@@ -1,4 +1,5 @@
-# Money Pot /*insert a logo Image here instead*/
+![Logo](/assets/images/logo.JPG)
+
 *Money Pot is a maths game designed for children age 4-6.*
 
 ---
