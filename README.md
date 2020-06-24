@@ -16,6 +16,8 @@
     * Fonts
     * Icons
     * Colours
+    * Wireframes
+    * Images
 * Technologies
 * Features
   * Features that have been developed
@@ -106,3 +108,7 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
 * For the **coin background** used *Madder Lake* (#BD3D3A)
 * *Ghost White* (#F3F6FB) mainly used for **non-highlighted stars**, **text** and **background colour**
 * *Queeen Blue* (#3F69AA) used for **console dashboard**, **sum display**, **information** and **contact form**
+  
+### Wireframes ###
+
+I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](), [tablet]() and [desktop]().
