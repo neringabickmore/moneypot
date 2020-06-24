@@ -77,3 +77,15 @@ Secondary goal of this project is to teach children to identify British Currency
 9. Games console should have six stars displayed, which are highlighted when correct sum is achieved. Stars are reset at each level.
 10. With each correct sum a pop up *Congrats* message display appears. The display should have a button to take the user to the next task.
 11. At each incorrect sum a pop up *Try again* message display appears. The display should have a button to restart the same task and will trigger the sum reset to 0. The user will not lose the stars they have already won.
+
+### Design Choices ###
+
+The main aim of the design of the site is to make it appealing to the children. It should have multiple colours, buttons should be large and larger fonts utilised where appropriate.
+
+**Fonts**
+
+For the **logo**, I have chosen [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger). This font seemed to me a close resemblance of a child's writing with a paint brush. 
+ 
+For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Like A Sister](https://fonts.google.com/specimen/Love+Ya+Like+A+Sister?query=love+ya) font. This font seems playful to me. I also liked the fact that there is some transparancy and you can see a bit of the background colour.
+
+For all **headers** I used [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP?query=noto) font and all **other text** [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto).
