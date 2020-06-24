@@ -49,3 +49,12 @@ Secondary goal of this project is to teach children to identify British Currency
 * As a parent of a **user**, I want to find the rules how to play the game so that I can explain them simply to my child.
 * As a parent of a **user**, I want to be able to contact the site owner for more information, to give feedback about the game or to suggest additional features.
 * As a **user** I want to have fun!
+
+### Site Owner Goals ###
+
+* As a **site owner**, I want to create an interactive educational maths game for children.
+* As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
+* As a **site owner**, I also want to teach the children a lifeskill how to count money, by starting small with pence coins.
+* It is also important to me to receive honest feedback from the parent of the **user** so I can identify how I can improve the game and for recommendations on other educational games their children would benefit from.
+* As a **site owner**, I would also like my audience to connect with me on social media platforms.
+
