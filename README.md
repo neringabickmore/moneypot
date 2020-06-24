@@ -121,4 +121,29 @@ You can find the images of the coins used for the site [here](/assets/images). I
 * [FAVPNG](https://favpng.com)
 * [iStock](https://www.istockphoto.com)
 * [flickr](https://www.flickr.com)
-  
+
+---  
+## Technologies ##
+
+### Languages ###
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [JQuery](https://jquery.com/)
+* [Popper](https://popper.js.org/)
+
+### Tools & Libraries ###
+
+* [Git](https://git-scm.com/) 
+* [GitHub](https://github.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+* [Google fonts](https://fonts.google.com/)
+* [Color editor](https://coolors.co/)
+* [Image editor](https://www.birme.net/)
+
+---
+
+
