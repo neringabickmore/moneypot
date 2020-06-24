@@ -186,3 +186,17 @@ The website was developed on *Visual Studio Code* and using *Git* pushed to *Git
 * Selected **Master Branch** from the **Source** dropdown menu.
 * Clicked to **confirm** my **selection**.
 * [Money Pot]() is now **live** on **GitHub Pages**.
+
+### Running Money Pot Locally ###
+
+Cloning Money Pot from GitHub:
+
+* Navigate to **neringabickmore/MoneyPot**.
+* Click the green **Clone or Download** button.
+* **Copy** the url in the dropdown box.
+* Using your favourite **IDE** open up your preferred terminal.
+* **Navigate** to your desired file location.
+
+Copy the following code and input it into your terminal to clone Money Pot:
+
+```git clone https://github.com/neringabickmore.MoneyPot```
