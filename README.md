@@ -4,47 +4,36 @@
 
 ---
 
-## [Contents](#contents) ##
+## Contents ##
 
-### [UX (User Experience)](#ux--user-experience-) ###
-
-* [Project Goals](#project-goals)
-* [User Goals](#user-goals)
-* [User Stories](#user-stories)
-* [Site Owner Goals](#site-owner-goals)
-* [User Requirements and Expectations](#user-requirements-and-expectations)
-* [Design Choices](#design-choices)
-  * [Fonts](#fonts)
-  * [Icons](#icons)
-  * [Colours](#colours)
-  * [Wireframes](#wireframes)
-
-### [Technologies](#technologies) ###
-
-* [Languages](#languages)
-* [Tools & Libraries](#tools---libraries)
-
-### [Features](#features) ###
-
-* [Features Implemented](#features-implemented)
-* [Future Features](#future-features)
-
-### [Testing](#testing) ###
-
-### [Bugs](#bugs) ###
-
-### [Deployment](#deployment) ###
-
-* [Running Money Pot Locally](#running-money-pot-locally)
-
-### [Credits](#credits) ###
-
-* [Audio](#audio)
-* [Images](#images)
-* [Colour](#colour)
-* [Image editing](#image-editing)
-
-### [Acknowledgements](#acknowledgements) ###
+- [Contents](#contents)
+- [UX (User Experience)](#ux-user-experience)
+  - [Project Goals](#project-goals)
+  - [User Goals](#user-goals)
+  - [User Stories](#user-stories)
+  - [Site Owner Goals](#site-owner-goals)
+  - [User Requirements and Expectations](#user-requirements-and-expectations)
+  - [Design Choices](#design-choices)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+  - [Colours](#colours)
+  - [Wireframes](#wireframes)
+- [Technologies](#technologies)
+  - [Languages](#languages)
+  - [Tools & Libraries](#tools--libraries)
+- [Features](#features)
+  - [Features Implemented](#features-implemented)
+  - [Future Features](#future-features)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Running Money Pot Locally](#running-money-pot-locally)
+- [Credits](#credits)
+  - [Audio](#audio)
+  - [Images](#images)
+  - [Colour](#colour)
+  - [Image editing](#image-editing)
+- [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -59,37 +48,37 @@ Secondary goal of this project is to teach children to identify British Currency
 
 ### User Goals ###
 
-* **Find the information** what the game is about.
-* **Find the rules** how to play the game.
-* **Play** the game.
-* **Learn** to identify British Currency coins.
-* **Learn** simple math sums.
-* **Give feedback** about the game and/or **contact** to the site owner.
+- **Find the information** what the game is about
+- **Find the rules** how to play the game
+- **Play** the game.
+- **Learn** to identify British Currency coins.
+- **Learn** simple math sums.
+- **Give feedback** about the game and/or **contact** to the site owner.
 
 ### User Stories ###
 
-* As a parent of a **user**, I want to make sure the game has educational value.
-* As a parent of a **user**, I want to find the rules how to play the game so that I can explain them simply to my child.
-* As a parent of a **user**, I want to be able to contact the site owner for more information, to give feedback about the game or to suggest additional features.
-* As a **user** I want to have fun!
+- As a parent of a **user**, I want to make sure the game has educational value.
+- As a parent of a **user**, I want to find the rules how to play the game so that I can explain them simply to my child.
+- As a parent of a **user**, I want to be able to contact the site owner for more information, to give feedback about the game or to suggest additional features.
+- As a **user** I want to have fun!
 
 ### Site Owner Goals ###
 
-* As a **site owner**, I want to create an interactive educational maths game for children.
-* As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
-* As a **site owner**, I also want to teach the children a lifeskill how to count money, by starting small with pence coins.
-* It is also important to me to receive honest feedback from the parent of the **user** so I can identify how I can improve the game and for recommendations on other educational games their children would benefit from.
-* As a **site owner**, I would also like my audience to connect with me on social media platforms.
+- As a **site owner**, I want to create an interactive educational maths game for children.
+ As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
+- As a **site owner**, I also want to teach the children a lifeskill how to count money, by starting small with pence coins.
+- It is also important to me to receive honest feedback from the parent of the **user** so I can identify how I can improve the game and for recommendations on other educational games their children would benefit from.
+- As a **site owner**, I would also like my audience to connect with me on social media platforms.
 
 ### User Requirements and Expectations ###
 
 1. The site should have:
-   * Game console.
-   * Navigation to *information* about the game, including how to play it.
-   * Navigation to *contact us* with a fully functioning form.
-   * Audio with a button to turn *audio on/off*.
-   * Button to *reset the game*.
-   * Button to *reset the sum*.
+   - Game console.
+   - Navigation to *information* about the game, including how to play it.
+   - Navigation to *contact us* with a fully functioning form.
+   - Audio with a button to turn *audio on/off*.
+   - Button to *reset the game*.
+   - Button to *reset the sum*.
 2. The site should be **visually appealing** and **interactive**.
 3. The game should have **three levels** and **six tasks** in each level.
 4. **Price tag** should be displayed and change it's value on a new task at each level. It should also increase in value on each task.
@@ -107,7 +96,7 @@ The main aim of the design of the site is to make it appealing to the children. 
 
 #### Fonts ####
 
-For the **logo**, I have chosen [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger). This font seemed to me a close resemblance of a child's writing with a paint brush. 
+For the **logo**, I have chosen [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger). This font seemed to me a close resemblance of a child's writing with a paint brush.
 
 For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Like A Sister](https://fonts.google.com/specimen/Love+Ya+Like+A+Sister?query=love+ya) font. This font seems playful to me. I also liked the fact that there is some transparancy and you can see a bit of the background colour.
 
@@ -124,38 +113,38 @@ Icons helped me to enhance visual display, minimise the amount of text and more 
 I chose the colours that I felt are quite strong and impactfull yet not *"screaming"*.
 ![Colour palette](/wireframes/colour-palette.png)
 
-* *Gold Metalic* (#D5AE41) used for the **Logo**, to highlight **stars**, **price tag** and **footer**
-* For the **nav buttons** used *Madder Lake* (#BD3D3A) , which on hover changes to *Cordovan* (#994044)
-* For the **coin background** used *Madder Lake* (#BD3D3A)
-* *Ghost White* (#F3F6FB) mainly used for **non-highlighted stars**, **text** and **background colour**
-* *Queeen Blue* (#3F69AA) used for **console dashboard**, **sum display**, **information** and **contact form**
+- *Gold Metalic* (#D5AE41) used for the **Logo**, to highlight **stars**, **price tag** and **footer**
+- For the **nav buttons** used *Madder Lake* (#BD3D3A) , which on hover changes to *Cordovan* (#994044)
+- For the **coin background** used *Madder Lake* (#BD3D3A)
+- *Ghost White* (#F3F6FB) mainly used for **non-highlighted stars**, **text** and **background colour**
+- *Queeen Blue* (#3F69AA) used for **console dashboard**, **sum display**, **information** and **contact form**
   
 ### Wireframes ###
 
 I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](), [tablet]() and [desktop]().
 
-
 ---  
+
 ## Technologies ##
 
 ### Languages ###
 
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [JQuery](https://jquery.com/)
-* [Popper](https://popper.js.org/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JQuery](https://jquery.com/)
+- [Popper](https://popper.js.org/)
 
 ### Tools & Libraries ###
 
-* [Git](https://git-scm.com/) 
-* [GitHub](https://github.com/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Bootstrap](https://getbootstrap.com/)
-* [Font-Awesome](https://fontawesome.com/icons?d=gallery)
-* [Google fonts](https://fonts.google.com/)
-* [Color editor](https://coolors.co/)
-* [Image editor](https://www.birme.net/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+- [Google fonts](https://fonts.google.com/)
+- [Color editor](https://coolors.co/)
+- [Image editor](https://www.birme.net/)
 
 ---
 
@@ -163,18 +152,18 @@ I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I
 
 ### Features Implemented ###
 
-* Responsive design
-* User friendly display
-* Interactive games console
-* Dashboard for easy navigation
-* Social media links
-* Functional contact form
+- Responsive design
+- User friendly display
+- Interactive games console
+- Dashboard for easy navigation
+- Social media links
+- Functional contact form
 
 ### Future Features ###
 
-* Currency switch (i.e. Euro and US Dollar options)
-* Information in a different language (i.e. Lithuanian as I have nieces and nephiew living in Lithuania)
-* Increase levels of difficulty and include higher value currency (Pound coins and notes)
+- Currency switch (i.e. Euro and US Dollar options)
+- Information in a different language (i.e. Lithuanian as I have nieces and nephiew living in Lithuania)
+- Increase levels of difficulty and include higher value currency (Pound coins and notes)
 
 ---
 
@@ -190,25 +179,25 @@ I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I
 
 The website was developed on *Visual Studio Code* and using *Git* pushed to *GitHub*, which hosts the repository. I made the following steps to deploy the site using *GitHub Pages*:
 
-* Opened up **GitHub** in the browser.
-* Signed in with my **username** and **password**.
-* Selected my **repositories**.
-* Navigated to **neringabickmore/MoneyPot**.
-* In the top navigation clicked **settings**.
-* Scrolled down to the **GitHub Pages** area.
-* Selected **Master Branch** from the **Source** dropdown menu.
-* Clicked to **confirm** my **selection**.
-* [Money Pot]() is now **live** on **GitHub Pages**.
+- Opened up **GitHub** in the browser.
+- Signed in with my **username** and **password**.
+- Selected my **repositories**.
+- Navigated to **neringabickmore/MoneyPot**.
+- In the top navigation clicked **settings**.
+- Scrolled down to the **GitHub Pages** area.
+- Selected **Master Branch** from the **Source** dropdown menu.
+- Clicked to **confirm** my **selection**.
+- [Money Pot]() is now **live** on **GitHub Pages**.
 
 ### Running Money Pot Locally ###
 
 Cloning Money Pot from GitHub:
 
-* Navigate to **neringabickmore/MoneyPot**.
-* Click the green **Clone or Download** button.
-* **Copy** the url in the dropdown box.
-* Using your favourite **IDE** open up your preferred terminal.
-* **Navigate** to your desired file location.
+- Navigate to **neringabickmore/MoneyPot**.
+- Click the green **Clone or Download** button.
+- **Copy** the url in the dropdown box.
+- Using your favourite **IDE** open up your preferred terminal.
+- **Navigate** to your desired file location.
 
 Copy the following code and input it into your terminal to clone Money Pot:
 
@@ -222,20 +211,20 @@ Copy the following code and input it into your terminal to clone Money Pot:
 
 All audio found on [Free Sound](https://freesound.org/) website:
 
-* [Coin button](https://freesound.org/people/volkbutphan/sounds/485486/) on click
-* [Other buttons](https://freesound.org/people/bubaproducer/sounds/107136/) on click
-* ["Congrats"](https://freesound.org/people/javapimp/sounds/439194/ ) pop up message
-* ["Try again"](https://freesound.org/people/rhodesmas/sounds/342756/) pop up message
-* ["Winner"](https://freesound.org/people/FunWithSound/sounds/456966/ ) pop up message
+- [Coin button](https://freesound.org/people/volkbutphan/sounds/485486/) on click
+- [Other buttons](https://freesound.org/people/bubaproducer/sounds/107136/) on click
+- ["Congrats"](https://freesound.org/people/javapimp/sounds/439194/ ) pop up message
+- ["Try again"](https://freesound.org/people/rhodesmas/sounds/342756/) pop up message
+- ["Winner"](https://freesound.org/people/FunWithSound/sounds/456966/ ) pop up message
 
 ### Images ###
 
 You can find the images of the coins used for the site [here](/assets/images). I have sourced them through various websites, which are free to use:
 
-* [Clipart-library](http://clipart-library.com)
-* [FAVPNG](https://favpng.com)
-* [iStock](https://www.istockphoto.com)
-* [flickr](https://www.flickr.com)
+- [Clipart-library](http://clipart-library.com)
+- [FAVPNG](https://favpng.com)
+- [iStock](https://www.istockphoto.com)
+- [flickr](https://www.flickr.com)
 
 ### Colour ###
 
@@ -243,9 +232,9 @@ I have identified the colour palette on [W3](https://www.w3schools.com/) and use
 
 ### Image editing ###
 
-* I have used snippet tool for capturing screengrabs which I saved as images.
-* MS Paint 3D to give the same background colour for the coin images as the button.
-* A handy [Birme](https://www.birme.net/?target_width=300&target_height=300&quality=100&border_width=1&border_color=%23bd3d3a) site allowed me to resise the images all at once.
+- I have used snippet tool for capturing screengrabs which I saved as images.
+- MS Paint 3D to give the same background colour for the coin images as the button.
+- A handy [Birme](https://www.birme.net/?target_width=300&target_height=300&quality=100&border_width=1&border_color=%23bd3d3a) site allowed me to resise the images all at once.
 
 ---
 
