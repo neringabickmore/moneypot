@@ -33,3 +33,12 @@
 
 The **goal** of this project is to build an interactive maths game for **children** age 4-6.
 Secondary goal of this project is to teach children to identify British Currency pence coins.
+
+### User Goals ###
+
+* **Find the information** what the game is about.
+* **Find the rules** how to play the game.
+* **Play** the game.
+* **Learn** to identify British Currency coins.
+* **Learn** simple math sums.
+* **Give feedback** about the game and/or **contact** to the site owner.
