@@ -113,14 +113,6 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
 
 I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](), [tablet]() and [desktop]().
 
-### Images ###
-
-You can find the images of the coins used for the site [here](/assets/images). I have sourced them through various websites, which are free to use:
-
-* [Clipart-library](http://clipart-library.com)
-* [FAVPNG](https://favpng.com)
-* [iStock](https://www.istockphoto.com)
-* [flickr](https://www.flickr.com)
 
 ---  
 ## Technologies ##
@@ -205,11 +197,25 @@ Copy the following code and input it into your terminal to clone Money Pot:
 
 ## Credits ##
 
-Audio found on [Free Sound](https://freesound.org/) website:
+### Audio ###
+
+All audio found on [Free Sound](https://freesound.org/) website:
 
 * [Coin button](https://freesound.org/people/volkbutphan/sounds/485486/) on click
 * [Other buttons](https://freesound.org/people/bubaproducer/sounds/107136/) on click
 * ["Congrats"](https://freesound.org/people/javapimp/sounds/439194/ ) pop up message
 * ["Try again"](https://freesound.org/people/rhodesmas/sounds/342756/) pop up message
 * ["Winner"](https://freesound.org/people/FunWithSound/sounds/456966/ ) pop up message
-  
+
+### Images ###
+
+You can find the images of the coins used for the site [here](/assets/images). I have sourced them through various websites, which are free to use:
+
+* [Clipart-library](http://clipart-library.com)
+* [FAVPNG](https://favpng.com)
+* [iStock](https://www.istockphoto.com)
+* [flickr](https://www.flickr.com)
+
+---
+
+## Acknowledgements ##
