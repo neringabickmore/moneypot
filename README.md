@@ -1,4 +1,4 @@
-![Logo](/assets/images/logo.JPG)
+![Logo](/wireframes/logo.JPG)
 
 *Money Pot is a maths game designed for children age 4-6.*
 
@@ -96,4 +96,13 @@ I have used icons provided by [Font Awesome](https://fontawesome.com) and are se
 
 Icons helped me to enhance visual display, minimise the amount of text and more importantly to ease the navigation, given the game is desiged for young children with limited reading skills.
 
+### Colours ###
 
+I chose the colours that I felt are quite strong and impactfull yet not *"screaming"*.
+![Colour palette](/wireframes/colour-palette.png)
+
+* *Gold Metalic* (#D5AE41) used for the **Logo**, to highlight **stars**, **price tag** and **footer**
+* For the **nav buttons** used *Madder Lake* (#BD3D3A) , which on hover changes to *Cordovan* (#994044)
+* For the **coin background** used *Madder Lake* (#BD3D3A)
+* *Ghost White* (#F3F6FB) mainly used for **non-highlighted stars**, **text** and **background colour**
+* *Queeen Blue* (#3F69AA) used for **console dashboard**, **sum display**, **information** and **contact form**
