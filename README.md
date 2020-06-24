@@ -172,3 +172,17 @@ You can find the images of the coins used for the site [here](/assets/images). I
 ## Bugs ##
 
 ---
+
+## Deployment ##
+
+The website was developed on *Visual Studio Code* and using *Git* pushed to *GitHub*, which hosts the repository. I made the following steps to deploy the site using *GitHub Pages*:
+
+* Opened up **GitHub** in the browser.
+* Signed in with my **username** and **password**.
+* Selected my **repositories**.
+* Navigated to **neringabickmore/MoneyPot**.
+* In the top navigation clicked **settings**.
+* Scrolled down to the **GitHub Pages** area.
+* Selected **Master Branch** from the **Source** dropdown menu.
+* Clicked to **confirm** my **selection**.
+* [Money Pot]() is now **live** on **GitHub Pages**.
