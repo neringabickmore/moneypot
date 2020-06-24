@@ -4,47 +4,36 @@
 
 ---
 
-## [Contents](#contents) ##
+## Contents ##
 
-### [UX (User Experience)](#ux--user-experience-) ###
-
-* [Project Goals](#project-goals)
-* [User Goals](#user-goals)
-* [User Stories](#user-stories)
-* [Site Owner Goals](#site-owner-goals)
-* [User Requirements and Expectations](#user-requirements-and-expectations)
-* [Design Choices](#design-choices)
-  * [Fonts](#fonts)
-  * [Icons](#icons)
-  * [Colours](#colours)
-  * [Wireframes](#wireframes)
-
-### [Technologies](#technologies) ###
-
-* [Languages](#languages)
-* [Tools & Libraries](#tools---libraries)
-
-### [Features](#features) ###
-
-* [Features Implemented](#features-implemented)
-* [Future Features](#future-features)
-
-### [Testing](#testing) ###
-
-### [Bugs](#bugs) ###
-
-### [Deployment](#deployment) ###
-
-* [Running Money Pot Locally](#running-money-pot-locally)
-
-### [Credits](#credits) ###
-
-* [Audio](#audio)
-* [Images](#images)
-* [Colour](#colour)
-* [Image editing](#image-editing)
-
-### [Acknowledgements](#acknowledgements) ###
+- [Contents](#contents)
+- [UX (User Experience)](#ux-user-experience)
+  - [Project Goals](#project-goals)
+  - [User Goals](#user-goals)
+  - [User Stories](#user-stories)
+  - [Site Owner Goals](#site-owner-goals)
+  - [User Requirements and Expectations](#user-requirements-and-expectations)
+  - [Design Choices](#design-choices)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+  - [Colours](#colours)
+  - [Wireframes](#wireframes)
+- [Technologies](#technologies)
+  - [Languages](#languages)
+  - [Tools & Libraries](#tools--libraries)
+- [Features](#features)
+  - [Features Implemented](#features-implemented)
+  - [Future Features](#future-features)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Running Money Pot Locally](#running-money-pot-locally)
+- [Credits](#credits)
+  - [Audio](#audio)
+  - [Images](#images)
+  - [Colour](#colour)
+  - [Image editing](#image-editing)
+- [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
