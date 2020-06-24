@@ -82,10 +82,18 @@ Secondary goal of this project is to teach children to identify British Currency
 
 The main aim of the design of the site is to make it appealing to the children. It should have multiple colours, buttons should be large and larger fonts utilised where appropriate.
 
-**Fonts**
+#### Fonts ####
 
 For the **logo**, I have chosen [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger). This font seemed to me a close resemblance of a child's writing with a paint brush. 
- 
+
 For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Like A Sister](https://fonts.google.com/specimen/Love+Ya+Like+A+Sister?query=love+ya) font. This font seems playful to me. I also liked the fact that there is some transparancy and you can see a bit of the background colour.
 
 For all **headers** I used [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP?query=noto) font and all **other text** [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto).
+
+#### Icons ####
+
+I have used icons provided by [Font Awesome](https://fontawesome.com) and are self explanatory.
+
+Icons helped me to enhance visual display, minimise the amount of text and more importantly to ease the navigation, given the game is desiged for young children with limited reading skills.
+
+
