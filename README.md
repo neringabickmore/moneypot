@@ -17,7 +17,6 @@
     * Icons
     * Colours
     * Wireframes
-    * Images
 * Technologies
 * Features
   * Features Implemented
@@ -26,6 +25,7 @@
 * Bugs
 * Deployment
 * Credit
+* Aknowledgements
 
 ---
 
