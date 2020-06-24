@@ -20,8 +20,8 @@
     * Images
 * Technologies
 * Features
-  * Features that have been developed
-  * Features that will be implemented in the future
+  * Features Implemented
+  * Future Features
 * Testing
 * Bugs
 * Deployment
@@ -145,5 +145,16 @@ You can find the images of the coins used for the site [here](/assets/images). I
 * [Image editor](https://www.birme.net/)
 
 ---
+
+## Features ##
+
+### Features Implemented ###
+
+* Responsive design
+* User friendly display
+* Interactive games console
+* Dashboard for easy navigation
+* Social media links
+* Functional contact form
 
 
