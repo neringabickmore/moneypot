@@ -58,3 +58,22 @@ Secondary goal of this project is to teach children to identify British Currency
 * It is also important to me to receive honest feedback from the parent of the **user** so I can identify how I can improve the game and for recommendations on other educational games their children would benefit from.
 * As a **site owner**, I would also like my audience to connect with me on social media platforms.
 
+### User Requirements and Expectations ###
+
+1. The site should have:
+   * Game console.
+   * Navigation to *information* about the game, including how to play it.
+   * Navigation to *contact us* with a fully functioning form.
+   * Audio with a button to turn *audio on/off*.
+   * Button to *reset the game*.
+   * Button to *reset the sum*.
+2. The site should be **visually appealing** and **interactive**.
+3. The game should have **three levels** and **six tasks** in each level.
+4. **Price tag** should be displayed and change it's value on a new task at each level. It should also increase in value on each task.
+5. **Level 1** should have **6 coins** displayed to start with and coins should be buttons.
+6. Additional coins should be displayed at level 2 and level 3 to add difficulty.
+7. Coin should add it's value to the total sum amount when clicked on.
+8. Total sum amount should be displayed and it should increase it's value every time a coin button is clicked on.
+9. Games console should have six stars displayed, which are highlighted when correct sum is achieved. Stars are reset at each level.
+10. With each correct sum a pop up *Congrats* message display appears. The display should have a button to take the user to the next task.
+11. At each incorrect sum a pop up *Try again* message display appears. The display should have a button to restart the same task and will trigger the sum reset to 0. The user will not lose the stars they have already won.
