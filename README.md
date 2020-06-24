@@ -200,3 +200,16 @@ Cloning Money Pot from GitHub:
 Copy the following code and input it into your terminal to clone Money Pot:
 
 ```git clone https://github.com/neringabickmore.MoneyPot```
+
+---
+
+## Credits ##
+
+Audio found on [Free Sound](https://freesound.org/) website:
+
+* [Coin button](https://freesound.org/people/volkbutphan/sounds/485486/) on click
+* [Other buttons](https://freesound.org/people/bubaproducer/sounds/107136/) on click
+* ["Congrats"](https://freesound.org/people/javapimp/sounds/439194/ ) pop up message
+* ["Try again"](https://freesound.org/people/rhodesmas/sounds/342756/) pop up message
+* ["Winner"](https://freesound.org/people/FunWithSound/sounds/456966/ ) pop up message
+  
