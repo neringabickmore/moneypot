@@ -216,6 +216,10 @@ You can find the images of the coins used for the site [here](/assets/images). I
 * [iStock](https://www.istockphoto.com)
 * [flickr](https://www.flickr.com)
 
+### Colour ###
+
+I have identified the colour palette on [W3](https://www.w3schools.com/) and used their [Fashion Colors 2018](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_colors_2018_lib) palette.
+
 ---
 
 ## Acknowledgements ##
