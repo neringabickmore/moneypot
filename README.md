@@ -157,4 +157,8 @@ You can find the images of the coins used for the site [here](/assets/images). I
 * Social media links
 * Functional contact form
 
+### Future Features ###
 
+* Currency switch (i.e. Euro and US Dollar options)
+* Information in a different language (i.e. Lithuanian as I have nieces and nephiew living in Lithuania)
+* Increase levels of difficulty and include higher value currency (Pound coins and notes)
