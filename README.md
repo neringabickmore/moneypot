@@ -121,7 +121,7 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
   
 ### Wireframes ###
 
-I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](), [tablet]() and [desktop]().
+I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](/wireframes/mobile.wf.JPG), [tablet](/wireframes/tablet.wf.JPG) and [desktop](/wireframes/mobile.wf.JPG).
 
 ---  
 
