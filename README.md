@@ -16,8 +16,8 @@
   - [Design Choices](#design-choices)
     - [Fonts](#fonts)
     - [Icons](#icons)
-  - [Colours](#colours)
-  - [Wireframes](#wireframes)
+    - [Colours](#colours)
+    - [Wireframes](#wireframes)
 - [Technologies](#technologies)
   - [Languages](#languages)
   - [Tools & Libraries](#tools--libraries)
@@ -108,7 +108,7 @@ I have used icons provided by [Font Awesome](https://fontawesome.com) and are se
 
 Icons helped me to enhance visual display, minimise the amount of text and more importantly to ease the navigation, given the game is desiged for young children with limited reading skills.
 
-### Colours ###
+#### Colours ####
 
 I chose the colours that I felt are quite strong and impactfull yet not *"screaming"*.
 ![Colour palette](/wireframes/colour-palette.png)
@@ -119,7 +119,7 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
 - *Ghost White* (#F3F6FB) mainly used for **non-highlighted stars**, **text** and **background colour**
 - *Queeen Blue* (#3F69AA) used for **console dashboard**, **sum display**, **information** and **contact form**
   
-### Wireframes ###
+#### Wireframes ####
 
 I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](/wireframes/mobile.wf.JPG), [tablet](/wireframes/tablet.wf.JPG) and [desktop](/wireframes/mobile.wf.JPG).
 
