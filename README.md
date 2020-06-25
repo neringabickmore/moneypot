@@ -123,6 +123,10 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
 
 I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](/wireframes/mobile.wf.JPG), [tablet](/wireframes/tablet.wf.JPG) and [desktop](/wireframes/mobile.wf.JPG).
 
+I have also included additional wireframes for the [form](/wireframes/form.wf.JPG) page, [information](/wireframes/info.wf.JPG), [winner](/wireframes/winner.wf.JPG), [error](/wireframes/error.wf.JPG) and [congrats](/wireframes/congrats.wf.JPG) modal displays. Please note that all of these display layouts will remain the same on all screen sizes. 
+
+In the **form page** the **envelope** icon in the footer is replaced with **games console** icon, which on-click brings the user back to the **games page**. On submission of the form, the user is also brought back to the games page.
+
 ---  
 
 ## Technologies ##
