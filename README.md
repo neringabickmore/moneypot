@@ -1,4 +1,4 @@
-![Logo](/wireframes/logo.JPG)
+![Logo](/wireframes/logo.jpg)
 
 *Money Pot is a maths game designed for children age 4-6.*
 
@@ -83,7 +83,7 @@ Secondary goal of this project is to teach children to identify British Currency
 3. The game should have **three levels** and **six tasks** in each level.
 4. **Price tag** should be displayed and change it's value on a new task at each level. It should also increase in value on each task.
 5. **Level 1** should have **6 coins** displayed to start with and coins should be buttons.
-6. Additional coins should be displayed at level 2 and level 3 to add difficulty.
+6. Additional coins should be displayed at **level 2 and level 3** to add difficulty.
 7. Coin should add it's value to the total sum amount when clicked on.
 8. Total sum amount should be displayed and it should increase it's value every time a coin button is clicked on.
 9. Games console should have six stars displayed, which are highlighted when correct sum is achieved. Stars are reset at each level.
@@ -121,9 +121,9 @@ I chose the colours that I felt are quite strong and impactfull yet not *"scream
   
 #### Wireframes ####
 
-I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](/wireframes/mobile.wf.JPG), [tablet](/wireframes/tablet.wf.JPG) and [desktop](/wireframes/mobile.wf.JPG).
+I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining basic layout structure of the game console and identifying how displays would change on different screen sizes such as [mobile](/wireframes/wireframe.mobile.jpg), [tablet](/wireframes/wireframe.tablet.jpg) and [desktop](/wireframes/wireframe.desktop.jpg).
 
-I have also included additional wireframes for the [form](/wireframes/form.wf.JPG) page, [information](/wireframes/info.wf.JPG), [winner](/wireframes/winner.wf.JPG), [error](/wireframes/error.wf.JPG) and [congrats](/wireframes/congrats.wf.JPG) modal displays. Please note that all of these display layouts will remain the same on all screen sizes. 
+I have also included additional wireframes for the [contact form](/wireframes/wireframe.contact.jpg) page, [information](/wireframes/wireframe.info.jpg), [winner](/wireframes/wireframe.winner.jpg), [error](/wireframes/wireframe.error.jpg) and [congrats](/wireframes/wireframe.congrats.jpg) modal displays. Please note that all of these display layouts will remain the same on all screen sizes.
 
 In the **form page** the **envelope** icon in the footer is replaced with **games console** icon, which on-click brings the user back to the **games page**. On submission of the form, the user is also brought back to the games page.
 
