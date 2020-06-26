@@ -15,12 +15,12 @@
   - [User Requirements and Expectations](#user-requirements-and-expectations)
   - [Design Choices](#design-choices)
     - [Fonts](#fonts)
-    - [Icons](#icons)
     - [Colours](#colours)
     - [Wireframes](#wireframes)
 - [Technologies](#technologies)
   - [Languages](#languages)
-  - [Tools & Libraries](#tools--libraries)
+  - [Libraries](#libraries)
+  - [Tools](#tools)
 - [Features](#features)
   - [Features Implemented](#features-implemented)
   - [Future Features](#future-features)
@@ -103,12 +103,6 @@ For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Li
 
 For all **headers** I used [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP?query=noto) font and all **other text** [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto).
 
-#### Icons ####
-
-I have used icons provided by [Font Awesome](https://fontawesome.com) and are self explanatory.
-
-Icons helped me to enhance visual display, minimise the amount of text and more importantly to ease the navigation, given the game is desiged for young children with limited reading skills.
-
 #### Colours ####
 
 I chose the colours that I felt are quite strong and impactfull yet not *"screaming"*.
@@ -136,16 +130,19 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [JQuery](https://jquery.com/)
-- [Popper](https://popper.js.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-### Tools & Libraries ###
+### Libraries ###
+
+- [jQuery](https://jquery.com/)
+- [Popper](https://popper.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
+  
+### Tools ###
 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Bootstrap](https://getbootstrap.com/)
 - [Font-Awesome](https://fontawesome.com/icons?d=gallery)
 - [Google fonts](https://fonts.google.com/)
 - [Color editor](https://coolors.co/)
@@ -216,12 +213,6 @@ Copy the following code and input it into your terminal to clone Money Pot:
 
 All audio found on [Free Sound](https://freesound.org/) website:
 
-- [Coin button](https://freesound.org/people/volkbutphan/sounds/485486/) on click
-- [Other buttons](https://freesound.org/people/bubaproducer/sounds/107136/) on click
-- ["Congrats"](https://freesound.org/people/javapimp/sounds/439194/ ) pop up message
-- ["Try again"](https://freesound.org/people/rhodesmas/sounds/342756/) pop up message
-- ["Winner"](https://freesound.org/people/FunWithSound/sounds/456966/ ) pop up message
-
 ### Images ###
 
 You can find the images of the coins used for the site [here](/assets/images). I have sourced them through various websites, which are free to use:
@@ -233,7 +224,7 @@ You can find the images of the coins used for the site [here](/assets/images). I
 
 ### Colour ###
 
-I have identified the colour palette on [W3](https://www.w3schools.com/) and used their [Fashion Colors 2018](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_colors_2018_lib) palette.
+I have identified the colour palette on [W3](https://www.w3schools.com/)
 
 ### Image editing ###
 
