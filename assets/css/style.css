@@ -71,12 +71,27 @@ body {
   display: flex;
   min-height: 100vh;
 }
-#priceTag,
-#sum {
+#priceTag h1,
+#sum h1 {
   color: #f3f6fb;
   font-family: "Love Ya Like A Sister", sans-serif;
   letter-spacing: 2px;
-  font-size: 2rem;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#priceTag {
+  background-color: #3f69aa;
+  border: solid 0.5rem #d5ae41;
+  padding: 2rem;
+  margin: 0 0.5rem;
+  border-radius: 50rem;
+}
+#sum {
+  background-color: #d5ae41;
+  border: solid 0.5rem #3f69aa;
+  padding: 2rem;
+  border-radius: 50%;
 }
 
 /*------------- Footer-----------------------------*/
