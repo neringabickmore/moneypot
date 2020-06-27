@@ -45,5 +45,19 @@ body {
   font-size: 1.75rem;
 }
 
-/*------------- Games Card-------------------------*/
+/*------------- Game Card-------------------------*/
+
+#game-card {
+  background-color: #bd3d3a;
+  display: flex;
+  min-height: 100vh;
+}
+#priceTag,
+#sum {
+  color: #f3f6fb;
+  font-family: "Love Ya Like A Sister", sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
 /*------------- Footer-----------------------------*/
