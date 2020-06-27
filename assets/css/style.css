@@ -10,6 +10,10 @@ body {
   background-color: #bd3d3a;
   margin: 0.5rem;
   border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 0.5;
+  padding: 0.5rem;
 }
 .btn a {
   color: #f3f6fb;
@@ -45,6 +49,13 @@ body {
   font-size: 1.75rem;
 }
 
+#gameNavBtn .btn {
+  transition: all 0.3s;
+}
+#gameNavBtn .btn:hover {
+  transform: scale(1.2);
+}
+
 /*------------- Game Card-------------------------*/
 
 #game-card {
@@ -61,3 +72,11 @@ body {
 }
 
 /*------------- Footer-----------------------------*/
+
+#footer {
+  background-color: #d5ae41;
+  padding: 1rem;
+}
+#social-links .btn:hover {
+  background-color: #994044;
+}
