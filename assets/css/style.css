@@ -34,6 +34,7 @@ body {
   background-color: #3f69aa;
   display: flex;
   min-height: 50vh;
+  border: solid 0.25rem #d5ae41;
 }
 
 #gameLevel,
@@ -70,6 +71,7 @@ body {
   background-color: #bd3d3a;
   display: flex;
   min-height: 100vh;
+  border: solid 0.25rem #d5ae41;
 }
 #priceTag h1,
 #sum h1 {
@@ -82,14 +84,14 @@ body {
 
 #priceTag {
   background-color: #3f69aa;
-  border: solid 0.5rem #d5ae41;
+  border: solid 0.25rem #d5ae41;
   padding: 2rem;
   margin: 0 0.5rem;
   border-radius: 50rem;
 }
 #sum {
   background-color: #d5ae41;
-  border: solid 0.5rem #3f69aa;
+  border: solid 0.25rem #3f69aa;
   padding: 2rem;
   border-radius: 50%;
 }
