@@ -33,7 +33,7 @@ body {
 #game-dashboard {
   background-color: #3f69aa;
   display: flex;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 #gameLevel,
@@ -41,7 +41,7 @@ body {
   color: #f3f6fb;
   font-family: "Love Ya Like A Sister", sans-serif;
   letter-spacing: 2px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .no-star {
   color: #f3f6fb;
