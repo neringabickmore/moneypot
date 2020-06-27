@@ -49,6 +49,14 @@ body {
   font-size: 1.75rem;
 }
 
+/**---- Stars will change colour to yellow when awarded----**/
+
+.yes-star {
+  color: #d5ae41;
+  letter-spacing: 1rem;
+  font-size: 1.75rem;
+}
+
 #gameNavBtn .btn {
   transition: all 0.3s;
 }
