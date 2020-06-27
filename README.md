@@ -1,4 +1,4 @@
-![Logo](/wireframes/logo.jpg)
+![Logo](/wireframes/logo-image.jpg)
 
 *Money Pot is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
 
