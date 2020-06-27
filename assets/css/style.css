@@ -16,5 +16,25 @@ body {
 }
 
 /*------------- Games Dashboard--------------------*/
+
+#game-dashboard {
+  background-color: #3f69aa;
+  display: flex;
+  min-height: 100vh;
+}
+
+#gameLevel,
+#gameTask {
+  color: #f3f6fb;
+  font-family: "Love Ya Like A Sister", sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.no-star {
+  color: #f3f6fb;
+  letter-spacing: 1rem;
+  font-size: 1.75rem;
+}
+
 /*------------- Games Card-------------------------*/
 /*------------- Footer-----------------------------*/
