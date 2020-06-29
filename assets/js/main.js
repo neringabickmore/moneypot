@@ -3,7 +3,7 @@
 // in the footer.
 
 const contactForm = document.createElement("div");
-document.getElementById("contact-form-box").appendChild(contactForm);
+$("#contact-form-box")[0].appendChild(contactForm);
 contactForm.innerHTML = `<!-- 1.1 Contact form: Header-->
                 <div class="modal-header">
                   <div
@@ -219,7 +219,7 @@ contactForm.innerHTML = `<!-- 1.1 Contact form: Header-->
 // displayed on the game dashboard -> game navigation.
 
 const gameRules = document.createElement("div");
-document.getElementById("game-rules-box").appendChild(gameRules);
+$("#game-rules-box")[0].appendChild(gameRules);
 gameRules.innerHTML = `<!-- 1.1 How to play: Header-->
                         <div class="modal-header">
                           <div
