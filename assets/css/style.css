@@ -138,4 +138,17 @@ body {
 }
 #social-links .btn:hover {
   background-color: #994044;
+  color: #f3f6fb;
+}
+
+/**---- Contact: modal styling----------**/
+
+.contact-form-box {
+  color: #f3f6fb;
+  background-color: #3f69aa;
+}
+.contact-form-box h5 {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: normal !important;
 }

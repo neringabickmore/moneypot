@@ -348,38 +348,88 @@
     <footer class="container" id="footer">
       <div class="row">
         <div class="col-sm d-flex justify-content-center" id="social-links">
-          <!--Facebook-->
+          <!-- Facebook-->
           <button type="button" class="btn">
             <a target="_blank" href="https://en-gb.facebook.com/"
               ><i class="fab fa-facebook-f" aria-hidden="true" type="button"></i
               ><span class="sr-only">Facebook</span></a
             >
           </button>
-          <!--Twitter-->
+          <!-- Twitter-->
           <button type="button" class="btn">
             <a target="_blank" href="https://www.twitter.com/"
               ><i class="fab fa-twitter" aria-hidden="true" type="button"></i
               ><span class="sr-only">Twitter</span></a
             >
           </button>
-          <!--Instagram-->
+          <!-- Instagram-->
           <button type="button" class="btn">
             <a target="_blank" href="https://www.instagram.com/"
               ><i class="fab fa-instagram" aria-hidden="true" type="button"></i
               ><span class="sr-only">Instagram</span></a
             >
           </button>
-          <!--Contact-->
-          <button type="button" class="btn">
-            <a href="#"
+          <!-- Contact-->
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#contactForm"
+          >
+            <a
               ><i
                 class="fas fa-envelope button"
                 aria-hidden="true"
-                type="button"
+                title="contact us"
               ></i
-              ><span class="sr-only">Envelope </span>
-            </a>
+              ><span class="sr-only">Envelope</span></a
+            >
           </button>
+          <!-- 1. How to play: Modal box -->
+          <div
+            class="modal fade"
+            id="contactForm"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="contactFormHeader"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content contact-form-box">
+                <!-- 1.1 How to play: Header-->
+                <div class="modal-header">
+                  <div
+                    class="modal-title col-12 font-weight-normal text-center"
+                    id="contactFormHeader"
+                  >
+                    <h5>
+                      Help us improve! We value every customer and your feedback
+                      matters to us.
+                    </h5>
+                  </div>
+                </div>
+                <!-- 1.2 Game Rules: Main body -->
+                <div class="container pt-3">
+                  <div class="row">
+                    <div class="col"></div>
+                  </div>
+                </div>
+                <!-- 1.3 Game Rules: exit button -->
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn" data-dismiss="modal">
+                    <i
+                      class="fas fa-paper-plane"
+                      type="button"
+                      aria-hidden="true"
+                      title="send!"
+                    ></i
+                    ><span class="sr-only"> Paper plane </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Game Rules: End-->
         </div>
       </div>
     </footer>
