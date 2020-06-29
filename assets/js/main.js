@@ -305,32 +305,35 @@ function addCoinAudio() {
 }
 
 // 3. Mute audio for all buttons
-
+// ***BugFix (Mute & Unmute audio):
+//          1. allAudio given constant variable to remove
+//             error appearance in dev tools.
+//          2. unnecesary lines off code removed to eliminate
+//             error appearance in dev tools.
 $("#soundOff").click(function () {
   muteAudio();
 });
-const silence = true;
+const soundOff = true;
 function muteAudio() {
-  let allAudio = $("audio");
-  if (silence) {
+  const allAudio = $("audio");
+  if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = true;
     }
-    silence = true;
   }
 }
 
 // 4. Unmute audio for all buttons
+
 $("#soundOn").click(function () {
   unMuteAudio();
 });
 const soundOn = true;
 function unMuteAudio() {
-  let allAudio = $("audio");
+  const allAudio = $("audio");
   if (soundOn) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = false;
     }
-    soundOn = true;
   }
 }
