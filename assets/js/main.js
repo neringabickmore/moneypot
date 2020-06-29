@@ -294,7 +294,7 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].play();
 }
 
-// 2. Play click audio when clicked
+// 2. Play coin click audio when clicked
 //    on all coin buttons.
 $(".coin").click(function () {
   addCoinAudio();
@@ -337,3 +337,13 @@ function unMuteAudio() {
     }
   }
 }
+// Game Dashboard:
+// 1.1 Define initial game level and current task stage
+// 1.2 Define levels and tasks in each level of the game
+// 1.3 Define highlighted star display for each completed task
+
+// Game Console:
+// 2.1 Define price tag display in each level
+// 2.2 Define coin display in each level
+// 2.3 Definte Initial sum  variable
+// 2.4 Write a function for the sum variable
