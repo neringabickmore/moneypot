@@ -280,3 +280,26 @@ gameRules.innerHTML = `<!-- 1.1 How to play: Header-->
                             ><span class="sr-only"> close </span>
                           </button>
                         </div>`;
+
+// Audio functions:
+
+// 1. Play button click audio when clicked
+//    on all elements with .btn class.
+
+$(".btn").click(function () {
+  playButtonAudio();
+});
+function playButtonAudio() {
+  $("#buttonClickAudio")[0].currentTime = 0;
+  $("#buttonClickAudio")[0].play();
+}
+
+// 2. Play click audio when clicked
+//    on all coin buttons.
+$(".coin").click(function () {
+  addCoinAudio();
+});
+function addCoinAudio() {
+  $("#coinClickAudio")[0].currentTime = 0;
+  $("#coinClickAudio")[0].play();
+}
