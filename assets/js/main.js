@@ -303,3 +303,34 @@ function addCoinAudio() {
   $("#coinClickAudio")[0].currentTime = 0;
   $("#coinClickAudio")[0].play();
 }
+
+// 3. Mute audio for all buttons
+
+$("#soundOff").click(function () {
+  muteAudio();
+});
+const silence = true;
+function muteAudio() {
+  let allAudio = $("audio");
+  if (silence) {
+    for (let i = 0; i < allAudio.length; i++) {
+      allAudio[i].muted = true;
+    }
+    silence = true;
+  }
+}
+
+// 4. Unmute audio for all buttons
+$("#soundOn").click(function () {
+  unMuteAudio();
+});
+const soundOn = true;
+function unMuteAudio() {
+  let allAudio = $("audio");
+  if (soundOn) {
+    for (let i = 0; i < allAudio.length; i++) {
+      allAudio[i].muted = false;
+    }
+    soundOn = true;
+  }
+}
