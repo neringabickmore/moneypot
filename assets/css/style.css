@@ -152,3 +152,7 @@ body {
   letter-spacing: 0.05rem;
   font-weight: normal !important;
 }
+.form-legal-info {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
