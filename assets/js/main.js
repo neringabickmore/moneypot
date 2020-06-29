@@ -338,9 +338,37 @@ function unMuteAudio() {
   }
 }
 // Game Dashboard:
-// 1.1 Define initial game level and current task stage
-// 1.2 Define levels and tasks in each level of the game
 // 1.3 Define highlighted star display for each completed task
+//
+
+let currentLevel = 1,
+  currentTask = 1,
+  gameLevels = {
+    "Level 1": {
+      "Task 1": {},
+      "Task 2": {},
+      "Task 3": {},
+      "Task 4": {},
+      "Task 5": {},
+      "Task 6": {},
+    },
+    "Level 2": {
+      "Task 1": {},
+      "Task 2": {},
+      "Task 3": {},
+      "Task 4": {},
+      "Task 5": {},
+      "Task 6": {},
+    },
+    "Level 1": {
+      "Task 1": {},
+      "Task 2": {},
+      "Task 3": {},
+      "Task 4": {},
+      "Task 5": {},
+      "Task 6": {},
+    },
+  };
 
 // Game Console:
 // 2.1 Define price tag display in each level
