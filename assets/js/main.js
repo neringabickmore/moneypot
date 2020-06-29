@@ -343,7 +343,7 @@ function unMuteAudio() {
 
 let currentLevel = 1,
   currentTask = 1,
-  gameLevels = {
+  gameStageDisplay = {
     "Level 1": {
       "Task 1": {},
       "Task 2": {},
@@ -369,6 +369,14 @@ let currentLevel = 1,
       "Task 6": {},
     },
   };
+
+$(document).ready(function () {
+  gameStage();
+});
+function gameStage() {
+  $("#gameLevel")[0].innerHTML = `Level ${currentLevel}`;
+  $("#gameTask")[0].innerHTML = `Task ${currentTask}`;
+}
 
 // Game Console:
 // 2.1 Define price tag display in each level
