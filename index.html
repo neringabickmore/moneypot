@@ -164,7 +164,12 @@
                     >
                   </button>
                   <!-- How to play-->
-                  <button type="button" class="btn">
+                  <button
+                    type="button"
+                    class="btn"
+                    data-toggle="modal"
+                    data-target="#gameRulesModal"
+                  >
                     <a href="#"
                       ><i
                         class="fas fa-question-circle"
@@ -175,6 +180,81 @@
                       ><span class="sr-only">rules of the game</span></a
                     >
                   </button>
+                  <!-- 1. How to play: Modal box -->
+                  <div
+                    class="modal fade"
+                    id="gameRulesModal"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="gameRulesDescription"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content game-rules-box">
+                        <!-- 1.1 How to play: Header-->
+                        <div class="modal-header">
+                          <div
+                            class="modal-title col-12"
+                            id="gameRulesDescription"
+                          >
+                            <h4 class="font-weight-bolder text-center">
+                              How to play?
+                            </h4>
+                          </div>
+                        </div>
+                        <!-- 1.2 How to play: Main body -->
+                        <div class="container pt-3">
+                          <div class="row">
+                            <div class="col text-left">
+                              <ul>
+                                <li>
+                                  Show your child some real coins. Let them
+                                  identify the number on the price tag. Help
+                                  your child to recognise the coins on the
+                                  screen.
+                                </li>
+                                <li>
+                                  To start, click on the chosen coins until
+                                  below sum display is equal to the price tag.
+                                  Please encourage your child to use a variety
+                                  of coins. Every time they play the game they
+                                  can choose alternative coins to come up with
+                                  the sum.
+                                </li>
+                                <li>
+                                  There are 3 levels to complete with 6 tasks in
+                                  each. Every correct task is rewarded with a
+                                  star. The task will restart if the sum is
+                                  greater than the price tag.
+                                </li>
+                                <li>
+                                  Have fun playing the game with your child and
+                                  please remember to leave us your feedback!
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 1.3 How to play: exit button -->
+                        <div class="modal-footer justify-content-center">
+                          <button
+                            type="button"
+                            class="btn"
+                            data-dismiss="modal"
+                          >
+                            <i
+                              class="fas fa-times-circle"
+                              type="button"
+                              aria-hidden="true"
+                              title="close"
+                            ></i
+                            ><span class="sr-only"> close </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- How to play: End-->
                   <!-- Sound off-->
                   <button type="button" class="btn">
                     <a href="#"

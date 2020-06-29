@@ -8,6 +8,7 @@ body {
 
 .btn {
   background-color: #bd3d3a;
+  color: #f3f6fb;
   margin: 0.5rem;
   border-radius: 50%;
   width: 2.5rem;
@@ -63,6 +64,22 @@ body {
 }
 #gameNavBtn .btn:hover {
   transform: scale(1.2);
+  color: #f3f6fb;
+}
+
+/**---- How to play: modal styling----------**/
+.game-rules-box {
+  color: #f3f6fb;
+  background-color: #3f69aa;
+}
+
+.game-rules-box h4 {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: normal !important;
+}
+.game-rules-box li {
+  font-family: "Roboto", sans-serif;
 }
 
 /*------------- Game Card-------------------------*/
