@@ -20,6 +20,41 @@ body {
   color: #f3f6fb;
 }
 
+/*------------- Modal Styling--------------------*/
+.game-rules-box,
+.contact-form-box {
+  color: #f3f6fb;
+  background-color: #3f69aa;
+}
+.game-rules-box li,
+.contact-form-box p,
+.form-group {
+  font-family: "Roboto", sans-serif;
+}
+.game-rules-box h4,
+.contact-form-box h5 {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: normal !important;
+}
+.game-rules-box .modal-header,
+.game-rules-box .modal-footer,
+.thank-you-box .modal-header,
+.thank-you-box .modal-footer {
+  border: none;
+}
+
+/**---- Modal styling: contact form----------**/
+
+.form-legal-info {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+.thank-you-box {
+  background-color: #d5ae41;
+  color: #343a40;
+}
+
 /*------------- Header-----------------------------*/
 
 #logo h1 {
@@ -65,21 +100,6 @@ body {
 #gameNavBtn .btn:hover {
   transform: scale(1.2);
   color: #f3f6fb;
-}
-
-/**---- How to play: modal styling----------**/
-.game-rules-box {
-  color: #f3f6fb;
-  background-color: #3f69aa;
-}
-
-.game-rules-box h4 {
-  font-family: "Noto", sans-serif;
-  letter-spacing: 0.1rem;
-  font-weight: normal !important;
-}
-.game-rules-box li {
-  font-family: "Roboto", sans-serif;
 }
 
 /*------------- Game Card-------------------------*/
@@ -139,20 +159,4 @@ body {
 #social-links .btn:hover {
   background-color: #994044;
   color: #f3f6fb;
-}
-
-/**---- Contact: modal styling----------**/
-
-.contact-form-box {
-  color: #f3f6fb;
-  background-color: #3f69aa;
-}
-.contact-form-box h5 {
-  font-family: "Noto", sans-serif;
-  letter-spacing: 0.05rem;
-  font-weight: normal !important;
-}
-.form-legal-info {
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
 }
