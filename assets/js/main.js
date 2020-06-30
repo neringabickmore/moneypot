@@ -282,7 +282,6 @@ gameRules.innerHTML = `<!-- 1.1 How to play: Header-->
                         </div>`;
 
 // Audio functions:
-
 // 1. Play button click audio when clicked
 //    on all elements with .btn class.
 
@@ -337,12 +336,14 @@ function unMuteAudio() {
     }
   }
 }
-// Game Dashboard:
-// 1.3 Define highlighted star display for each completed task
-//
-const displayCoinsL1 = [1, 2, 5, 10];
-const displayCoinsL2 = [1, 2, 5, 10, 20];
-const displayCoinsL3 = [1, 2, 5, 10, 20, 50];
+
+// GAME CARD:
+// 1.1 Game Console: COIN variables defined for each level of the game
+const coinsL1 = [1, 2, 5, 10];
+const coinsL2 = [1, 2, 5, 10, 20];
+const coinsL3 = [1, 2, 5, 10, 20, 50];
+
+// 1.2 Game console: COIN IMAGE variables defined for each level of the game
 const coinImagesL1 = [
   "assets/images/1p.png",
   "assets/images/2p.png",
@@ -365,50 +366,66 @@ const coinImagesL3 = [
   "assets/images/50p.png",
 ];
 
+// 1.3 Game console: Variables defined for CURRENT: Level, Task, Coins, Coin Images
 let currentLevel = 1,
   currentTask = 1,
-  gameStageDisplay = {
-    "Level 1": {
-      displayCoinsL1,
-      coinImagesL1,
-      "Task 1": {},
-      "Task 2": {},
-      "Task 3": {},
-      "Task 4": {},
-      "Task 5": {},
-      "Task 6": {},
-    },
-    "Level 2": {
-      displayCoinsL2,
-      coinImagesL2,
-      "Task 1": {},
-      "Task 2": {},
-      "Task 3": {},
-      "Task 4": {},
-      "Task 5": {},
-      "Task 6": {},
-    },
-    "Level 3": {
-      displayCoinsL3,
-      coinImagesL3,
-      "Task 1": {},
-      "Task 2": {},
-      "Task 3": {},
-      "Task 4": {},
-      "Task 5": {},
-      "Task 6": {},
-    },
-  };
+  currentCoinImages = [
+    "assets/images/1p.png",
+    "assets/images/2p.png",
+    "assets/images/5p.png",
+    "assets/images/10p.png",
+  ];
+let currentCoins = [1, 2, 5, 10];
+// 1.4  Game console: Variable defined for the GAME STAGE SCREEN DISPLAY
+let gameStageDisplay = {
+  "Level 1": {
+    displayCoins: { coinsL1 },
+    displayCoinImages: { coinImagesL1 },
+    "Task 1": {},
+    "Task 2": {},
+    "Task 3": {},
+    "Task 4": {},
+    "Task 5": {},
+    "Task 6": {},
+  },
+  "Level 2": {
+    displayCoins: { coinsL2 },
+    displayCoinImages: { coinImagesL2 },
+    "Task 1": {},
+    "Task 2": {},
+    "Task 3": {},
+    "Task 4": {},
+    "Task 5": {},
+    "Task 6": {},
+  },
+  "Level 3": {
+    displayCoins: { coinsL3 },
+    displayCoinImages: { coinImagesL3 },
+    "Task 1": {},
+    "Task 2": {},
+    "Task 3": {},
+    "Task 4": {},
+    "Task 5": {},
+    "Task 6": {},
+  },
+};
 
+// Function to call html document:
 $(document).ready(function () {
   gameStage();
 });
+
+//function to define game Stage and call required variables
 function gameStage() {
   $("#gameLevel").html(`Level ${currentLevel}`);
   $("#gameTask").html(`Task ${currentTask}`);
 }
 
+//LEFT TO DO:
 // Game Console:
 // 2.1 Define price tag display in each level
 // 2.3 Definte Initial sum  variable
 // 2.4 Write a function for the sum variable
+// Game Dashboard:
+// 1.3 Define highlighted star display for each completed task
+//
