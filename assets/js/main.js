@@ -419,6 +419,22 @@ $(document).ready(function () {
 function gameStage() {
   $("#gameLevel").html(`Level ${currentLevel}`);
   $("#gameTask").html(`Task ${currentTask}`);
+  $("#coins").html(`${currentCoinImages}`);
+  displayCoins();
+}
+
+function displayCoins(displayCoinImages) {
+  displayCoinImages.forEach((img) => {
+    let btn = document.createElement("BUTTON");
+    btn.innerHTML = `<button class="col-5 col-sm-3 text-center coin">
+                  <img
+                    src="${img}"
+                    alt="1 pence"
+                    class="img h-75 w-75"
+                  />
+                </button>`;
+    $("#coins").appendChild(btn);
+  });
 }
 
 //LEFT TO DO:
