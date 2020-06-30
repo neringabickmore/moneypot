@@ -374,8 +374,8 @@ $(document).ready(function () {
   gameStage();
 });
 function gameStage() {
-  $("#gameLevel")[0].innerHTML = `Level ${currentLevel}`;
-  $("#gameTask")[0].innerHTML = `Task ${currentTask}`;
+  $("#gameLevel").html(`Level ${currentLevel}`);
+  $("#gameTask").html(`Task ${currentTask}`);
 }
 
 // Game Console:
