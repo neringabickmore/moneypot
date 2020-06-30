@@ -214,27 +214,10 @@ contactForm.innerHTML = `<!-- 1.1 Contact form: Header-->
                   </div>
                 </div>`;
 
-// This creates modal displaying game rules
-// when the user clicks on the "question" icon
-// displayed on the game dashboard -> game navigation.
-
-const gameRules = document.createElement("div");
-$("#game-rules-box")[0].appendChild(gameRules);
-gameRules.innerHTML = `<!-- 1.1 How to play: Header-->
-                        <div class="modal-header">
-                          <div
-                            class="modal-title col-12"
-                            id="gameRulesDescription"
-                          >
-                            <h4 class="font-weight-bolder text-center">
-                              How to play?
-                            </h4>
-                          </div>
-                        </div>
-                        <!-- 1.2 How to play: Main body -->
-                        <div class="container pt-3">
-                          <div class="row">
-                            <div class="col text-left">
+// This displays Game Rules Main content to the user
+const gameRulesMain = document.createElement("DIV");
+$("#gameRulesMain")[0].appendChild(gameRulesMain);
+gameRulesMain.innerHTML = `<div class="col text-left">
                               <ul>
                                 <li>
                                   Show your child some real coins. Let them
@@ -261,25 +244,14 @@ gameRules.innerHTML = `<!-- 1.1 How to play: Header-->
                                   please remember to leave us your feedback!
                                 </li>
                               </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- 1.3 How to play: exit button -->
-                        <div class="modal-footer justify-content-center">
-                          <button
-                            type="button"
-                            class="btn"
-                            data-dismiss="modal"
-                          >
-                            <i
-                              class="fas fa-times-circle"
-                              type="button"
-                              aria-hidden="true"
-                              title="close"
-                            ></i
-                            ><span class="sr-only"> close </span>
-                          </button>
-                        </div>`;
+                            </div>`;
+
+// This displays Game Rules Header to the user
+const gameRulesHeader = document.createElement("H4");
+$("#gameRulesHeader")[0].appendChild(gameRulesHeader);
+gameRulesHeader.innerHTML = `<h4 class="font-weight-bolder text-center">
+                              How to play?
+                            </h4>`;
 
 // Audio functions:
 // 1. Play button click audio when clicked
