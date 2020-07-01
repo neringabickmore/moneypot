@@ -22,17 +22,17 @@ body {
 
 /*------------- Modal Styling--------------------*/
 .game-rules-box,
-.contact-form-box {
+#contact-form-box {
   color: #f3f6fb;
   background-color: #3f69aa;
 }
 .game-rules-box li,
-.contact-form-box p,
+#contact-form-box p,
 .form-group {
   font-family: "Roboto", sans-serif;
 }
 .game-rules-box h4,
-.contact-form-box h5 {
+#contact-form-box h5 {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.05rem;
   font-weight: normal !important;
