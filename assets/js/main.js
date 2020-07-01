@@ -309,111 +309,50 @@ function unMuteAudio() {
   }
 }
 
-// GAME CARD:
-// 1.1 Game Console: COIN variables defined for each level of the game
-const coinsL1 = [1, 2, 5, 10];
-const coinsL2 = [1, 2, 5, 10, 20];
-const coinsL3 = [1, 2, 5, 10, 20, 50];
+$(document).ready(function () {
+  fetchData("coins.json");
+});
+// Created variable to get coinButton by calling coinButtonRef
+const coinButtonRef = document.getElementById("coin");
+const fetchData = (url) => {
+  fetch(`assets/data/${url}`)
+    .then((res) => res.json())
+    .then((json) => {
+      displayCoins(json);
+    });
+};
 
-// 1.2 Game console: COIN IMAGE variables defined for each level of the game
-const coinImagesL1 = [
-  "assets/images/1p.png",
-  "assets/images/2p.png",
-  "assets/images/5p.png",
-  "assets/images/10p.png",
-];
-const coinImagesL2 = [
-  "assets/images/1p.png",
-  "assets/images/2p.png",
-  "assets/images/5p.png",
-  "assets/images/10p.png",
-  "assets/images/20p.png",
-];
-const coinImagesL3 = [
-  "assets/images/1p.png",
-  "assets/images/2p.png",
-  "assets/images/5p.png",
-  "assets/images/10p.png",
-  "assets/images/20p.png",
-  "assets/images/50p.png",
-];
-
-// 1.3 Game console: Variables defined for CURRENT: Level, Task, Coins, Coin Images
-let currentLevel = 1,
-  currentTask = 1,
-  currentCoinImages = [
-    "assets/images/1p.png",
-    "assets/images/2p.png",
-    "assets/images/5p.png",
-    "assets/images/10p.png",
-  ];
-let currentCoins = [1, 2, 5, 10];
-// 1.4  Game console: Variable defined for the GAME STAGE SCREEN DISPLAY
-let gameStageDisplay = {
-  "Level 1": {
-    displayCoins: { coinsL1 },
-    displayCoinImages: { coinImagesL1 },
-    "Task 1": {},
-    "Task 2": {},
-    "Task 3": {},
-    "Task 4": {},
-    "Task 5": {},
-    "Task 6": {},
-  },
-  "Level 2": {
-    displayCoins: { coinsL2 },
-    displayCoinImages: { coinImagesL2 },
-    "Task 1": {},
-    "Task 2": {},
-    "Task 3": {},
-    "Task 4": {},
-    "Task 5": {},
-    "Task 6": {},
-  },
-  "Level 3": {
-    displayCoins: { coinsL3 },
-    displayCoinImages: { coinImagesL3 },
-    "Task 1": {},
-    "Task 2": {},
-    "Task 3": {},
-    "Task 4": {},
-    "Task 5": {},
-    "Task 6": {},
-  },
+//Created function to displayCoin images fetched from coins.json
+const displayCoins = (coinArray) => {
+  let coinButton;
+  coinArray.forEach((coinImage) => {
+    coinButton += `
+    <div class="col-5 col-sm-3 text-center">
+      <a class="coin" href="#">
+      <img src="${coinImage.source}" alt="${coinImage.name}" class="img h-75 w-75">
+      </a>
+    </div>`;
+  });
+  coinButtonRef.innerHTML = coinButton;
 };
 
 // Function to call html document:
-$(document).ready(function () {
-  gameStage();
-});
+//$(document).ready(function () {
+// gameStage();
+//});
 
 //function to define game Stage and call required variables
-function gameStage() {
-  $("#gameLevel").html(`Level ${currentLevel}`);
-  $("#gameTask").html(`Task ${currentTask}`);
-  $("#coins").html(`${currentCoinImages}`);
-  displayCoins();
-}
+// function gameStage() {
+//   $("#gameLevel").html(`Level ${currentLevel}`);
+//   $("#gameTask").html(`Task ${currentTask}`);
+//   $("#coins").html(`${currentCoinImages}`);
+//   displayCoins();
+// }
 
-function displayCoins(displayCoinImages) {
-  displayCoinImages.forEach((img) => {
-    let btn = document.createElement("BUTTON");
-    btn.innerHTML = `<button class="col-5 col-sm-3 text-center coin">
-                  <img
-                    src="${img}"
-                    alt="1 pence"
-                    class="img h-75 w-75"
-                  />
-                </button>`;
-    $("#coins").appendChild(btn);
-  });
-}
-
-//LEFT TO DO:
-// Game Console:
-// 2.1 Define price tag display in each level
-// 2.3 Definte Initial sum  variable
-// 2.4 Write a function for the sum variable
-// Game Dashboard:
-// 1.3 Define highlighted star display for each completed task
-//
+// //LEFT TO DO:
+// // Game Console:
+// // 2.1 Define price tag display in each level
+// // 2.3 Definte Initial sum  variable
+// // 2.4 Write a function for the sum variable
+// // Game Dashboard:
+// // 1.3 Define highlighted star display for each completed task
