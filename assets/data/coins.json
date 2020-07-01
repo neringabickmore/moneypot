@@ -1,0 +1,28 @@
+[
+  { "value": 1, "name": "1p", "source": "assets/images/1p.png" },
+  {
+    "value": 2,
+    "name": "2p",
+    "source": "assets/images/2p.png"
+  },
+  {
+    "value": 5,
+    "name": "5p",
+    "source": "assets/images/5p.png"
+  },
+  {
+    "value": 10,
+    "name": "10p",
+    "source": "assets/images/10p.png"
+  },
+  {
+    "value": 20,
+    "name": "20p",
+    "source": "assets/images/20p.png"
+  },
+  {
+    "value": 50,
+    "name": "50p",
+    "source": "assets/images/50p.png"
+  }
+]
