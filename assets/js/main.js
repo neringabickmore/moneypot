@@ -323,8 +323,11 @@ const fetchData = (url) => {
 };
 
 //Created function to displayCoin images fetched from coins.json
+// ***BugFix:
+//    coinButton was display additional "undefined" item because was missing `` to pass in a string.
+//    Adding `` fixed this bug.
 const displayCoins = (coinArray) => {
-  let coinButton;
+  let coinButton = ``;
   coinArray.forEach((coinImage) => {
     coinButton += `
     <div class="col-5 col-sm-3 text-center">
