@@ -1,0 +1,89 @@
+[
+  {
+    "level": 1,
+    "task": [
+      {
+        "priceTag": "4p",
+        "star": 0
+      },
+      {
+        "priceTag": "5p",
+        "star": 1
+      },
+      {
+        "priceTag": "9p",
+        "stars": 2
+      },
+      {
+        "priceTag": "11p",
+        "stars": 3
+      },
+      {
+        "priceTag": "13p",
+        "stars": 4
+      },
+      {
+        "priceTag": "17p",
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "task": [
+      {
+        "priceTag": "15p",
+        "star": 0
+      },
+      {
+        "priceTag": "20p",
+        "star": 1
+      },
+      {
+        "priceTag": "25p",
+        "stars": 2
+      },
+      {
+        "priceTag": "33p",
+        "stars": 3
+      },
+      {
+        "priceTag": "37p",
+        "stars": 4
+      },
+      {
+        "priceTag": "48p",
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "task": [
+      {
+        "priceTag": "34p",
+        "star": 0
+      },
+      {
+        "priceTag": "38p",
+        "star": 1
+      },
+      {
+        "priceTag": "41p",
+        "star": 2
+      },
+      {
+        "priceTag": "56p",
+        "star": 3
+      },
+      {
+        "priceTag": "68p",
+        "star": 4
+      },
+      {
+        "priceTag": "72p",
+        "star": 5
+      }
+    ]
+  }
+]
