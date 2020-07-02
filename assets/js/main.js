@@ -125,19 +125,6 @@ const displayCoins = (coinArray) => {
   coinButtonRef.innerHTML = coinButton;
 };
 
-// Function to call html document:
-//$(document).ready(function () {
-// gameStage();
-//});
-
-//function to define game Stage and call required variables
-// function gameStage() {
-//   $("#gameLevel").html(`Level ${currentLevel}`);
-//   $("#gameTask").html(`Task ${currentTask}`);
-//   $("#coins").html(`${currentCoinImages}`);
-//   displayCoins();
-// }
-
 // //LEFT TO DO:
 // // Game Console:
 // // 2.1 Define price tag display in each level
