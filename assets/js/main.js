@@ -1,5 +1,13 @@
-// This displays Game Rules Main content to the user
+const coinButtonRef = document.getElementById("coin");
 const gameRulesMain = document.createElement("DIV");
+const gameRulesHeader = document.createElement("H4");
+const soundOff = true;
+const soundOn = true;
+
+$(document).ready(function () {
+  fetchData("coins.json");
+});
+
 $("#gameRulesMain")[0].appendChild(gameRulesMain);
 gameRulesMain.innerHTML = `<div class="col text-left">
                               <ul>
@@ -30,17 +38,10 @@ gameRulesMain.innerHTML = `<div class="col text-left">
                               </ul>
                             </div>`;
 
-// This displays Game Rules Header to the user
-
-const gameRulesHeader = document.createElement("H4");
 $("#gameRulesHeader")[0].appendChild(gameRulesHeader);
 gameRulesHeader.innerHTML = `<h4 class="font-weight-bolder text-center">
                               How to play?
                             </h4>`;
-
-/* Audio functions:
-    1. Play button click audio when clicked
-    on all elements with .btn class. */
 
 $(".btn").click(function () {
   playButtonAudio();
@@ -50,8 +51,6 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].play();
 }
 
-/* 2. Play coin click audio when clicked
-    on all coin buttons. */
 $(".coin").click(function () {
   addCoinAudio();
 });
@@ -70,7 +69,7 @@ function addCoinAudio() {
 $("#soundOff").click(function () {
   muteAudio();
 });
-const soundOff = true;
+
 function muteAudio() {
   const allAudio = $("audio");
   if (soundOff) {
@@ -80,12 +79,10 @@ function muteAudio() {
   }
 }
 
-// 4. Unmute audio for all buttons
-
 $("#soundOn").click(function () {
   unMuteAudio();
 });
-const soundOn = true;
+
 function unMuteAudio() {
   const allAudio = $("audio");
   if (soundOn) {
@@ -95,11 +92,6 @@ function unMuteAudio() {
   }
 }
 
-$(document).ready(function () {
-  fetchData("coins.json");
-});
-// Created variable to get coinButton by calling coinButtonRef
-const coinButtonRef = document.getElementById("coin");
 const fetchData = (url) => {
   fetch(`assets/data/${url}`)
     .then((res) => res.json())
@@ -108,10 +100,6 @@ const fetchData = (url) => {
     });
 };
 
-//Created function to displayCoin images fetched from coins.json
-// ***BugFix:
-//    coinButton was display additional "undefined" item because was missing `` to pass in a string.
-//    Adding `` fixed this bug.
 const displayCoins = (coinArray) => {
   let coinButton = ``;
   coinArray.forEach((coinImage) => {
@@ -124,11 +112,3 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
-
-// //LEFT TO DO:
-// // Game Console:
-// // 2.1 Define price tag display in each level
-// // 2.3 Definte Initial sum  variable
-// // 2.4 Write a function for the sum variable
-// // Game Dashboard:
-// // 1.3 Define highlighted star display for each completed task
