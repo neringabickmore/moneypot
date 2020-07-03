@@ -1,3 +1,5 @@
+// Variables
+
 const coinButtonRef = document.getElementById("coin");
 const gameRulesMain = document.createElement("DIV");
 const gameRulesHeader = document.createElement("H4");
@@ -8,6 +10,9 @@ $(document).ready(function () {
   fetchData("coins.json");
 });
 
+/**
+ * This function creates a div in HTML and gives it some content.
+ */
 $("#gameRulesMain")[0].appendChild(gameRulesMain);
 gameRulesMain.innerHTML = `<div class="col text-left">
                               <ul>
@@ -43,6 +48,11 @@ gameRulesHeader.innerHTML = `<h4 class="font-weight-bolder text-center">
                               How to play?
                             </h4>`;
 
+/**
+ * Function enabling an audio at a click of a button in HTML.
+ * If you remove it, elements with .btn class won't have a sound.
+ */
+
 $(".btn").click(function () {
   playButtonAudio();
 });
@@ -51,6 +61,10 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].play();
 }
 
+/**
+ * Function enabling an audio at a click of a coin image in HTML.
+ * If you remove it, elements with .coin class won't have a sound.
+ */
 $(".coin").click(function () {
   addCoinAudio();
 });
@@ -59,17 +73,14 @@ function addCoinAudio() {
   $("#coinClickAudio")[0].play();
 }
 
-/* 3. Mute audio for all buttons
-          ***BugFix (Mute & Unmute audio):
-          1. allAudio given constant variable to remove
-            error appearance in dev tools.
-          2. unnecesary lines off code removed to eliminate
-             error appearance in dev tools. */
-
 $("#soundOff").click(function () {
   muteAudio();
 });
-
+/**
+ *  This function mutes all buttons
+ * when the "sound-off" button
+ * located in index.html is clicked on
+ */
 function muteAudio() {
   const allAudio = $("audio");
   if (soundOff) {
@@ -82,7 +93,11 @@ function muteAudio() {
 $("#soundOn").click(function () {
   unMuteAudio();
 });
-
+/**
+ *  This function unmutes all buttons
+ * when the "sound-on" button
+ * located in index.html is clicked on
+ */
 function unMuteAudio() {
   const allAudio = $("audio");
   if (soundOn) {
@@ -91,7 +106,11 @@ function unMuteAudio() {
     }
   }
 }
-
+/**
+ * Fetch data from:
+ * @param {"assets/data/coins.js"} url allows
+ * coins to show on the index.html.
+ */
 const fetchData = (url) => {
   fetch(`assets/data/${url}`)
     .then((res) => res.json())
@@ -100,6 +119,11 @@ const fetchData = (url) => {
     });
 };
 
+/**
+ * Create a button div and button for each coin
+ * @param {coins} coinArray
+ * is array of coins
+ */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
   coinArray.forEach((coinImage) => {
