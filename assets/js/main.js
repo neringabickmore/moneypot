@@ -1,10 +1,50 @@
 // Variables
-
 const coinButtonRef = document.getElementById("coin");
 const gameRulesMain = document.createElement("div");
 const gameRulesHeader = document.createElement("h4");
 const soundOff = true;
 const soundOn = true;
+const priceTagRef = document.getElementById("priceTag");
+const displaySumRef = document.getElementById("sum");
+
+let gameLevels = [`Level &{currentLevel}`][`Task &{currentTask}`];
+let sum = 0;
+let currentLevel = 1;
+let currentTask = 1;
+let stars = 0;
+
+// TODO write the following functions:
+/**
+ * function setLevels() {
+ *
+ * function nextLevel() {
+ * }
+ * function nextStage(){
+ * }
+ * function addCoinValue() {
+ * }
+ * function rewardStars() {
+ * }
+ * function resetStars() {
+ * }
+ * function resetSum(){
+ * }
+ * funcion displaySum() {
+ * }
+ * function resetGame() {
+ * }
+ * function enfOfGame(){
+ * }
+ * function addCoinAudio(){
+ * }
+ * function correctSumAudio(){
+ * }
+ * function badSumAudio() {
+ * }
+ * function winnerAudio(){
+ * }
+ *
+ */
 
 $(document).ready(function () {
   fetchData("coins.json");
@@ -120,13 +160,10 @@ const fetchData = (url) => {
 };
 
 /**
-<<<<<<< HEAD
  * Create a button div and button for each coinS
  * @param {"coins"} coinArray
-=======
  * Create a button div and button for each coin
  * @param {coins} coinArray
->>>>>>> f191e9a7f496cc1deb2ff807e2bb20234ae8a678
  * is array of coins
  */
 const displayCoins = (coinArray) => {
