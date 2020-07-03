@@ -191,7 +191,7 @@ The website was developed on *Visual Studio Code* and using *Git* pushed to *Git
 - Scrolled down to the **GitHub Pages** area.
 - Selected **Master Branch** from the **Source** dropdown menu.
 - Clicked to **confirm** my **selection**.
-- [Money Pot]() is now **live** on **GitHub Pages**.
+- [Money Pot](https://neringabickmore.github.io/MoneyPot/) is now **live** on **GitHub Pages**.
 
 ### Running Money Pot Locally ###
 
