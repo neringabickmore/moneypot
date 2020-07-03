@@ -27,6 +27,15 @@ The following validation services and linter were used to check the validity of 
 
 #### Solved bugs
 
+1. **Dev tools were throwing an error in console**
+
+- Fix: all audio buttons were given const and removed let.
+
+```javascript
+const soundOff = true;
+const soundOn = true
+```
+
 #### Unsolved bugs
 
 ## Further testing
