@@ -120,8 +120,13 @@ const fetchData = (url) => {
 };
 
 /**
+<<<<<<< HEAD
  * Create a button div and button for each coinS
  * @param {"coins"} coinArray
+=======
+ * Create a button div and button for each coin
+ * @param {coins} coinArray
+>>>>>>> f191e9a7f496cc1deb2ff807e2bb20234ae8a678
  * is array of coins
  */
 const displayCoins = (coinArray) => {
