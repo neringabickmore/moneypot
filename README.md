@@ -171,6 +171,8 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 
 ## Testing ##
 
+Testing information can be found in a separate [testing.md](testing.md) file.
+
 ---
 
 ## Bugs ##
