@@ -82,69 +82,9 @@ let stars = 0;
  * }
  *
  */
-
 $(document).ready(function () {
   fetchData("game.json");
 });
-
-/**
- * Function enabling an audio at a click of a button in HTML.
- * If you remove it, elements with .btn class won't have a sound.
- */
-
-$(".btn").click(function () {
-  playButtonAudio();
-});
-function playButtonAudio() {
-  $("#buttonClickAudio")[0].currentTime = 0;
-  $("#buttonClickAudio")[0].play();
-}
-
-/**
- * Function enabling an audio at a click of a coin image in HTML.
- * If you remove it, elements with .coin class won't have a sound.
- */
-$(".coin").click(function () {
-  addCoinAudio();
-});
-function addCoinAudio() {
-  $("#coinClickAudio")[0].currentTime = 0;
-  $("#coinClickAudio")[0].play();
-}
-
-$("#soundOff").click(function () {
-  muteAudio();
-});
-/**
- *  This function mutes all buttons
- * when the "sound-off" button
- * located in index.html is clicked on
- */
-function muteAudio() {
-  const allAudio = $("audio");
-  if (soundOff) {
-    for (let i = 0; i < allAudio.length; i++) {
-      allAudio[i].muted = true;
-    }
-  }
-}
-
-$("#soundOn").click(function () {
-  unMuteAudio();
-});
-/**
- *  This function unmutes all buttons
- * when the "sound-on" button
- * located in index.html is clicked on
- */
-function unMuteAudio() {
-  const allAudio = $("audio");
-  if (soundOn) {
-    for (let i = 0; i < allAudio.length; i++) {
-      allAudio[i].muted = false;
-    }
-  }
-}
 /**
  * Fetch data from:
  * @param {"assets/data/coins.js"} url allows
@@ -177,3 +117,64 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
+
+// ALL AUDIO FUNCTIONS
+/**
+ * Function enabling an audio
+ * at a click of a button in HTML.
+ * If you remove it, elements with
+ * .btn class won't have a sound.
+ */
+
+$(".btn").click(function () {
+  playButtonAudio();
+});
+function playButtonAudio() {
+  $("#buttonClickAudio")[0].currentTime = 0;
+  $("#buttonClickAudio")[0].play();
+}
+/**
+ * Function enabling an audio
+ * at a click of a coin image in HTML.
+ * If you remove it, elements with
+ * .coin class won't have a sound.
+ */
+$(".coin").click(function () {
+  addCoinAudio();
+});
+function addCoinAudio() {
+  $("#coinClickAudio")[0].currentTime = 0;
+  $("#coinClickAudio")[0].play();
+}
+$("#soundOff").click(function () {
+  muteAudio();
+});
+/**
+ *  This function mutes all buttons
+ * when the "sound-off" button
+ * located in index.html is clicked on
+ */
+function muteAudio() {
+  const allAudio = $("audio");
+  if (soundOff) {
+    for (let i = 0; i < allAudio.length; i++) {
+      allAudio[i].muted = true;
+    }
+  }
+}
+$("#soundOn").click(function () {
+  unMuteAudio();
+});
+/**
+ *  This function unmutes all buttons
+ * when the "sound-on" button
+ * located in index.html is clicked on
+ */
+function unMuteAudio() {
+  const allAudio = $("audio");
+  if (soundOn) {
+    for (let i = 0; i < allAudio.length; i++) {
+      allAudio[i].muted = false;
+    }
+  }
+}
