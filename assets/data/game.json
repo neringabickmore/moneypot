@@ -1,170 +1,177 @@
-[
-  {
-    "level": 1,
-    "task": [
-      {
-        "priceTag": "4p",
-        "star": 0
-      },
-      {
-        "priceTag": "5p",
-        "star": 1
-      },
-      {
-        "priceTag": "9p",
-        "stars": 2
-      },
-      {
-        "priceTag": "11p",
-        "stars": 3
-      },
-      {
-        "priceTag": "13p",
-        "stars": 4
-      },
-      {
-        "priceTag": "17p",
-        "stars": 5
-      }
-    ],
-    "coins": [
-      {
-        "value": 1,
-        "name": "1p",
-        "source": "assets\\images\\1p.png"
-      },
-      {
-        "value": 2,
-        "name": "2p",
-        "source": "assets\\images\\2p.png"
-      },
-      {
-        "value": 5,
-        "name": "5p",
-        "source": "assets\\images\\5p.png"
-      },
-      {
-        "value": 10,
-        "name": "10p",
-        "source": "assets\\images\\10p.png"
-      }
-    ]
-  },
-  {
-    "level": 2,
-    "task": [
-      {
-        "priceTag": "15p",
-        "star": 0
-      },
-      {
-        "priceTag": "20p",
-        "star": 1
-      },
-      {
-        "priceTag": "25p",
-        "stars": 2
-      },
-      {
-        "priceTag": "33p",
-        "stars": 3
-      },
-      {
-        "priceTag": "37p",
-        "stars": 4
-      },
-      {
-        "priceTag": "48p",
-        "stars": 5
-      }
-    ],
-    "coins": [
-      {
-        "value": 1,
-        "name": "1p",
-        "source": "assets\\images\\1p.png"
-      },
-      {
-        "value": 2,
-        "name": "2p",
-        "source": "assets\\images\\2p.png"
-      },
-      {
-        "value": 5,
-        "name": "5p",
-        "source": "assets\\images\\5p.png"
-      },
-      {
-        "value": 10,
-        "name": "10p",
-        "source": "assets\\images\\10p.png"
-      },
-      {
-        "value": 20,
-        "name": "20p",
-        "source": "assets\\images\\20p.png"
-      }
-    ]
-  },
-  {
-    "level": 3,
-    "task": [
-      {
-        "priceTag": "34p",
-        "star": 0
-      },
-      {
-        "priceTag": "38p",
-        "star": 1
-      },
-      {
-        "priceTag": "41p",
-        "star": 2
-      },
-      {
-        "priceTag": "56p",
-        "star": 3
-      },
-      {
-        "priceTag": "68p",
-        "star": 4
-      },
-      {
-        "priceTag": "72p",
-        "star": 5
-      }
-    ],
-    "coins": [
-      {
-        "value": 1,
-        "name": "1p",
-        "source": "assets\\images\\1p.png"
-      },
-      {
-        "value": 2,
-        "name": "2p",
-        "source": "assets\\images\\2p.png"
-      },
-      {
-        "value": 5,
-        "name": "5p",
-        "source": "assets\\images\\5p.png"
-      },
-      {
-        "value": 10,
-        "name": "10p",
-        "source": "assets\\images\\10p.png"
-      },
-      {
-        "value": 20,
-        "name": "20p",
-        "source": "assets\\images\\20p.png"
-      },
-      {
-        "value": 50,
-        "name": "50p",
-        "source": "assets\\images\\50p.png"
-      }
-    ]
-  }
-]
+{
+  "gameLevel": [
+    {
+      "levelOne": [
+        {
+          "task": [
+            {
+              "priceTag": "4p",
+              "star": 0
+            },
+            {
+              "priceTag": "5p",
+              "star": 1
+            },
+            {
+              "priceTag": "9p",
+              "stars": 2
+            },
+            {
+              "priceTag": "11p",
+              "stars": 3
+            },
+            {
+              "priceTag": "13p",
+              "stars": 4
+            },
+            {
+              "priceTag": "17p",
+              "stars": 5
+            }
+          ],
+          "coins": [
+            {
+              "value": 1,
+              "name": "1p",
+              "source": "assets\\images\\1p.png"
+            },
+            {
+              "value": 2,
+              "name": "2p",
+              "source": "assets\\images\\2p.png"
+            },
+            {
+              "value": 5,
+              "name": "5p",
+              "source": "assets\\images\\5p.png"
+            },
+            {
+              "value": 10,
+              "name": "10p",
+              "source": "assets\\images\\10p.png"
+            }
+          ]
+        }
+      ],
+      "levelTwo": [
+        {
+          "task": [
+            {
+              "priceTag": "15p",
+              "star": 0
+            },
+            {
+              "priceTag": "20p",
+              "star": 1
+            },
+            {
+              "priceTag": "25p",
+              "stars": 2
+            },
+            {
+              "priceTag": "33p",
+              "stars": 3
+            },
+            {
+              "priceTag": "37p",
+              "stars": 4
+            },
+            {
+              "priceTag": "48p",
+              "stars": 5
+            }
+          ],
+          "coins": [
+            {
+              "value": 1,
+              "name": "1p",
+              "source": "assets\\images\\1p.png"
+            },
+            {
+              "value": 2,
+              "name": "2p",
+              "source": "assets\\images\\2p.png"
+            },
+            {
+              "value": 5,
+              "name": "5p",
+              "source": "assets\\images\\5p.png"
+            },
+            {
+              "value": 10,
+              "name": "10p",
+              "source": "assets\\images\\10p.png"
+            },
+            {
+              "value": 20,
+              "name": "20p",
+              "source": "assets\\images\\20p.png"
+            }
+          ]
+        }
+      ],
+      "levelThree": [
+        {
+          "task": [
+            {
+              "priceTag": "34p",
+              "star": 0
+            },
+            {
+              "priceTag": "38p",
+              "star": 1
+            },
+            {
+              "priceTag": "41p",
+              "star": 2
+            },
+            {
+              "priceTag": "56p",
+              "star": 3
+            },
+            {
+              "priceTag": "68p",
+              "star": 4
+            },
+            {
+              "priceTag": "72p",
+              "star": 5
+            }
+          ],
+          "coins": [
+            {
+              "value": 1,
+              "name": "1p",
+              "source": "assets\\images\\1p.png"
+            },
+            {
+              "value": 2,
+              "name": "2p",
+              "source": "assets\\images\\2p.png"
+            },
+            {
+              "value": 5,
+              "name": "5p",
+              "source": "assets\\images\\5p.png"
+            },
+            {
+              "value": 10,
+              "name": "10p",
+              "source": "assets\\images\\10p.png"
+            },
+            {
+              "value": 20,
+              "name": "20p",
+              "source": "assets\\images\\20p.png"
+            },
+            {
+              "value": 50,
+              "name": "50p",
+              "source": "assets\\images\\50p.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
