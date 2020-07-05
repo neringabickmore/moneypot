@@ -84,7 +84,7 @@ let stars = 0;
  */
 
 $(document).ready(function () {
-  fetchData("coins.json");
+  fetchData("game.json");
 });
 
 /**
