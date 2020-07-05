@@ -88,44 +88,6 @@ $(document).ready(function () {
 });
 
 /**
- * This function creates a div in HTML and gives it some content.
- */
-$("#gameRulesMain")[0].appendChild(gameRulesMain);
-gameRulesMain.innerHTML = `<div class="col text-left">
-                              <ul>
-                                <li>
-                                  Show your child some real coins. Let them
-                                  identify the number on the price tag. Help
-                                  your child to recognise the coins on the
-                                  screen.
-                                </li>
-                                <li>
-                                  To start, click on the chosen coins until
-                                  below sum display is equal to the price tag.
-                                  Please encourage your child to use a variety
-                                  of coins. Every time they play the game they
-                                  can choose alternative coins to come up with
-                                  the sum.
-                                </li>
-                                <li>
-                                  There are 3 levels to complete with 6 tasks in
-                                  each. Every correct task is rewarded with a
-                                  star. The task will restart if the sum is
-                                  greater than the price tag.
-                                </li>
-                                <li>
-                                  Have fun playing the game with your child and
-                                  please remember to leave us your feedback!
-                                </li>
-                              </ul>
-                            </div>`;
-
-$("#gameRulesHeader")[0].appendChild(gameRulesHeader);
-gameRulesHeader.innerHTML = `<h4 class="font-weight-bolder text-center">
-                              How to play?
-                            </h4>`;
-
-/**
  * Function enabling an audio at a click of a button in HTML.
  * If you remove it, elements with .btn class won't have a sound.
  */
