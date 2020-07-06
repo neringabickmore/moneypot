@@ -6,10 +6,11 @@ const soundOff = true;
 const soundOn = true;
 const priceTagRef = document.getElementById("priceTag");
 const displaySumRef = document.getElementById("sum");
+let currentLevel = 1;
+let currentTask = 1;
 
-let gameLevel = [`Level ${level}`];
-let taskLevel = [`Task ${task}`];
 let sum = 0;
+
 let stars = 0;
 
 // TODO GAME FLOW:
@@ -87,14 +88,14 @@ $(document).ready(function () {
 });
 /**
  * Fetch data from:
- * @param {"assets/data/coins.js"} url allows
+ * @param {"assets/data/game.js"} url allows
  * coins to show on the index.html.
  */
 const fetchData = (url) => {
   fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then((json) => {
-      displayCoins(json);
+      setLevel(json);
     });
 };
 
@@ -105,13 +106,17 @@ const fetchData = (url) => {
  * @param {coins} coinArray
  * is array of coins
  */
+function setLevel(level, task) {
+  displayCoins(fetchData[level][task].coins);
+  setPriceTag(fetchData[level][task].priceTag);
+}
 const displayCoins = (coinArray) => {
   let coinButton = ``;
-  coinArray.forEach((coinImage) => {
+  coinArray.forEach((coin) => {
     coinButton += `
     <div class="col-5 col-sm-3 text-center">
       <a class="coin" href="#">
-      <img src="${coinImage.source}" alt="${coinImage.name}" class="img h-75 w-75">
+      <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </a>
     </div>`;
   });
