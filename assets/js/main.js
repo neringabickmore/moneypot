@@ -1,16 +1,3 @@
-// Variables
-const coinButtonRef = document.getElementById("coin");
-const soundOff = true;
-const soundOn = true;
-const priceTagRef = document.getElementById("priceTag");
-const displaySumRef = document.getElementById("sum");
-let currentLevel = 1;
-let currentTask = 1;
-
-let sum = 0;
-
-let stars = 0;
-
 // TODO GAME FLOW:
 /**
  * (A) START OF THE GAME DISPLAY:
@@ -80,7 +67,19 @@ let stars = 0;
  * function winnerAudio(){
  * }
  *
- */
+ */ // Variables
+const coinButtonRef = document.getElementById("coin");
+const soundOff = true;
+const soundOn = true;
+const priceTagRef = document.getElementById("priceTag");
+const displaySumRef = document.getElementById("sum");
+let currentLevel = 1;
+let currentTask = 1;
+
+let sum = 0;
+
+let stars = 0;
+
 $(document).ready(function () {
   fetchData("game.json");
 });
