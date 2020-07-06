@@ -1,7 +1,5 @@
 // Variables
 const coinButtonRef = document.getElementById("coin");
-const gameRulesMain = document.createElement("div");
-const gameRulesHeader = document.createElement("h4");
 const soundOff = true;
 const soundOn = true;
 const priceTagRef = document.getElementById("priceTag");
