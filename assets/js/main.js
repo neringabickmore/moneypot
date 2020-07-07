@@ -84,6 +84,7 @@ let result;
 
 $(document).ready(function () {
   result = fetchData("game.json");
+  setLevel();
   console.log(result);
 });
 
@@ -107,10 +108,10 @@ const setLevel = (setGame) => {
   let gameTask = ``;
   setGame.forEach((currentLevel, currentTask) => {
     gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
-    gameTask = +`<h1>Level ${currentTask.task}</h1>`;
+    gameTask = +`<h1>Task ${currentTask.task}</h1>`;
   });
   levelRef.innerHTML = gameLevel;
-  taskRef.innerHTML - gameTask;
+  taskRef.innerHTML = gameTask;
   displayCoins(result[gameLevel[0].coins[2]]);
   setPriceTag(result[gameLevel[0].task[0]]);
   displaySum();
@@ -128,7 +129,6 @@ const displayCoins = (coinArray) => {
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </a>
     </div>`;
-    console.log();
   });
   coinButtonRef.innerHTML = coinButton;
 };
