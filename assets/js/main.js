@@ -103,24 +103,23 @@ const fetchData = (url) => {
 const setLevel = (setGame) => {
   let gameLevel = ``;
   let gameTask = ``;
-  setGame.forEach((level, task) => {
-    gameLevel = +`<h1>Level ${level}</h1>`;
-    gameTask = +`<h1>Level ${task}</h1>`;
+  setGame.forEach((currentLevel, currentTask) => {
+    gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
+    gameTask = +`<h1>Level ${currentTask.task}</h1>`;
   });
+
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML - gameTask;
-
   displayCoins(result["gameLevel"]["coins"]["source"]);
   setPriceTag(results["gameLevel"]["task"]["priceTag"]);
   displaySum();
 };
 /**
  * Create a button div and button for each coin
- * @param {[coins.source]} coinArray
+ * @param {[source]} coinArray
  */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
-
   coinArray.forEach((coin) => {
     coinButton += `
     <div class="col-5 col-sm-3 text-center">
