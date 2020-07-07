@@ -103,10 +103,11 @@ const fetchData = (url) => {
  * @param {coins} coinArray
  * is array of coins
  */
-function setLevel(level, task) {
+const setLevel = (level, task) => {
   displayCoins(fetchData[level][task].coins);
   setPriceTag(fetchData[level][task].priceTag);
-}
+  displaySum();
+};
 const displayCoins = (coinArray) => {
   let coinButton = ``;
   coinArray.forEach((coin) => {
