@@ -75,9 +75,7 @@ const priceTagRef = document.getElementById("priceTag");
 const displaySumRef = document.getElementById("sum");
 let currentLevel = 1;
 let currentTask = 1;
-
 let sum = 0;
-
 let stars = 0;
 
 $(document).ready(function () {
@@ -95,7 +93,16 @@ const fetchData = (url) => {
       setLevel(json);
     });
 };
-
+/**
+ * This function sets the Game card
+ * @param {"level"} level
+ * @param {"task"} task
+ */
+const setLevel = (level, task) => {
+  displayCoins(fetchData[level][task].coins);
+  setPriceTag(fetchData[level][task].priceTag);
+  displaySum();
+};
 /**
  * Create a button div and button for each coinS
  * @param {"coins"} coinArray
@@ -103,11 +110,6 @@ const fetchData = (url) => {
  * @param {coins} coinArray
  * is array of coins
  */
-const setLevel = (level, task) => {
-  displayCoins(fetchData[level][task].coins);
-  setPriceTag(fetchData[level][task].priceTag);
-  displaySum();
-};
 const displayCoins = (coinArray) => {
   let coinButton = ``;
   coinArray.forEach((coin) => {
