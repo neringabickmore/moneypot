@@ -1,27 +1,30 @@
 // TODO GAME FLOW:
 /**
  * (A) START OF THE GAME DISPLAY:
- * 1. display Level 1(L1) =(gameLevel)
- * 2. display Task 1 (T1) =(gameTask)
+ * 1. display Level 1(L1) =(currentLevel)
+ * 2. display Task 1 (T1) =(currentTask)
  * 3. display coins assigned to L1 =(displayCoins)
- * 4. display 6 white stars, as assigned in JSON at L1 T1 =(awardStar)
+ * 4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
  * 5. display price tag assigned to L1 T1 =(priceTag)
  * 6. sum = 0 before the user takes any action =(sum)
  *
  * (B) GAME ON:
- * 1. User clicks on (coinButton), it's value is added to the (sum): (addEventListener("click", function(addCoinValue()){}; coinValue(json) = (gameLevel[0].LevelOne[1].coins[0])
+ * 1. User clicks on (coinButton), it's value is added to the =(displaySum): (addEventListener("click", function(addCoinValue()){}; coinValue(json) = (gameLevel[0].LevelOne[1].coins[0])
+ *
  * (there is no limit how many times the user can click the same button)
- * 2. When the (sum) === (priceTag)  then a Congrats Modal comes up with a button nextTask
+ *
+ * 2. When the (displaySum) === (priceTag)  then a Congrats Modal comes up with a button nextTask
  * 3. nextTask should then have on a display:
  *    (1) "Level 1", "Task 2"
- *    (2) Display 1 yellow and 5 white stars =(awardStar)
- *    (3) new priceTag
+ *    (maybe tie this in somehow with = (setLevel) ?)
+ *    (2) Display 1 yellow and 5 white stars =(rewardStar)
+ *    (3) new priceTag (price tag assigned to L1 T2)
  *    (4) sum reset to 0 =(sumReset)
  *    (5) coin display doesnt change
  *
  * (B.1)
  * This action should be repeat until it reaches L1 T6 (increasing no of yellow stars at T2, T3 etc)
- * When at L1 T6 sum === priceTag then a Congrats Modal comes up with a button nextLevel (not nextTask)
+ * When at L1 T6 sum === priceTag then a Congrats Modal comes up with a button =(nextLevel) (not nextTask)
  * (addEventListener(when sum === PriceTag displayCongratsModal, else display badSum if sum > priceTag))
  *
  * (B.2)
@@ -38,21 +41,17 @@
  */
 
 // TODO  WRITE:
-/* function setLevels() {
+/* function nextLevel() {
  * }
- * function nextLevel() {
- * }
- * function nextStage(){
+ * function nextTask() {
  * }
  * function addCoinValue() {
  * }
- * function rewardStars() {
+ * function rewardStar() {
  * }
  * function resetStars() {
  * }
  * function resetSum(){
- * }
- * funcion displaySum() {
  * }
  * function resetGame() {
  * }
@@ -67,12 +66,14 @@
  * function winnerAudio(){
  * }
  *
- */ // Variables
+ */
+
+//Variables
 const coinButtonRef = document.getElementById("coin");
-const soundOff = true;
-const soundOn = true;
 const priceTagRef = document.getElementById("priceTag");
 const displaySumRef = document.getElementById("sum");
+const soundOff = true;
+const soundOn = true;
 let currentLevel = 1;
 let currentTask = 1;
 let sum = 0;
@@ -104,11 +105,8 @@ const setLevel = (level, task) => {
   displaySum();
 };
 /**
- * Create a button div and button for each coinS
- * @param {"coins"} coinArray
  * Create a button div and button for each coin
- * @param {coins} coinArray
- * is array of coins
+ * @param {[coin]} coinArray
  */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
@@ -122,14 +120,21 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
+/**
+ *Creates a header displaying priceTag
+ * @param {"string"} priceTagText
+ */
 const setPriceTag = (priceTagText) => {
   let priceTagDisplay = ``;
   priceTagText.forEach((priceTag) => {
-    priceTagDisplay += `<h1>${priceTag}p</h1>`;
+    priceTagDisplay += `<h1>${priceTag}</h1>`;
   });
   priceTagRef.innerHTML = priceTagDisplay;
 };
-
+/**
+ * Creates text displaying Sum
+ * @param {number} sumText
+ */
 const displaySum = (sumText) => {
   let showSum = ``;
   sumText.forEach((sum) => {
