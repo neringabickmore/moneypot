@@ -122,6 +122,13 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
+const setPriceTag = (priceTagText) => {
+  let priceTagDisplay = ``;
+  priceTagText.forEach((priceTag) => {
+    priceTagText += `<h1>${priceTag}p</h1>`;
+  });
+  priceTagRef.innerHTML = priceTagDisplay;
+};
 
 const displaySum = (sumText) => {
   let showSum = ``;
