@@ -120,6 +120,13 @@ const displayCoins = (coinArray) => {
   coinButtonRef.innerHTML = coinButton;
 };
 
+const displaySum = (sumText) => {
+  let showSum = ``;
+  sumText.forEach((sum) => {
+    showSum = +`<p>${sum}p</p>`;
+  });
+  displaySumRef.innerHTML = showSum;
+};
 // ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
