@@ -72,6 +72,8 @@
 const coinButtonRef = document.getElementById("coin");
 const priceTagRef = document.getElementById("priceTag");
 const displaySumRef = document.getElementById("sum");
+const taskRef = document.getElementById("gameTask");
+const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
 let currentLevel = 1;
@@ -96,17 +98,26 @@ const fetchData = (url) => {
 };
 /**
  * This function sets the Game card
- * @param {"level"} level
- * @param {"task"} task
+ * @param {"string"} level
+ * @param {"string"} task
  */
-const setLevel = (level, task) => {
+const setLevel = (setGame) => {
+  let gameLevel = ``;
+  let gameTask = ``;
+  setGame.forEach((level, task) => {
+    gameLevel = +`<h1>Level ${level}</h1>`;
+    gameTask = +`<h1>Level ${task}</h1>`;
+  });
+  levelRef.innerHTML = gameLevel;
+  taskRef.innerHTML - gameTask;
+
   displayCoins(fetchData[level][task].coins);
   setPriceTag(fetchData[level][task].priceTag);
   displaySum();
 };
 /**
  * Create a button div and button for each coin
- * @param {[coin]} coinArray
+ * @param {[coins.source]} coinArray
  */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
