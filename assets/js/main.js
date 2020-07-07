@@ -80,21 +80,20 @@ let currentLevel = 1;
 let currentTask = 1;
 let sum = 0;
 let stars = 0;
+let result;
 
 $(document).ready(function () {
   fetchData("game.json");
+  result = fetchData("game.json");
 });
+
 /**
  * Fetch data from:
  * @param {"assets/data/game.js"} url allows
  * coins to show on the index.html.
  */
 const fetchData = (url) => {
-  fetch(`assets/data/${url}`)
-    .then((res) => res.json())
-    .then((json) => {
-      setLevel(json);
-    });
+  fetch(`assets/data/${url}`).then((res) => res.json());
 };
 /**
  * This function sets the Game card
@@ -111,8 +110,8 @@ const setLevel = (setGame) => {
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML - gameTask;
 
-  displayCoins(fetchData[level][task].coins);
-  setPriceTag(fetchData[level][task].priceTag);
+  displayCoins(result["gameLevel"]["coins"]["source"]);
+  setPriceTag(results["gameLevel"]["task"]["priceTag"]);
   displaySum();
 };
 /**
@@ -121,6 +120,7 @@ const setLevel = (setGame) => {
  */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
+
   coinArray.forEach((coin) => {
     coinButton += `
     <div class="col-5 col-sm-3 text-center">
