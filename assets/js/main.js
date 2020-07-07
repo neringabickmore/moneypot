@@ -83,8 +83,8 @@ let stars = 0;
 let result;
 
 $(document).ready(function () {
-  fetchData("game.json");
   result = fetchData("game.json");
+  console.log(result);
 });
 
 /**
@@ -93,7 +93,9 @@ $(document).ready(function () {
  * coins to show on the index.html.
  */
 const fetchData = (url) => {
-  fetch(`assets/data/${url}`).then((res) => res.json());
+  return fetch(`assets/data/${url}`)
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
 };
 /**
  * This function sets the Game card
@@ -107,11 +109,10 @@ const setLevel = (setGame) => {
     gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
     gameTask = +`<h1>Level ${currentTask.task}</h1>`;
   });
-
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML - gameTask;
-  displayCoins(result["gameLevel"]["coins"]["source"]);
-  setPriceTag(results["gameLevel"]["task"]["priceTag"]);
+  displayCoins(result(gameLevel[0].coins[2]));
+  setPriceTag(result["gameLevel"]["task"]["priceTag"]);
   displaySum();
 };
 /**
