@@ -111,8 +111,8 @@ const setLevel = (setGame) => {
   });
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML - gameTask;
-  displayCoins(result(gameLevel[0].coins[2]));
-  setPriceTag(result["gameLevel"]["task"]["priceTag"]);
+  displayCoins(result[gameLevel[0].coins[2]]);
+  setPriceTag(result[gameLevel[0].task[0]]);
   displaySum();
 };
 /**
@@ -128,6 +128,7 @@ const displayCoins = (coinArray) => {
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </a>
     </div>`;
+    console.log();
   });
   coinButtonRef.innerHTML = coinButton;
 };
@@ -149,7 +150,7 @@ const setPriceTag = (priceTagText) => {
 const displaySum = (sumText) => {
   let showSum = ``;
   sumText.forEach((sum) => {
-    showSum = +`<p>${sum}p</p>`;
+    showSum += `<h1>${sum}p</h1>`;
   });
   displaySumRef.innerHTML = showSum;
 };
