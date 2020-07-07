@@ -125,7 +125,7 @@ const displayCoins = (coinArray) => {
 const setPriceTag = (priceTagText) => {
   let priceTagDisplay = ``;
   priceTagText.forEach((priceTag) => {
-    priceTagText += `<h1>${priceTag}p</h1>`;
+    priceTagDisplay += `<h1>${priceTag}p</h1>`;
   });
   priceTagRef.innerHTML = priceTagDisplay;
 };
