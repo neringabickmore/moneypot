@@ -16,6 +16,7 @@ body {
   line-height: 0.5;
   padding: 0.5rem;
 }
+
 .btn a {
   color: #f3f6fb;
 }
@@ -26,17 +27,20 @@ body {
   color: #f3f6fb;
   background-color: #3f69aa;
 }
+
 .game-rules-box li,
 #contact-form-box p,
 .form-group {
   font-family: "Roboto", sans-serif;
 }
+
 .game-rules-box h4,
 #contact-form-box h5 {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.05rem;
   font-weight: normal !important;
 }
+
 .game-rules-box .modal-header,
 .game-rules-box .modal-footer,
 .thank-you-box .modal-header,
@@ -50,6 +54,7 @@ body {
   margin-bottom: 1rem;
   margin-left: 0.5rem;
 }
+
 .thank-you-box {
   background-color: #d5ae41;
   color: #343a40;
@@ -80,6 +85,7 @@ body {
   letter-spacing: 2px;
   font-size: 3rem;
 }
+
 .no-star {
   color: #f3f6fb;
   letter-spacing: 1rem;
@@ -97,6 +103,7 @@ body {
 #gameNavBtn .btn {
   transition: all 0.3s;
 }
+
 #gameNavBtn .btn:hover {
   transform: scale(1.2);
   color: #f3f6fb;
@@ -110,7 +117,8 @@ body {
   min-height: 100vh;
   border: solid 0.25rem #d5ae41;
 }
-#priceTag h1,
+
+#price h1,
 #sum h1 {
   color: #f3f6fb;
   font-family: "Love Ya Like A Sister", sans-serif;
@@ -119,13 +127,14 @@ body {
   margin-bottom: 0;
 }
 
-#priceTag {
+#price {
   background-color: #3f69aa;
   border: solid 0.25rem #d5ae41;
   padding: 2rem;
   margin: 0.5rem;
   border-radius: 50rem;
 }
+
 #sum {
   background-color: #d5ae41;
   border: solid 0.25rem #3f69aa;
@@ -134,19 +143,20 @@ body {
   border-radius: 50%;
 }
 
-#coins {
+#coin {
   padding: 0.5rem 0;
   margin: 1rem 0;
 }
 
-#coins button {
+#coin div {
   background-color: #bd3d3a;
   border: none;
   transition: all 0.3s;
   margin-bottom: 0.75rem;
   padding: 0.15rem;
 }
-#coins button:hover {
+
+#coin div:hover {
   transform: scale(1.2);
 }
 
@@ -156,6 +166,7 @@ body {
   background-color: #d5ae41;
   padding: 1rem;
 }
+
 #social-links .btn:hover {
   background-color: #994044;
   color: #f3f6fb;

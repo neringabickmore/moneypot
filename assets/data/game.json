@@ -1,29 +1,35 @@
 {
-  "gameLevel": [
+  "game": [
     {
-      "level": 1,
-      "task": [
+      "level": "Level 1",
+      "tps": [
         {
+          "thisTask": "Task 1",
           "priceTag": "4p",
           "star": 0
         },
         {
+          "thisTask": "Task 2",
           "priceTag": "5p",
           "star": 1
         },
         {
+          "thisTask": "Task 3",
           "priceTag": "9p",
           "stars": 2
         },
         {
+          "thisTask": "Task 4",
           "priceTag": "11p",
           "stars": 3
         },
         {
+          "thisTask": "Task 5",
           "priceTag": "13p",
           "stars": 4
         },
         {
+          "thisTask": "Task 6",
           "priceTag": "17p",
           "stars": 5
         }
@@ -52,29 +58,35 @@
       ]
     },
     {
-      "level": 2,
-      "task": [
+      "level": "Level 2",
+      "tps": [
         {
+          "gameTask": "Task 1",
           "priceTag": "15p",
           "star": 0
         },
         {
+          "task": "Task 2",
           "priceTag": "20p",
           "star": 1
         },
         {
+          "thisTask": "Task 3",
           "priceTag": "25p",
           "stars": 2
         },
         {
+          "thisTask": "Task 4",
           "priceTag": "33p",
           "stars": 3
         },
         {
+          "thisTask": "Task 5",
           "priceTag": "37p",
           "stars": 4
         },
         {
+          "thisTask": "Task 6",
           "priceTag": "48p",
           "stars": 5
         }
@@ -108,29 +120,35 @@
       ]
     },
     {
-      "level": 3,
-      "task": [
+      "level": "Level 3",
+      "tps": [
         {
+          "thisTask": "Task 1",
           "priceTag": "34p",
           "star": 0
         },
         {
+          "thisTask": "Task 2",
           "priceTag": "38p",
           "star": 1
         },
         {
+          "thisTask": "Task 3",
           "priceTag": "41p",
           "star": 2
         },
         {
+          "thisTask": "Task 4",
           "priceTag": "56p",
           "star": 3
         },
         {
+          "thisTask": "Task 5",
           "priceTag": "68p",
           "star": 4
         },
         {
+          "thisTask": "Task 6",
           "priceTag": "72p",
           "star": 5
         }

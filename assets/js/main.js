@@ -1,6 +1,6 @@
 // TODO GAME FLOW:
 /**
- * (A) START OF THE GAME DISPLAY:
+ * (A) START OF THE GAME DISPLAY: 
  * 1. display Level 1(L1) =(currentLevel)
  * 2. display Task 1 (T1) =(currentTask)
  * 3. display coins assigned to L1 =(displayCoins)
@@ -69,69 +69,101 @@
  */
 
 //Variables
+
 const coinButtonRef = document.getElementById("coin");
-const priceTagRef = document.getElementById("priceTag");
+const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
-let currentLevel = 1;
-let currentTask = 1;
 let sum = 0;
 let stars = 0;
-let result;
-$(document).ready(function () {
-  result = fetchData("game.json");
-  console.log();
-  return setLevel(result);
-});
 
+$(document).ready(function () {
+  fetchData("game.json")
+})
+
+// return setLevel(result);
 /**
  * Fetch data from:
- * @param {"assets/data/game.js"} url allows
- * coins to show on the index.html.
+ * @param {string} url allows
+ * game data to show on the index.html form JSON file
  */
 const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      console.log(gameData)
+      console.log(gameData.game)
+      setGame(gameData.game)
     })
     .catch((err) => console.log(err))
 };
 
 /**
  * This function sets the Game card
- * @param {"string"} level
- * @param {"string"} task
+ * @param {[]} game
  */
-const setLevel = (setGame) => {
-  console.log();
-  let gameLevel = ``;
-  let gameTask = ``;
-  setGame.forEach((currentLevel, currentTask) => {
-    gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
-    gameTask = +`<h1>Task ${currentTask.task}</h1>`;
+const setGame = (game) => {
+  let showLevel = ``
+  game.forEach((levelText) => {
+    showLevel += `<h1>${levelText.level}</h1>`;
   });
-
-
-  levelRef.innerHTML = gameLevel;
-  taskRef.innerHTML = gameTask;
-  // displayCoins(result[gameLevel[0].coins[2]]);
-  // setPriceTag(result[gameLevel[0].task[0]]);
-  // displaySum();
+  levelRef.innerHTML = showLevel;
+  displayTask(game[0].tps);
+  displayPrice(game[0].tps);
+  displayCoins(game[0].coins);
 };
+
 /**
- * Create a button div and button for each coin
- * @param {[source]} coinArray
+ * Function displaying game tasks
+ * @param {[]} taskArray 
+ */
+const displayTask = (taskText) => {
+  console.log(taskText)
+  let showTask = ``
+  taskText.forEach((task) => {
+    showTask +=
+      `<h1>${task.thisTask}</h1>`
+  });
+  taskRef.innerHTML = showTask;
+}
+
+/**
+ * Function displaying price tag
+ * @param {[]} priceText
+ */
+const displayPrice = (priceText) => {
+  let showPrice = ``;
+  priceText.forEach((price) => {
+    showPrice += `<h1>${price.priceTag}</h1>`;
+  });
+  priceRef.innerHTML = showPrice;
+};
+
+/**
+ * 
+ * @param {string} value 
+ */
+function addValue(value) {
+  sum += value;
+  document.getElementById("sum").innerHTML = `${sum}p`;
+  coinButtonRef.addEventListener("click", function () {
+    displaySumRef = `${sum}p`
+  })
+};
+
+
+/**
+ * Function displaying coin buttons
+ * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
-
+  console.log(coinArray)
   let coinButton = ``;
   coinArray.forEach((coin) => {
     coinButton += `
-    <div class="col-5 col-sm-3 text-center">
+    <div class="col-5 col-sm-3 text-center button">
       <a class="coin" href="#">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </a>
@@ -139,28 +171,7 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
-/**
- *Creates a header displaying priceTag
- * @param {"string"} priceTagText
- */
-const setPriceTag = (priceTagText) => {
-  let priceTagDisplay = ``;
-  priceTagText.forEach((priceTag) => {
-    priceTagDisplay += `<h1>${priceTag}</h1>`;
-  });
-  priceTagRef.innerHTML = priceTagDisplay;
-};
-/**
- * Creates text displaying Sum
- * @param {number} sumText
- */
-const displaySum = (sumText) => {
-  let showSum = ``;
-  sumText.forEach((sum) => {
-    showSum += `<h1>${sum}p</h1>`;
-  });
-  displaySumRef.innerHTML = showSum;
-};
+
 // ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
