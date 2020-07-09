@@ -71,7 +71,7 @@
 //Variables
 const coinButtonRef = document.getElementById("coin");
 const priceTagRef = document.getElementById("priceTag");
-const displaySumRef = document.getElementById("sum");
+//const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
@@ -112,53 +112,45 @@ const setLevel = (game) => {
     gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
     gameTask = +`<h1>Task ${currentTask.task}</h1>`;
   });
-
-
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML = gameTask;
-  // displayCoins(result[gameLevel[0].coins[2]]);
-  // setPriceTag(result[gameLevel[0].task[0]]);
-  // displaySum();
+  displayCoins(game[0].coins);
+  setPriceTag(game[0].task);
+
 };
 /**
  * Create a button div and button for each coin
- * @param {[source]} coinArray
+ * @param {[]} coinArray
  */
-// const displayCoins = (coinArray) => {
-
-//   let coinButton = ``;
-//   coinArray.forEach((coin) => {
-//     coinButton += `
-//     <div class="col-5 col-sm-3 text-center">
-//       <a class="coin" href="#">
-//       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
-//       </a>
-//     </div>`;
-//   });
-//   coinButtonRef.innerHTML = coinButton;
-// };
+const displayCoins = (coinArray) => {
+  let coinButton = ``;
+  coinArray.forEach((coin) => {
+    coinButton += `
+    <div class="col-5 col-sm-3 text-center">
+      <a class="coin" href="#">
+      <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
+      </a>
+    </div>`;
+  });
+  coinButtonRef.innerHTML = coinButton;
+};
 /**
  *Creates a header displaying priceTag
- * @param {"string"} priceTagText
+ * @param {[]} priceTagText
  */
-// const setPriceTag = (priceTagText) => {
-//   let priceTagDisplay = ``;
-//   priceTagText.forEach((priceTag) => {
-//     priceTagDisplay += `<h1>${priceTag}</h1>`;
-//   });
-//   priceTagRef.innerHTML = priceTagDisplay;
-// };
+const setPriceTag = (priceTagText) => {
+  console.log(priceTagText)
+  let priceTagDisplay = ``;
+  priceTagText.forEach((price) => {
+    priceTagDisplay += `<h1>${price.priceTag}</h1>`;
+  });
+  priceTagRef.innerHTML = priceTagDisplay;
+};
 /**
  * Creates text displaying Sum
  * @param {number} sumText
  */
-// const displaySum = (sumText) => {
-//   let showSum = ``;
-//   sumText.forEach((sum) => {
-//     showSum += `<h1>${sum}p</h1>`;
-//   });
-//   displaySumRef.innerHTML = showSum;
-// };
+
 // ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
