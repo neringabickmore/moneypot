@@ -70,7 +70,7 @@
 
 //Variables
 const coinButtonRef = document.getElementById("coin");
-const priceTagRef = document.getElementById("priceTag");
+const priceRef = document.getElementById("price");
 //const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
@@ -94,7 +94,7 @@ const fetchData = (url) => {
     .then((res) => res.json())
     .then(gameData => {
       console.log(gameData.game)
-      setLevel(gameData.game)
+      setGame(gameData.game)
     })
     .catch((err) => console.log(err))
 };
@@ -103,30 +103,42 @@ const fetchData = (url) => {
  * This function sets the Game card
  * @param {[]} game
  */
-const setLevel = (game) => {
-  let gameLevel = ``
-  game.forEach((currentGame) => {
-    gameLevel += `<h1>${currentGame.level}</h1>`;
+const setGame = (game) => {
+  let showLevel = ``
+  game.forEach((levelText) => {
+    showLevel += `<h1>${levelText.level}</h1>`;
   });
-  levelRef.innerHTML = gameLevel;
+  levelRef.innerHTML = showLevel;
+  displayTask(game[0].tps);
+  displayPrice(game[0].tps);
   displayCoins(game[0].coins);
-  setPriceTag(game[0].tps);
-  displayTask(game[0].tps)
 };
 
 /**
  * Function displaying game tasks
  * @param {[]} taskArray 
  */
-const displayTask = (taskArray) => {
-  console.log(taskArray)
-  let gameTask = ``
-  taskArray.forEach((task) => {
-    gameTask +=
-      `<h1>${task.task}</h1>`
+const displayTask = (taskText) => {
+  console.log(taskText)
+  let showTask = ``
+  taskText.forEach((task) => {
+    showTask +=
+      `<h1>${task.thisTask}</h1>`
   });
-  taskRef.innerHTML = gameTask;
+  taskRef.innerHTML = showTask;
 }
+
+/**
+ * Function displaying price tag
+ * @param {[]} priceText
+ */
+const displayPrice = (priceText) => {
+  let showPrice = ``;
+  priceText.forEach((price) => {
+    showPrice += `<h1>${price.priceTag}</h1>`;
+  });
+  priceRef.innerHTML = showPrice;
+};
 
 /**
  * Function displaying coin buttons
@@ -144,19 +156,6 @@ const displayCoins = (coinArray) => {
     </div>`;
   });
   coinButtonRef.innerHTML = coinButton;
-};
-
-/**
- *  Function displaying price tag
- * @param {[]} priceTagText
- */
-const setPriceTag = (priceTagText) => {
-  console.log(priceTagText)
-  let priceTagDisplay = ``;
-  priceTagText.forEach((price) => {
-    priceTagDisplay += `<h1>${price.priceTag}</h1>`;
-  });
-  priceTagRef.innerHTML = priceTagDisplay;
 };
 
 // ALL AUDIO FUNCTIONS
