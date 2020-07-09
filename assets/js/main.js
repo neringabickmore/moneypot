@@ -81,11 +81,10 @@ let currentTask = 1;
 let sum = 0;
 let stars = 0;
 let result;
-
 $(document).ready(function () {
   result = fetchData("game.json");
-  setLevel();
-  console.log(result);
+  console.log();
+  return setLevel(result);
 });
 
 /**
@@ -96,31 +95,39 @@ $(document).ready(function () {
 const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
-    .catch((err) => console.log(err));
+    .then(gameData => {
+      console.log(gameData)
+    })
+    .catch((err) => console.log(err))
 };
+
 /**
  * This function sets the Game card
  * @param {"string"} level
  * @param {"string"} task
  */
 const setLevel = (setGame) => {
+  console.log();
   let gameLevel = ``;
   let gameTask = ``;
   setGame.forEach((currentLevel, currentTask) => {
     gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
     gameTask = +`<h1>Task ${currentTask.task}</h1>`;
   });
+
+
   levelRef.innerHTML = gameLevel;
   taskRef.innerHTML = gameTask;
-  displayCoins(result[gameLevel[0].coins[2]]);
-  setPriceTag(result[gameLevel[0].task[0]]);
-  displaySum();
+  // displayCoins(result[gameLevel[0].coins[2]]);
+  // setPriceTag(result[gameLevel[0].task[0]]);
+  // displaySum();
 };
 /**
  * Create a button div and button for each coin
  * @param {[source]} coinArray
  */
 const displayCoins = (coinArray) => {
+
   let coinButton = ``;
   coinArray.forEach((coin) => {
     coinButton += `
@@ -165,6 +172,7 @@ const displaySum = (sumText) => {
 $(".btn").click(function () {
   playButtonAudio();
 });
+
 function playButtonAudio() {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
@@ -178,6 +186,7 @@ function playButtonAudio() {
 $(".coin").click(function () {
   addCoinAudio();
 });
+
 function addCoinAudio() {
   $("#coinClickAudio")[0].currentTime = 0;
   $("#coinClickAudio")[0].play();
