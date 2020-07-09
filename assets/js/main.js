@@ -80,40 +80,35 @@ let currentLevel = 1;
 let currentTask = 1;
 let sum = 0;
 let stars = 0;
-let result;
+
 
 $(document).ready(function () {
-  result = fetchData("game.json");
-  console.log(result);
+  fetchData("game.json")
 })
 
 // return setLevel(result);
-
-
 /**
  * Fetch data from:
- * @param {"assets/data/game.js"} url allows
+ * @param {string} url allows
  * game data to show on the index.html form JSON file
  */
 const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      console.log(gameData)
+      setLevel(gameData.gameLevel)
     })
     .catch((err) => console.log(err))
 };
 
 /**
  * This function sets the Game card
- * @param {"string"} level
- * @param {"string"} task
+ * @param {[]} game
  */
-const setLevel = (setGame) => {
-  console.log();
+const setLevel = (game) => {
   let gameLevel = ``;
   let gameTask = ``;
-  setGame.forEach((currentLevel, currentTask) => {
+  game.forEach((currentLevel, currentTask) => {
     gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
     gameTask = +`<h1>Task ${currentTask.task}</h1>`;
   });
