@@ -69,9 +69,10 @@
  */
 
 //Variables
+
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
-//const displaySumRef = document.getElementById("sum");
+const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
@@ -141,6 +142,19 @@ const displayPrice = (priceText) => {
 };
 
 /**
+ * 
+ * @param {string} value 
+ */
+function addValue(value) {
+  sum += value;
+  document.getElementById("sum").innerHTML = `${sum}p`;
+  coinButtonRef.addEventListener("click", function () {
+    displaySumRef = `${sum}p`
+  })
+};
+
+
+/**
  * Function displaying coin buttons
  * @param {[]} coinArray
  */
@@ -149,7 +163,7 @@ const displayCoins = (coinArray) => {
   let coinButton = ``;
   coinArray.forEach((coin) => {
     coinButton += `
-    <div class="col-5 col-sm-3 text-center">
+    <div class="col-5 col-sm-3 text-center button">
       <a class="coin" href="#">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </a>
