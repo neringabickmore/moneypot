@@ -81,16 +81,19 @@ let currentTask = 1;
 let sum = 0;
 let stars = 0;
 let result;
+
 $(document).ready(function () {
   result = fetchData("game.json");
-  console.log();
-  return setLevel(result);
-});
+  console.log(result);
+})
+
+// return setLevel(result);
+
 
 /**
  * Fetch data from:
  * @param {"assets/data/game.js"} url allows
- * coins to show on the index.html.
+ * game data to show on the index.html form JSON file
  */
 const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
@@ -126,41 +129,41 @@ const setLevel = (setGame) => {
  * Create a button div and button for each coin
  * @param {[source]} coinArray
  */
-const displayCoins = (coinArray) => {
+// const displayCoins = (coinArray) => {
 
-  let coinButton = ``;
-  coinArray.forEach((coin) => {
-    coinButton += `
-    <div class="col-5 col-sm-3 text-center">
-      <a class="coin" href="#">
-      <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
-      </a>
-    </div>`;
-  });
-  coinButtonRef.innerHTML = coinButton;
-};
+//   let coinButton = ``;
+//   coinArray.forEach((coin) => {
+//     coinButton += `
+//     <div class="col-5 col-sm-3 text-center">
+//       <a class="coin" href="#">
+//       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
+//       </a>
+//     </div>`;
+//   });
+//   coinButtonRef.innerHTML = coinButton;
+// };
 /**
  *Creates a header displaying priceTag
  * @param {"string"} priceTagText
  */
-const setPriceTag = (priceTagText) => {
-  let priceTagDisplay = ``;
-  priceTagText.forEach((priceTag) => {
-    priceTagDisplay += `<h1>${priceTag}</h1>`;
-  });
-  priceTagRef.innerHTML = priceTagDisplay;
-};
+// const setPriceTag = (priceTagText) => {
+//   let priceTagDisplay = ``;
+//   priceTagText.forEach((priceTag) => {
+//     priceTagDisplay += `<h1>${priceTag}</h1>`;
+//   });
+//   priceTagRef.innerHTML = priceTagDisplay;
+// };
 /**
  * Creates text displaying Sum
  * @param {number} sumText
  */
-const displaySum = (sumText) => {
-  let showSum = ``;
-  sumText.forEach((sum) => {
-    showSum += `<h1>${sum}p</h1>`;
-  });
-  displaySumRef.innerHTML = showSum;
-};
+// const displaySum = (sumText) => {
+//   let showSum = ``;
+//   sumText.forEach((sum) => {
+//     showSum += `<h1>${sum}p</h1>`;
+//   });
+//   displaySumRef.innerHTML = showSum;
+// };
 // ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
