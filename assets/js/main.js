@@ -1,6 +1,6 @@
 // TODO GAME FLOW:
 /**
- * (A) START OF THE GAME DISPLAY:
+ * (A) START OF THE GAME DISPLAY: 
  * 1. display Level 1(L1) =(currentLevel)
  * 2. display Task 1 (T1) =(currentTask)
  * 3. display coins assigned to L1 =(displayCoins)
@@ -76,11 +76,8 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
-let currentLevel = 1;
-let currentTask = 1;
 let sum = 0;
 let stars = 0;
-
 
 $(document).ready(function () {
   fetchData("game.json")
@@ -96,7 +93,8 @@ const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      setLevel(gameData.gameLevel)
+      console.log(gameData.game)
+      setLevel(gameData.game)
     })
     .catch((err) => console.log(err))
 };
@@ -106,23 +104,36 @@ const fetchData = (url) => {
  * @param {[]} game
  */
 const setLevel = (game) => {
-  let gameLevel = ``;
-  let gameTask = ``;
-  game.forEach((currentLevel, currentTask) => {
-    gameLevel = +`<h1>Level ${currentLevel.level}</h1>`;
-    gameTask = +`<h1>Task ${currentTask.task}</h1>`;
+  let gameLevel = ``
+  game.forEach((currentGame) => {
+    gameLevel += `<h1>${currentGame.level}</h1>`;
   });
   levelRef.innerHTML = gameLevel;
-  taskRef.innerHTML = gameTask;
   displayCoins(game[0].coins);
-  setPriceTag(game[0].task);
-
+  setPriceTag(game[0].tps);
+  displayTask(game[0].tps)
 };
+
 /**
- * Create a button div and button for each coin
+ * Function displaying game tasks
+ * @param {[]} taskArray 
+ */
+const displayTask = (taskArray) => {
+  console.log(taskArray)
+  let gameTask = ``
+  taskArray.forEach((task) => {
+    gameTask +=
+      `<h1>${task.task}</h1>`
+  });
+  taskRef.innerHTML = gameTask;
+}
+
+/**
+ * Function displaying coin buttons
  * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
+  console.log(coinArray)
   let coinButton = ``;
   coinArray.forEach((coin) => {
     coinButton += `
@@ -134,8 +145,9 @@ const displayCoins = (coinArray) => {
   });
   coinButtonRef.innerHTML = coinButton;
 };
+
 /**
- *Creates a header displaying priceTag
+ *  Function displaying price tag
  * @param {[]} priceTagText
  */
 const setPriceTag = (priceTagText) => {
@@ -146,10 +158,6 @@ const setPriceTag = (priceTagText) => {
   });
   priceTagRef.innerHTML = priceTagDisplay;
 };
-/**
- * Creates text displaying Sum
- * @param {number} sumText
- */
 
 // ALL AUDIO FUNCTIONS
 /**
