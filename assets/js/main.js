@@ -113,6 +113,7 @@ const setGame = (game) => {
   displayTask(game[0].tps);
   displayPrice(game[0].tps);
   displayCoins(game[0].coins);
+  addValue(game[0].coins)
 };
 
 /**
@@ -145,8 +146,7 @@ const displayPrice = (priceText) => {
  * 
  * @param {string} coinValue 
  */
-function addValue(coinValue) {
-  sum += coinValue;
+function addValue() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
@@ -164,11 +164,14 @@ const displayCoins = (coinArray) => {
       id="${coin.name}">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
-    </div>`;
-    $(document).on("click", $("#" + coin.name), addValue(coin.value));
+    </div>`
+  });
+  $("#" + coin.name).on("click", function () {
+    addValue(coin.value)
   });
   coinButtonRef.innerHTML = coinButton;
 };
+
 
 // ALL AUDIO FUNCTIONS
 /**
