@@ -1,587 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="keywords"
-      content="Money game, coin game, game, reception kids, kids game"
-    />
-    <meta name="author" content="Neringa Bickmore" />
-    <meta name="Description" content="Maths game for children age 4-6" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Favicons-->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicons/favicon-16x16.png"
-    />
-    <title>Game: Money Pot</title>
-  </head>
-  <body>
-    <!-- Logo-->
-    <header class="container h-auto" id="logo">
-      <div class="row pt-1">
-        <div class="col-sm text-center text-md-left mx-3 text-capitalize">
-          <h1>money pot</h1>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="keywords" content="Money game, coin game, game, reception kids, kids game" />
+  <meta name="author" content="Neringa Bickmore" />
+  <meta name="Description" content="Maths game for children age 4-6" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+  <title>Game: Money Pot</title>
+</head>
+
+<body>
+  <!-- Logo-->
+  <header class="container h-auto" id="logo">
+    <div class="row pt-1">
+      <div class="col-sm text-center text-md-left mx-3 text-capitalize">
+        <h1>money pot</h1>
       </div>
-    </header>
-    <!-- Game console-->
-    <section class="container" id="game-console">
-      <div class="row">
-        <!-- Dashboard-->
-        <div class="col-12 col-lg-5" id="game-dashboard">
-          <div class="row align-items-center">
-            <!-- Game stages-->
-            <div class="col-12">
-              <div class="row align-items-center">
-                <!-- Game Level-->
-                <div
-                  class="col-6 col-lg-12 text-right text-lg-center"
-                  id="gameLevel"
-                >
-                  <h1>
-                    <!--Game Level is displayed here from JS-->
-                  </h1>
-                </div>
-                <!-- Game Task-->
-                <div
-                  class="col-6 col-lg-12 text-left text-lg-center"
-                  id="gameTask"
-                >
-                  <h1>
-                    <!--Game Task is displayed here from JS-->
-                  </h1>
-                </div>
+    </div>
+  </header>
+  <!-- Game console-->
+  <section class="container" id="game-console">
+    <div class="row">
+      <!-- Dashboard-->
+      <div class="col-12 col-lg-5" id="game-dashboard">
+        <div class="row align-items-center">
+          <!-- Game stages-->
+          <div class="col-12">
+            <div class="row align-items-center">
+              <!-- Game Level-->
+              <div class="col-6 col-lg-12 text-right text-lg-center" id="gameLevel">
+                <h1>
+                  <!--Game Level is displayed here from JS-->
+                </h1>
+              </div>
+              <!-- Game Task-->
+              <div class="col-6 col-lg-12 text-left text-lg-center" id="gameTask">
+                <h1>
+                  <!--Game Task is displayed here from JS-->
+                </h1>
               </div>
             </div>
-            <!-- Star reward display-->
-            <div class="col-12">
-              <div class="row justify-content-center">
-                <div class="col-sm d-flex justify-content-center">
-                  <div class="no-star" id="star1">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
-                  <div class="no-star" id="star2">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
-                  <div class="no-star" id="star3">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
-                  <div class="no-star" id="star4">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
-                  <div class="no-star" id="star5">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
-                  <div class="no-star" id="star6">
-                    <i
-                      class="fas fa-star"
-                      aria-hidden="true"
-                      title="no star"
-                    ></i
-                    ><span class="sr-only">star</span>
-                  </div>
+          </div>
+          <!-- Star reward display-->
+          <div class="col-12">
+            <div class="row justify-content-center">
+              <div class="col-sm d-flex justify-content-center">
+                <div class="no-star" id="star1">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
                 </div>
-              </div>
-            </div>
-            <!-- Game navigation-->
-            <div class="col-12">
-              <div class="row">
-                <div
-                  class="col-sm d-flex justify-content-center"
-                  id="gameNavBtn"
-                >
-                  <!-- Restart the game-->
-                  <button type="button" class="btn">
-                    <a href="#"
-                      ><i
-                        class="fas fa-sync"
-                        aria-hidden="true"
-                        title="reset the game"
-                        id="resetGame"
-                      ></i
-                      ><span class="sr-only">restart the game</span></a
-                    >
-                  </button>
-                  <!-- Reset the sum-->
-                  <button type="button" class="btn">
-                    <a href="#"
-                      ><i
-                        class="fas fa-redo"
-                        aria-hidden="true"
-                        title="reset the sum"
-                        id="resetSum"
-                      ></i
-                      ><span class="sr-only">reset the sum</span></a
-                    >
-                  </button>
-                  <!-- How to play-->
-                  <button
-                    type="button"
-                    class="btn"
-                    data-toggle="modal"
-                    data-target="#gameRulesModal"
-                  >
-                    <a
-                      ><i
-                        class="fas fa-question-circle"
-                        aria-hidden="true"
-                        title="rules of the game"
-                        id="gameRules"
-                      ></i
-                      ><span class="sr-only">rules of the game</span></a
-                    >
-                  </button>
-                  <!-- 1. How to play: Modal box -->
-                  <div
-                    class="modal fade"
-                    id="gameRulesModal"
-                    tabindex="-1"
-                    role="dialog"
-                    aria-labelledby="gameRulesDescription"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-xl">
-                      <div
-                        class="modal-content game-rules-box"
-                        id="game-rules-box"
-                      >
-                        <!-- 1.1 How to play: Header-->
-                        <div class="modal-header">
-                          <div class="modal-title col-12" id="gameRulesHeader">
-                            <h4 class="font-weight-bolder text-center">
-                              How to play?
-                            </h4>
-                          </div>
-                        </div>
-                        <!-- 1.2 How to play: Main body -->
-                        <div class="container pt-3">
-                          <div class="row" id="gameRulesMain">
-                            <div class="col text-left">
-                              <ul>
-                                <li>
-                                  Show your child some real coins. Let them
-                                  identify the number on the price tag. Help
-                                  your child to recognise the coins on the
-                                  screen.
-                                </li>
-                                <li>
-                                  To start, click on the chosen coins until
-                                  below sum display is equal to the price tag.
-                                  Please encourage your child to use a variety
-                                  of coins. Every time they play the game they
-                                  can choose alternative coins to come up with
-                                  the sum.
-                                </li>
-                                <li>
-                                  There are 3 levels to complete with 6 tasks in
-                                  each. Every correct task is rewarded with a
-                                  star. The task will restart if the sum is
-                                  greater than the price tag.
-                                </li>
-                                <li>
-                                  Have fun playing the game with your child and
-                                  please remember to leave us your feedback!
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- 1.3 How to play: exit button -->
-                        <div class="modal-footer justify-content-center">
-                          <button
-                            type="button"
-                            class="btn"
-                            data-dismiss="modal"
-                          >
-                            <i
-                              class="fas fa-times-circle"
-                              type="button"
-                              aria-hidden="true"
-                              title="close"
-                            ></i
-                            ><span class="sr-only"> close </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- How to play: End-->
-                  <!-- Sound off-->
-                  <button type="button" class="btn">
-                    <a
-                      ><i
-                        class="fas fa-volume-mute"
-                        aria-hidden="true"
-                        title="sound off"
-                        id="soundOff"
-                      ></i
-                      ><span class="sr-only">sound off</span></a
-                    >
-                  </button>
-                  <!-- Sound on-->
-                  <button type="button" class="btn">
-                    <a href="#"
-                      ><i
-                        class="fas fa-volume-up"
-                        aria-hidden="true"
-                        title="sound on"
-                        id="soundOn"
-                      ></i
-                      ><span class="sr-only">sound on</span></a
-                    >
-                  </button>
+                <div class="no-star" id="star2">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                </div>
+                <div class="no-star" id="star3">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                </div>
+                <div class="no-star" id="star4">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                </div>
+                <div class="no-star" id="star5">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                </div>
+                <div class="no-star" id="star6">
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Game card-->
-        <div class="col-12 col-lg-7" id="game-card">
-          <div class="row align-items-center justify-content-center">
-            <!-- 1.0 Price tag-->
-            <div class="col-sm-5 text-center" id="price">
-              <h1>
-                <!-- 1.1 Price tag display is imported in here from JS file-->
-              </h1>
-            </div>
-            <!-- 2.0 Coin display-->
-            <div class="col-12">
-              <div
-                class="row justify-content-center align-items-center"
-                id="coin"
-              >
-                <!-- 2.1 Coins display is imported here from JS file-->
-              </div>
-            </div>
-            <!-- Money pot image and sum display-->
-            <div class="col-12">
-              <div class="row align-items-center justify-content-center">
-                <div class="col-6 text-center" id="moneyPot">
-                  <img
-                    src="assets/images/money-pot.png"
-                    alt="money pot"
-                    class="img h-100 w-100"
-                  />
+          <!-- Game navigation-->
+          <div class="col-12">
+            <div class="row">
+              <div class="col-sm d-flex justify-content-center" id="gameNavBtn">
+                <!-- Restart the game-->
+                <button type="button" class="btn">
+                  <a href="#"><i class="fas fa-sync" aria-hidden="true" title="reset the game" id="resetGame"></i><span
+                      class="sr-only">restart the game</span></a>
+                </button>
+                <!-- Reset the sum-->
+                <button type="button" class="btn">
+                  <a href="#"><i class="fas fa-redo" aria-hidden="true" title="reset the sum" id="resetSum"></i><span
+                      class="sr-only">reset the sum</span></a>
+                </button>
+                <!-- How to play-->
+                <button type="button" class="btn" data-toggle="modal" data-target="#gameRulesModal">
+                  <a><i class="fas fa-question-circle" aria-hidden="true" title="rules of the game"
+                      id="gameRules"></i><span class="sr-only">rules of the game</span></a>
+                </button>
+                <!-- 1. How to play: Modal box -->
+                <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog"
+                  aria-labelledby="gameRulesDescription" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content game-rules-box" id="game-rules-box">
+                      <!-- 1.1 How to play: Header-->
+                      <div class="modal-header">
+                        <div class="modal-title col-12" id="gameRulesHeader">
+                          <h4 class="font-weight-bolder text-center">
+                            How to play?
+                          </h4>
+                        </div>
+                      </div>
+                      <!-- 1.2 How to play: Main body -->
+                      <div class="container pt-3">
+                        <div class="row" id="gameRulesMain">
+                          <div class="col text-left">
+                            <ul>
+                              <li>
+                                Show your child some real coins. Let them
+                                identify the number on the price tag. Help
+                                your child to recognise the coins on the
+                                screen.
+                              </li>
+                              <li>
+                                To start, click on the chosen coins until
+                                below sum display is equal to the price tag.
+                                Please encourage your child to use a variety
+                                of coins. Every time they play the game they
+                                can choose alternative coins to come up with
+                                the sum.
+                              </li>
+                              <li>
+                                There are 3 levels to complete with 6 tasks in
+                                each. Every correct task is rewarded with a
+                                star. The task will restart if the sum is
+                                greater than the price tag.
+                              </li>
+                              <li>
+                                Have fun playing the game with your child and
+                                please remember to leave us your feedback!
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 1.3 How to play: exit button -->
+                      <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn" data-dismiss="modal">
+                          <i class="fas fa-times-circle" type="button" aria-hidden="true" title="close"></i><span
+                            class="sr-only"> close </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-5 text-center" id="sum">
-                  <h1></h1>
-                </div>
+                <!-- How to play: End-->
+                <!-- Sound off-->
+                <button type="button" class="btn">
+                  <a><i class="fas fa-volume-mute" aria-hidden="true" title="sound off" id="soundOff"></i><span
+                      class="sr-only">sound off</span></a>
+                </button>
+                <!-- Sound on-->
+                <button type="button" class="btn">
+                  <a href="#"><i class="fas fa-volume-up" aria-hidden="true" title="sound on" id="soundOn"></i><span
+                      class="sr-only">sound on</span></a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Footer-->
-    <footer class="container" id="footer">
-      <div class="row">
-        <div class="col-sm d-flex justify-content-center" id="social-links">
-          <!-- Facebook-->
-          <button type="button" class="btn">
-            <a target="_blank" href="https://en-gb.facebook.com/" rel="noopener"
-              ><i class="fab fa-facebook-f" aria-hidden="true" type="button"></i
-              ><span class="sr-only">Facebook</span></a
-            >
-          </button>
-          <!-- Twitter-->
-          <button type="button" class="btn">
-            <a target="_blank" href="https://www.twitter.com/" rel="noopener"
-              ><i class="fab fa-twitter" aria-hidden="true" type="button"></i
-              ><span class="sr-only">Twitter</span></a
-            >
-          </button>
-          <!-- Instagram-->
-          <button type="button" class="btn">
-            <a target="_blank" href="https://www.instagram.com/" rel="noopener"
-              ><i class="fab fa-instagram" aria-hidden="true" type="button"></i
-              ><span class="sr-only">Instagram</span></a
-            >
-          </button>
-          <!-- 1. Contact-->
-          <button
-            type="button"
-            class="btn"
-            data-toggle="modal"
-            data-target="#contactForm"
-          >
-            <a
-              ><i
-                class="fas fa-envelope button"
-                aria-hidden="true"
-                title="contact us"
-              ></i
-              ><span class="sr-only">Envelope</span></a
-            >
-          </button>
-          <!-- 1. Contact form: Modal box -->
-          <div
-            class="modal fade"
-            id="contactForm"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="contactFormHeader"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content" id="contact-form-box">
-                <!-- 1.1 Contact form: Header-->
-                <div class="modal-header">
-                  <div
-                    class="modal-title col-12 font-weight-normal text-center"
-                    id="contactFormHeader"
-                  >
-                    <button
-                      type="button"
-                      class="close p-1"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">×</span>
-                    </button>
-                    <h5>
-                      Help us improve! We value every customer and your feedback
-                      matters to us.
-                    </h5>
-                  </div>
+      <!-- Game card-->
+      <div class="col-12 col-lg-7" id="game-card">
+        <div class="row align-items-center justify-content-center">
+          <!-- 1.0 Price tag-->
+          <div class="col-sm-5 text-center" id="price">
+            <h1>
+              <!-- 1.1 Price tag display is imported in here from JS file-->
+            </h1>
+          </div>
+          <!-- 2.0 Coin display-->
+          <div class="col-12">
+            <div class="row justify-content-center align-items-center" id="coin">
+              <!-- 2.1 Coins display is imported here from JS file-->
+            </div>
+          </div>
+          <!-- Money pot image and sum display-->
+          <div class="col-12">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-6 text-center" id="moneyPot">
+                <img src="assets/images/money-pot.png" alt="money pot" class="img h-100 w-100" />
+              </div>
+              <div class="col-5 text-center" id="sum">
+                <h1></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="container" id="footer">
+    <div class="row">
+      <div class="col-sm d-flex justify-content-center" id="social-links">
+        <!-- Facebook-->
+        <button type="button" class="btn">
+          <a target="_blank" href="https://en-gb.facebook.com/" rel="noopener"><i class="fab fa-facebook-f"
+              aria-hidden="true" type="button"></i><span class="sr-only">Facebook</span></a>
+        </button>
+        <!-- Twitter-->
+        <button type="button" class="btn">
+          <a target="_blank" href="https://www.twitter.com/" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"
+              type="button"></i><span class="sr-only">Twitter</span></a>
+        </button>
+        <!-- Instagram-->
+        <button type="button" class="btn">
+          <a target="_blank" href="https://www.instagram.com/" rel="noopener"><i class="fab fa-instagram"
+              aria-hidden="true" type="button"></i><span class="sr-only">Instagram</span></a>
+        </button>
+        <!-- 1. Contact-->
+        <button type="button" class="btn" data-toggle="modal" data-target="#contactForm">
+          <a><i class="fas fa-envelope button" aria-hidden="true" title="contact us"></i><span
+              class="sr-only">Envelope</span></a>
+        </button>
+        <!-- 1. Contact form: Modal box -->
+        <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactFormHeader"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="contact-form-box">
+              <!-- 1.1 Contact form: Header-->
+              <div class="modal-header">
+                <div class="modal-title col-12 font-weight-normal text-center" id="contactFormHeader">
+                  <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                  <h5>
+                    Help us improve! We value every customer and your feedback
+                    matters to us.
+                  </h5>
                 </div>
-                <!-- 1.2 Contact form: Main body -->
-                <form class="container pt-3" id="contactForm">
-                  <div class="row justify-content-center">
-                    <div class="col-12 col-sm-6">
-                      <!-- 1.1.1 name input-->
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control text-center"
-                          id="name"
-                          placeholder="Your Name"
-                          required=""
-                        />
+              </div>
+              <!-- 1.2 Contact form: Main body -->
+              <form class="container pt-3" id="contactForm">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-sm-6">
+                    <!-- 1.1.1 name input-->
+                    <div class="form-group">
+                      <input type="text" class="form-control text-center" id="name" placeholder="Your Name"
+                        required="" />
+                    </div>
+                    <!-- 1.1.2 email address input----->
+                    <div class="form-group">
+                      <input type="email" class="form-control text-center" id="email" placeholder="Your email address"
+                        required="" />
+                    </div>
+                    <!-- 1.1.3 question one------->
+                    <div class="form-group text-center">
+                      <div class="px-0">
+                        <label for="formQ1" class="form-control col-form-label">
+                          How challenging were the tasks for your
+                          child?</label>
                       </div>
-                      <!-- 1.1.2 email address input----->
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control text-center"
-                          id="email"
-                          placeholder="Your email address"
-                          required=""
-                        />
+                      <div class="px-0">
+                        <select class="form-control" id="formQ1">
+                          <option selected=""></option>
+                          <option>Too challenging</option>
+                          <option>Very challenging</option>
+                          <option>At the right level</option>
+                          <option>Could be more challening</option>
+                          <option>Not challenging at all</option>
+                        </select>
                       </div>
-                      <!-- 1.1.3 question one------->
-                      <div class="form-group text-center">
-                        <div class="px-0">
-                          <label
-                            for="formQ1"
-                            class="form-control col-form-label"
-                          >
-                            How challenging were the tasks for your
-                            child?</label
-                          >
-                        </div>
-                        <div class="px-0">
-                          <select class="form-control" id="formQ1">
-                            <option selected=""></option>
-                            <option>Too challenging</option>
-                            <option>Very challenging</option>
-                            <option>At the right level</option>
-                            <option>Could be more challening</option>
-                            <option>Not challenging at all</option>
-                          </select>
-                        </div>
+                    </div>
+                    <!-- 1.1.4 question two-->
+                    <div class="form-group text-center">
+                      <div class="px-0">
+                        <label for="#formQ2" class="form-control col-form-label">
+                          Did your child find the game entertaining?</label>
                       </div>
-                      <!-- 1.1.4 question two-->
-                      <div class="form-group text-center">
-                        <div class="px-0">
-                          <label
-                            for="#formQ2"
-                            class="form-control col-form-label"
-                          >
-                            Did your child find the game entertaining?</label
-                          >
-                        </div>
-                        <div class="px-0">
-                          <select class="form-control" id="formQ2">
-                            <option selected=""></option>
-                            <option>Very entertaining</option>
-                            <option>Entertaining</option>
-                            <option>Not entertaining</option>
-                            <option>Boring</option>
-                          </select>
-                        </div>
+                      <div class="px-0">
+                        <select class="form-control" id="formQ2">
+                          <option selected=""></option>
+                          <option>Very entertaining</option>
+                          <option>Entertaining</option>
+                          <option>Not entertaining</option>
+                          <option>Boring</option>
+                        </select>
                       </div>
-                      <!-- 1.1.5 question three-->
-                      <div class="form-group text-center">
-                        <div class="px-0">
-                          <label
-                            for="interestedInMore"
-                            class="form-control col-form-label"
-                          >
-                            Would you like to hear about similar games?</label
-                          >
-                        </div>
-                        <div class="px-0">
-                          <select class="form-control" id="interestedInMore">
-                            <option selected=""></option>
-                            <option>Yes</option>
-                            <option>No</option>
-                          </select>
-                        </div>
+                    </div>
+                    <!-- 1.1.5 question three-->
+                    <div class="form-group text-center">
+                      <div class="px-0">
+                        <label for="interestedInMore" class="form-control col-form-label">
+                          Would you like to hear about similar games?</label>
                       </div>
-                      <!-- 1.1.6 suggestions-->
-                      <div class="form-group text-center">
-                        <label
-                          for="otherinfo"
-                          class="form-control col-form-label"
-                          >Your suggestions</label
-                        >
-                        <textarea
-                          class="form-control"
-                          id="otherinfo"
-                          rows="3"
-                        ></textarea>
+                      <div class="px-0">
+                        <select class="form-control" id="interestedInMore">
+                          <option selected=""></option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
                       </div>
-                      <!-- 1.1.7 legal/consent information-->
-                      <div class="from-group">
-                        <div class="form-legal-info">
-                          <small class="form-text">
-                            We'll never share your personal details with anyone
-                            else.</small
-                          >
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="gridCheck"
-                              required=""
-                            />
-                            <label class="form-check-label" for="gridCheck">
-                              <small class="form-text">
-                                I consent to Money Pot collecting my details
-                                through this form.</small
-                              >
-                            </label>
-                          </div>
+                    </div>
+                    <!-- 1.1.6 suggestions-->
+                    <div class="form-group text-center">
+                      <label for="otherinfo" class="form-control col-form-label">Your suggestions</label>
+                      <textarea class="form-control" id="otherinfo" rows="3"></textarea>
+                    </div>
+                    <!-- 1.1.7 legal/consent information-->
+                    <div class="from-group">
+                      <div class="form-legal-info">
+                        <small class="form-text">
+                          We'll never share your personal details with anyone
+                          else.</small>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck" required="" />
+                          <label class="form-check-label" for="gridCheck">
+                            <small class="form-text">
+                              I consent to Money Pot collecting my details
+                              through this form.</small>
+                          </label>
                         </div>
                       </div>
                     </div>
                   </div>
-                </form>
-                <!-- 1.3 Contact form: Send button -->
-                <div class="modal-footer justify-content-center">
-                  <button
-                    type="button"
-                    class="btn"
-                    data-toggle="modal"
-                    data-target="#thank-you-note"
-                  >
-                    <i
-                      class="fas fa-paper-plane"
-                      type="button"
-                      aria-hidden="true"
-                      title="send!"
-                    ></i
-                    ><span class="sr-only"> Paper plane </span>
-                  </button>
-                  <!-- 2. Thank you note-->
-                  <div
-                    class="modal fade"
-                    id="thank-you-note"
-                    tabindex="-1"
-                    role="dialog"
-                    aria-labelledby="thankYouNoteHeader"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-md">
-                      <div class="modal-content thank-you-box">
-                        <!-- 2.1 Thank you note: Header-->
-                        <div class="modal-header">
-                          <div
-                            class="modal-title col-12 text-center"
-                            id="thankYouNoteHeader"
-                          >
-                            <h5>
-                              Thank you!
-                            </h5>
+                </div>
+              </form>
+              <!-- 1.3 Contact form: Send button -->
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#thank-you-note">
+                  <i class="fas fa-paper-plane" type="button" aria-hidden="true" title="send!"></i><span
+                    class="sr-only"> Paper plane </span>
+                </button>
+                <!-- 2. Thank you note-->
+                <div class="modal fade" id="thank-you-note" tabindex="-1" role="dialog"
+                  aria-labelledby="thankYouNoteHeader" aria-hidden="true">
+                  <div class="modal-dialog modal-md">
+                    <div class="modal-content thank-you-box">
+                      <!-- 2.1 Thank you note: Header-->
+                      <div class="modal-header">
+                        <div class="modal-title col-12 text-center" id="thankYouNoteHeader">
+                          <h5>
+                            Thank you!
+                          </h5>
+                        </div>
+                      </div>
+                      <!-- 2.2 Thank you note: Main body -->
+                      <div class="container pt-3">
+                        <div class="row">
+                          <div class="col text-center">
+                            <p>We will get back to you within 48 hours.</p>
                           </div>
                         </div>
-                        <!-- 2.2 Thank you note: Main body -->
-                        <div class="container pt-3">
-                          <div class="row">
-                            <div class="col text-center">
-                              <p>We will get back to you within 48 hours.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- 2.3 Thank you note: Exit button -->
-                        <div class="modal-footer justify-content-center">
-                          <button
-                            type="button"
-                            class="btn"
-                            data-dismiss="modal"
-                          >
-                            <i
-                              class="fas fa-times-circle"
-                              type="button"
-                              aria-hidden="true"
-                              title="Exit!"
-                            ></i
-                            ><span class="sr-only"> Cross </span>
-                          </button>
-                        </div>
+                      </div>
+                      <!-- 2.3 Thank you note: Exit button -->
+                      <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn" data-dismiss="modal">
+                          <i class="fas fa-times-circle" type="button" aria-hidden="true" title="Exit!"></i><span
+                            class="sr-only"> Cross </span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -589,21 +364,23 @@
               </div>
             </div>
           </div>
-          <!-- Contact form: End-->
         </div>
+        <!-- Contact form: End-->
       </div>
-    </footer>
-    <!-- Audio-->
-    <audio id="buttonClickAudio" src="assets/audio/button.wav"></audio>
-    <audio id="coinClickAudio" src="assets/audio/addCoin.ogg"></audio>
-    <audio id="tryAgainAudio" src="assets/audio/tryAgain.wav"></audio>
-    <audio id="yippeeAudio" src="assets/audio/yippee.ogg"></audio>
-    <audio id="winnerAudio" src="assets/audio/winner.mp3"></audio>
-    <!-- JS scripts-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- My JS path-->
-    <script type="text/javascript" src="assets/js/main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <!-- Audio-->
+  <audio id="buttonClickAudio" src="assets/audio/button.wav"></audio>
+  <audio id="coinClickAudio" src="assets/audio/addCoin.ogg"></audio>
+  <audio id="tryAgainAudio" src="assets/audio/tryAgain.wav"></audio>
+  <audio id="yippeeAudio" src="assets/audio/yippee.ogg"></audio>
+  <audio id="winnerAudio" src="assets/audio/winner.mp3"></audio>
+  <!-- JS scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- My JS path-->
+  <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
 </html>
