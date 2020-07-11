@@ -154,7 +154,9 @@ const displayCoins = (coinArray) => {
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
-    $(".coin-button").click(function () {
+    document.querySelector(".coin-button");
+
+    document.addEventListener("click", function () {
       addValue(coin.value)
     })
     coinButtonRef.innerHTML = coinButton;
