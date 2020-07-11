@@ -147,11 +147,8 @@ const displayPrice = (priceText) => {
  */
 function addValue(coinValue) {
   sum += coinValue;
-  displaySumRef.innerHTML = `${sum}p`;
-  console.log(sum)
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
-
-$(document).on("click", $("#coin1"), addValue(sum));
 
 /**
  * Function displaying coin buttons
@@ -164,10 +161,11 @@ const displayCoins = (coinArray) => {
     coinButton += `
     <div class="col-5 col-sm-3 text-center">
       <button class="coin"
-      id="coin1">
+      id="${coin.name}">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
+    $(document).on("click", $("#" + coin.name), addValue(coin.value));
   });
   coinButtonRef.innerHTML = coinButton;
 };
