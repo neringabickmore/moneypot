@@ -148,7 +148,7 @@ body {
   margin: 1rem 0;
 }
 
-#coin div {
+#coin button {
   background-color: #bd3d3a;
   border: none;
   transition: all 0.3s;
@@ -156,7 +156,7 @@ body {
   padding: 0.15rem;
 }
 
-#coin div:hover {
+#coin button:hover {
   transform: scale(1.2);
 }
 
