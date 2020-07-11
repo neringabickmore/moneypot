@@ -45,8 +45,6 @@
  * }
  * function nextTask() {
  * }
- * function addCoinValue() {
- * }
  * function rewardStar() {
  * }
  * function resetStars() {
@@ -77,8 +75,8 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
-let sum = 0;
-let stars = 0;
+let sum = 0,
+  stars = 0
 
 $(document).ready(function () {
   fetchData("game.json")
@@ -143,36 +141,35 @@ const displayPrice = (priceText) => {
 };
 
 /**
- * 
- * @param {string} coinValue 
- */
-function addValue() {
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-};
-
-/**
  * Function displaying coin buttons
  * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
   console.log(coinArray)
   let coinButton = ``;
+  console.log(coinButton)
   coinArray.forEach((coin) => {
-    coinButton += `
-    <div class="col-5 col-sm-3 text-center">
-      <button class="coin"
-      id="${coin.name}">
+    coinButton += `<div class="col-5 col-sm-3 text-center">
+         <button class="coin" type="button" aria-hidden="true coin-button">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
-    </div>`
-  });
-  $("#" + coin.name).on("click", function () {
-    addValue(coin.value)
-  });
-  coinButtonRef.innerHTML = coinButton;
+    </div>`;
+    $(".coin-button").click(function () {
+      addValue(coin.value)
+    })
+    coinButtonRef.innerHTML = coinButton;
+  })
+}
+
+/**
+ * Function to calculate total value
+ * of the coins, that user chooses
+ * to click on. 
+ */
+function addValue() {
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+  console.log(sum);
 };
-
-
 // ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
