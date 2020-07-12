@@ -1,7 +1,9 @@
 {
   "game": [
     {
-      "level": "Level 1",
+      "level": [
+        "Level 1"
+      ],
       "tps": [
         {
           "thisTask": "Task 1",
@@ -58,7 +60,9 @@
       ]
     },
     {
-      "level": "Level 2",
+      "level": [
+        "Level 2"
+      ],
       "tps": [
         {
           "gameTask": "Task 1",
@@ -120,7 +124,9 @@
       ]
     },
     {
-      "level": "Level 3",
+      "level": [
+        "Level 3"
+      ],
       "tps": [
         {
           "thisTask": "Task 1",
