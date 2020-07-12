@@ -153,11 +153,13 @@ const displayCoins = (coinArray) => {
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
-    $(".coin-button").click(function () {
-      result.addValue(this.value)
-    });
-    coinButtonRef.innerHTML = coinButton;
-  })
+  });
+  coinButtonRef.innerHTML = coinButton;
+
+  $(".coin-button").click(function () {
+    console.log($(this).attr("value"))
+    addValue($(this).attr("value"))
+  });
 }
 
 /**
