@@ -75,7 +75,7 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
-let sum = 0
+let sum = 0;
 
 $(document).ready(function () {
   fetchData("game.json")
@@ -139,7 +139,7 @@ const displayPrice = (priceText) => {
 };
 
 /**
- * Function displaying coin buttons
+ * Function displaying coins that are buttons
  * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
@@ -153,27 +153,32 @@ const displayCoins = (coinArray) => {
     </div>`;
   });
   coinButtonRef.innerHTML = coinButton;
-
+  // This is an event listener giving coin value on every click
   $(".coin-button").click(function () {
-    console.log($(this).attr("value"))
-    addValue($(this).attr("value"))
+    addCoinValue($(this).attr("value"))
   });
 }
-
-// function addCoinValuetoSum() {
-//   addValue()
-// }
 /**
- * Function to calculate total value
- * of the coins, that user chooses
- * to click on. 
+ * This function takes coin value in a string,
+ * converts it into a number which then allows displaySum
+ * of all of the coins the user clicks on.
+ * @param {number} coinValue 
+ */
+function addCoinValue(coinValue) {
+  sum += JSON.parse(coinValue);
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+}
+/**
+ * Function to display initial
+ * sum value of 0 at the start
+ * of the game. If it's removed, 
+ * you remove initial sum display
+ * and leave it blank
  */
 function displaySum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-  console.log(sum);
-  //addCoinValueToSum()
 };
-// ALL AUDIO FUNCTIONS
+//ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
  * at a click of a button in HTML.
