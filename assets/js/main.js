@@ -76,7 +76,8 @@ const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
 let sum = 0,
-  stars = 0
+  taskStage = 1,
+  currentLevel = 1
 
 $(document).ready(function () {
   fetchData("game.json")
