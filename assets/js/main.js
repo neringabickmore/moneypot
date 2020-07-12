@@ -75,9 +75,7 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
-let sum = 0,
-  taskStage = 1,
-  currentLevel = 1
+let sum = 0
 
 $(document).ready(function () {
   fetchData("game.json")
@@ -105,8 +103,8 @@ const fetchData = (url) => {
  */
 const setGame = (game) => {
   displayLevel(game[0].level);
-  displayTask(game[0].tps);
-  displayPrice(game[0].tps);
+  displayTask(game[0].tps[0]);
+  displayPrice(game[0].tps[0]);
   displayCoins(game[0].coins);
   displaySum(game[0].coins)
 };
@@ -117,10 +115,7 @@ const setGame = (game) => {
  */
 const displayLevel = (levelText) => {
   showLevel = ``
-  levelText.forEach((level) => {
-    showLevel += `<h1>${level}</h1>`;
-  });
-
+  showLevel += `<h1>${levelText}</h1>`;
   levelRef.innerHTML = showLevel;
 }
 /**
@@ -128,11 +123,8 @@ const displayLevel = (levelText) => {
  * @param {[]} taskArray 
  */
 const displayTask = (taskText) => {
-  console.log(taskText)
   let showTask = ``
-  taskText.forEach((task) => {
-    showTask += `<h1>${task.thisTask}</h1>`
-  });
+  showTask += `<h1>${taskText.thisTask}</h1>`
   taskRef.innerHTML = showTask;
 }
 
@@ -142,9 +134,7 @@ const displayTask = (taskText) => {
  */
 const displayPrice = (priceText) => {
   let showPrice = ``;
-  priceText.forEach((price) => {
-    showPrice += `<h1>${price.priceTag}</h1>`;
-  });
+  showPrice += `<h1>${priceText.priceTag}</h1>`;
   priceRef.innerHTML = showPrice;
 };
 
