@@ -104,17 +104,25 @@ const fetchData = (url) => {
  * @param {[]} game
  */
 const setGame = (game) => {
-  let showLevel = ``
-  game.forEach((levelText) => {
-    showLevel += `<h1>${levelText.level}</h1>`;
-  });
-  levelRef.innerHTML = showLevel;
+  displayLevel(game[0].level);
   displayTask(game[0].tps);
   displayPrice(game[0].tps);
   displayCoins(game[0].coins);
-  addValue(game[0].coins)
+  displaySum(game[0].coins)
 };
 
+/**
+ * Function displaying game level
+ * @param {"string"} levelText 
+ */
+const displayLevel = (levelText) => {
+  showLevel = ``
+  levelText.forEach((level) => {
+    showLevel += `<h1>${level}</h1>`;
+  });
+
+  levelRef.innerHTML = showLevel;
+}
 /**
  * Function displaying game tasks
  * @param {[]} taskArray 
@@ -123,8 +131,7 @@ const displayTask = (taskText) => {
   console.log(taskText)
   let showTask = ``
   taskText.forEach((task) => {
-    showTask +=
-      `<h1>${task.thisTask}</h1>`
+    showTask += `<h1>${task.thisTask}</h1>`
   });
   taskRef.innerHTML = showTask;
 }
@@ -163,14 +170,18 @@ const displayCoins = (coinArray) => {
   });
 }
 
+// function addCoinValuetoSum() {
+//   addValue()
+// }
 /**
  * Function to calculate total value
  * of the coins, that user chooses
  * to click on. 
  */
-function addValue() {
+function displaySum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
   console.log(sum);
+  //addCoinValueToSum()
 };
 // ALL AUDIO FUNCTIONS
 /**
