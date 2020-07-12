@@ -1,18 +1,8 @@
 // TODO GAME FLOW:
 /**
  * (A) START OF THE GAME DISPLAY: 
- * 1. display Level 1(L1) =(currentLevel)
- * 2. display Task 1 (T1) =(currentTask)
- * 3. display coins assigned to L1 =(displayCoins)
- * 4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
- * 5. display price tag assigned to L1 T1 =(priceTag)
- * 6. sum = 0 before the user takes any action =(sum)
- *
+ *  4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
  * (B) GAME ON:
- * 1. User clicks on (coinButton), it's value is added to the =(displaySum): (addEventListener("click", function(addCoinValue()){}; coinValue(json) = (gameLevel[0].LevelOne[1].coins[0])
- *
- * (there is no limit how many times the user can click the same button)
- *
  * 2. When the (displaySum) === (priceTag)  then a Congrats Modal comes up with a button nextTask
  * 3. nextTask should then have on a display:
  *    (1) "Level 1", "Task 2"
