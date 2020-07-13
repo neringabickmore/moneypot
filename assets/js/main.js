@@ -1,18 +1,8 @@
 // TODO GAME FLOW:
 /**
  * (A) START OF THE GAME DISPLAY: 
- * 1. display Level 1(L1) =(currentLevel)
- * 2. display Task 1 (T1) =(currentTask)
- * 3. display coins assigned to L1 =(displayCoins)
- * 4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
- * 5. display price tag assigned to L1 T1 =(priceTag)
- * 6. sum = 0 before the user takes any action =(sum)
- *
+ *  4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
  * (B) GAME ON:
- * 1. User clicks on (coinButton), it's value is added to the =(displaySum): (addEventListener("click", function(addCoinValue()){}; coinValue(json) = (gameLevel[0].LevelOne[1].coins[0])
- *
- * (there is no limit how many times the user can click the same button)
- *
  * 2. When the (displaySum) === (priceTag)  then a Congrats Modal comes up with a button nextTask
  * 3. nextTask should then have on a display:
  *    (1) "Level 1", "Task 2"
@@ -45,8 +35,6 @@
  * }
  * function nextTask() {
  * }
- * function addCoinValue() {
- * }
  * function rewardStar() {
  * }
  * function resetStars() {
@@ -78,7 +66,6 @@ const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
 let sum = 0;
-let stars = 0;
 
 $(document).ready(function () {
   fetchData("game.json")
@@ -105,27 +92,29 @@ const fetchData = (url) => {
  * @param {[]} game
  */
 const setGame = (game) => {
-  let showLevel = ``
-  game.forEach((levelText) => {
-    showLevel += `<h1>${levelText.level}</h1>`;
-  });
-  levelRef.innerHTML = showLevel;
-  displayTask(game[0].tps);
-  displayPrice(game[0].tps);
+  displayLevel(game[0].level);
+  displayTask(game[0].tps[0]);
+  displayPrice(game[0].tps[0]);
   displayCoins(game[0].coins);
+  displaySum(game[0].coins)
 };
 
+/**
+ * Function displaying game level
+ * @param {"string"} levelText 
+ */
+const displayLevel = (levelText) => {
+  showLevel = ``
+  showLevel += `<h1>${levelText}</h1>`;
+  levelRef.innerHTML = showLevel;
+}
 /**
  * Function displaying game tasks
  * @param {[]} taskArray 
  */
 const displayTask = (taskText) => {
-  console.log(taskText)
   let showTask = ``
-  taskText.forEach((task) => {
-    showTask +=
-      `<h1>${task.thisTask}</h1>`
-  });
+  showTask += `<h1>${taskText.thisTask}</h1>`
   taskRef.innerHTML = showTask;
 }
 
@@ -135,42 +124,51 @@ const displayTask = (taskText) => {
  */
 const displayPrice = (priceText) => {
   let showPrice = ``;
-  priceText.forEach((price) => {
-    showPrice += `<h1>${price.priceTag}</h1>`;
-  });
+  showPrice += `<h1>${priceText.priceTag}</h1>`;
   priceRef.innerHTML = showPrice;
 };
 
 /**
- * 
- * @param {string} coinValue 
- */
-function addValue(coinValue) {
-  sum += coinValue;
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-};
-
-/**
- * Function displaying coin buttons
+ * Function displaying coins that are buttons
  * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
   console.log(coinArray)
   let coinButton = ``;
   coinArray.forEach((coin) => {
-    coinButton += `
-    <div class="col-5 col-sm-3 text-center">
-      <button class="coin"
-      id="${coin.name}">
+    coinButton += `<div class="col-5 col-sm-3 text-center">
+         <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
-    $(document).on("click", $("#" + coin.name), addValue(coin.value));
   });
   coinButtonRef.innerHTML = coinButton;
+  // This is an event listener giving coin value on every click
+  $(".coin-button").click(function () {
+    addCoinValue($(this).attr("value"))
+  });
+}
+/**
+ * This function takes coin value in a string,
+ * converts it into a number which then allows displaySum
+ * of all of the coins the user clicks on.
+ * @param {number} coinValue 
+ */
+function addCoinValue(coinValue) {
+  sum += JSON.parse(coinValue);
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+}
+/**
+ * Function to display initial
+ * sum value of 0 at the start
+ * of the game. If it's removed, 
+ * you remove initial sum display
+ * and leave it blank
+ */
+function displaySum() {
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
-
-// ALL AUDIO FUNCTIONS
+//ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
  * at a click of a button in HTML.
