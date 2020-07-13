@@ -371,7 +371,8 @@
       </div>
     </div>
   </footer>
-  <!-- GAME CARD: POP UP MODALS-->
+
+  <!-- GAME CARD: POP UP MODALS (inserted with JS)-->
   <!-- 1. Congratulations:  correct task -->
   <div class="modal fade" id="CongratsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
     aria-labelledby="staticBackdropLabel1" aria-hidden="true">
@@ -387,6 +388,38 @@
     </div>
   </div>
   <!-- 1. Congratulations:  correct task/END -->
+
+  <!-- 2. Congratulations:  You have completed the level -->
+  <div class="modal fade" id="CongratsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title justify-content-center" id="staticBackdropLabel2">
+            Congratulations! You are now through to the next level!
+          </h6>
+        </div>
+        <div id="modalBody2" class="modal-body text-center"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 2. Congratulations:  You have completed the level/END -->
+
+  <!-- 3. Bad Sum:  incorrect task -->
+  <div class="modal fade" id="errorModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="staticBackdropLabel3">
+            The sum is not correct. Please check your coins!
+          </h6>
+        </div>
+        <div id="modalBody3" class="modal-body tryAgain text-center"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 2. Bad Sum:  incorrect task/END -->
 
   <!-- Audio-->
   <audio id="buttonClickAudio" src="assets/audio/button.wav"></audio>
