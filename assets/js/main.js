@@ -134,7 +134,6 @@ const displayPrice = (priceText) => {
  * @param {[]} coinArray
  */
 const displayCoins = (coinArray) => {
-  console.log(coinArray)
   let coinButton = ``;
   coinArray.forEach((coin) => {
     coinButton += `<div class="col-5 col-sm-3 text-center">
@@ -146,7 +145,7 @@ const displayCoins = (coinArray) => {
   coinButtonRef.innerHTML = coinButton;
   // This is an event listener giving coin value on every click
   $(".coin-button").click(function () {
-    addCoinValue($(this).attr("value"))
+    addCoinValue($(this).attr("value"));
   });
 }
 
@@ -156,68 +155,75 @@ const displayCoins = (coinArray) => {
  * of all of the coins the user clicks on.
  * @param {number} coinValue 
  */
-function addCoinValue(coinValue) {
-  sum += JSON.parse(coinValue);
+function addCoinValue(coinValue, displayPrice, displayTask) {
+  sum += +coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-  showModals();
+
+  if (sum === displayPrice) {
+    nextTaskModal();
+    return
+
+  } else if (sum > displayPrice) {
+    repeatTaskModal()
+    return
+  } else if (sum === displayPrice && displayTask >= 6) {
+    nextLevelModal()
+    return
+  }
+  return
+
 }
 
 /**
- * Function allowing to call notification modals
- * to establish where the user is in the game
- * and what should be the next action
- * @param {string} displayPrice 
- * @param {string} displayTask 
+ * 1. When the sum is equal to displayPrice
+ * pop up modal displays "congrats"
+ * it also displays button to go to the nextTask.
  */
-function showModals(displayPrice, displayTask) {
+function nextTaskModal() {
+  const nextTask = document.createElement("div");
+  nextTask.innerHTML = `<div class="modal-footer"><button id="nextTask" type="button" class="btn" data-dismiss="modal"> Next task <i class="fa fa-play p-2" aria-hidden="true"></i></button></div>`;
+  $("#nextTask").click(function () {
+    resetSum();
+    nextTask();
+  });
+  document.getElementById("modalBody1").appendChild(nextTask);
+  $("#CongratsModal").modal("toggle");
 
-  /**
-   * 1. When the sum is equal to displayPrice
-   * pop up modal displays "congrats"
-   * it also displays button to go to the nextTask.
-   */
-  if (sum === displayPrice) {
-    const nextTask = document.createElement("div");
-    nextTask.innerHTML = `<div class="modal-footer"><button id="nextTask" type="button" class="btn" data-dismiss="modal"> Next task <i class="fa fa-play p-2" aria-hidden="true"></i></button></div>`;
-    $("#nextTask").click(function () {
-      resetSum();
-      nextTask();
-    });
-    document.getElementById("modalBody1").appendChild(nextTask);
-    $("#CongratsModal").modal("toggle");
-
-    /**
-     * 2. When the sum is larger than the displayPrice
-     * pop up modal displays "error"
-     * it also displays button to try again
-     * and takes the user to repeat the task
-     */
-  } else if (sum > displayPrice) {
-    const resetSum = document.createElement("div");
-    resetSum.innerHTML = `<div class="modal-footer button"><a data-dismiss="modal" onclick="resetSum()"><i class="fas fa-redo btn" id="errorModal" aria-hidden="true"></i><span class="sr-only">reset</span></a></div>`;
-    $("#errorModal").click(function () {
-      resetSum();
-    });
-    document.getElementById("modalBody3").appendChild(resetSum);
-    $("#errorModal").modal("toggle");
-
-    /**
-     * 3. When the sum is equal to the displayPrice AND
-     * displayTask is equal to 6 (user is at the last 
-     * task of the level they are in), pop up 
-     * modal displays button to go to the nextLevel.
-     */
-  } else if (sum === displayPrice || displayTask === 6) {
-    const nextLevel = document.createElement("div");
-    nextLevel.innerHTML = `<div class="modal-footer"><button id="nextLevel" type="button" class="btn" data-dismiss="modal" onclick="resetSum(), nextLevel();"> Next Level <i class="fa fa-play p-2" aria-hidden="true"></i></button></div>`;
-    $("#nextLevel").click(function () {
-      resetSum();
-      nextLevel();
-    });
-    document.getElementById("modalBody2").appendChild(nextLevel);
-    $("#CongratsModal").modal("toggle");
-  }
 }
+
+/**
+ * 2. When the sum is larger than the displayPrice
+ * pop up modal displays "error"
+ * it also displays button to try again
+ * and takes the user to repeat the task
+ */
+function repeatTaskModal() {
+  const resetSum = document.createElement("div");
+  resetSum.innerHTML = `<div class="modal-footer button"><a data-dismiss="modal" onclick="resetSum()"><i class="fas fa-redo btn" id="errorModal" aria-hidden="true"></i><span class="sr-only">reset</span></a></div>`;
+  $("#errorModal").click(function () {
+    resetSum();
+  });
+  document.getElementById("modalBody3").appendChild(resetSum);
+  $("#errorModal").modal("toggle");
+}
+
+/**
+ * 3. When the sum is equal to the displayPrice AND
+ * displayTask is equal to 6 (user is at the last 
+ * task of the level they are in), pop up 
+ * modal displays button to go to the nextLevel.
+ */
+function nextLevelModal() {
+  const nextLevel = document.createElement("div");
+  nextLevel.innerHTML = `<div class="modal-footer"><button id="nextLevel" type="button" class="btn" data-dismiss="modal"> Next Level <i class="fa fa-play p-2" aria-hidden="true"></i></button></div>`;
+  $("#nextLevel").click(function () {
+    resetSum();
+    nextLevel();
+  });
+  document.getElementById("modalBody2").appendChild(nextLevel);
+  $("#CongratsModal").modal("toggle");
+}
+
 
 /**
  * Function to display initial
