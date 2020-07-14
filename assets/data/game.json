@@ -1,36 +1,36 @@
 {
   "game": [
     {
-      "level": "Level 1",
+      "level": 1,
       "tps": [
         {
-          "thisTask": "Task 1",
-          "priceTag": "4p",
+          "thisTask": 1,
+          "priceTag": 4,
           "star": 0
         },
         {
-          "thisTask": "Task 2",
-          "priceTag": "5p",
+          "thisTask": 2,
+          "priceTag": 5,
           "star": 1
         },
         {
-          "thisTask": "Task 3",
-          "priceTag": "9p",
+          "thisTask": 3,
+          "priceTag": 9,
           "stars": 2
         },
         {
-          "thisTask": "Task 4",
-          "priceTag": "11p",
+          "thisTask": 4,
+          "priceTag": 11,
           "stars": 3
         },
         {
-          "thisTask": "Task 5",
-          "priceTag": "13p",
+          "thisTask": 5,
+          "priceTag": 13,
           "stars": 4
         },
         {
-          "thisTask": "Task 6",
-          "priceTag": "17p",
+          "thisTask": 6,
+          "priceTag": 17,
           "stars": 5
         }
       ],
@@ -58,36 +58,36 @@
       ]
     },
     {
-      "level": "Level 2",
+      "level": 2,
       "tps": [
         {
-          "gameTask": "Task 1",
-          "priceTag": "15p",
+          "gameTask": 1,
+          "priceTag": 15,
           "star": 0
         },
         {
-          "task": "Task 2",
-          "priceTag": "20p",
+          "task": 2,
+          "priceTag": 20,
           "star": 1
         },
         {
-          "thisTask": "Task 3",
-          "priceTag": "25p",
+          "thisTask": 3,
+          "priceTag": 25,
           "stars": 2
         },
         {
-          "thisTask": "Task 4",
-          "priceTag": "33p",
+          "thisTask": 4,
+          "priceTag": 33,
           "stars": 3
         },
         {
-          "thisTask": "Task 5",
-          "priceTag": "37p",
+          "thisTask": 5,
+          "priceTag": 37,
           "stars": 4
         },
         {
-          "thisTask": "Task 6",
-          "priceTag": "48p",
+          "thisTask": 6,
+          "priceTag": 48,
           "stars": 5
         }
       ],
@@ -120,36 +120,36 @@
       ]
     },
     {
-      "level": "Level 3",
+      "level": 3,
       "tps": [
         {
-          "thisTask": "Task 1",
-          "priceTag": "34p",
+          "thisTask": 1,
+          "priceTag": 34,
           "star": 0
         },
         {
-          "thisTask": "Task 2",
-          "priceTag": "38p",
+          "thisTask": 2,
+          "priceTag": 38,
           "star": 1
         },
         {
-          "thisTask": "Task 3",
-          "priceTag": "41p",
+          "thisTask": 3,
+          "priceTag": 41,
           "star": 2
         },
         {
-          "thisTask": "Task 4",
-          "priceTag": "56p",
+          "thisTask": 4,
+          "priceTag": 56,
           "star": 3
         },
         {
-          "thisTask": "Task 5",
-          "priceTag": "68p",
+          "thisTask": 5,
+          "priceTag": 68,
           "star": 4
         },
         {
-          "thisTask": "Task 6",
-          "priceTag": "72p",
+          "thisTask": 6,
+          "priceTag": 72,
           "star": 5
         }
       ],
