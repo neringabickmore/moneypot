@@ -105,7 +105,7 @@ const setGame = (game) => {
  */
 const displayLevel = (levelText) => {
   showLevel = ``
-  showLevel += `<h1>${levelText}</h1>`;
+  showLevel += `<h1>Level ${levelText}</h1>`;
   levelRef.innerHTML = showLevel;
 }
 
@@ -115,8 +115,9 @@ const displayLevel = (levelText) => {
  */
 const displayTask = (taskText) => {
   let showTask = ``
-  showTask += `<h1>${taskText.thisTask}</h1>`
+  showTask += `<h1>Task ${taskText.thisTask}</h1>`
   taskRef.innerHTML = showTask;
+
 }
 
 /**
@@ -125,13 +126,14 @@ const displayTask = (taskText) => {
  */
 const displayPrice = (priceText) => {
   let showPrice = ``;
-  showPrice += `<h1>${priceText.priceTag}</h1>`;
+  showPrice += `<h1>${priceText.priceTag}p</h1>`;
   priceRef.innerHTML = showPrice;
+
 };
 
 /**
  * Function displaying coins that are buttons
- * @param {[]} coinArray
+ * @param {[]} coinArray 
  */
 const displayCoins = (coinArray) => {
   let coinButton = ``;
@@ -153,7 +155,7 @@ const displayCoins = (coinArray) => {
  * This function takes coin value in a string,
  * converts it into a number which then allows displaySum
  * of all of the coins the user clicks on.
- * @param {number} coinValue 
+ * @param {number} coinValue
  */
 function addCoinValue(coinValue, displayPrice, displayTask) {
   sum += +coinValue;
