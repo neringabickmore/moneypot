@@ -88,67 +88,33 @@ const fetchData = (url) => {
 };
 
 /**
- * This function sets the Game card
- * @param {[]} game
+ * setGame initiates the game and it's display
+ * @param {[]} game 
  */
 const setGame = (game) => {
-  displayLevel(game[0].level);
-  displayTask(game[0].tps[0]);
-  displayPrice(game[0].tps[0]);
-  displayCoins(game[0].coins);
-  displaySum(game[0].coins)
-};
-
-/**
- * Function displaying game level
- * @param {"string"} levelText 
- */
-const displayLevel = (levelText) => {
-  showLevel = ``
-  showLevel += `<h1>Level ${levelText}</h1>`;
-  levelRef.innerHTML = showLevel;
-}
-
-/**
- * Function displaying game tasks
- * @param {[]} taskArray 
- */
-const displayTask = (taskText) => {
-  let showTask = ``
-  showTask += `<h1>Task ${taskText.thisTask}</h1>`
-  taskRef.innerHTML = showTask;
-
-}
-
-/**
- * Function displaying price tag
- * @param {[]} priceText
- */
-const displayPrice = (priceText) => {
-  let showPrice = ``;
-  showPrice += `<h1>${priceText.priceTag}p</h1>`;
-  priceRef.innerHTML = showPrice;
-
-};
-
-/**
- * Function displaying coins that are buttons
- * @param {[]} coinArray 
- */
-const displayCoins = (coinArray) => {
-  let coinButton = ``;
-  coinArray.forEach((coin) => {
+  let showLevel = ``,
+    showTask = ``,
+    showPrice = ``,
+    coinButton = ``;
+  showLevel += `<h1>Level ${game[0].level}</h1>`;
+  showTask += `<h1>Task ${game[0].tps[0].thisTask}</h1>`;
+  showPrice += `<h1>${game[0].tps[0].priceTag}p</h1>`;
+  game[0].coins.forEach((coin) => {
     coinButton += `<div class="col-5 col-sm-3 text-center">
          <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
   });
+  levelRef.innerHTML = showLevel;
+  taskRef.innerHTML = showTask;
+  priceRef.innerHTML = showPrice;
   coinButtonRef.innerHTML = coinButton;
-  // This is an event listener giving coin value on every click
+  //This is an event listener giving coin value on every click
   $(".coin-button").click(function () {
     addCoinValue($(this).attr("value"));
   });
+  displaySum(game);
 }
 
 /**
@@ -157,8 +123,9 @@ const displayCoins = (coinArray) => {
  * of all of the coins the user clicks on.
  * @param {number} coinValue
  */
-function addCoinValue(coinValue, displayPrice, displayTask) {
-  sum += +coinValue;
+function addCoinValue(game, displayPrice, displayTask) {
+  sum += +game[0].coins[0].value;
+  console.log(+game[0].coins[0].value)
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 
   if (sum === displayPrice) {
