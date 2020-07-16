@@ -134,6 +134,36 @@ const addCoinValue = (sum, gameData) => {
     openModal("nextLevel")
   }
 }
+
+/**
+ * This function created modal footer and
+ * replace it's button & id depending on the outcome 
+ * on addCoinValue (on the switch).
+ * @param state {string} - the string to match switch statement.
+ */
+const openModal = (state) => {
+  let buttonText = ``;
+  let id = ``;
+  console.log(buttonText)
+  const nextTask = document.createElement("div");
+  nextTask.innerHTML += `<div class="modal-footer"><button id="${id}" type "btn" data-dismiss="modal">${buttonText}<i>"fa fa-play p-2 aria-hidden-"true></i></button></div>`;
+  switch (state) {
+    case "nextTask":
+      buttonText = "Next Task";
+      id = "nextTask";
+      break;
+    case "nextLevel":
+      buttonText = "Next Level";
+      id = "nextLevel";
+      break;
+    case "reset":
+      buttonText = "Reset";
+      id = "errorModal";
+      break;
+  }
+  $(".superModal").modal("toggle");
+}
+
 /**
  * Function to display initial
  * sum value of 0 at the start
