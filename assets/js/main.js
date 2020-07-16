@@ -143,13 +143,15 @@ const addCoinValue = (sum, gameData) => {
  */
 const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
   let buttonText = ``;
-  let id = ``;
+  let buttonId = ``;
   let iClassFooter = ``;
   let iClassBody = ``;
   let bodyText = ``;
   let srOnly = ``;
+
+  // These variables add content to individual parts of the modal
   const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${id}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   const backdropLabelContent = document.createElement("h6");
   backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
@@ -159,10 +161,15 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
             class="sr-only">${srOnly}</span></div>
       </div>`;
 
+  /**
+   * Switch allows the information to change in the 
+   * required parts of the modal dependant on the 
+   * assifned variable
+   */
   switch (footerInfo, backdropLabelInfo, mainBodyInfo) {
     case "nextTask":
       buttonText = "Next Task";
-      id = "nextTask";
+      buttonId = "nextTask";
       iClassFooter = "fa fa-play";
       iClassBody = "fas fa-star";
       bodyText = "Congratulations! You are now through to the next task!";
@@ -171,7 +178,7 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
 
     case "nextLevel":
       buttonText = "Next Level";
-      id = "nextLevel";
+      buttonId = "nextLevel";
       iClassFooter = "fas fa-redo btn";
       iClassBody = "fas fa-medal";
       bodyText = "Congratulations! You are now through to the next level!";
@@ -180,7 +187,7 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
 
     case "reset":
       buttonText = "Reset";
-      id = "errorModal";
+      buttonId = "errorModal";
       iClassFooter = "fa fa-play";
       iClassBody = "far fa-frown";
       bodyText = "The sum is not correct. Please check your coins!";
@@ -188,11 +195,20 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
       break;
   }
 
+  /**
+   * This method allows to fetch the information 
+   * to index.html and assing appopriate content.
+   */
   $("#modal").modal("toggle");
   document.getElementById("modalFooter").appendChild(modalFooterContent);
   document.getElementById("staticBackdropLabel").appendChild(backdropLabelContent);
   document.getElementById("modalBody").appendChild(modalBodyContent);
 
+  /**
+   * Event listeners required to action
+   * the game Level and/or Task 
+   * dependant on addCoinValue outcomes.
+   */
   $("#nextTask").click(function () {
     resetSum();
     nextTask();
