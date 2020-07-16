@@ -112,26 +112,27 @@ const setGame = (game, levelNumber) => {
 
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
-    const userValue = +$(this).attr("value")
-    addCoinValue(userValue, tps)
+    const coinValue = $(this).attr("value")
+    addCoinValue(coinValue, tps)
+    console.log(coinValue)
   });
-
   displaySum(game[0].coins)
 };
 
-
-
-
-
 /**
- * This function takes coin value in a string,
- * converts it into a number which then allows displaySum
- * of all of the coins the user clicks on.
- * @param {number} coinValue 
+ * This function allows coin value to add to totalSum
+ * @param sum {number} - total value of coins the user clicked on
+ * @param gameData {[]} - The whole game.json 
  */
-function addCoinValue(coinValue) {
-  sum += JSON.parse(coinValue);
+const addCoinValue = (sum, gameData) => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+  if (sum === gameData.priceTag) {
+    openModal("nextTask");
+  } else if (sum > gameData.priceTag) {
+    openModal("reset)");
+  } else if (sum === gameData.priceTag && gameData.task >= 6) {
+    openModal("nextLevel")
+  }
 }
 /**
  * Function to display initial
