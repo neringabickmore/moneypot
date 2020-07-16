@@ -98,9 +98,9 @@ const setGame = (game, levelNumber) => {
   const currentGame = game[levelNumber = 0];
   console.log(game[levelNumber = 0])
   const tps = currentGame.tps[0];
-  levelRef.innerHTML += `<h1>${currentGame.level}</h1>`;
-  taskRef.innerHTML += `<h1>${tps.thisTask}</h1>`;
-  priceRef.innerHTML += `<h1>${tps.priceTag}</h1>`;
+  levelRef.innerHTML += `<h1>Level ${currentGame.level}</h1>`;
+  taskRef.innerHTML += `<h1>Task ${tps.thisTask}</h1>`;
+  priceRef.innerHTML += `<h1>${tps.priceTag}p</h1>`;
 
   currentGame.coins.forEach((coin) => {
     coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
@@ -114,7 +114,7 @@ const setGame = (game, levelNumber) => {
     // Converting the value clicked on to a number
     const coinValue = $(this).attr("value")
     addCoinValue(coinValue, tps)
-    console.log(coinValue)
+    console.log(coinValue, tps)
   });
   displaySum(game[0].coins)
 };
