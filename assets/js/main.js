@@ -144,24 +144,42 @@ const addCoinValue = (sum, gameData) => {
 const openModal = (state) => {
   let buttonText = ``;
   let id = ``;
+  let iClass = ``;
   console.log(buttonText)
-  const nextTask = document.createElement("div");
-  nextTask.innerHTML += `<div class="modal-footer"><button id="${id}" type "btn" data-dismiss="modal">${buttonText}<i>"fa fa-play p-2 aria-hidden-"true></i></button></div>`;
+  const modalFooterContent = document.createElement("div");
+  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${id}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClass} p-2" aria-hidden-"true></i></button></div>`;
   switch (state) {
     case "nextTask":
       buttonText = "Next Task";
       id = "nextTask";
+      iClass = "fa fa-play";
+
       break;
     case "nextLevel":
       buttonText = "Next Level";
       id = "nextLevel";
+      iClass = "fas fa-redo btn";
       break;
     case "reset":
       buttonText = "Reset";
       id = "errorModal";
+      iClass = "fa fa-play";
       break;
   }
   $(".superModal").modal("toggle");
+  $("#nextTask").click(function () {
+    resetSum();
+    nextTask();
+  });
+  $("#errorModal").click(function () {
+    resetSum();
+  });
+  $("#nextLevel").click(function () {
+    resetSum();
+    nextLevel();
+  });
+  document.getElementById("modalBody").appendChild(modalFooterContent);
+
 }
 
 /**
