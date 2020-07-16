@@ -141,32 +141,58 @@ const addCoinValue = (sum, gameData) => {
  * on addCoinValue (on the switch).
  * @param state {string} - the string to match switch statement.
  */
-const openModal = (state) => {
+const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
   let buttonText = ``;
   let id = ``;
-  let iClass = ``;
-  console.log(buttonText)
+  let iClassFooter = ``;
+  let iClassBody = ``;
+  let bodyText = ``;
+  let srOnly = ``;
   const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${id}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClass} p-2" aria-hidden-"true></i></button></div>`;
-  switch (state) {
+  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${id}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+
+  const backdropLabelContent = document.createElement("h6");
+  backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
+
+  const modalBodyContent = document.createElement("div");
+  modalBodyContent.i += `<div id="modalBody" class="modal-body text-center"><i class="${iClassBody}" aria-hidden="true"></i><span
+            class="sr-only">${srOnly}</span></div>
+      </div>`;
+
+  switch (footerInfo, backdropLabelInfo, mainBodyInfo) {
     case "nextTask":
       buttonText = "Next Task";
       id = "nextTask";
-      iClass = "fa fa-play";
-
+      iClassFooter = "fa fa-play";
+      iClassBody = "fas fa-star";
+      bodyText = "Congratulations! You are now through to the next task!";
+      srOnly = "star";
       break;
+
     case "nextLevel":
       buttonText = "Next Level";
       id = "nextLevel";
-      iClass = "fas fa-redo btn";
+      iClassFooter = "fas fa-redo btn";
+      iClassBody = "fas fa-medal";
+      bodyText = "Congratulations! You are now through to the next level!";
+      srOnly = "medal";
       break;
+
     case "reset":
       buttonText = "Reset";
       id = "errorModal";
-      iClass = "fa fa-play";
+      iClassFooter = "fa fa-play";
+      iClassBody = "far fa-frown";
+      bodyText = "The sum is not correct. Please check your coins!";
+      srOnly = "sad face";
       break;
   }
-  $(".superModal").modal("toggle");
+
+  $("#modal").modal("toggle");
+  document.getElementById("modalFooter").appendChild(modalFooterContent);
+  document.getElementById("staticBackdropLabel").appendChild(backdropLabelContent);
+  document.getElementById("modalBody").appendChild(modalBodyContent);
+
   $("#nextTask").click(function () {
     resetSum();
     nextTask();
@@ -178,8 +204,6 @@ const openModal = (state) => {
     resetSum();
     nextLevel();
   });
-  document.getElementById("modalBody").appendChild(modalFooterContent);
-
 }
 
 /**
