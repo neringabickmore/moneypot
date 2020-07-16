@@ -109,8 +109,7 @@ const setGame = (game) => {
   coinButtonRef.innerHTML = coinButton;
   //This is an event listener giving coin value on every click
   $(".coin-button").click(function () {
-    addCoinValue($(this).attr("value"));
-    console.log($(this).attr("value"))
+    addCoinValue($(this).attr("value"), showTask, showPrice);
   });
   displaySum(game);
 }
@@ -121,23 +120,20 @@ const setGame = (game) => {
  * of all of the coins the user clicks on.
  * @param {number} coinValue
  */
-function addCoinValue(game, displayPrice, displayTask) {
+function addCoinValue(game, priceTag, thisTask) {
   sum += +game;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-
-  if (sum === displayPrice) {
+  if (sum === priceTag) {
     nextTaskModal();
     return
-
-  } else if (sum > displayPrice) {
+  } else if (sum > priceTag) {
     repeatTaskModal()
     return
-  } else if (sum === displayPrice && displayTask >= 6) {
+  } else if (sum === priceTag && thisTask >= 6) {
     nextLevelModal()
     return
   }
   return
-
 }
 
 /**
