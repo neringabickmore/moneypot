@@ -82,72 +82,45 @@ const fetchData = (url) => {
     .then((res) => res.json())
     .then(gameData => {
       console.log(gameData.game)
-      setGame(gameData.game)
+      setGame(gameData.game, gameData.level - 1)
     })
     .catch((err) => console.log(err))
 };
 
+//setGame(gameData.game, gameData.level - 1);
 /**
  * This function sets the Game card
  * @param {[]} game
  */
-const setGame = (game) => {
-  displayLevel(game[0].level);
-  displayTask(game[0].tps[0]);
-  displayPrice(game[0].tps[0]);
-  displayCoins(game[0].coins);
-  displaySum(game[0].coins)
-};
+const setGame = (game, levelNumber) => {
+  const currentGame = game[levelNumber];
+  const tps = currentGame.tps[0];
+  levelRef.innerHTML += `<h1>${currentGame.level}</h1>`;
+  taskRef.innerHTML += `<h1>${tps.thisTask}</h1>`;
+  priceRef.innerHTML += `<h1>${priceText.priceTag}</h1>`;
 
-/**
- * Function displaying game level
- * @param {"string"} levelText 
- */
-const displayLevel = (levelText) => {
-  showLevel = ``
-  showLevel += `<h1>${levelText}</h1>`;
-  levelRef.innerHTML = showLevel;
-}
-/**
- * Function displaying game tasks
- * @param {[]} taskArray 
- */
-const displayTask = (taskText) => {
-  let showTask = ``
-  showTask += `<h1>${taskText.thisTask}</h1>`
-  taskRef.innerHTML = showTask;
-}
-
-/**
- * Function displaying price tag
- * @param {[]} priceText
- */
-const displayPrice = (priceText) => {
-  let showPrice = ``;
-  showPrice += `<h1>${priceText.priceTag}</h1>`;
-  priceRef.innerHTML = showPrice;
-};
-
-/**
- * Function displaying coins that are buttons
- * @param {[]} coinArray
- */
-const displayCoins = (coinArray) => {
-  console.log(coinArray)
-  let coinButton = ``;
-  coinArray.forEach((coin) => {
-    coinButton += `<div class="col-5 col-sm-3 text-center">
+  currentGame.coins.forEach((coin) => {
+    coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
          <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
-  });
-  coinButtonRef.innerHTML = coinButton;
-  // This is an event listener giving coin value on every click
+  })
   $(".coin-button").click(function () {
-    addCoinValue($(this).attr("value"))
+    const userValue = +$(this).attr("value")
+    addCoinValue(userValue, tps)
   });
-}
+  // displayLevel(game[0].level);
+  // displayTask(game[0].tps[0]);
+  // displayPrice(game[0].tps[0]);
+  // displayCoins(game[0].coins);
+  // displaySum(game[0].coins)
+};
+
+
+
+
+
 /**
  * This function takes coin value in a string,
  * converts it into a number which then allows displaySum
