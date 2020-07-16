@@ -235,6 +235,11 @@ const openModal = (state) => {
 function displaySum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
+
+function resetSum() {
+  sum = 0;
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+}
 //ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
