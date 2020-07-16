@@ -81,23 +81,26 @@ const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      console.log(gameData.game)
-      setGame(gameData.game, gameData.level - 1)
+      console.log(gameData.game, gameData.level = -1)
+      setGame(gameData.game, gameData.level = -1)
     })
     .catch((err) => console.log(err))
 };
 
-//setGame(gameData.game, gameData.level - 1);
 /**
- * This function sets the Game card
- * @param {[]} game
+ * This function initiates the game display
+ * starting with Level 1 & Task 1,
+ * first priceTag and coins associates
+ * @param game {[]} - The whole game.json
+ * @param levelNumber {number}
  */
 const setGame = (game, levelNumber) => {
-  const currentGame = game[levelNumber];
+  const currentGame = game[levelNumber = 0];
+  console.log(game[levelNumber = 0])
   const tps = currentGame.tps[0];
   levelRef.innerHTML += `<h1>${currentGame.level}</h1>`;
   taskRef.innerHTML += `<h1>${tps.thisTask}</h1>`;
-  priceRef.innerHTML += `<h1>${priceText.priceTag}</h1>`;
+  priceRef.innerHTML += `<h1>${tps.priceTag}</h1>`;
 
   currentGame.coins.forEach((coin) => {
     coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
@@ -105,16 +108,15 @@ const setGame = (game, levelNumber) => {
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
     </div>`;
-  })
+  });
+
   $(".coin-button").click(function () {
+    // Converting the value clicked on to a number
     const userValue = +$(this).attr("value")
     addCoinValue(userValue, tps)
   });
-  // displayLevel(game[0].level);
-  // displayTask(game[0].tps[0]);
-  // displayPrice(game[0].tps[0]);
-  // displayCoins(game[0].coins);
-  // displaySum(game[0].coins)
+
+  displaySum(game[0].coins)
 };
 
 
