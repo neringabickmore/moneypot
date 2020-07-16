@@ -1,35 +1,3 @@
-// TODO GAME FLOW:
-/**
- * (A) START OF THE GAME DISPLAY: 
- *  4. display 6 white stars, as assigned in JSON at L1 T1 =(rewardStar)
- * (B) GAME ON:
- * 2. When the (displaySum) === (priceTag)  then a Congrats Modal comes up with a button nextTask
- * 3. nextTask should then have on a display:
- *    (1) "Level 1", "Task 2"
- *    (maybe tie this in somehow with = (setLevel) ?)
- *    (2) Display 1 yellow and 5 white stars =(rewardStar)
- *    (3) new priceTag (price tag assigned to L1 T2)
- *    (4) sum reset to 0 =(sumReset)
- *    (5) coin display doesnt change
- *
- * (B.1)
- * This action should be repeat until it reaches L1 T6 (increasing no of yellow stars at T2, T3 etc)
- * When at L1 T6 sum === priceTag then a Congrats Modal comes up with a button =(nextLevel) (not nextTask)
- * (addEventListener(when sum === PriceTag displayCongratsModal, else display badSum if sum > priceTag))
- *
- * (B.2)
- * At (nextLevel) (L2), the display differs from L1 is as follows:
- * 1. display: L2 T1
- * 2. Stars are reset =(resetStars)
- * 3. display coins assigned to Level 2 gameCard(json) = game[1].coins[0])
- * (B.3)
- * The next steps repeat itself as per steps on L1
- *
- * (C) END OF THE GAME =(EOG)
- * The game ends when the user reached L1 Task 6 sum === priceTag then Winner modal comes up with a button to resetGame (=(resetGame))button AND button to feedbackForm (${`#feedbackForm`}.hmtl(feedback)
- *
- */
-
 // TODO  WRITE:
 /* function nextLevel() {
  * }
@@ -38,8 +6,6 @@
  * function rewardStar() {
  * }
  * function resetStars() {
- * }
- * function resetSum(){
  * }
  * function resetGame() {
  * }
