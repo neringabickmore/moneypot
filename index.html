@@ -369,18 +369,37 @@
       </div>
     </div>
   </footer>
-  <!-- Audio-->
-  <audio id="buttonClickAudio" src="assets/audio/button.wav"></audio>
-  <audio id="coinClickAudio" src="assets/audio/addCoin.ogg"></audio>
-  <audio id="tryAgainAudio" src="assets/audio/tryAgain.wav"></audio>
-  <audio id="yippeeAudio" src="assets/audio/yippee.ogg"></audio>
-  <audio id="winnerAudio" src="assets/audio/winner.mp3"></audio>
-  <!-- JS scripts-->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <!-- My JS path-->
-  <script type="text/javascript" src="assets/js/main.js"></script>
+
+  <!-- GAME CARD: POP UP MODAL (inserted with JS)-->
+  <div class="modal fade" id="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" id="modalHeader">
+          <!--Modal Header Info comes in from game.js-->
+        </div>
+        <div id="modalBody" class="modal-body text-center">
+          <!--Modal Body Info comes in from game.js-->
+        </div>
+        <div class="modal-footer" id="modalFooter">
+          <!-- Modal Footer Info comes in from game.js-->
+        </div>
+      </div>
+    </div>
+    <!-- GAME CARD: POP UP MODAL/END -->
+
+    <!-- Audio-->
+    <audio id="buttonClickAudio" src="assets/audio/button.wav"></audio>
+    <audio id="coinClickAudio" src="assets/audio/addCoin.ogg"></audio>
+    <audio id="tryAgainAudio" src="assets/audio/tryAgain.wav"></audio>
+    <audio id="yippeeAudio" src="assets/audio/yippee.ogg"></audio>
+    <audio id="winnerAudio" src="assets/audio/winner.mp3"></audio>
+    <!-- JS scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- My JS path-->
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>
