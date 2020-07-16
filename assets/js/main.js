@@ -129,7 +129,7 @@ const addCoinValue = (sum, gameData) => {
   if (sum === gameData.priceTag) {
     openModal("nextTask");
   } else if (sum > gameData.priceTag) {
-    openModal("reset)");
+    openModal("reset");
   } else if (sum === gameData.priceTag && gameData.task >= 6) {
     openModal("nextLevel")
   }
@@ -141,7 +141,7 @@ const addCoinValue = (sum, gameData) => {
  * on addCoinValue (on the switch).
  * @param state {string} - the string to match switch statement.
  */
-const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
+const openModal = (state) => {
   let buttonText = ``;
   let buttonId = ``;
   let iClassFooter = ``;
@@ -149,24 +149,12 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
   let bodyText = ``;
   let srOnly = ``;
 
-  // These variables add content to individual parts of the modal
-  const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div class="modal-footer"><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
-
-  const backdropLabelContent = document.createElement("h6");
-  backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
-
-  const modalBodyContent = document.createElement("div");
-  modalBodyContent.i += `<div id="modalBody" class="modal-body text-center"><i class="${iClassBody}" aria-hidden="true"></i><span
-            class="sr-only">${srOnly}</span></div>
-      </div>`;
-
   /**
    * Switch allows the information to change in the 
    * required parts of the modal dependant on the 
    * assifned variable
    */
-  switch (footerInfo, backdropLabelInfo, mainBodyInfo) {
+  switch (state) {
     case "nextTask":
       buttonText = "Next Task";
       buttonId = "nextTask";
@@ -194,15 +182,29 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
       srOnly = "sad face";
       break;
   }
+  // These variables add content to individual parts of the modal
+  const backdropLabelContent = document.createElement("h6");
+  backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
+
+  const modalBodyContent = document.createElement("div");
+  modalBodyContent.innerHTML += `<div><i class="${iClassBody}" aria-hidden="true"></i><span
+            class="sr-only">${srOnly}</span></div>
+      </div>`;
+  console.log(`<div><i class="${iClassBody}" aria-hidden="true"></i><span
+            class="sr-only">${srOnly}</span></div>
+      </div>`)
+  const modalFooterContent = document.createElement("div");
+  modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+  console.log(bodyText)
 
   /**
    * This method allows to fetch the information 
    * to index.html and assing appopriate content.
    */
   $("#modal").modal("toggle");
-  document.getElementById("modalFooter").appendChild(modalFooterContent);
-  document.getElementById("staticBackdropLabel").appendChild(backdropLabelContent);
+  document.getElementById("modalHeader").appendChild(backdropLabelContent);
   document.getElementById("modalBody").appendChild(modalBodyContent);
+  document.getElementById("modalFooter").appendChild(modalFooterContent);
 
   /**
    * Event listeners required to action
@@ -220,6 +222,7 @@ const openModal = (footerInfo, backdropLabelInfo, mainBodyInfo) => {
     resetSum();
     nextLevel();
   });
+
 }
 
 /**
