@@ -95,9 +95,12 @@ const nextTask = (taskArray, currentTask) => {
   const count = Object.keys(taskArray).length;
   if (currentTask < count) {
     currentTask += 1;
-    currentGame = 1;
     return;
-  }
+  } else {
+    currentTask = 1;
+
+    return;
+  };
 }
 
 /**
