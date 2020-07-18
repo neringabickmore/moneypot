@@ -1,10 +1,10 @@
 // TODO  WRITE:
 /* function nextLevel() {
- * }
+ * } 
  * function nextTask() {
- * }
+ * } 
  * function rewardStar() {
- * }
+ * } 
  * function resetStars() {
  * }
  * function resetGame() {
@@ -62,20 +62,21 @@ const fetchData = (url) => {
  */
 const setGame = (game, levelNumber) => {
   const currentGame = game[levelNumber = 0];
-  console.log(game[levelNumber = 0])
-  console.log(currentGame.tps[0])
   const tps = currentGame.tps[0];
+  const taskArray = (currentGame.tps);
+  const currentTask = (currentGame.tps[0].thisTask)
+
   levelRef.innerHTML += `<h1>Level ${currentGame.level}</h1>`;
   taskRef.innerHTML += `<h1>Task ${tps.thisTask}</h1>`;
   priceRef.innerHTML += `<h1>${tps.priceTag}p</h1>`;
 
   currentGame.coins.forEach((coin) => {
-
-    coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
-         <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
+    coinButtonRef.innerHTML +=
+      `<div class="col-5 col-sm-3 text-center">
+      <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
       </button>
-    </div>`;
+      </div>`;
   });
 
   $(".coin-button").click(function () {
@@ -85,8 +86,23 @@ const setGame = (game, levelNumber) => {
     const task = (tps.thisTask)
     addCoinValue(coinValue, price, task);
   });
-  displaySum(game[0].coins)
+  displaySum(game[0].coins);
+  nextTask(taskArray, currentTask);
 };
+
+/**
+ * This function calls out the next task in the Level of the game.
+ * @param taskArray {[]} parameter for all tasks in a level.
+ * @param currentTask {number} sequence number of the current task.
+ */
+const nextTask = (taskArray, currentTask) => {
+  const count = Object.keys(taskArray).length;
+  if (currentTask < count) {
+    currentTask += 1;
+    currentGame = 1;
+    return;
+  }
+}
 
 /**
  * This function allows coin value to add to totalSum
