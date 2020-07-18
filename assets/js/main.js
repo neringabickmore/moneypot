@@ -63,12 +63,14 @@ const fetchData = (url) => {
 const setGame = (game, levelNumber) => {
   const currentGame = game[levelNumber = 0];
   console.log(game[levelNumber = 0])
+  console.log(currentGame.tps[0])
   const tps = currentGame.tps[0];
   levelRef.innerHTML += `<h1>Level ${currentGame.level}</h1>`;
   taskRef.innerHTML += `<h1>Task ${tps.thisTask}</h1>`;
   priceRef.innerHTML += `<h1>${tps.priceTag}p</h1>`;
 
   currentGame.coins.forEach((coin) => {
+
     coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
          <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
       <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
@@ -78,9 +80,10 @@ const setGame = (game, levelNumber) => {
 
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
-    const coinValue = $(this).attr("value")
-    addCoinValue(coinValue, tps)
-    console.log(coinValue, tps)
+    const coinValue = +($(this).attr("value"));
+    const price = (tps.priceTag)
+    const task = (tps.thisTask)
+    addCoinValue(coinValue, price, task);
   });
   displaySum(game[0].coins)
 };
@@ -90,13 +93,14 @@ const setGame = (game, levelNumber) => {
  * @param sum {number} - total value of coins the user clicked on
  * @param gameData {[]} - The whole game.json 
  */
-const addCoinValue = (sum, gameData) => {
+const addCoinValue = (coinValue, price, task) => {
+  sum += coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-  if (sum === gameData.priceTag) {
+  if (sum === price) {
     openModal("nextTask");
-  } else if (sum > gameData.priceTag) {
+  } else if (sum > price) {
     openModal("reset");
-  } else if (sum === gameData.priceTag && gameData.task >= 6) {
+  } else if (sum === price && task >= 6) {
     openModal("nextLevel")
   }
 }
@@ -199,19 +203,13 @@ const openModal = (state) => {
  * and leave it blank
  */
 function displaySum() {
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`; <<
-  << << < HEAD
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 }
-
-===
-=== =
-};
 
 function resetSum() {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-} >>>
->>> > 49298726 b1de6be256bd532f710edefcf4f97819
+}
 //ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
