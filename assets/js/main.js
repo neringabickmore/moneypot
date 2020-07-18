@@ -1,8 +1,6 @@
 // TODO  WRITE:
 /* function nextLevel() {
  * } 
- * function nextTask() {
- * } 
  * function rewardStar() {
  * } 
  * function resetStars() {
@@ -22,8 +20,7 @@
  *
  */
 
-//Variables
-
+// Global variables
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
@@ -47,7 +44,6 @@ const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      console.log(gameData.game, gameData.level = -1)
       setGame(gameData.game, gameData.level = -1)
     })
     .catch((err) => console.log(err))
@@ -60,8 +56,8 @@ const fetchData = (url) => {
  * @param game {[]} - The whole game.json
  * @param levelNumber {number}
  */
-const setGame = (game, levelNumber) => {
-  const currentGame = game[levelNumber = 0];
+const setGame = (game) => {
+  const currentGame = game[0];
   const tps = currentGame.tps[0];
   const taskArray = (currentGame.tps);
   const currentTask = (currentGame.tps[0].thisTask)
