@@ -29,12 +29,15 @@ const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
 let sum = 0;
+let currentGame;
+let currentTPS;
+let taskArray;
+let currentTask;
 
 $(document).ready(function () {
-  fetchData("game.json")
-})
+  fetchData("game.json");
+});
 
-// return setLevel(result);
 /**
  * Fetch data from:
  * @param {string} url allows
@@ -44,9 +47,9 @@ const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      setGame(gameData.game, gameData.level = -1)
+      setGame(gameData.game, gameData.level = -1);
     })
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err));
 };
 
 /**
@@ -55,16 +58,17 @@ const fetchData = (url) => {
  * first priceTag and coins associates
  * @param game {[]} - The whole game.json
  * @param levelNumber {number}
+ * @param taskNumber {number}
  */
-const setGame = (game) => {
-  const currentGame = game[0];
-  const tps = currentGame.tps[0];
-  const taskArray = (currentGame.tps);
-  const currentTask = (currentGame.tps[0].thisTask)
+const setGame = (game, levelNumber, taskNumber) => {
+  currentGame = game[levelNumber = 0];
+  currentTPS = currentGame.tps[taskNumber = 0];
+  taskArray = (currentGame.tps);
+  currentTask = (currentGame.tps[0].thisTask);
 
   levelRef.innerHTML += `<h1>Level ${currentGame.level}</h1>`;
-  taskRef.innerHTML += `<h1>Task ${tps.thisTask}</h1>`;
-  priceRef.innerHTML += `<h1>${tps.priceTag}p</h1>`;
+  taskRef.innerHTML += `<h1>Task ${currentTPS.thisTask}</h1>`;
+  priceRef.innerHTML += `<h1>${currentTPS.priceTag}p</h1>`;
 
   currentGame.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
@@ -78,8 +82,8 @@ const setGame = (game) => {
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
     const coinValue = +($(this).attr("value"));
-    const price = (tps.priceTag)
-    const task = (tps.thisTask)
+    const price = (currentTPS.priceTag);
+    const task = (currentTPS.thisTask);
     addCoinValue(coinValue, price, task);
   });
   displaySum(game[0].coins);
@@ -97,11 +101,10 @@ const nextTask = (taskArray, currentTask) => {
     currentTask += 1;
     return;
   } else {
-    currentTask = 1;
-
+    currentTask = 0;
     return;
   };
-}
+};
 
 /**
  * This function allows coin value to add to totalSum
@@ -116,9 +119,9 @@ const addCoinValue = (coinValue, price, task) => {
   } else if (sum > price) {
     openModal("reset");
   } else if (sum === price && task >= 6) {
-    openModal("nextLevel")
+    openModal("nextLevel");
   }
-}
+};
 
 /**
  * This function created modal footer and
@@ -175,12 +178,9 @@ const openModal = (state) => {
   modalBodyContent.innerHTML += `<div><i class="${iClassBody}" aria-hidden="true"></i><span
             class="sr-only">${srOnly}</span></div>
       </div>`;
-  console.log(`<div><i class="${iClassBody}" aria-hidden="true"></i><span
-            class="sr-only">${srOnly}</span></div>
-      </div>`)
+
   const modalFooterContent = document.createElement("div");
   modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
-  console.log(bodyText)
 
   /**
    * This method allows to fetch the information 
@@ -208,7 +208,7 @@ const openModal = (state) => {
     nextLevel();
   });
 
-}
+};
 
 /**
  * Function to display initial
