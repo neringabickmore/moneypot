@@ -9,13 +9,8 @@
  * }
  * function enfOfGame(){
  * }
- * function correctSumAudio(){
- * }
- * function badSumAudio() {
- * }
  * function winnerAudio(){
  * }
- *
  */
 
 // Global variables
