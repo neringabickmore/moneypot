@@ -11,6 +11,7 @@
  * }
  * function winnerAudio(){
  * }
+ * Congrats modal for winning the game!
  */
 
 // Global variables
