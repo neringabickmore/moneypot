@@ -9,8 +9,6 @@
  * }
  * function enfOfGame(){
  * }
- * function addCoinAudio(){
- * }
  * function correctSumAudio(){
  * }
  * function badSumAudio() {
@@ -123,6 +121,7 @@ const addCoinValue = (coinValue, price, task) => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
   if (sum === price) {
     openModal("nextTask");
+    delayedCorrectSumAudio();
   } else if (sum > price) {
     openModal("reset");
   } else if (sum === price && task >= 6) {
@@ -261,6 +260,12 @@ $(".coin").click(function () {
 function addCoinAudio() {
   $("#coinClickAudio")[0].currentTime = 0;
   $("#coinClickAudio")[0].play();
+};
+
+function delayedCorrectSumAudio() {
+  setTimeout(function () {
+    $("#yippeeAudio")[0].play();
+  }, 800);
 }
 $("#soundOff").click(function () {
   muteAudio();
