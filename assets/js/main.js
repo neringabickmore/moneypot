@@ -157,7 +157,7 @@ const openModal = (state) => {
     case "nextLevel":
       buttonText = "Next Level";
       buttonId = "nextLevel";
-      iClassFooter = "fas fa-redo btn";
+      iClassFooter = "fa fa-play";
       iClassBody = "fas fa-medal";
       bodyText = "Congratulations! You are now through to the next level!";
       srOnly = "medal";
@@ -166,7 +166,7 @@ const openModal = (state) => {
     case "reset":
       buttonText = "Reset";
       buttonId = "errorModal";
-      iClassFooter = "fa fa-play";
+      iClassFooter = "fas fa-redo";
       iClassBody = "far fa-frown";
       bodyText = "The sum is not correct. Please check your coins!";
       srOnly = "sad face";
@@ -182,7 +182,7 @@ const openModal = (state) => {
       </div>`;
 
   const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+  modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   /**
    * This method allows to fetch the information 
