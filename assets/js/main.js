@@ -124,6 +124,7 @@ const addCoinValue = (coinValue, price, task) => {
     delayedCorrectSumAudio();
   } else if (sum > price) {
     openModal("reset");
+    delayedBadSumAudio();
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
   }
@@ -266,7 +267,14 @@ function delayedCorrectSumAudio() {
   setTimeout(function () {
     $("#yippeeAudio")[0].play();
   }, 800);
-}
+};
+
+function delayedBadSumAudio() {
+  setTimeout(function () {
+    $("#tryAgainAudio")[0].play();
+  }, 800);
+};
+
 $("#soundOff").click(function () {
   muteAudio();
 });
