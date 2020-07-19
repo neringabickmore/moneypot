@@ -87,21 +87,24 @@ const setGame = (game, levelNumber, taskNumber) => {
     addCoinValue(coinValue, price, task);
   });
   displaySum(game[0].coins);
-  nextTask(taskArray, currentTask);
+  nextTask(taskArray, currentTask, currentTPS);
 };
 
 /**
  * This function calls out the next task in the Level of the game.
  * @param taskArray {[]} parameter for all tasks in a level.
  * @param currentTask {number} sequence number of the current task.
+ * @param currentTPS{[]} parameter for the current display of Task, Price and Stars.
  */
-const nextTask = (taskArray, currentTask) => {
+const nextTask = (taskArray, currentTask, currentTPS) => {
   const count = Object.keys(taskArray).length;
   if (currentTask < count) {
-    currentTask += 1;
+    currentTPS += 1;
+    setGame(currentGame, currentTPS);
     return;
   } else {
-    currentTask = 0;
+    currentTPS = 0;
+    setGame(currentGame, currentTPS);
     return;
   };
 };
@@ -109,7 +112,8 @@ const nextTask = (taskArray, currentTask) => {
 /**
  * This function allows coin value to add to totalSum
  * @param sum {number} - total value of coins the user clicked on
- * @param gameData {[]} - The whole game.json 
+ * @param gameData {[]} - The whole game.json.
+ * @param task{[]} - current task.
  */
 const addCoinValue = (coinValue, price, task) => {
   sum += coinValue;
@@ -198,14 +202,14 @@ const openModal = (state) => {
    */
   $("#nextTask").click(function () {
     resetSum();
-    nextTask();
+    nextTask(currentGame, currentTPS);
   });
   $("#errorModal").click(function () {
     resetSum();
   });
   $("#nextLevel").click(function () {
     resetSum();
-    nextLevel();
+    nextLevel(currentGame);
   });
 
 };
