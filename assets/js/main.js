@@ -86,6 +86,9 @@ const setGame = (game, levelNumber, taskNumber) => {
     const task = (currentTPS.thisTask);
     addCoinValue(coinValue, price, task);
   });
+  $(".coin").click(function () {
+    addCoinAudio();
+  });
   displaySum(game[0].coins);
   nextTask(taskArray, currentTask, currentTPS);
 };

@@ -12,7 +12,7 @@
 
 The following validation services and linter were used to check the validity of the website code.
 - [W3C Markup Validation]( https://validator.w3.org/) was used to validate HTML.
-- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+- - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
 
 ### Client stories testing
@@ -27,7 +27,7 @@ The following validation services and linter were used to check the validity of 
 
 #### Solved bugs
 
-1. **Dev tools were throwing an error in console**
+**1. Dev tools were throwing an error in console**
 
 - Fix: all audio buttons were given const and removed let.
 
@@ -36,7 +36,10 @@ const soundOff = true;
 const soundOn = true
 ```
 
+**2. Event listener was not registering addCoinAudio**
+
+- Fix: migrated addCoinAudio event listener into setGame function.
+
 #### Unsolved bugs
 
 ## Further testing
-
