@@ -85,6 +85,7 @@ const setGame = (game) => {
     coinValue = +($(this).attr("value"));
     price = currentTask.priceTag;
     task = currentTask.thisTask;
+    level = currentLevel.level;
     addCoinValue();
   });
   $(".coin").click(function () {
@@ -115,14 +116,17 @@ const addCoinValue = () => {
   sum += coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
   console.log(sum === price && task >= 6)
-  if (sum === price && task >= 6) {
+  if (sum === price && task >= 6 && level >= 3) {
+    openModal("endOfGame")
+  } else if (sum === price && task >= 6) {
     openModal("nextLevel");
   } else if (sum > price) {
     openModal("reset");
     delayedBadSumAudio();
   } else if (sum === price) {
     openModal("nextTask");
-  }
+
+  };
 };
 
 /**
@@ -171,6 +175,15 @@ const openModal = (state) => {
       bodyText = "The sum is not correct. Please check your coins!";
       srOnly = "sad face";
       break;
+    case "endOfGame":
+      buttonText = "Start again";
+      buttonId = "endOfGame";
+      iClassFooter = "fas fa-sync";
+      iClassBody = "fas fa-trophy";
+      bodyText = "Congratulations! You are a winner!";
+      srOnly = "trophy";
+      break;
+
   }
 
   backdropLabelContent.innerHTML = `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
@@ -204,6 +217,9 @@ const openModal = (state) => {
     nextLevel();
     resetTask();
   });
+  $("#endOfGame").click(function () {
+    resetGame();
+  })
 };
 
 /**
@@ -224,6 +240,10 @@ function resetSum() {
 
 function resetTask() {
   taskNumber = 0;
+}
+
+function endOfGame() {
+  openModal("endOfGame");
 }
 
 /**
