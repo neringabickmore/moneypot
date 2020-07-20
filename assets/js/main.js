@@ -27,7 +27,6 @@ let currentGame;
 let currentTask;
 let levelNumber = 0;
 let taskNumber = 0;
-let taskArray;
 
 $(document).ready(function () {
   fetchData("game.json");
@@ -56,7 +55,6 @@ const fetchData = () => {
 const setGame = (game) => {
   currentGame = game[levelNumber];
   currentTask = currentGame.tps[taskNumber];
-  taskArray = (currentGame.tps);
 
   levelRef.innerHTML = `<h1>Level ${currentGame.level}</h1>`;
   taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
