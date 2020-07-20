@@ -80,6 +80,26 @@ const nextTask = () => {
   fetchData();
 ```
 
+**3. Function ```setGame()``` not clearing information when displaying ```newTask()```:
+
+![nextTaskError](/assets//testing/images/nextTaskDisplayError.jpg)
+
+- Fix: cleared data passed into html file before fetching new info:
+
+```javascript
+levelRef.innerHTML = `<h1>Level ${currentGame.level}</h1>`;
+taskRef.innerHTML = `<h1>Task ${currentTPS.thisTask}</h1>`;
+priceRef.innerHTML = `<h1>${currentTPS.priceTag}p</h1>`;
+coinButtonRef.innerHTML = ``;
+currentGame.coins.forEach((coin) => {
+coinButtonRef.innerHTML +=
+ `<div class="col-5 col-sm-3 text-center">
+   <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
+    <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
+   </button>
+  </div>`;
+```
+
 #### Unsolved bugs
 
 ## Further testing
