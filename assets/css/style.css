@@ -56,7 +56,8 @@ body {
 
 .modal-body .fa-star,
 .modal-body .fa-trophy,
-.modal-body .fa-frown {
+.modal-body .fa-frown,
+.modal-body .fa-medal {
   color: #d5ae41;
   font-size: 55px;
   line-height: 20px;

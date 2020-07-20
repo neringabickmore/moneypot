@@ -115,6 +115,17 @@ const modalFooterContent = document.createElement("div");
 
 This fix not only removed the initial error of display not clearing before loading the next modal content, but also allowed the game to flow from task 1 to task 6 wihtout errors.
 
+**5. Function ```resetStars``` is not completely functional.
+
+Function is working appropriately to clear rewarded stars when the user progresses to the next level, however, when they complete the first task of the next level, all 6 stars are rewarded as opposed to just one: 
+
+![starDisplayError](/assets/testing/images/starDisplayError.jpg)
+
+-Fix: `resetStars()` given `sum = 0` allowed to reset stars correctly and display them appropriately: 
+
+![starDisplay](/assets/testing/images/starDisplay.jpg)
+
 #### Unsolved bugs
+
 
 ## Further testing
