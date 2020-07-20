@@ -86,7 +86,6 @@ const setGame = (game, levelNumber, taskNumber) => {
     addCoinAudio();
   });
   displaySum(game[0].coins);
-  nextTask(taskArray, currentTask, currentTPS);
 };
 
 /**
@@ -95,17 +94,9 @@ const setGame = (game, levelNumber, taskNumber) => {
  * @param currentTask {number} sequence number of the current task.
  * @param currentTPS{[]} parameter for the current display of Task, Price and Stars.
  */
-const nextTask = (taskArray, currentTask, currentTPS) => {
-  const count = Object.keys(taskArray).length;
-  if (currentTask < count) {
-    currentTPS += 1;
-    setGame(currentGame, currentTPS);
-    return;
-  } else {
-    currentTPS = 0;
-    setGame(currentGame, currentTPS);
-    return;
-  };
+const nextTask = () => {
+  taskNumber++;
+  fetchData();
 };
 
 /**
@@ -203,14 +194,14 @@ const openModal = (state) => {
    */
   $("#nextTask").click(function () {
     resetSum();
-    nextTask(currentGame, currentTPS);
+    nextTask();
   });
   $("#errorModal").click(function () {
     resetSum();
   });
   $("#nextLevel").click(function () {
     resetSum();
-    nextLevel(currentGame);
+    nextLevel();
   });
 
 };
