@@ -32,11 +32,15 @@ const backdropLabelContent = document.createElement("h6");
 const modalBodyContent = document.createElement("div");
 const modalFooterContent = document.createElement("div");
 
-let sum = 0;
-let currentLevel;
-let currentTask;
 let levelNumber = 0;
 let taskNumber = 0;
+let sum = 0;
+
+let currentLevel;
+let currentTask;
+let coinValue;
+let price;
+let task;
 
 $(document).ready(function () {
   fetchData("game.json");
@@ -80,10 +84,10 @@ const setGame = (game) => {
 
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
-    const coinValue = +($(this).attr("value"));
-    const price = (currentTask.priceTag);
-    const task = (currentTask.thisTask);
-    addCoinValue(coinValue, price, task);
+    coinValue = +($(this).attr("value"));
+    price = currentTask.priceTag;
+    task = currentTask.thisTask;
+    addCoinValue();
   });
   $(".coin").click(function () {
     addCoinAudio();
@@ -97,13 +101,24 @@ const nextTask = () => {
   fetchData();
 };
 
+//This function calls out the next level of the game.
+const nextLevel = () => {
+  if (currentTask === 6) {
+    levelNumber++;
+    fetchData();
+  } else {
+    levelNumber = 0;
+    fetchData();
+  }
+}
+
 /**
  * This function allows coin value to add to totalSum
  * @param sum {number} - total value of coins the user clicked on
  * @param gameData {[]} - The whole game.json.
  * @param task{[]} - current task.
  */
-const addCoinValue = (coinValue, price, task) => {
+const addCoinValue = () => {
   sum += coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
   if (sum === price) {
@@ -195,7 +210,6 @@ const openModal = (state) => {
     resetSum();
     nextLevel();
   });
-
 };
 
 /**
