@@ -90,7 +90,6 @@ const setGame = (game) => {
 
 const nextTask = () => {
   taskNumber++;
-  star++;
   fetchData();
   rewardStars();
 };
@@ -256,6 +255,7 @@ function resetGame() {
 };
 
 function rewardStars() {
+  star++;
   for (let i = 1; i <= star; i++) {
     let element = document.getElementById(`star${i}`);
     element.classList.remove("no-star");
