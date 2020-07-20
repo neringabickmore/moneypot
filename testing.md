@@ -102,4 +102,9 @@ coinButtonRef.innerHTML +=
 
 #### Unsolved bugs
 
+**1. Modal display is not clearing initial display before loading the next:**
+
+![modalDisplayError](/assets/testing/images/modalDisplayError.jpg)
+![modalDisplayError2](/assets/testing/images/modalDisplayError.2.jpg)
+
 ## Further testing
