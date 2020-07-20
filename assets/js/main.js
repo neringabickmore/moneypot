@@ -28,16 +28,15 @@ let currentTPS;
 let levelNumber = 0;
 let taskNumber = 0;
 let taskArray;
-let currentTask;
 
 $(document).ready(function () {
   fetchData("game.json");
 });
 
 /**
- * Fetch data from:
- * @param {string} url allows
- * game data to show on the index.html form JSON file
+ * Fetchdata() allows to pass on the information 
+ * located in the json file into setGame, which
+ * allows the game display to load.
  */
 const fetchData = () => {
   return fetch(`assets/data/game.json`)
@@ -53,14 +52,11 @@ const fetchData = () => {
  * starting with Level 1 & Task 1,
  * first priceTag and coins associates
  * @param game {[]} - The whole game.json
- * @param levelNumber {number}
- * @param taskNumber {number}
  */
 const setGame = (game) => {
   currentGame = game[levelNumber];
   currentTPS = currentGame.tps[taskNumber];
   taskArray = (currentGame.tps);
-  currentTask = (currentGame.tps[0].thisTask);
 
   levelRef.innerHTML = `<h1>Level ${currentGame.level}</h1>`;
   taskRef.innerHTML = `<h1>Task ${currentTPS.thisTask}</h1>`;
@@ -88,12 +84,7 @@ const setGame = (game) => {
   displaySum(game[0].coins);
 };
 
-/**
- * This function calls out the next task in the Level of the game.
- * @param taskArray {[]} parameter for all tasks in a level.
- * @param currentTask {number} sequence number of the current task.
- * @param currentTPS{[]} parameter for the current display of Task, Price and Stars.
- */
+//This function calls out the next task in the Level of the game.
 const nextTask = () => {
   taskNumber++;
   fetchData();
@@ -172,8 +163,7 @@ const openModal = (state) => {
 
   const modalBodyContent = document.createElement("div");
   modalBodyContent.innerHTML += `<div><i class="${iClassBody}" aria-hidden="true"></i><span
-            class="sr-only">${srOnly}</span></div>
-      </div>`;
+            class="sr-only">${srOnly}</span></div>`;
 
   const modalFooterContent = document.createElement("div");
   modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
@@ -221,6 +211,7 @@ function resetSum() {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 }
+
 //ALL AUDIO FUNCTIONS
 /**
  * Function enabling an audio
