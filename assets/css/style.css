@@ -35,17 +35,43 @@ body {
 }
 
 .game-rules-box h4,
-#contact-form-box h5 {
+#contact-form-box h5,
+.game-card-modal h6 {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.05rem;
   font-weight: normal !important;
 }
 
-.game-rules-box .modal-header,
-.game-rules-box .modal-footer,
-.thank-you-box .modal-header,
-.thank-you-box .modal-footer {
+.modal-header,
+.modal-footer {
   border: none;
+}
+
+/**---- Modal styling: Game Console----------**/
+.game-card-modal {
+  background-color: #f3f6fb;
+  color: #343a40;
+
+}
+
+.modal-body .fa-star,
+.modal-body .fa-trophy,
+.modal-body .fa-frown {
+  color: #d5ae41;
+  font-size: 55px;
+  line-height: 20px;
+}
+
+.modal-btn {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  border: none;
+  transition: all 0.3s;
+  margin: 0.25rem;
+}
+
+.modal-btn:hover {
+  transform: scale(1.2);
 }
 
 /**---- Modal styling: contact form----------**/

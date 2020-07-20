@@ -1,29 +1,20 @@
 // TODO  WRITE:
 /* function nextLevel() {
- * }
- * function nextTask() {
- * }
+ * } 
  * function rewardStar() {
- * }
+ * } 
  * function resetStars() {
  * }
  * function resetGame() {
  * }
  * function enfOfGame(){
  * }
- * function addCoinAudio(){
- * }
- * function correctSumAudio(){
- * }
- * function badSumAudio() {
- * }
  * function winnerAudio(){
  * }
- *
+ * Congrats modal for winning the game!
  */
 
-//Variables
-
+// Global variables
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
@@ -31,26 +22,38 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
+
+/**
+ * Below three variables 
+ * add content to individual parts 
+ * of the gamemodal
+ */
+const backdropLabelContent = document.createElement("h6");
+const modalBodyContent = document.createElement("div");
+const modalFooterContent = document.createElement("div");
+
 let sum = 0;
+let currentLevel;
+let currentTask;
+let levelNumber = 0;
+let taskNumber = 0;
 
 $(document).ready(function () {
-  fetchData("game.json")
-})
+  fetchData("game.json");
+});
 
-// return setLevel(result);
 /**
- * Fetch data from:
- * @param {string} url allows
- * game data to show on the index.html form JSON file
+ * Fetchdata() allows to pass on the information 
+ * located in the json file into setGame, which
+ * allows the game display to load.
  */
-const fetchData = (url) => {
-  return fetch(`assets/data/${url}`)
+const fetchData = () => {
+  return fetch(`assets/data/game.json`)
     .then((res) => res.json())
     .then(gameData => {
-      console.log(gameData.game, gameData.level = -1)
-      setGame(gameData.game, gameData.level = -1)
+      setGame(gameData.game);
     })
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err));
 };
 
 /**
@@ -58,48 +61,61 @@ const fetchData = (url) => {
  * starting with Level 1 & Task 1,
  * first priceTag and coins associates
  * @param game {[]} - The whole game.json
- * @param levelNumber {number}
  */
-const setGame = (game, levelNumber) => {
-  const currentGame = game[levelNumber = 0];
-  console.log(game[levelNumber = 0])
-  const tps = currentGame.tps[0];
-  levelRef.innerHTML += `<h1>Level ${currentGame.level}</h1>`;
-  taskRef.innerHTML += `<h1>Task ${tps.thisTask}</h1>`;
-  priceRef.innerHTML += `<h1>${tps.priceTag}p</h1>`;
-
-  currentGame.coins.forEach((coin) => {
-    coinButtonRef.innerHTML += `<div class="col-5 col-sm-3 text-center">
-         <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
-      <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
-      </button>
-    </div>`;
+const setGame = (game) => {
+  currentLevel = game[levelNumber];
+  currentTask = currentLevel.tps[taskNumber];
+  levelRef.innerHTML = `<h1>Level ${currentLevel.level}</h1>`;
+  taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
+  priceRef.innerHTML = `<h1>${currentTask.priceTag}p</h1>`;
+  coinButtonRef.innerHTML = ``;
+  currentLevel.coins.forEach((coin) => {
+    coinButtonRef.innerHTML +=
+      `<div class="col-5 col-sm-3 text-center">
+        <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
+          <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
+        </button>
+      </div>`;
   });
 
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
-    const coinValue = $(this).attr("value")
-    addCoinValue(coinValue, tps)
-    console.log(coinValue, tps)
+    const coinValue = +($(this).attr("value"));
+    const price = (currentTask.priceTag);
+    const task = (currentTask.thisTask);
+    addCoinValue(coinValue, price, task);
   });
-  displaySum(game[0].coins)
+  $(".coin").click(function () {
+    addCoinAudio();
+  });
+  displaySum(game[0].coins);
+};
+
+//This function calls out the next task in the Level of the game.
+const nextTask = () => {
+  taskNumber++;
+  fetchData();
 };
 
 /**
  * This function allows coin value to add to totalSum
  * @param sum {number} - total value of coins the user clicked on
- * @param gameData {[]} - The whole game.json 
+ * @param gameData {[]} - The whole game.json.
+ * @param task{[]} - current task.
  */
-const addCoinValue = (sum, gameData) => {
+const addCoinValue = (coinValue, price, task) => {
+  sum += coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-  if (sum === gameData.priceTag) {
+  if (sum === price) {
     openModal("nextTask");
-  } else if (sum > gameData.priceTag) {
+    delayedCorrectSumAudio();
+  } else if (sum > price) {
     openModal("reset");
-  } else if (sum === gameData.priceTag && gameData.task >= 6) {
-    openModal("nextLevel")
+    delayedBadSumAudio();
+  } else if (sum === price && task >= 6) {
+    openModal("nextLevel");
   }
-}
+};
 
 /**
  * This function created modal footer and
@@ -133,7 +149,7 @@ const openModal = (state) => {
     case "nextLevel":
       buttonText = "Next Level";
       buttonId = "nextLevel";
-      iClassFooter = "fas fa-redo btn";
+      iClassFooter = "fa fa-play";
       iClassBody = "fas fa-medal";
       bodyText = "Congratulations! You are now through to the next level!";
       srOnly = "medal";
@@ -142,26 +158,17 @@ const openModal = (state) => {
     case "reset":
       buttonText = "Reset";
       buttonId = "errorModal";
-      iClassFooter = "fa fa-play";
+      iClassFooter = "fas fa-redo";
       iClassBody = "far fa-frown";
       bodyText = "The sum is not correct. Please check your coins!";
       srOnly = "sad face";
       break;
   }
-  // These variables add content to individual parts of the modal
-  const backdropLabelContent = document.createElement("h6");
-  backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
 
-  const modalBodyContent = document.createElement("div");
-  modalBodyContent.innerHTML += `<div><i class="${iClassBody}" aria-hidden="true"></i><span
-            class="sr-only">${srOnly}</span></div>
-      </div>`;
-  console.log(`<div><i class="${iClassBody}" aria-hidden="true"></i><span
-            class="sr-only">${srOnly}</span></div>
-      </div>`)
-  const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
-  console.log(bodyText)
+  backdropLabelContent.innerHTML = `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
+  modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
+            class="sr-only">${srOnly}</span></div>`;
+  modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   /**
    * This method allows to fetch the information 
@@ -189,7 +196,7 @@ const openModal = (state) => {
     nextLevel();
   });
 
-}
+};
 
 /**
  * Function to display initial
@@ -200,20 +207,21 @@ const openModal = (state) => {
  */
 function displaySum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-};
+}
 
 function resetSum() {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 }
-//ALL AUDIO FUNCTIONS
+
 /**
+ * ALL AUDIO FUNCTIONS
+ * 
  * Function enabling an audio
  * at a click of a button in HTML.
- * If you remove it, elements with
+ * If you remove it, elements with 
  * .btn class won't have a sound.
  */
-
 $(".btn").click(function () {
   playButtonAudio();
 });
@@ -222,6 +230,7 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
 }
+
 /**
  * Function enabling an audio
  * at a click of a coin image in HTML.
@@ -235,10 +244,24 @@ $(".coin").click(function () {
 function addCoinAudio() {
   $("#coinClickAudio")[0].currentTime = 0;
   $("#coinClickAudio")[0].play();
-}
+};
+
+function delayedCorrectSumAudio() {
+  setTimeout(function () {
+    $("#yippeeAudio")[0].play();
+  }, 800);
+};
+
+function delayedBadSumAudio() {
+  setTimeout(function () {
+    $("#tryAgainAudio")[0].play();
+  }, 800);
+};
+
 $("#soundOff").click(function () {
   muteAudio();
 });
+
 /**
  *  This function mutes all buttons
  * when the "sound-off" button
@@ -252,9 +275,11 @@ function muteAudio() {
     }
   }
 }
+
 $("#soundOn").click(function () {
   unMuteAudio();
 });
+
 /**
  *  This function unmutes all buttons
  * when the "sound-on" button
