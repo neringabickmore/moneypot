@@ -1,10 +1,3 @@
-// TODO  WRITE:
-/*function rewardStar() {
- * } 
- * function resetStars() {
- * }
- */
-
 // Global variables
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
