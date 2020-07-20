@@ -223,30 +223,30 @@ const openModal = (state) => {
   });
 };
 
-function displaySum() {
+const displaySum = () => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
-function resetSum() {
+const resetSum = () => {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
-function resetTask() {
+const resetTask = () => {
   taskNumber = 0;
   resetStars();
 };
 
-function endOfGame() {
+const endOfGame = () => {
   openModal("endOfGame");
 };
 
-function resetLevel() {
+const resetLevel = () => {
   levelNumber = 0;
   resetStars();
 };
 
-function resetGame() {
+const resetGame = () => {
   resetLevel();
   resetSum();
   resetTask();
@@ -254,7 +254,7 @@ function resetGame() {
   resetStars();
 };
 
-function rewardStars() {
+const rewardStars = () => {
   star++;
   for (let i = 1; i <= star; i++) {
     let element = document.getElementById(`star${i}`);
@@ -263,7 +263,7 @@ function rewardStars() {
   }
 };
 
-function resetStars() {
+const resetStars = () => {
   star = 0;
   for (let i = 1; i <= 6; i++) {
     let element = document.getElementById(`star${i}`);
@@ -277,29 +277,29 @@ $(".btn").click(function () {
   playButtonAudio();
 });
 
-function playButtonAudio() {
+const playButtonAudio = () => {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
 }
 
-function addCoinAudio() {
+const addCoinAudio = () => {
   $("#coinClickAudio")[0].currentTime = 0;
   $("#coinClickAudio")[0].play();
 };
 
-function delayedCorrectSumAudio() {
+const delayedCorrectSumAudio = () => {
   setTimeout(function () {
     $("#yippeeAudio")[0].play();
   }, 800);
 };
 
-function delayedBadSumAudio() {
+const delayedBadSumAudio = () => {
   setTimeout(function () {
     $("#tryAgainAudio")[0].play();
   }, 800);
 };
 
-function winnerAudio() {
+const winnerAudio = () => {
   setTimeout(function () {
     $("#winnerAudio")[0].play();
   }, 800);
@@ -309,12 +309,7 @@ $("#soundOff").click(function () {
   muteAudio();
 });
 
-/**
- *  This function mutes all buttons
- * when the "sound-off" button
- * located in index.html is clicked on
- */
-function muteAudio() {
+const muteAudio = () => {
   const allAudio = $("audio");
   if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
@@ -327,12 +322,7 @@ $("#soundOn").click(function () {
   unMuteAudio();
 });
 
-/**
- *  This function unmutes all buttons
- * when the "sound-on" button
- * located in index.html is clicked on
- */
-function unMuteAudio() {
+const unMuteAudio = () => {
   const allAudio = $("audio");
   if (soundOn) {
     for (let i = 0; i < allAudio.length; i++) {
