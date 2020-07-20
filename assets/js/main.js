@@ -26,7 +26,7 @@ let sum = 0;
 let currentGame;
 let currentTPS;
 let levelNumber = 0;
-let levelTask = 0;
+let taskNumber = 0;
 let taskArray;
 let currentTask;
 
@@ -39,8 +39,8 @@ $(document).ready(function () {
  * @param {string} url allows
  * game data to show on the index.html form JSON file
  */
-const fetchData = (url) => {
-  return fetch(`assets/data/${url}`)
+const fetchData = () => {
+  return fetch(`assets/data/game.json`)
     .then((res) => res.json())
     .then(gameData => {
       setGame(gameData.game);
@@ -56,7 +56,7 @@ const fetchData = (url) => {
  * @param levelNumber {number}
  * @param taskNumber {number}
  */
-const setGame = (game, levelNumber, taskNumber) => {
+const setGame = (game) => {
   currentGame = game[levelNumber];
   currentTPS = currentGame.tps[taskNumber];
   taskArray = (currentGame.tps);
