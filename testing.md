@@ -117,4 +117,10 @@ This fix not only removed the initial error of display not clearing before loadi
 
 #### Unsolved bugs
 
+**1. Function ```resetStars``` is not completely functional.
+
+Function is working appropriately to clear rewarded stars when the user progresses to the next level, however, when they complete the first task of the next level, all 6 stars are rewarded as opposed to just one: 
+
+![starDisplayError](/assets/testing/images/starDisplayError.jpg)
+
 ## Further testing
