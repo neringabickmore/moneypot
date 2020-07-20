@@ -24,7 +24,7 @@ const soundOff = true;
 const soundOn = true;
 let sum = 0;
 let currentGame;
-let currentTPS;
+let currentTask;
 let levelNumber = 0;
 let taskNumber = 0;
 let taskArray;
@@ -55,12 +55,12 @@ const fetchData = () => {
  */
 const setGame = (game) => {
   currentGame = game[levelNumber];
-  currentTPS = currentGame.tps[taskNumber];
+  currentTask = currentGame.tps[taskNumber];
   taskArray = (currentGame.tps);
 
   levelRef.innerHTML = `<h1>Level ${currentGame.level}</h1>`;
-  taskRef.innerHTML = `<h1>Task ${currentTPS.thisTask}</h1>`;
-  priceRef.innerHTML = `<h1>${currentTPS.priceTag}p</h1>`;
+  taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
+  priceRef.innerHTML = `<h1>${currentTask.priceTag}p</h1>`;
   coinButtonRef.innerHTML = ``;
   currentGame.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
@@ -74,8 +74,8 @@ const setGame = (game) => {
   $(".coin-button").click(function () {
     // Converting the value clicked on to a number
     const coinValue = +($(this).attr("value"));
-    const price = (currentTPS.priceTag);
-    const task = (currentTPS.thisTask);
+    const price = (currentTask.priceTag);
+    const task = (currentTask.thisTask);
     addCoinValue(coinValue, price, task);
   });
   $(".coin").click(function () {
