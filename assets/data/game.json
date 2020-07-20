@@ -62,33 +62,27 @@
       "tps": [
         {
           "thisTask": 1,
-          "priceTag": 15,
-          "star": 0
+          "priceTag": 15
         },
         {
           "thisTask": 2,
-          "priceTag": 20,
-          "star": 1
+          "priceTag": 20
         },
         {
           "thisTask": 3,
-          "priceTag": 25,
-          "stars": 2
+          "priceTag": 25
         },
         {
           "thisTask": 4,
-          "priceTag": 33,
-          "stars": 3
+          "priceTag": 33
         },
         {
           "thisTask": 5,
-          "priceTag": 37,
-          "stars": 4
+          "priceTag": 37
         },
         {
           "thisTask": 6,
-          "priceTag": 48,
-          "stars": 5
+          "priceTag": 48
         }
       ],
       "coins": [
@@ -124,33 +118,27 @@
       "tps": [
         {
           "thisTask": 1,
-          "priceTag": 34,
-          "star": 0
+          "priceTag": 34
         },
         {
           "thisTask": 2,
-          "priceTag": 38,
-          "star": 1
+          "priceTag": 38
         },
         {
           "thisTask": 3,
-          "priceTag": 41,
-          "star": 2
+          "priceTag": 41
         },
         {
           "thisTask": 4,
-          "priceTag": 56,
-          "star": 3
+          "priceTag": 56
         },
         {
           "thisTask": 5,
-          "priceTag": 68,
-          "star": 4
+          "priceTag": 68
         },
         {
           "thisTask": 6,
-          "priceTag": 72,
-          "star": 5
+          "priceTag": 72
         }
       ],
       "coins": [
