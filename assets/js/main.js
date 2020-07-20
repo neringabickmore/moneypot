@@ -23,7 +23,7 @@ const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
 let sum = 0;
-let currentGame;
+let currentLevel;
 let currentTask;
 let levelNumber = 0;
 let taskNumber = 0;
@@ -53,14 +53,13 @@ const fetchData = () => {
  * @param game {[]} - The whole game.json
  */
 const setGame = (game) => {
-  currentGame = game[levelNumber];
-  currentTask = currentGame.tps[taskNumber];
-
-  levelRef.innerHTML = `<h1>Level ${currentGame.level}</h1>`;
+  currentLevel = game[levelNumber];
+  currentTask = currentLevel.tps[taskNumber];
+  levelRef.innerHTML = `<h1>Level ${currentLevel.level}</h1>`;
   taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
   priceRef.innerHTML = `<h1>${currentTask.priceTag}p</h1>`;
   coinButtonRef.innerHTML = ``;
-  currentGame.coins.forEach((coin) => {
+  currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
       `<div class="col-5 col-sm-3 text-center">
         <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
