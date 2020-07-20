@@ -2,7 +2,7 @@
   "game": [
     {
       "level": 1,
-      "tps": [
+      "taskArray": [
         {
           "thisTask": 1,
           "priceTag": 4,
@@ -59,7 +59,7 @@
     },
     {
       "level": 2,
-      "tps": [
+      "taskArray": [
         {
           "thisTask": 1,
           "priceTag": 15
@@ -115,7 +115,7 @@
     },
     {
       "level": 3,
-      "tps": [
+      "taskArray": [
         {
           "thisTask": 1,
           "priceTag": 34

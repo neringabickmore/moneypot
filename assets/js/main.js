@@ -60,7 +60,7 @@ const fetchData = () => {
  */
 const setGame = (game) => {
   currentLevel = game[levelNumber];
-  currentTask = currentLevel.tps[taskNumber];
+  currentTask = currentLevel.taskArray[taskNumber];
 
   levelRef.innerHTML = `<h1>Level ${currentLevel.level}</h1>`;
   taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
