@@ -26,6 +26,7 @@ const modalFooterContent = document.createElement("div");
 let levelNumber = 0;
 let taskNumber = 0;
 let sum = 0;
+let star = 0;
 
 let currentLevel;
 let currentTask;
@@ -95,12 +96,15 @@ const setGame = (game) => {
 
 const nextTask = () => {
   taskNumber++;
+  star++;
   fetchData();
+  rewardStars();
 };
 
 const nextLevel = () => {
   levelNumber++;
   fetchData();
+  resetStars();
 }
 
 /**
@@ -219,6 +223,7 @@ const openModal = (state) => {
     resetSum();
     nextLevel();
     resetTask();
+    resetStars();
   });
   $("#endOfGame").click(function () {
     resetGame();
@@ -236,6 +241,7 @@ function resetSum() {
 
 function resetTask() {
   taskNumber = 0;
+  resetStars();
 };
 
 function endOfGame() {
@@ -244,6 +250,7 @@ function endOfGame() {
 
 function resetLevel() {
   levelNumber = 0;
+  resetStars();
 }
 
 function resetGame() {
@@ -251,8 +258,24 @@ function resetGame() {
   resetSum();
   resetTask();
   fetchData();
+  resetStars();
 }
 
+function rewardStars() {
+  for (let i = 1; i <= star; i++) {
+    let element = document.getElementById(`star${i}`);
+    element.classList.remove("no-star");
+    element.classList.add("yes-star");
+  }
+};
+
+function resetStars() {
+  for (let i = 1; i < 6; i++) {
+    let element = document.getElementById(`star${i}`);
+    element.classList.remove("yes-star");
+    element.classList.add("no-star");
+  }
+}
 // ALL AUDIO FUNCTIONS
 
 $(".btn").click(function () {
