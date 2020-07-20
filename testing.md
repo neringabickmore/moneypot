@@ -100,11 +100,21 @@ coinButtonRef.innerHTML +=
   </div>`;
 ```
 
-#### Unsolved bugs
-
-**1. Modal display is not clearing initial display before loading the next:**
+**4. Modal display is not clearing initial display before loading the next:**
 
 ![modalDisplayError](/assets/testing/images/modalDisplayError.jpg)
 ![modalDisplayError2](/assets/testing/images/modalDisplayError.2.jpg)
+
+- Fix: changed below three functions to global and removed it from ```openModal()```:
+
+```javascript
+const backdropLabelContent = document.createElement("h6");
+const modalBodyContent = document.createElement("div");
+const modalFooterContent = document.createElement("div");
+```
+
+This fix not only removed the initial error of display not clearing before loading the next modal content, but also allowed the game to flow from task 1 to task 6 wihtout errors.
+
+#### Unsolved bugs
 
 ## Further testing

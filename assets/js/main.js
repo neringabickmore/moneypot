@@ -22,6 +22,16 @@ const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 const soundOff = true;
 const soundOn = true;
+
+/**
+ * Below three variables 
+ * add content to individual parts 
+ * of the gamemodal
+ */
+const backdropLabelContent = document.createElement("h6");
+const modalBodyContent = document.createElement("div");
+const modalFooterContent = document.createElement("div");
+
 let sum = 0;
 let currentLevel;
 let currentTask;
@@ -154,16 +164,11 @@ const openModal = (state) => {
       srOnly = "sad face";
       break;
   }
-  // These variables add content to individual parts of the modal
-  const backdropLabelContent = document.createElement("h6");
-  backdropLabelContent.innerHTML += `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
 
-  const modalBodyContent = document.createElement("div");
-  modalBodyContent.innerHTML += `<div><i class="${iClassBody}" aria-hidden="true"></i><span
+  backdropLabelContent.innerHTML = `<h6 class="modal-title justify-content-center" id="staticBackdropLabel">${bodyText}</h6>`;
+  modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
             class="sr-only">${srOnly}</span></div>`;
-
-  const modalFooterContent = document.createElement("div");
-  modalFooterContent.innerHTML += `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+  modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   /**
    * This method allows to fetch the information 
@@ -209,14 +214,14 @@ function resetSum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 }
 
-//ALL AUDIO FUNCTIONS
 /**
+ * ALL AUDIO FUNCTIONS
+ * 
  * Function enabling an audio
  * at a click of a button in HTML.
- * If you remove it, elements with
+ * If you remove it, elements with 
  * .btn class won't have a sound.
  */
-
 $(".btn").click(function () {
   playButtonAudio();
 });
@@ -225,6 +230,7 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
 }
+
 /**
  * Function enabling an audio
  * at a click of a coin image in HTML.
@@ -255,6 +261,7 @@ function delayedBadSumAudio() {
 $("#soundOff").click(function () {
   muteAudio();
 });
+
 /**
  *  This function mutes all buttons
  * when the "sound-off" button
@@ -268,9 +275,11 @@ function muteAudio() {
     }
   }
 }
+
 $("#soundOn").click(function () {
   unMuteAudio();
 });
+
 /**
  *  This function unmutes all buttons
  * when the "sound-on" button
