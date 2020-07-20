@@ -25,6 +25,8 @@ const soundOn = true;
 let sum = 0;
 let currentGame;
 let currentTPS;
+let levelNumber = 0;
+let levelTask = 0;
 let taskArray;
 let currentTask;
 
@@ -41,7 +43,7 @@ const fetchData = (url) => {
   return fetch(`assets/data/${url}`)
     .then((res) => res.json())
     .then(gameData => {
-      setGame(gameData.game, gameData.level = -1);
+      setGame(gameData.game);
     })
     .catch((err) => console.log(err));
 };
@@ -55,8 +57,8 @@ const fetchData = (url) => {
  * @param taskNumber {number}
  */
 const setGame = (game, levelNumber, taskNumber) => {
-  currentGame = game[levelNumber = 0];
-  currentTPS = currentGame.tps[taskNumber = 0];
+  currentGame = game[levelNumber];
+  currentTPS = currentGame.tps[taskNumber];
   taskArray = (currentGame.tps);
   currentTask = (currentGame.tps[0].thisTask);
 
