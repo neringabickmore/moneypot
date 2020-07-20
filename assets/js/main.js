@@ -36,8 +36,14 @@ let task;
 $(document).ready(function () {
   fetchData("game.json");
 });
-//TODO global event listener for resetSum button on game console
 
+$("#resetSum").click(function () {
+  resetSum();
+})
+
+$("#resetGame").click(function () {
+  resetGame();
+})
 /**
  * Fetchdata() allows to pass on the information 
  * located in the json file into setGame, which
@@ -215,9 +221,7 @@ const openModal = (state) => {
     resetTask();
   });
   $("#endOfGame").click(function () {
-    resetLevel();
-    resetSum();
-    resetTask();
+    resetGame();
   })
 };
 
@@ -240,6 +244,13 @@ function endOfGame() {
 
 function resetLevel() {
   levelNumber = 0;
+}
+
+function resetGame() {
+  resetLevel();
+  resetSum();
+  resetTask();
+  fetchData();
 }
 
 // ALL AUDIO FUNCTIONS
