@@ -31,12 +31,21 @@ $(document).ready(function () {
   fetchData("game.json");
 });
 
+// Global event listeners
 $("#resetSum").click(function () {
   resetSum();
 });
 
 $("#resetGame").click(function () {
   resetGame();
+});
+
+$("#soundOff").click(function () {
+  muteAudio();
+});
+
+$("#soundOn").click(function () {
+  unMuteAudio();
 });
 
 /**
@@ -305,10 +314,6 @@ const winnerAudio = () => {
   }, 800);
 };
 
-$("#soundOff").click(function () {
-  muteAudio();
-});
-
 const muteAudio = () => {
   const allAudio = $("audio");
   if (soundOff) {
@@ -317,10 +322,6 @@ const muteAudio = () => {
     }
   }
 };
-
-$("#soundOn").click(function () {
-  unMuteAudio();
-});
 
 const unMuteAudio = () => {
   const allAudio = $("audio");
