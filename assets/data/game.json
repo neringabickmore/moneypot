@@ -61,12 +61,12 @@
       "level": 2,
       "tps": [
         {
-          "gameTask": 1,
+          "thisTask": 1,
           "priceTag": 15,
           "star": 0
         },
         {
-          "task": 2,
+          "thisTask": 2,
           "priceTag": 20,
           "star": 1
         },
