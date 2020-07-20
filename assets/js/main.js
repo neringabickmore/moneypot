@@ -116,7 +116,7 @@ const addCoinValue = () => {
 
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
-    //TODO endOfGameAudio
+    winnerAudio();
 
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
@@ -281,6 +281,12 @@ function delayedBadSumAudio() {
   }, 800);
 };
 
+function winnerAudio() {
+  setTimeout(function () {
+    $("#winnerAudio")[0].play();
+  }, 800);
+};
+
 $("#soundOff").click(function () {
   muteAudio();
 });
@@ -297,7 +303,7 @@ function muteAudio() {
       allAudio[i].muted = true;
     }
   }
-}
+};
 
 $("#soundOn").click(function () {
   unMuteAudio();
