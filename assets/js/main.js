@@ -33,11 +33,12 @@ $(document).ready(function () {
 
 $("#resetSum").click(function () {
   resetSum();
-})
+});
 
 $("#resetGame").click(function () {
   resetGame();
-})
+});
+
 /**
  * Fetchdata() allows to pass on the information 
  * located in the json file into setGame, which
@@ -220,7 +221,7 @@ const openModal = (state) => {
   });
   $("#endOfGame").click(function () {
     resetGame();
-  })
+  });
 };
 
 function displaySum() {
@@ -244,7 +245,7 @@ function endOfGame() {
 function resetLevel() {
   levelNumber = 0;
   resetStars();
-}
+};
 
 function resetGame() {
   resetLevel();
@@ -252,7 +253,7 @@ function resetGame() {
   resetTask();
   fetchData();
   resetStars();
-}
+};
 
 function rewardStars() {
   for (let i = 1; i <= star; i++) {
@@ -263,12 +264,13 @@ function rewardStars() {
 };
 
 function resetStars() {
-  for (let i = 1; i < 6; i++) {
+  star = 0;
+  for (let i = 1; i <= 6; i++) {
     let element = document.getElementById(`star${i}`);
     element.classList.remove("yes-star");
     element.classList.add("no-star");
-  }
-}
+  };
+};
 // ALL AUDIO FUNCTIONS
 
 $(".btn").click(function () {
