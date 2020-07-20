@@ -1,7 +1,5 @@
 // TODO  WRITE:
-/* function nextLevel() {
- * } 
- * function rewardStar() {
+/*function rewardStar() {
  * } 
  * function resetStars() {
  * }
@@ -103,13 +101,8 @@ const nextTask = () => {
 
 //This function calls out the next level of the game.
 const nextLevel = () => {
-  if (currentTask === 6) {
-    levelNumber++;
-    fetchData();
-  } else {
-    levelNumber = 0;
-    fetchData();
-  }
+  levelNumber++;
+  fetchData();
 }
 
 /**
@@ -209,6 +202,7 @@ const openModal = (state) => {
   $("#nextLevel").click(function () {
     resetSum();
     nextLevel();
+    resetTask();
   });
 };
 
@@ -226,6 +220,10 @@ function displaySum() {
 function resetSum() {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+}
+
+function resetTask() {
+  taskNumber = 0;
 }
 
 /**
