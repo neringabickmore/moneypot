@@ -3,13 +3,6 @@
  * } 
  * function resetStars() {
  * }
- * function resetGame() {
- * }
- * function enfOfGame(){
- * }
- * function winnerAudio(){
- * }
- * Congrats modal for winning the game!
  */
 
 // Global variables
@@ -43,6 +36,7 @@ let task;
 $(document).ready(function () {
   fetchData("game.json");
 });
+//TODO global event listener for resetSum button on game console
 
 /**
  * Fetchdata() allows to pass on the information 
@@ -67,9 +61,11 @@ const fetchData = () => {
 const setGame = (game) => {
   currentLevel = game[levelNumber];
   currentTask = currentLevel.tps[taskNumber];
+
   levelRef.innerHTML = `<h1>Level ${currentLevel.level}</h1>`;
   taskRef.innerHTML = `<h1>Task ${currentTask.thisTask}</h1>`;
   priceRef.innerHTML = `<h1>${currentTask.priceTag}p</h1>`;
+
   coinButtonRef.innerHTML = ``;
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
@@ -81,51 +77,52 @@ const setGame = (game) => {
   });
 
   $(".coin-button").click(function () {
-    // Converting the value clicked on to a number
     coinValue = +($(this).attr("value"));
     price = currentTask.priceTag;
     task = currentTask.thisTask;
     level = currentLevel.level;
     addCoinValue();
-  });
-  $(".coin").click(function () {
     addCoinAudio();
   });
-  displaySum(game[0].coins);
+  displaySum();
 };
 
-//This function calls out the next task in the Level of the game.
 const nextTask = () => {
   taskNumber++;
   fetchData();
 };
 
-//This function calls out the next level of the game.
 const nextLevel = () => {
   levelNumber++;
   fetchData();
 }
 
 /**
- * This function allows coin value to add to totalSum
- * @param sum {number} - total value of coins the user clicked on
- * @param gameData {[]} - The whole game.json.
- * @param task{[]} - current task.
+ * This function allows 
+ * coin value to add to total sum 
+ * as well as open up relevant modals
+ * dependant on the user actions
+ * level of the game they are at.
  */
 const addCoinValue = () => {
   sum += coinValue;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-  console.log(sum === price && task >= 6)
+
   if (sum === price && task >= 6 && level >= 3) {
-    openModal("endOfGame")
+    openModal("endOfGame");
+    //TODO endOfGameAudio
+
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
+    //TODO nextLevelAudio
+
   } else if (sum > price) {
     openModal("reset");
     delayedBadSumAudio();
+
   } else if (sum === price) {
     openModal("nextTask");
-
+    delayedCorrectSumAudio();
   };
 };
 
@@ -202,7 +199,7 @@ const openModal = (state) => {
 
   /**
    * Event listeners required to action
-   * the game Level and/or Task 
+   * the game Level and/or Task, or end the game,
    * dependant on addCoinValue outcomes.
    */
   $("#nextTask").click(function () {
@@ -218,42 +215,35 @@ const openModal = (state) => {
     resetTask();
   });
   $("#endOfGame").click(function () {
-    resetGame();
+    resetLevel();
+    resetSum();
+    resetTask();
   })
 };
 
-/**
- * Function to display initial
- * sum value of 0 at the start
- * of the game. If it's removed, 
- * you remove initial sum display
- * and leave it blank
- */
 function displaySum() {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-}
+};
 
 function resetSum() {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
-}
+};
 
 function resetTask() {
   taskNumber = 0;
-}
+};
 
 function endOfGame() {
   openModal("endOfGame");
+};
+
+function resetLevel() {
+  levelNumber = 0;
 }
 
-/**
- * ALL AUDIO FUNCTIONS
- * 
- * Function enabling an audio
- * at a click of a button in HTML.
- * If you remove it, elements with 
- * .btn class won't have a sound.
- */
+// ALL AUDIO FUNCTIONS
+
 $(".btn").click(function () {
   playButtonAudio();
 });
@@ -262,16 +252,6 @@ function playButtonAudio() {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
 }
-
-/**
- * Function enabling an audio
- * at a click of a coin image in HTML.
- * If you remove it, elements with
- * .coin class won't have a sound.
- */
-$(".coin").click(function () {
-  addCoinAudio();
-});
 
 function addCoinAudio() {
   $("#coinClickAudio")[0].currentTime = 0;
