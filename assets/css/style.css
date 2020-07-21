@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Love+Ya+Like+A+Sister&family=Noto+Sans+JP&family=Roboto:wght@300&display=swap");
-
 /*------------- Special Styling--------------------*/
 
 body {
@@ -194,7 +192,23 @@ body {
   padding: 1rem;
 }
 
-#social-links .btn:hover {
+#social-links li a i {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.75rem 0;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 0.5rem;
+  text-align: center;
+}
+
+#social-links li a i:hover {
   background-color: #994044;
   color: #f3f6fb;
+}
+
+#social-links li {
+  list-style-type: none;
 }
