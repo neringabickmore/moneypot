@@ -85,7 +85,7 @@ const setGame = (game) => {
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
       `<div class="col-5 col-sm-3 text-center">
-        <button class="coin coin-button" value="${coin.value}" type="button" aria-hidden="true">
+        <button class="coin-button" value="${coin.value}" type="button" aria-hidden="true">
           <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
         </button>
       </div>`;
