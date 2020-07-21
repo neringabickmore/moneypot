@@ -1,12 +1,11 @@
-![Logo](/wireframes/logo-image.jpg)
+# ![Logo](/wireframes/logo-image.jpg) #
 
-*Money Pot is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
+*[Money Pot](https://neringabickmore.github.io/MoneyPot/) is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
 
 ---
 
 ## Contents ##
 
-- [Contents](#contents)
 - [UX (User Experience)](#ux-user-experience)
   - [Project Goals](#project-goals)
   - [User Goals](#user-goals)
@@ -25,7 +24,6 @@
   - [Features Implemented](#features-implemented)
   - [Future Features](#future-features)
 - [Testing](#testing)
-- [Bugs](#bugs)
 - [Deployment](#deployment)
   - [Running Money Pot Locally](#running-money-pot-locally)
 - [Credits](#credits)
@@ -35,7 +33,7 @@
   - [Image editing](#image-editing)
 - [Acknowledgements](#acknowledgements)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+*Table of contents generated with [markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)*
 
 ---
 
@@ -172,10 +170,6 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 ## Testing ##
 
 Testing information can be found in a separate [testing.md](testing.md) file.
-
----
-
-## Bugs ##
 
 ---
 

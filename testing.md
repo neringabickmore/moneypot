@@ -8,18 +8,16 @@ View [website in GitHub](https://neringabickmore.github.io/MoneyPot/) Pages.
 
 ## Contents ##
 
-- [Money Pot - Testing details](#money-pot---testing-details)
-  - [Contents](#contents)
-  - [Automated Testing](#automated-testing)
-    - [Validation Services](#validation-services)
-    - [Client stories testing](#client-stories-testing)
-  - [Manual testing](#manual-testing)
-    - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
-    - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
-    - [Bugs discovered](#bugs-discovered)
-      - [Solved bugs](#solved-bugs)
-      - [Unsolved bugs](#unsolved-bugs)
-  - [Further testing](#further-testing)
+- [Automated Testing](#automated-testing)
+  - [Validation Services](#validation-services)
+  - [Client stories testing](#client-stories-testing)
+- [Manual testing](#manual-testing)
+  - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
+  - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
+  - [Bugs discovered](#bugs-discovered)
+    - [Solved bugs](#solved-bugs)
+    - [Unsolved bugs](#unsolved-bugs)
+- [Further testing](#further-testing)
 
 *Table of contents generated with [markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)*
 
