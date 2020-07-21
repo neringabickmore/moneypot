@@ -1,31 +1,54 @@
-# Money Pot - Testing details
+# Money Pot - Testing details #
 
-[Main README.md file](README.md)
+Main [README.md](README.md) file.
 
-[View website in GitHub Pages]()
+View [website in GitHub](https://neringabickmore.github.io/MoneyPot/) Pages.
 
-## Table of Contents ##
+---
+
+## Contents ##
+
+- [Money Pot - Testing details](#money-pot---testing-details)
+  - [Contents](#contents)
+  - [Automated Testing](#automated-testing)
+    - [Validation Services](#validation-services)
+    - [Client stories testing](#client-stories-testing)
+  - [Manual testing](#manual-testing)
+    - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
+    - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
+    - [Bugs discovered](#bugs-discovered)
+      - [Solved bugs](#solved-bugs)
+      - [Unsolved bugs](#unsolved-bugs)
+  - [Further testing](#further-testing)
+
+*Table of contents generated with [markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)*
+
+---
 
 ## Automated Testing ##
 
 ### Validation Services ###
 
 The following validation services and linter were used to check the validity of the website code.
-- [W3C Markup Validation]( https://validator.w3.org/) was used to validate HTML.
-- - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+
+- [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML.
+  
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
 
-### Client stories testing
+### Client stories testing ###
 
-## Manual testing
+---
 
-### Testing undertaken on desktop
+## Manual testing ##
 
-### Testing undertaken on tablet and phone devices
+### Testing undertaken on desktop ##
 
-### Bugs discovered
+### Testing undertaken on tablet and phone devices ###
 
-#### Solved bugs
+### Bugs discovered ###
+
+#### Solved bugs ####
 
 **1. Dev tools were throwing an error in console.**
 
@@ -117,15 +140,14 @@ This fix not only removed the initial error of display not clearing before loadi
 
 **5. Function ```resetStars``` is not completely functional.
 
-Function is working appropriately to clear rewarded stars when the user progresses to the next level, however, when they complete the first task of the next level, all 6 stars are rewarded as opposed to just one: 
+Function is working appropriately to clear rewarded stars when the user progresses to the next level, however, when they complete the first task of the next level, all 6 stars are rewarded as opposed to just one:
 
 ![starDisplayError](/assets/testing/images/starDisplayError.jpg)
 
--Fix: `resetStars()` given `sum = 0` allowed to reset stars correctly and display them appropriately: 
+-Fix: `resetStars()` given `sum = 0` allowed to reset stars correctly and display them appropriately:
 
 ![starDisplay](/assets/testing/images/starDisplay.jpg)
 
-#### Unsolved bugs
+#### Unsolved bugs ####
 
-
-## Further testing
+## Further testing ##
