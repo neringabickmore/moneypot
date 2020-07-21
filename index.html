@@ -220,22 +220,24 @@
           <div class="modal-content" id="contact-form-box">
             <!-- 1.1 Contact form: Header-->
             <div class="modal-header">
-              <div class="modal-title col-12 font-weight-normal text-center" id="contactFormHeader">
+              <div class="modal-title col-12 font-weight-normal  text-center" id="contactFormHeader">
                 <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
                 </button>
-                <h5>
-                  Help us improve! We value every customer and your feedback
-                  matters to us.
-                </h5>
+                <h5 class="pt-4">
+                  Help us improve! </h5>
+                <h6 class="pb-2">We value every customer and your feedback matters to us.</h6>
+                <small class="">We would love to hear from you should you have any suggestions or for general
+                  enquiries.</small>
+
               </div>
             </div>
             <!-- 1.2 Contact form: Main body-->
-            <form class="container pt-3" action="feedback.html">
+            <form class="container pt-1" action="feedback.html">
               <div class="row justify-content-center">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-lg-7">
                   <!-- 1.1.1 name input-->
-                  <div class="form-group">
+                  <div class="form-group mb-0">
                     <label for="name"></label>
                     <input name="name" type="text" class="form-control text-center" id="name" placeholder="Your Name"
                       required />
@@ -247,11 +249,13 @@
                       placeholder="Your email address" required />
                   </div>
                   <!-- 1.1.3 question one-->
-                  <div class="form-group text-center">
+                  <div class="form-group">
                     <div class="px-0">
-                      <label for="formQ1" class="form-control col-form-label">
-                        How challenging were the tasks for your
-                        child?</label>
+
+                      <label for="formQ1">
+                        <h6>How challenging were the tasks for your
+                          child?</h6>
+                      </label>
                     </div>
                     <div class="px-0">
                       <select name="formQ1" class="form-control" id="formQ1">
@@ -265,10 +269,12 @@
                     </div>
                   </div>
                   <!-- 1.1.4 question two-->
-                  <div class="form-group text-center">
+                  <div class="form-group">
                     <div class="px-0">
-                      <label for="formQ2" class="form-control col-form-label">
-                        Did your child find the game entertaining?</label>
+
+                      <label for="formQ2">
+                        <h6>Did your child find the game entertaining?</h6>
+                      </label>
                     </div>
                     <div class="px-0">
                       <select name="formQ2" class="form-control" id="formQ2">
@@ -281,10 +287,12 @@
                     </div>
                   </div>
                   <!-- 1.1.5 question three-->
-                  <div class="form-group text-center">
+                  <div class="form-group">
                     <div class="px-0">
-                      <label for="interestedInMore" class="form-control col-form-label">
-                        Would you like to hear about similar games?</label>
+
+                      <label for="interestedInMore">
+                        <h6>Would you like to hear about similar games?</h6>
+                      </label>
                     </div>
                     <div class="px-0">
                       <select name="interestedInMore" class="form-control" id="interestedInMore">
@@ -295,8 +303,10 @@
                     </div>
                   </div>
                   <!-- 1.1.6 suggestions-->
-                  <div class="form-group text-center">
-                    <label for="otherinfo" class="form-control col-form-label">Your suggestions</label>
+                  <div class="form-group">
+                    <label for="otherinfo">
+                      <h6>Your suggestions</h6>
+                    </label>
                     <textarea class="form-control" id="otherinfo" rows="3"></textarea>
                   </div>
                   <!-- 1.1.7 legal/consent information-->
