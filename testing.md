@@ -32,7 +32,10 @@ The following validation services and linter were used to check the validity of 
 - [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML.
   
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+  
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
+
+- [Autoprefixer CSS online](https://autoprefixer.github.io/) was used to add vendor prefixes.
 
 ### Client stories testing ###
 
