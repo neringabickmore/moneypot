@@ -26,12 +26,17 @@ let currentTask;
 let coinValue;
 let price;
 let task;
+let level;
 
 $(document).ready(function () {
   fetchData("game.json");
 });
 
 // Global event listeners
+$(".btn").click(function () {
+  playButtonAudio();
+});
+
 $("#resetSum").click(function () {
   resetSum();
 });
@@ -107,7 +112,7 @@ const nextLevel = () => {
   levelNumber++;
   fetchData();
   resetStars();
-}
+};
 
 /**
  * This function allows 
@@ -135,7 +140,7 @@ const addCoinValue = () => {
   } else if (sum === price) {
     openModal("nextTask");
     delayedCorrectSumAudio();
-  };
+  }
 };
 
 /**
@@ -195,7 +200,7 @@ const openModal = (state) => {
 
   }
 
-  backdropLabelContent.innerHTML = `<h6 class="modal-title" id="staticBackdropLabel">${bodyText}</h6>`;
+  backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}</h6>`;
   modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
     class="sr-only">${srOnly}</span></div>`;
   modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
@@ -218,15 +223,18 @@ const openModal = (state) => {
     resetSum();
     nextTask();
   });
+
   $("#errorModal").click(function () {
     resetSum();
   });
+
   $("#nextLevel").click(function () {
     resetSum();
     nextLevel();
     resetTask();
     resetStars();
   });
+
   $("#endOfGame").click(function () {
     resetGame();
   });
@@ -244,10 +252,6 @@ const resetSum = () => {
 const resetTask = () => {
   taskNumber = 0;
   resetStars();
-};
-
-const endOfGame = () => {
-  openModal("endOfGame");
 };
 
 const resetLevel = () => {
@@ -278,18 +282,14 @@ const resetStars = () => {
     let element = document.getElementById(`star${i}`);
     element.classList.remove("yes-star");
     element.classList.add("no-star");
-  };
+  }
 };
+
 // ALL AUDIO FUNCTIONS
-
-$(".btn").click(function () {
-  playButtonAudio();
-});
-
 const playButtonAudio = () => {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
-}
+};
 
 const addCoinAudio = () => {
   $("#coinClickAudio")[0].currentTime = 0;
@@ -312,7 +312,7 @@ const delayedNextLevelAudio = () => {
   setTimeout(function () {
     $("#nextLevelAudio")[0].play();
   }, 800);
-}
+};
 
 const winnerAudio = () => {
   setTimeout(function () {
@@ -336,4 +336,4 @@ const unMuteAudio = () => {
       allAudio[i].muted = false;
     }
   }
-}
+};
