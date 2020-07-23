@@ -241,6 +241,11 @@ body {
 }
 
 /*-----------Feedback html styling-------------*/
+
+#feedback-div {
+  background-color: #d5ae41;
+}
+
 .confirmation-page {
   background-color: #f3f6fb;
   color: #343a40;
