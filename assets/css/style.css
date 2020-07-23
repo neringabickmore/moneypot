@@ -239,3 +239,32 @@ body {
 #social-links li {
   list-style-type: none;
 }
+
+/*-----------Feedback html styling-------------*/
+.confirmation-page {
+  background-color: #f3f6fb;
+  color: #343a40;
+  margin: 50px auto;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.playAgain-btn {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  border: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s !important;
+  margin: 0.25rem;
+}
+
+.playAgain-btn:hover {
+  text-decoration: none;
+  color: #f3f6fb;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2) !important;
+}
