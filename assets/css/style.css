@@ -22,8 +22,18 @@ body {
   padding: 0.5rem;
 }
 
-.btn a {
+.btn {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: 0 0 3px 0px black;
+}
+
+.btn:hover {
   color: #f3f6fb;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /*------------- Modal Styling--------------------*/
@@ -37,14 +47,17 @@ body {
 #contact-form-box p,
 .form-group {
   font-family: "Roboto", sans-serif;
+  text-shadow: 0 0 4px black;
 }
 
 .game-rules-box h4,
 #contact-form-box h5,
-.game-card-modal h6 {
+#contact-form-box h6 {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.05rem;
   font-weight: normal !important;
+  text-shadow: 0 0 14px black;
+
 }
 
 .modal-header,
@@ -53,10 +66,16 @@ body {
 }
 
 /**---- Modal styling: Game Console----------**/
-.game-card-modal {
+.game-card-modal h6 {
   background-color: #f3f6fb;
   color: #343a40;
+  letter-spacing: 0.05rem;
+  font-size: 2rem;
+  font-family: "Love Ya Like A Sister", sans-serif;
+}
 
+.game-card-modal {
+  background-color: #f3f6fb;
 }
 
 .modal-body .fa-star,
@@ -66,6 +85,12 @@ body {
   color: #d5ae41;
   font-size: 55px;
   line-height: 20px;
+}
+
+.modal-body .fa-star,
+.modal-body .fa-trophy,
+.modal-body .fa-medal {
+  text-shadow: 3px -1px 8px black;
 }
 
 .modal-btn {
@@ -91,9 +116,8 @@ body {
   margin-left: 0.5rem;
 }
 
-.thank-you-box {
-  background-color: #d5ae41;
-  color: #343a40;
+.form-control {
+  box-shadow: 2px -1px 20px 0px #0e2952;
 }
 
 /*------------- Header-----------------------------*/
@@ -103,6 +127,7 @@ body {
   font-family: "Finger Paint", sans-serif;
   letter-spacing: 3px;
   font-size: 2.5rem;
+  text-shadow: 1px 0px #382d0d;
 }
 
 /*------------- Games Dashboard--------------------*/
@@ -112,7 +137,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 50vh;
+  min-height: 35vh;
   border: solid 0.25rem #d5ae41;
 }
 
@@ -120,14 +145,16 @@ body {
 #gameTask {
   color: #f3f6fb;
   font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 2px;
-  font-size: 3rem;
+  letter-spacing: 1.5px;
+  font-size: 1.75rem;
+  text-shadow: 0 0 20px black;
 }
 
 .no-star {
   color: #f3f6fb;
   letter-spacing: 1rem;
   font-size: 1.75rem;
+  text-shadow: 0 0 20px black;
 }
 
 /**---- Stars will change colour to yellow when awarded----**/
@@ -136,6 +163,7 @@ body {
   color: #d5ae41;
   letter-spacing: 1rem;
   font-size: 1.75rem;
+  text-shadow: 0 0 20px black;
 }
 
 #gameNavBtn .btn {
@@ -166,9 +194,10 @@ body {
 #sum h1 {
   color: #f3f6fb;
   font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 4rem;
   margin-bottom: 0;
+  text-shadow: 3px -2px #303031;
 }
 
 #price {
@@ -192,7 +221,7 @@ body {
   margin: 1rem 0;
 }
 
-#coin button {
+.coin-button {
   background-color: #bd3d3a;
   border: none;
   -webkit-transition: all 0.3s;
@@ -202,7 +231,7 @@ body {
   padding: 0.15rem;
 }
 
-#coin button:hover {
+.coin-button:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -225,6 +254,7 @@ body {
   font-size: 1rem;
   line-height: 0.5rem;
   text-align: center;
+  box-shadow: 0 0 3px 0px black;
 }
 
 #social-links li a i:hover {
@@ -234,4 +264,47 @@ body {
 
 #social-links li {
   list-style-type: none;
+}
+
+/*-----------Feedback html styling-------------*/
+
+#feedback-div {
+  background-color: #d5ae41;
+}
+
+.confirmation-page {
+  background-color: #f3f6fb;
+  color: #343a40;
+  margin: 50px auto;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.confirmation-page h4,
+.confirmation-page h6 {
+  font-family: "Noto",
+    sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: normal !important;
+}
+
+.playAgain-btn {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  border: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0.25rem;
+  box-shadow: 0 0 3px 0px black;
+}
+
+.playAgain-btn:hover {
+  text-decoration: none;
+  color: #f3f6fb;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
