@@ -257,7 +257,7 @@ body {
   border: none;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s !important;
+  transition: all 0.3s;
   margin: 0.25rem;
 }
 
@@ -266,5 +266,5 @@ body {
   color: #f3f6fb;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
-  transform: scale(1.2) !important;
+  transform: scale(1.2);
 }
