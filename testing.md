@@ -68,7 +68,7 @@ const soundOn = true
 
 - The ```nextTask()``` function was throwing the following error when I was trying to get to game console to take me to the next task of the game:
 
-  ![nextTaskError](/assets//testing/images/nextTaskError.jpg)
+  ![nextTaskError](/wireframes/testing/images/nextTaskError.jpg)
 
 - Fix:
   I have identified that I wasn't passing correct data into my functions, effected by ```nextTask()``` and therefore changed the code as follows:
@@ -106,7 +106,7 @@ const nextTask = () => {
 
 **3. Function ```setGame()``` not clearing information when displaying ```newTask()```:
 
-![nextTaskError](/assets//testing/images/nextTaskDisplayError.jpg)
+![nextTaskError](/wireframes/testing/images/nextTaskDisplayError.jpg)
 
 - Fix: cleared data passed into html file before fetching new info:
 
@@ -126,8 +126,8 @@ coinButtonRef.innerHTML +=
 
 **4. Modal display is not clearing initial display before loading the next:**
 
-![modalDisplayError](/assets/testing/images/modalDisplayError.jpg)
-![modalDisplayError2](/assets/testing/images/modalDisplayError.2.jpg)
+![modalDisplayError](/wireframes/testing/images/modalDisplayError.jpg)
+![modalDisplayError2](/wireframess/testing/images/modalDisplayError.2.jpg)
 
 - Fix: changed below three functions to global and removed it from ```openModal()```:
 
@@ -143,11 +143,11 @@ This fix not only removed the initial error of display not clearing before loadi
 
 Function is working appropriately to clear rewarded stars when the user progresses to the next level, however, when they complete the first task of the next level, all 6 stars are rewarded as opposed to just one:
 
-![starDisplayError](/assets/testing/images/starDisplayError.jpg)
+![starDisplayError](/wireframes/testing/images/starDisplayError.jpg)
 
 -Fix: `resetStars()` given `sum = 0` allowed to reset stars correctly and display them appropriately:
 
-![starDisplay](/assets/testing/images/starDisplay.jpg)
+![starDisplay](/wireframes/testing/images/starDisplay.jpg)
 
 #### Unsolved bugs ####
 
