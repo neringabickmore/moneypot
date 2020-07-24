@@ -1,4 +1,4 @@
-// Global variables
+// Global variables & methods
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
@@ -71,7 +71,7 @@ const fetchData = () => {
  * This function initiates the game display
  * starting with Level 1 & Task 1,
  * first priceTag and coins associates
- * @param game {[]} - The whole game.json
+ * @param game {[]} - The whole game.json.
  */
 const setGame = (game) => {
   currentLevel = game[levelNumber];
@@ -102,12 +102,14 @@ const setGame = (game) => {
   displaySum();
 };
 
+// This function pushes the information for the next task.
 const nextTask = () => {
   taskNumber++;
   fetchData();
   rewardStars();
 };
 
+// This function pushes the information for the next level.
 const nextLevel = () => {
   levelNumber++;
   fetchData();
@@ -228,33 +230,37 @@ const openModal = (state) => {
   });
 };
 
+// This function displays total sum in the div.
 const displaySum = () => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
+// This function resets the sum to 0.
 const resetSum = () => {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
+// This function resets task of the game to the starting point.
 const resetTask = () => {
   taskNumber = 0;
   resetStars();
 };
 
+// This function resets level of the game to the starting point.
 const resetLevel = () => {
   levelNumber = 0;
-  resetStars();
 };
 
+// This function resets the game back to the begining.
 const resetGame = () => {
   resetLevel();
   resetSum();
   resetTask();
   fetchData();
-  resetStars();
 };
 
+// This function rewards the user with the yellow stars. 
 const rewardStars = () => {
   star++;
   for (let i = 1; i <= star; i++) {
@@ -264,6 +270,7 @@ const rewardStars = () => {
   }
 };
 
+// This function resets all stars back to white.
 const resetStars = () => {
   star = 0;
   for (let i = 1; i <= 6; i++) {
@@ -273,7 +280,7 @@ const resetStars = () => {
   }
 };
 
-// ALL AUDIO FUNCTIONS
+
 const playButtonAudio = () => {
   $("#buttonClickAudio")[0].currentTime = 0;
   $("#buttonClickAudio")[0].play();
