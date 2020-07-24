@@ -4,17 +4,17 @@ const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
-const soundOff = true;
-const soundOn = true;
 
-/**
- * Below three variables 
- * add content to individual parts 
- * of the gamemodal
- */
 const backdropLabelContent = document.createElement("h6");
 const modalBodyContent = document.createElement("div");
 const modalFooterContent = document.createElement("div");
+
+document.getElementById("modalHeader").appendChild(backdropLabelContent);
+document.getElementById("modalBody").appendChild(modalBodyContent);
+document.getElementById("modalFooter").appendChild(modalFooterContent);
+
+const soundOff = true;
+const soundOn = true;
 
 let levelNumber = 0;
 let taskNumber = 0;
@@ -54,9 +54,9 @@ $("#soundOn").click(function () {
 });
 
 /**
- * Fetchdata() allows to pass on the information 
- * located in the json file into setGame, which
- * allows the game display to load.
+ * This function allows to pass on the information 
+ * located in the json file into 
+ * setGame to load the game display.
  */
 const fetchData = () => {
   return fetch(`assets/data/game.json`)
@@ -157,11 +157,7 @@ const openModal = (state) => {
   let bodyText = ``;
   let srOnly = ``;
 
-  /**
-   * Switch allows the information to change in the 
-   * required parts of the modal dependant on the 
-   * assifned variable
-   */
+  //Changes the info passed into modals
   switch (state) {
     case "nextTask":
       buttonText = "Next Task";
@@ -210,15 +206,7 @@ const openModal = (state) => {
    * to index.html and assing appopriate content.
    */
   $("#modal").modal("toggle");
-  document.getElementById("modalHeader").appendChild(backdropLabelContent);
-  document.getElementById("modalBody").appendChild(modalBodyContent);
-  document.getElementById("modalFooter").appendChild(modalFooterContent);
 
-  /**
-   * Event listeners required to action
-   * the game Level and/or Task, or end the game,
-   * dependant on addCoinValue outcomes.
-   */
   $("#nextTask").click(function () {
     resetSum();
     nextTask();
