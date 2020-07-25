@@ -129,19 +129,23 @@ const addCoinValue = () => {
 
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
-    winnerAudio();
+    let audioButtonId = "#winnerAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
-    delayedNextLevelAudio();
+    let audioButtonId = "#nextLevelAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum > price) {
     openModal("reset");
-    delayedBadSumAudio();
+    let audioButtonId = "#tryAgainAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum === price) {
     openModal("nextTask");
-    delayedCorrectSumAudio();
+    let audioButtonId = "#yippeeAudio";
+    delayedAudioButton(audioButtonId)
   }
 };
 
@@ -291,31 +295,14 @@ const addCoinAudio = () => {
   $("#coinClickAudio")[0].play();
 };
 
-const delayedCorrectSumAudio = () => {
+// Function to play audio on modal openings: nextTask, reset, nextLevel, endOfGame.
+const delayedAudioButton = (audioButtonId) => {
   setTimeout(function () {
-    $("#yippeeAudio")[0].play();
+    $(`${audioButtonId}`)[0].play();
   }, 800);
 };
 
-const delayedBadSumAudio = () => {
-  setTimeout(function () {
-    $("#tryAgainAudio")[0].play();
-  }, 800);
-};
-
-const delayedNextLevelAudio = () => {
-  setTimeout(function () {
-    $("#nextLevelAudio")[0].play();
-  }, 800);
-};
-
-const winnerAudio = () => {
-  setTimeout(function () {
-    $("#winnerAudio")[0].play();
-  }, 800);
-};
-
-// Mute/unmute audio
+// Mute/unmute audio.
 const muteAudio = (soundOff) => {
   const allAudio = $("audio");
   if (soundOff) {
