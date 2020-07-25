@@ -32,7 +32,8 @@ $(document).ready(function () {
 
 // Global event listeners
 $(".btn").click(function () {
-  playButtonAudio();
+  let audioButtonId = "#buttonClickAudio";
+  audioButton(audioButtonId);
 });
 
 $("#resetSum").click(function () {
@@ -92,12 +93,17 @@ const setGame = (game) => {
   });
 
   $(".coin-button").click(function () {
+
     coinValue = +($(this).attr("value"));
     price = currentTask.priceTag;
     task = currentTask.thisTask;
     level = currentLevel.level;
+
+    let audioButtonId = "#coinClickAudio";
+
     addCoinValue();
-    addCoinAudio();
+    audioButton(audioButtonId);
+
   });
   displaySum();
 };
@@ -284,15 +290,10 @@ const resetStars = () => {
   }
 };
 
-
-const playButtonAudio = () => {
-  $("#buttonClickAudio")[0].currentTime = 0;
-  $("#buttonClickAudio")[0].play();
-};
-
-const addCoinAudio = () => {
-  $("#coinClickAudio")[0].currentTime = 0;
-  $("#coinClickAudio")[0].play();
+// Function to play audio on at a click of .btn and .coin-button.
+const audioButton = (audioButtonId) => {
+  $(`${audioButtonId}`)[0].currentTime = 0;
+  $(`${audioButtonId}`)[0].play();
 };
 
 // Function to play audio on modal openings: nextTask, reset, nextLevel, endOfGame.
