@@ -31,6 +31,7 @@
   - [Images](#images)
   - [Colour](#colour)
   - [Image editing](#image-editing)
+  - [Code Ideas](#code-ideas)
 - [Acknowledgements](#acknowledgements)
 
 *Table of contents generated with [markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)*
@@ -227,6 +228,10 @@ I have identified the colour palette on [W3](https://www.w3schools.com/)
 - I have used snippet tool for capturing screengrabs which I saved as images.
 - MS Paint 3D to give the same background colour for the coin images as the button.
 - A handy [Birme](https://www.birme.net/?target_width=300&target_height=300&quality=100&border_width=1&border_color=%23bd3d3a) site allowed me to resise the images all at once.
+
+### Code ideas ###
+
+- I have borrowed audio button ideas from [PicFlip!](https://github.com/AJGreaves/picflip) game.
 
 ---
 
