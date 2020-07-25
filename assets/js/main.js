@@ -13,9 +13,6 @@ document.getElementById("modalHeader").appendChild(backdropLabelContent);
 document.getElementById("modalBody").appendChild(modalBodyContent);
 document.getElementById("modalFooter").appendChild(modalFooterContent);
 
-const soundOff = true;
-const soundOn = true;
-
 let levelNumber = 0;
 let taskNumber = 0;
 let sum = 0;
@@ -27,6 +24,7 @@ let coinValue;
 let price;
 let task;
 let level;
+let soundOn;
 
 $(document).ready(function () {
   fetchData("game.json");
@@ -46,11 +44,13 @@ $("#resetGame").click(function () {
 });
 
 $("#soundOff").click(function () {
-  muteAudio();
+  let soundOff = true;
+  muteAudio(soundOff);
 });
 
 $("#soundOn").click(function () {
-  unMuteAudio();
+  let soundOff = false;
+  muteAudio(soundOff);
 });
 
 /**
@@ -315,20 +315,16 @@ const winnerAudio = () => {
   }, 800);
 };
 
-const muteAudio = () => {
+// Mute/unmute audio
+const muteAudio = (soundOff) => {
   const allAudio = $("audio");
   if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = true;
-    }
-  }
-};
-
-const unMuteAudio = () => {
-  const allAudio = $("audio");
-  if (soundOn) {
+    };
+  } else {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = false;
-    }
-  }
+    };
+  };
 };
