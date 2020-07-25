@@ -55,6 +55,11 @@ $("#soundOn").click(function () {
   muteAudio(soundOff);
 });
 
+// Calls form sent confirmation modal.
+$(".submitForm").click(function () {
+  openModal("formSent");
+});
+
 /**
  * Fetches data to game display.
  * @returns {string} All data in game.json
@@ -159,18 +164,19 @@ const addCoinValue = () => {
 };
 
 /**
- * This function created modal footer and
- * replace it's button & id depending on the outcome 
- * on addCoinValue (on the switch).
+ * This function creates modals 
+ * with required content
  * @param {string} state - Pass the info to match switch statement.
  */
 const openModal = (state) => {
   let buttonText = ``;
+  let bodyText2 = ``;
   let buttonId = ``;
   let iClassFooter = ``;
   let iClassBody = ``;
   let bodyText = ``;
   let srOnly = ``;
+  let mainContent = ``;
 
   //Changes the info passed into modals
   switch (state) {
@@ -209,11 +215,24 @@ const openModal = (state) => {
       srOnly = "trophy";
       break;
 
+    case "formSent":
+      buttonText = "Let's play again";
+      buttonId = "formSent";
+      iClassFooter = "fas fa-sync";
+      bodyText = "Thank you";
+      bodyText2 = " ! We have now received your feedback.";
+      mainContent = "If you have contacted us for other reasons than feedback we will get back to you within 48 hours.";
+      break;
+
   }
 
-  backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}</h6>`;
+  backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}<span id="yourName"></span>${bodyText2}</h6>`;
+
   modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
-    class="sr-only">${srOnly}</span></div>`;
+    class="sr-only">${srOnly}</span>
+    <h6>${mainContent}</h6>
+    </div>`;
+
   modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   /**
