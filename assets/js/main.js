@@ -1,20 +1,17 @@
-// Global variables
+// Global variables & methods
 const coinButtonRef = document.getElementById("coin");
 const priceRef = document.getElementById("price");
 const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
-const soundOff = true;
-const soundOn = true;
 
-/**
- * Below three variables 
- * add content to individual parts 
- * of the gamemodal
- */
 const backdropLabelContent = document.createElement("h6");
 const modalBodyContent = document.createElement("div");
 const modalFooterContent = document.createElement("div");
+
+document.getElementById("modalHeader").appendChild(backdropLabelContent);
+document.getElementById("modalBody").appendChild(modalBodyContent);
+document.getElementById("modalFooter").appendChild(modalFooterContent);
 
 let levelNumber = 0;
 let taskNumber = 0;
@@ -27,14 +24,17 @@ let coinValue;
 let price;
 let task;
 let level;
+let soundOn;
 
 $(document).ready(function () {
   fetchData("game.json");
 });
 
 // Global event listeners
+
 $(".btn").click(function () {
-  playButtonAudio();
+  let audioButtonId = "#buttonClickAudio";
+  audioButton(audioButtonId);
 });
 
 $("#resetSum").click(function () {
@@ -46,17 +46,18 @@ $("#resetGame").click(function () {
 });
 
 $("#soundOff").click(function () {
-  muteAudio();
+  let soundOff = true;
+  muteAudio(soundOff);
 });
 
 $("#soundOn").click(function () {
-  unMuteAudio();
+  let soundOff = false;
+  muteAudio(soundOff);
 });
 
 /**
- * Fetchdata() allows to pass on the information 
- * located in the json file into setGame, which
- * allows the game display to load.
+ * Fetches data to game display.
+ * @returns {string} All data in game.json
  */
 const fetchData = () => {
   return fetch(`assets/data/game.json`)
@@ -68,12 +69,14 @@ const fetchData = () => {
 };
 
 /**
- * This function initiates the game display
+ * Initiates the game display
  * starting with Level 1 & Task 1,
- * first priceTag and coins associates
- * @param game {[]} - The whole game.json
+ * first priceTag and coins associated.
+ * @param {[]} game - The whole game.json data.
  */
+
 const setGame = (game) => {
+
   currentLevel = game[levelNumber];
   currentTask = currentLevel.taskArray[taskNumber];
 
@@ -82,6 +85,7 @@ const setGame = (game) => {
   priceRef.innerHTML = `<h1>${currentTask.priceTag}p</h1>`;
 
   coinButtonRef.innerHTML = ``;
+
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
       `<div class="col-5 col-sm-3 text-center">
@@ -91,23 +95,31 @@ const setGame = (game) => {
       </div>`;
   });
 
+  // Coin information send to the game when clicked on.
   $(".coin-button").click(function () {
+
     coinValue = +($(this).attr("value"));
     price = currentTask.priceTag;
     task = currentTask.thisTask;
     level = currentLevel.level;
+
+    let audioButtonId = "#coinClickAudio";
+
     addCoinValue();
-    addCoinAudio();
+    audioButton(audioButtonId);
+
   });
   displaySum();
 };
 
+// This function pushes the information for the next task.
 const nextTask = () => {
   taskNumber++;
   fetchData();
   rewardStars();
 };
 
+// This function pushes the information for the next level.
 const nextLevel = () => {
   levelNumber++;
   fetchData();
@@ -115,8 +127,7 @@ const nextLevel = () => {
 };
 
 /**
- * This function allows 
- * coin value to add to total sum 
+ * Allows coin value to add to total sum 
  * as well as open up relevant modals
  * dependant on the user actions
  * level of the game they are at.
@@ -127,19 +138,23 @@ const addCoinValue = () => {
 
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
-    winnerAudio();
+    let audioButtonId = "#winnerAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
-    delayedNextLevelAudio();
+    let audioButtonId = "#nextLevelAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum > price) {
     openModal("reset");
-    delayedBadSumAudio();
+    let audioButtonId = "#tryAgainAudio";
+    delayedAudioButton(audioButtonId)
 
   } else if (sum === price) {
     openModal("nextTask");
-    delayedCorrectSumAudio();
+    let audioButtonId = "#yippeeAudio";
+    delayedAudioButton(audioButtonId)
   }
 };
 
@@ -147,7 +162,7 @@ const addCoinValue = () => {
  * This function created modal footer and
  * replace it's button & id depending on the outcome 
  * on addCoinValue (on the switch).
- * @param state {string} - the string to match switch statement.
+ * @param {string} state - Pass the info to match switch statement.
  */
 const openModal = (state) => {
   let buttonText = ``;
@@ -157,11 +172,7 @@ const openModal = (state) => {
   let bodyText = ``;
   let srOnly = ``;
 
-  /**
-   * Switch allows the information to change in the 
-   * required parts of the modal dependant on the 
-   * assifned variable
-   */
+  //Changes the info passed into modals
   switch (state) {
     case "nextTask":
       buttonText = "Next Task";
@@ -210,15 +221,7 @@ const openModal = (state) => {
    * to index.html and assing appopriate content.
    */
   $("#modal").modal("toggle");
-  document.getElementById("modalHeader").appendChild(backdropLabelContent);
-  document.getElementById("modalBody").appendChild(modalBodyContent);
-  document.getElementById("modalFooter").appendChild(modalFooterContent);
 
-  /**
-   * Event listeners required to action
-   * the game Level and/or Task, or end the game,
-   * dependant on addCoinValue outcomes.
-   */
   $("#nextTask").click(function () {
     resetSum();
     nextTask();
@@ -240,33 +243,37 @@ const openModal = (state) => {
   });
 };
 
+// Displays total sum in the div.
 const displaySum = () => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
+// Resets the sum to 0.
 const resetSum = () => {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
+// Resets task of the game to the starting point.
 const resetTask = () => {
   taskNumber = 0;
   resetStars();
 };
 
+// Resets level of the game to the starting point.
 const resetLevel = () => {
   levelNumber = 0;
-  resetStars();
 };
 
+// Resets the game back to the begining.
 const resetGame = () => {
   resetLevel();
   resetSum();
   resetTask();
   fetchData();
-  resetStars();
 };
 
+// Rewards a user with the yellow stars.
 const rewardStars = () => {
   star++;
   for (let i = 1; i <= star; i++) {
@@ -276,6 +283,7 @@ const rewardStars = () => {
   }
 };
 
+// Resets all stars back to white.
 const resetStars = () => {
   star = 0;
   for (let i = 1; i <= 6; i++) {
@@ -285,55 +293,40 @@ const resetStars = () => {
   }
 };
 
-// ALL AUDIO FUNCTIONS
-const playButtonAudio = () => {
-  $("#buttonClickAudio")[0].currentTime = 0;
-  $("#buttonClickAudio")[0].play();
+/**
+ * Plays audio on at a click of 
+ * elements with class: .btn and .coin-button.
+ * @param {string} audioButtonId - Passes an ID.
+ */
+const audioButton = (audioButtonId) => {
+  $(`${audioButtonId}`)[0].currentTime = 0;
+  $(`${audioButtonId}`)[0].play();
 };
 
-const addCoinAudio = () => {
-  $("#coinClickAudio")[0].currentTime = 0;
-  $("#coinClickAudio")[0].play();
-};
-
-const delayedCorrectSumAudio = () => {
+/**
+ * Plays audio on modal openings: 
+ * nextTask, reset, nextLevel, endOfGame.
+ * @param {string} audioButtonId - Passed an Id.
+ */
+const delayedAudioButton = (audioButtonId) => {
   setTimeout(function () {
-    $("#yippeeAudio")[0].play();
+    $(`${audioButtonId}`)[0].play();
   }, 800);
 };
 
-const delayedBadSumAudio = () => {
-  setTimeout(function () {
-    $("#tryAgainAudio")[0].play();
-  }, 800);
-};
-
-const delayedNextLevelAudio = () => {
-  setTimeout(function () {
-    $("#nextLevelAudio")[0].play();
-  }, 800);
-};
-
-const winnerAudio = () => {
-  setTimeout(function () {
-    $("#winnerAudio")[0].play();
-  }, 800);
-};
-
-const muteAudio = () => {
+/**
+ * Mute/unmute audio.
+ * @param {string} soundOff - Targets all audio elements in html.
+ */
+const muteAudio = (soundOff) => {
   const allAudio = $("audio");
   if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = true;
-    }
-  }
-};
-
-const unMuteAudio = () => {
-  const allAudio = $("audio");
-  if (soundOn) {
+    };
+  } else {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = false;
-    }
-  }
+    };
+  };
 };
