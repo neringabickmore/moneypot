@@ -47,15 +47,38 @@ The following validation services and linter were used to check the validity of 
 
 ![json validation](wireframes\testing\images\json-validation.jpg)
 
-### Client stories testing ###
+## Client stories testing ##
+
+ The following section goes through each of the user stories from the UX section of [README.md](https://github.com/neringabickmore/MoneyPot/blob/master/README.md)
+
+1. As a  **user**, I want to find the rules how to play the game.
+2. As a **user**, I want to learn how to add numbers to get the correct sums.
+3. As a **user**, I want to learn how to recognise British Currency coins.
+4. As a **user**, I want to be able to contact the site owner for more information or suggest additional features.
+5. As a **user**, I want to give feedback about the game using a questionaire.
+6. As a **user**, I want to see attractive colours, large icons to play with and have fun!
 
 ---
 
 ## Manual testing ##
 
-### Testing undertaken on desktop ##
+### Testing undertaken on Mobile ##
 
-### Testing undertaken on tablet and phone devices ###
+- Responsive design
+- User friendly display
+- Interactive games console
+- Dashboard for easy navigation
+- Social media links
+- Functional contact form
+
+### Testing undertaken on tablet and desktop ###
+
+- Responsive design
+- User friendly display
+- Interactive games console
+- Dashboard for easy navigation
+- Social media links
+- Functional contact form
 
 ### Bugs discovered ###
 
@@ -137,7 +160,8 @@ coinButtonRef.innerHTML +=
 **4. Modal display is not clearing initial display before loading the next:**
 
 ![modalDisplayError](/wireframes/testing/images/modalDisplayError.jpg)
-![modalDisplayError2](/wireframess/testing/images/modalDisplayError.2.jpg)
+
+![modalDisplayError2](/wireframess/testing/images/modalDisplayError2.jpg)
 
 - Fix: changed below three functions to global and removed it from ```openModal()```:
 
