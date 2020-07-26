@@ -11,6 +11,15 @@ body {
   background-color: #f3f6fb;
 }
 
+h4,
+h5,
+h6 {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  text-shadow: 0 0 14px black;
+}
+
 .btn-all {
   background-color: #bd3d3a;
   color: #f3f6fb;
@@ -51,27 +60,18 @@ body {
 }
 
 /*------------- Modal Styling--------------------*/
-.game-rules-box,
+
+#game-rules-box,
 #contact-form-box {
   color: #f3f6fb;
   background-color: #3f69aa;
 }
 
-.game-rules-box li,
+#game-rules-main li,
 #contact-form-box p,
 .form-group {
   font-family: "Roboto", sans-serif;
   text-shadow: 0 0 4px black;
-}
-
-.game-rules-box h4,
-#contact-form-box h5,
-#contact-form-box h6 {
-  font-family: "Noto", sans-serif;
-  letter-spacing: 0.05rem;
-  font-weight: normal !important;
-  text-shadow: 0 0 14px black;
-
 }
 
 .modal-header,
@@ -80,6 +80,7 @@ body {
 }
 
 /**---- Modal styling: Game Console----------**/
+
 .game-card-modal h6 {
   background-color: #f3f6fb;
   color: #343a40;
@@ -269,8 +270,5 @@ body {
 
 .confirmation-page h4,
 .confirmation-page h6 {
-  font-family: "Noto",
-    sans-serif;
-  letter-spacing: 0.05rem;
-  font-weight: normal !important;
+  text-shadow: none;
 }
