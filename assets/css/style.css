@@ -5,6 +5,16 @@
 * Browsers: last 4 version
 */
 
+/*------------- Header-----------------------------*/
+
+#logo h1 {
+  color: #d5ae41;
+  font-family: "Finger Paint", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  text-shadow: 1px 0px #382d0d;
+}
+
 /*------------- Special Styling--------------------*/
 
 body {
@@ -23,6 +33,7 @@ h6 {
 .btn-all {
   background-color: #bd3d3a;
   color: #f3f6fb;
+  -webkit-box-shadow: 0 0 3px 0px black;
   box-shadow: 0 0 3px 0px black;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -57,16 +68,6 @@ h6 {
 .btn-other {
   border: none;
   margin: 0.25rem;
-}
-
-/*------------- Header-----------------------------*/
-
-#logo h1 {
-  color: #d5ae41;
-  font-family: "Finger Paint", sans-serif;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-shadow: 1px 0px #382d0d;
 }
 
 /*---- Font size increases on larger devices-------------*/
@@ -125,7 +126,7 @@ h6 {
   border: none;
 }
 
-/**---- Modal styling: Game Console----------**/
+/**---- Modal Styling: Game Console----------**/
 
 #game-card-modal h6 {
   color: #343a40;
@@ -154,7 +155,7 @@ h6 {
   text-shadow: 3px -1px 8px black;
 }
 
-/**---- Modal styling: Contact Form----------**/
+/**---- Modal Styling: Contact Form----------**/
 
 .form-legal-info {
   margin-bottom: 1rem;
@@ -162,6 +163,7 @@ h6 {
 }
 
 .form-control {
+  -webkit-box-shadow: 2px -1px 20px 0px #0e2952;
   box-shadow: 2px -1px 20px 0px #0e2952;
 }
 
@@ -242,6 +244,7 @@ h6 {
 }
 
 .coin-button {
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none;
   margin-bottom: 0.75rem;
@@ -265,6 +268,7 @@ h6 {
   font-size: 1rem;
   line-height: 0.5rem;
   text-align: center;
+  -webkit-box-shadow: 0 0 3px 0px black;
   box-shadow: 0 0 3px 0px black;
 }
 
