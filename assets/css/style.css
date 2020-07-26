@@ -81,15 +81,15 @@ h6 {
 
 /**---- Modal styling: Game Console----------**/
 
-.game-card-modal h6 {
-  background-color: #f3f6fb;
+#game-card-modal h6 {
   color: #343a40;
+  font-family: "Love Ya Like A Sister", sans-serif;
   letter-spacing: 0.05rem;
   font-size: 2rem;
-  font-family: "Love Ya Like A Sister", sans-serif;
+  text-shadow: none;
 }
 
-.game-card-modal {
+#game-card-modal {
   background-color: #f3f6fb;
 }
 
@@ -108,7 +108,7 @@ h6 {
   text-shadow: 3px -1px 8px black;
 }
 
-/**---- Modal styling: contact form----------**/
+/**---- Modal styling: Contact Form----------**/
 
 .form-legal-info {
   margin-bottom: 1rem;
@@ -186,19 +186,21 @@ h6 {
   text-shadow: 3px -2px #303031;
 }
 
+#price,
+#sum {
+  padding: 2rem;
+  margin: 0.5rem;
+}
+
 #price {
   background-color: #3f69aa;
   border: solid 0.25rem #d5ae41;
-  padding: 2rem;
-  margin: 0.5rem;
   border-radius: 50rem;
 }
 
 #sum {
   background-color: #d5ae41;
   border: solid 0.25rem #3f69aa;
-  padding: 2rem;
-  margin: 0.5rem;
   border-radius: 50%;
 }
 
