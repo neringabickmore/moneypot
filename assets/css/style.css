@@ -272,6 +272,7 @@ button:focus {
   overflow: hidden !important;
 }
 
+/**------Coin sizes change on different screensize------**/
 @media(min-width: 1024px) {
   #coin div {
     max-width: 80%;
