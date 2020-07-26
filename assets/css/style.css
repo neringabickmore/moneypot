@@ -23,11 +23,18 @@ body {
 
 h4,
 h5,
-h6 {
-  font-family: "Noto", sans-serif;
+h6,
+p,
+.p {
+  font-family: "Noto", sans-serif !important;
   letter-spacing: 0.05rem;
   font-weight: normal;
   text-shadow: 0 0 14px black;
+}
+
+.p,
+p {
+  font-size: 18px !important;
 }
 
 .btn-all {
