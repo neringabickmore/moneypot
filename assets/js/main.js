@@ -24,7 +24,6 @@ let coinValue;
 let price;
 let task;
 let level;
-let soundOn;
 
 $(document).ready(function () {
   fetchData("game.json");
@@ -139,22 +138,22 @@ const addCoinValue = () => {
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
     let audioButtonId = "#winnerAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
     let audioButtonId = "#nextLevelAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum > price) {
     openModal("reset");
     let audioButtonId = "#tryAgainAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum === price) {
     openModal("nextTask");
     let audioButtonId = "#yippeeAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
   }
 };
 
@@ -323,10 +322,10 @@ const muteAudio = (soundOff) => {
   if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = true;
-    };
+    }
   } else {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = false;
-    };
-  };
+    }
+  }
 };
