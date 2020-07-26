@@ -121,6 +121,8 @@ button:focus {
 @media(min-width: 1024px) {
 
   #game-dashboard {
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
     align-items: baseline !important;
     padding-top: 8rem;
   }
