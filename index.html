@@ -32,13 +32,13 @@
   </header>
 
   <!-- Game console-->
-  <section class="container" id="game-console">
+  <section class="container">
     <div class="row">
       <!-- Dashboard-->
       <div class="col-12 col-lg-5" id="game-dashboard">
         <div class="row align-items-center">
           <!-- Game stages-->
-          <div class="col-12">
+          <div class="col-12 mb-lg-4">
             <div class="row">
               <!-- Game Level-->
               <div class="col-6 col-lg-12 text-right text-lg-center px-2" id="gameLevel">
@@ -51,8 +51,8 @@
             </div>
           </div>
           <!-- Star reward display-->
-          <div class="col-12">
-            <div class="row justify-content-center">
+          <div class="col-12 mb-lg-4">
+            <div class="row">
               <div class="col-sm d-flex justify-content-center">
                 <div class="no-star" id="star1">
                   <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
@@ -80,19 +80,21 @@
             <div class="row">
               <div class="col-sm d-flex justify-content-center" id="gameNavBtn">
                 <!-- Restart the game-->
-                <button type="button" class="btn-round btn-all">
-                  <i class="fas fa-sync" aria-hidden="true" title="reset the game" id="resetGame"></i><span
-                    class="sr-only">restart the game</span>
+                <button type="button" class="btn-round btn-all" title="Reset the Game" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-sync" aria-hidden="true" id="resetGame"></i><span class="sr-only">restart the
+                    game</span>
                 </button>
                 <!-- Reset the sum-->
-                <button type="button" class="btn-round btn-all">
-                  <i class="fas fa-redo" aria-hidden="true" title="reset the sum" id="resetSum"></i><span
-                    class="sr-only">reset the sum</span>
+                <button type="button" class="btn-round btn-all" title="Reset the Sum" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-redo" aria-hidden="true" id="resetSum"></i><span class="sr-only">reset the sum</span>
                 </button>
                 <!-- How to play-->
                 <button type="button" class="btn-round btn-all" data-toggle="modal" data-target="#gameRulesModal">
-                  <i class="fas fa-question" aria-hidden="true" title="rules of the game" id="gameRules"></i><span
-                    class="sr-only">rules of the game</span>
+                  <i class="fas fa-question" aria-hidden="true" id="gameRules" title="Rules of the Game"
+                    data-toggle="tooltip" data-placement="top"></i><span class="sr-only">rules of the
+                    game</span>
                 </button>
                 <!-- 1. How to play: Modal box-->
                 <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog"
@@ -142,8 +144,9 @@
                       </div>
                       <!-- 1.3 How to play: exit button-->
                       <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn-round btn-all" data-dismiss="modal">
-                          <i class="fas fa-times-circle" aria-hidden="true" title="close"></i><span class="sr-only">
+                        <button type="button" class="btn-round btn-all" data-dismiss="modal" title="Close and Play"
+                          data-toggle="tooltip" data-placement="top">
+                          <i class="fas fa-times-circle" aria-hidden="true"></i><span class="sr-only">
                             close </span>
                         </button>
                       </div>
@@ -152,14 +155,15 @@
                 </div>
                 <!-- How to play: End-->
                 <!-- Sound off-->
-                <button type="button" class="btn-round btn-all">
-                  <i class="fas fa-volume-mute" aria-hidden="true" title="sound off" id="soundOff"></i><span
-                    class="sr-only">sound off</span>
+                <button type="button" class="btn-round btn-all" title="Sound Off" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-volume-mute" aria-hidden="true" id="soundOff"></i><span class="sr-only">sound
+                    off</span>
                 </button>
                 <!-- Sound on-->
-                <button type="button" class="btn-round btn-all">
-                  <i class="fas fa-volume-up" aria-hidden="true" title="sound on" id="soundOn"></i><span
-                    class="sr-only">sound on</span>
+                <button type="button" class="btn-round btn-all" title="Sound On" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-volume-up" aria-hidden="true" id="soundOn"></i><span class="sr-only">sound on</span>
                 </button>
               </div>
             </div>
@@ -170,7 +174,7 @@
       <div class="col-12 col-lg-7" id="game-card">
         <div class="row align-items-center justify-content-center">
           <!-- 1.0 Price tag-->
-          <div class="col-sm-5 col-10 text-center" id="price">
+          <div class="col-12" id="price">
             <!-- 1.1 Price tag display is imported in here from JS file-->
           </div>
           <!-- 2.0 Coin display-->
@@ -185,7 +189,7 @@
               <div class="col-6 text-center" id="moneyPot">
                 <img src="assets/images/money-pot.png" alt="money pot" class="img h-100 w-100" />
               </div>
-              <div class="col-5 text-center" id="sum">
+              <div class="col-6" id="sum">
                 <!-- 3.1 Sum display is imported here from JS file-->
               </div>
             </div>
