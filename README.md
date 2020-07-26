@@ -47,20 +47,21 @@ Secondary goal of this project is to teach children to identify British Currency
 
 ### User Goals ###
 
-- **Find the information** what the game is about
-- **Find the rules** how to play the game
+- **Find the rules** how to play the game.
 - **Play** the game.
 - **Learn** to identify British Currency coins.
 - **Learn** simple math sums.
-- **Give feedback** about the game and/or **contact** to the site owner.
+- **Give feedback** about the game. 
+- **Contact** to the site owner.
 
 ### User Stories ###
 
 - As a  **user**, I want to find the rules how to play the game.
 - As a **user**, I want to learn how to add numbers to get the correct sums.
 - As a **user**, I want to learn how to recognise British Currency coins.
-- As a **user**, I want to be able to contact the site owner for more information, to give feedback about the game or to suggest additional features.
-- As a **user** I want to see attractive colours, large icons to play with and have fun!
+- As a **user**, I want to be able to contact the site owner for more information or suggest additional features.
+- As a **user**, I want to give feedback about the game using a questionaire.
+- As a **user**, I want to see attractive colours, large icons to play with and have fun!
 
 ### Site Owner Goals ###
 
@@ -76,7 +77,7 @@ Secondary goal of this project is to teach children to identify British Currency
    - Game console.
    - Navigation to *information* about the game, including how to play it.
    - Navigation to *contact us* with a fully functioning form.
-   - Audio with a button to turn *audio on/off*.
+   - Audio with a buttons to turn *audio on/off*.
    - Button to *reset the game*.
    - Button to *reset the sum*.
 2. The site should be **visually appealing** and **interactive**.
@@ -86,9 +87,10 @@ Secondary goal of this project is to teach children to identify British Currency
 6. Additional coins should be displayed at **level 2 and level 3** to add difficulty.
 7. Coin should add it's value to the total sum amount when clicked on.
 8. Total sum amount should be displayed and it should increase it's value every time a coin button is clicked on.
-9. Games console should have six stars displayed, which are highlighted when correct sum is achieved. Stars are reset at each level.
+9. Games console should have six stars displayed, which are highlighted in yellow when correct sum is achieved. Stars colour should reset back to white at each level.
 10. With each correct sum a pop up *Congrats* message display appears. The display should have a button to take the user to the next task.
 11. At each incorrect sum a pop up *Try again* message display appears. The display should have a button to restart the same task and will trigger the sum reset to 0. The user will not lose the stars they have already won.
+12. At each correct completion of the 6 task, *Next level* message display appears. The display should have a button to take the user to the next level task one, trigger the sum reset to 0, all stars reset to white colour and an additional coin is displayed. 
 
 ### Design Choices ###
 
