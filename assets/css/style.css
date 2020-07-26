@@ -239,23 +239,13 @@ h6 {
 
 #coin {
   padding: 0.5rem 0;
-  margin: 1rem 0;
 }
 
 .coin-button {
-  background-color: #bd3d3a;
+  box-shadow: none !important;
   border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   margin-bottom: 0.75rem;
   padding: 0.15rem;
-}
-
-.coin-button:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 /*------------- Footer-----------------------------*/
