@@ -129,7 +129,7 @@ h6 {
   text-shadow: 1px 0px #382d0d;
 }
 
-/*------------- Games Dashboard--------------------*/
+/*------------- Game Dashboard--------------------*/
 
 #game-dashboard {
   background-color: #3f69aa;
@@ -141,29 +141,28 @@ h6 {
 }
 
 #gameLevel,
-#gameTask {
+#gameTask,
+.no-star,
+.yes-star {
   color: #f3f6fb;
-  font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 1.5px;
   font-size: 1.75rem;
+  letter-spacing: 1rem;
   text-shadow: 0 0 20px black;
 }
 
-.no-star {
-  color: #f3f6fb;
-  letter-spacing: 1rem;
+#gameLevel,
+#gameTask {
+  font-family: "Love Ya Like A Sister", sans-serif;
+  letter-spacing: 1.5px;
   font-size: 1.75rem;
-  text-shadow: 0 0 20px black;
 }
 
 /**---- Stars will change colour to yellow when awarded----**/
 
 .yes-star {
   color: #d5ae41;
-  letter-spacing: 1rem;
-  font-size: 1.75rem;
-  text-shadow: 0 0 20px black;
 }
+
 
 /*------------- Game Card-------------------------*/
 
