@@ -58,7 +58,6 @@ p {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-
 }
 
 .btn-round {
@@ -81,6 +80,10 @@ p {
   margin: 0.25rem;
 }
 
+button:focus {
+  outline: none;
+}
+
 /*---- Font size increases on larger devices-------------*/
 @media(min-width: 768px) {
 
@@ -99,6 +102,11 @@ p {
     font-size: 6rem !important;
   }
 
+  #price {
+    max-width: 65%;
+    max-height: 20%;
+  }
+
   #gameNavBtn .btn-round {
     width: 3.6rem !important;
     height: 3.6rem !important;
@@ -111,9 +119,10 @@ p {
 }
 
 @media(min-width: 1024px) {
-  .coin-button {
-    width: 8rem !important;
-    height: 8rem !important;
+
+  #game-dashboard {
+    align-items: baseline !important;
+    padding-top: 8rem;
   }
 }
 
@@ -142,7 +151,7 @@ p {
 
 #game-card-modal h6 {
   color: #343a40;
-  font-family: "Love Ya Like A Sister", sans-serif;
+  font-family: "Love Ya Like A Sister", sans-serif !important;
   letter-spacing: 0.05rem;
   font-size: 2rem;
   text-shadow: none;
@@ -235,24 +244,21 @@ p {
 
 #price,
 #sum {
-  padding: 2rem;
-  margin: 0.5rem;
+  text-align: center;
 }
 
 #price {
   background-color: #3f69aa;
   border: solid 0.25rem #d5ae41;
   border-radius: 50rem;
+  padding: 2rem;
+  margin: 0.25rem;
 }
 
 #sum {
   background-color: #d5ae41;
   border: solid 0.25rem #3f69aa;
-  border-radius: 50%;
-}
-
-#coin {
-  padding: 0.5rem 0;
+  border-radius: 60%;
 }
 
 .coin-button {
@@ -260,7 +266,32 @@ p {
   box-shadow: none !important;
   border: none;
   margin-bottom: 0.75rem;
-  padding: 0.15rem;
+  padding: 0.5rem;
+  overflow: hidden !important;
+}
+
+@media(min-width: 1024px) {
+  #coin div {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+@media(min-width: 576px) {
+
+  #coin div {
+    max-width: 40%;
+    max-height: 40%;
+    overflow-x: hidden;
+  }
+}
+
+@media(min-width: 300px) {
+
+  #coin div {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 /*------------- Footer-----------------------------*/
