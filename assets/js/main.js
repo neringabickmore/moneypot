@@ -24,7 +24,6 @@ let coinValue;
 let price;
 let task;
 let level;
-let soundOn;
 
 $(document).ready(function () {
   fetchData("game.json");
@@ -88,11 +87,9 @@ const setGame = (game) => {
 
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
-      `<div class="col-5 col-sm-3 text-center">
-        <button class="coin-button" value="${coin.value}" type="button" aria-hidden="true">
-          <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75">
-        </button>
-      </div>`;
+      `<div class="col-6 p-3"><button class="coin-button btn-all" value="${coin.value}" type="button" aria-hidden="true">
+          <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75 p-1">
+        </button></div`;
   });
 
   // Coin information send to the game when clicked on.
@@ -134,27 +131,27 @@ const nextLevel = () => {
  */
 const addCoinValue = () => {
   sum += coinValue;
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1 class="p-2">${sum}p</h1>`;
 
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
     let audioButtonId = "#winnerAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum === price && task >= 6) {
     openModal("nextLevel");
     let audioButtonId = "#nextLevelAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum > price) {
     openModal("reset");
     let audioButtonId = "#tryAgainAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
 
   } else if (sum === price) {
     openModal("nextTask");
     let audioButtonId = "#yippeeAudio";
-    delayedAudioButton(audioButtonId)
+    delayedAudioButton(audioButtonId);
   }
 };
 
@@ -193,7 +190,7 @@ const openModal = (state) => {
       break;
 
     case "reset":
-      buttonText = "Reset";
+      buttonText = "Try again";
       buttonId = "errorModal";
       iClassFooter = "fas fa-redo";
       iClassBody = "far fa-frown";
@@ -214,7 +211,7 @@ const openModal = (state) => {
   backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}</h6>`;
   modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
     class="sr-only">${srOnly}</span></div>`;
-  modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="modal-btn rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
+  modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="btn-all btn-other rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
 
   /**
    * This method allows to fetch the information 
@@ -245,13 +242,13 @@ const openModal = (state) => {
 
 // Displays total sum in the div.
 const displaySum = () => {
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1 class="p-2">${sum}p</h1>`;
 };
 
 // Resets the sum to 0.
 const resetSum = () => {
   sum = 0;
-  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1 class="p2">${sum}p</h1>`;
 };
 
 // Resets task of the game to the starting point.
@@ -323,10 +320,15 @@ const muteAudio = (soundOff) => {
   if (soundOff) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = true;
-    };
+    }
   } else {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].muted = false;
-    };
-  };
+    }
+  }
 };
+
+// Allows to show tooltip title
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

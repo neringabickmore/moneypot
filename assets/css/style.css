@@ -5,59 +5,143 @@
 * Browsers: last 4 version
 */
 
+/*------------- Header-----------------------------*/
+header {
+  height: auto;
+}
+
+#logo h1 {
+  color: #d5ae41;
+  font-family: "Finger Paint", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  text-shadow: 1px 0px #382d0d;
+  text-transform: capitalize;
+}
+
 /*------------- Special Styling--------------------*/
 
 body {
   background-color: #f3f6fb;
 }
 
-.btn {
+h4,
+h5,
+h6,
+p,
+.p {
+  font-family: "Noto", sans-serif !important;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  text-shadow: 0 0 14px black;
+}
+
+.p,
+p {
+  font-size: 18px !important;
+}
+
+.btn-all {
   background-color: #bd3d3a;
   color: #f3f6fb;
+  -webkit-box-shadow: 0 0 3px 0px black;
+  box-shadow: 0 0 3px 0px black;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+}
+
+.btn-all:hover {
+  color: #f3f6fb;
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.btn-round {
   margin: 0.5rem;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 0.5;
   padding: 0.5rem;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-size: 1.35rem;
 }
 
-.btn {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  box-shadow: 0 0 3px 0px black;
+.btn-other {
+  border: none;
+  margin: 0.25rem;
 }
 
-.btn:hover {
-  color: #f3f6fb;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+button:focus {
+  outline: none;
+}
+
+/*---- Font size increases on larger devices-------------*/
+@media(min-width: 768px) {
+
+  .yes-star,
+  .no-star {
+    font-size: 2.5rem !important;
+  }
+
+  #gameLevel h1,
+  #gameTask h1 {
+    font-size: 4rem !important;
+  }
+
+  #price h1,
+  #sum h1 {
+    font-size: 6rem !important;
+  }
+
+  #price {
+    max-width: 65%;
+    max-height: 20%;
+  }
+
+  #gameNavBtn .btn-round {
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    font-size: 2rem !important;
+  }
+
+  #logo h1 {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media(min-width: 1024px) {
+
+  #game-dashboard {
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    align-items: baseline !important;
+    padding-top: 8rem;
+  }
 }
 
 /*------------- Modal Styling--------------------*/
-.game-rules-box,
+
+#game-rules-box,
 #contact-form-box {
   color: #f3f6fb;
   background-color: #3f69aa;
+  text-align: center;
 }
 
-.game-rules-box li,
+#game-rules-main li,
 #contact-form-box p,
 .form-group {
   font-family: "Roboto", sans-serif;
   text-shadow: 0 0 4px black;
-}
-
-.game-rules-box h4,
-#contact-form-box h5,
-#contact-form-box h6 {
-  font-family: "Noto", sans-serif;
-  letter-spacing: 0.05rem;
-  font-weight: normal !important;
-  text-shadow: 0 0 14px black;
-
 }
 
 .modal-header,
@@ -65,16 +149,17 @@ body {
   border: none;
 }
 
-/**---- Modal styling: Game Console----------**/
-.game-card-modal h6 {
-  background-color: #f3f6fb;
+/**---- Modal Styling: Game Console----------**/
+
+#game-card-modal h6 {
   color: #343a40;
+  font-family: "Love Ya Like A Sister", sans-serif !important;
   letter-spacing: 0.05rem;
   font-size: 2rem;
-  font-family: "Love Ya Like A Sister", sans-serif;
+  text-shadow: none;
 }
 
-.game-card-modal {
+#game-card-modal {
   background-color: #f3f6fb;
 }
 
@@ -83,7 +168,7 @@ body {
 .modal-body .fa-frown,
 .modal-body .fa-medal {
   color: #d5ae41;
-  font-size: 55px;
+  font-size: 6rem;
   line-height: 20px;
 }
 
@@ -93,23 +178,7 @@ body {
   text-shadow: 3px -1px 8px black;
 }
 
-.modal-btn {
-  background-color: #bd3d3a;
-  color: #f3f6fb;
-  border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  margin: 0.25rem;
-}
-
-.modal-btn:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-/**---- Modal styling: contact form----------**/
+/**---- Modal Styling: Contact Form----------**/
 
 .form-legal-info {
   margin-bottom: 1rem;
@@ -117,20 +186,11 @@ body {
 }
 
 .form-control {
+  -webkit-box-shadow: 2px -1px 20px 0px #0e2952;
   box-shadow: 2px -1px 20px 0px #0e2952;
 }
 
-/*------------- Header-----------------------------*/
-
-#logo h1 {
-  color: #d5ae41;
-  font-family: "Finger Paint", sans-serif;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-shadow: 1px 0px #382d0d;
-}
-
-/*------------- Games Dashboard--------------------*/
+/*------------- Game Dashboard--------------------*/
 
 #game-dashboard {
   background-color: #3f69aa;
@@ -142,41 +202,25 @@ body {
 }
 
 #gameLevel,
-#gameTask {
+#gameTask,
+.no-star,
+.yes-star {
   color: #f3f6fb;
-  font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 1.5px;
   font-size: 1.75rem;
+  letter-spacing: 1rem;
   text-shadow: 0 0 20px black;
 }
 
-.no-star {
-  color: #f3f6fb;
-  letter-spacing: 1rem;
-  font-size: 1.75rem;
-  text-shadow: 0 0 20px black;
+#gameLevel,
+#gameTask {
+  font-family: "Love Ya Like A Sister", sans-serif;
+  letter-spacing: 2px;
 }
 
 /**---- Stars will change colour to yellow when awarded----**/
 
 .yes-star {
   color: #d5ae41;
-  letter-spacing: 1rem;
-  font-size: 1.75rem;
-  text-shadow: 0 0 20px black;
-}
-
-#gameNavBtn .btn {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#gameNavBtn .btn:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  color: #f3f6fb;
 }
 
 /*------------- Game Card-------------------------*/
@@ -200,46 +244,62 @@ body {
   text-shadow: 3px -2px #303031;
 }
 
+#price,
+#sum {
+  text-align: center;
+}
+
 #price {
   background-color: #3f69aa;
   border: solid 0.25rem #d5ae41;
-  padding: 2rem;
-  margin: 0.5rem;
   border-radius: 50rem;
+  padding: 2rem;
+  margin: 0.25rem;
 }
 
 #sum {
   background-color: #d5ae41;
   border: solid 0.25rem #3f69aa;
-  padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 50%;
-}
-
-#coin {
-  padding: 0.5rem 0;
-  margin: 1rem 0;
+  border-radius: 60%;
 }
 
 .coin-button {
-  background-color: #bd3d3a;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
   border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   margin-bottom: 0.75rem;
-  padding: 0.15rem;
+  padding: 0.5rem;
+  overflow: hidden !important;
 }
 
-.coin-button:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+/**------Coin sizes change on different screensize------**/
+@media(min-width: 1024px) {
+  #coin div {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+@media(min-width: 576px) {
+
+  #coin div {
+    max-width: 40%;
+    max-height: 40%;
+    overflow-x: hidden;
+  }
+}
+
+@media(min-width: 300px) {
+
+  #coin div {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 /*------------- Footer-----------------------------*/
 
-#footer {
+footer {
   background-color: #d5ae41;
   padding: 1rem;
 }
@@ -254,6 +314,7 @@ body {
   font-size: 1rem;
   line-height: 0.5rem;
   text-align: center;
+  -webkit-box-shadow: 0 0 3px 0px black;
   box-shadow: 0 0 3px 0px black;
 }
 
@@ -284,27 +345,5 @@ body {
 
 .confirmation-page h4,
 .confirmation-page h6 {
-  font-family: "Noto",
-    sans-serif;
-  letter-spacing: 0.05rem;
-  font-weight: normal !important;
-}
-
-.playAgain-btn {
-  background-color: #bd3d3a;
-  color: #f3f6fb;
-  border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  margin: 0.25rem;
-  box-shadow: 0 0 3px 0px black;
-}
-
-.playAgain-btn:hover {
-  text-decoration: none;
-  color: #f3f6fb;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  text-shadow: none;
 }

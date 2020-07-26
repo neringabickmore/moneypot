@@ -10,7 +10,6 @@
   <meta name="Description" content="Maths game for children age 4-6" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Love+Ya+Like+A+Sister&family=Noto+Sans+JP&family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -24,21 +23,22 @@
 
 <body>
   <!-- Logo-->
-  <header class="container h-auto" id="logo">
+  <header class="container" id="logo">
     <div class="row pt-1">
-      <div class="col-sm text-center text-md-left mx-3 text-capitalize">
+      <div class="col-sm text-center text-md-left mx-3">
         <h1>money pot</h1>
       </div>
     </div>
   </header>
+
   <!-- Game console-->
-  <section class="container" id="game-console">
+  <section class="container">
     <div class="row">
       <!-- Dashboard-->
       <div class="col-12 col-lg-5" id="game-dashboard">
         <div class="row align-items-center">
           <!-- Game stages-->
-          <div class="col-12">
+          <div class="col-12 mb-lg-4">
             <div class="row">
               <!-- Game Level-->
               <div class="col-6 col-lg-12 text-right text-lg-center px-2" id="gameLevel">
@@ -51,8 +51,8 @@
             </div>
           </div>
           <!-- Star reward display-->
-          <div class="col-12">
-            <div class="row justify-content-center">
+          <div class="col-12 mb-lg-4">
+            <div class="row">
               <div class="col-sm d-flex justify-content-center">
                 <div class="no-star" id="star1">
                   <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
@@ -80,36 +80,38 @@
             <div class="row">
               <div class="col-sm d-flex justify-content-center" id="gameNavBtn">
                 <!-- Restart the game-->
-                <button type="button" class="btn">
-                  <i class="fas fa-sync" aria-hidden="true" title="reset the game" id="resetGame"></i><span
-                    class="sr-only">restart the game</span>
+                <button type="button" class="btn-round btn-all" title="Reset the Game" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-sync" aria-hidden="true" id="resetGame"></i><span class="sr-only">restart the
+                    game</span>
                 </button>
                 <!-- Reset the sum-->
-                <button type="button" class="btn">
-                  <i class="fas fa-redo" aria-hidden="true" title="reset the sum" id="resetSum"></i><span
-                    class="sr-only">reset the sum</span>
+                <button type="button" class="btn-round btn-all" title="Reset the Sum" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-redo" aria-hidden="true" id="resetSum"></i><span class="sr-only">reset the sum</span>
                 </button>
                 <!-- How to play-->
-                <button type="button" class="btn" data-toggle="modal" data-target="#gameRulesModal">
-                  <i class="fas fa-question-circle" aria-hidden="true" title="rules of the game"
-                    id="gameRules"></i><span class="sr-only">rules of the game</span>
+                <button type="button" class="btn-round btn-all" data-toggle="modal" data-target="#gameRulesModal">
+                  <i class="fas fa-question" aria-hidden="true" id="gameRules" title="Rules of the Game"
+                    data-toggle="tooltip" data-placement="top"></i><span class="sr-only">rules of the
+                    game</span>
                 </button>
                 <!-- 1. How to play: Modal box-->
-                <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog" aria-labelledby="gameRulesMain"
-                  aria-hidden="true">
+                <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog"
+                  aria-labelledby="game-rules-main" aria-hidden="true">
                   <div class="modal-dialog modal-xl">
-                    <div class="modal-content game-rules-box" id="game-rules-box">
+                    <div class="modal-content" id="game-rules-box">
                       <!-- 1.1 How to play: Header-->
                       <div class="modal-header">
                         <div class="modal-title col-12" id="gameRulesHeader">
-                          <h4 class="font-weight-bolder text-center">
-                            How to play?
+                          <h4 class="text-center">
+                            How to play!
                           </h4>
                         </div>
                       </div>
                       <!-- 1.2 How to play: Main body-->
                       <div class="container pt-3">
-                        <div class="row" id="gameRulesMain">
+                        <div class="row" id="game-rules-main">
                           <div class="col text-left">
                             <ul>
                               <li>
@@ -142,8 +144,9 @@
                       </div>
                       <!-- 1.3 How to play: exit button-->
                       <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn" data-dismiss="modal">
-                          <i class="fas fa-times-circle" aria-hidden="true" title="close"></i><span class="sr-only">
+                        <button type="button" class="btn-round btn-all" data-dismiss="modal" title="Close and Play"
+                          data-toggle="tooltip" data-placement="top">
+                          <i class="fas fa-times-circle" aria-hidden="true"></i><span class="sr-only">
                             close </span>
                         </button>
                       </div>
@@ -152,14 +155,15 @@
                 </div>
                 <!-- How to play: End-->
                 <!-- Sound off-->
-                <button type="button" class="btn">
-                  <i class="fas fa-volume-mute" aria-hidden="true" title="sound off" id="soundOff"></i><span
-                    class="sr-only">sound off</span>
+                <button type="button" class="btn-round btn-all" title="Sound Off" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-volume-mute" aria-hidden="true" id="soundOff"></i><span class="sr-only">sound
+                    off</span>
                 </button>
                 <!-- Sound on-->
-                <button type="button" class="btn">
-                  <i class="fas fa-volume-up" aria-hidden="true" title="sound on" id="soundOn"></i><span
-                    class="sr-only">sound on</span>
+                <button type="button" class="btn-round btn-all" title="Sound On" data-toggle="tooltip"
+                  data-placement="top">
+                  <i class="fas fa-volume-up" aria-hidden="true" id="soundOn"></i><span class="sr-only">sound on</span>
                 </button>
               </div>
             </div>
@@ -170,7 +174,7 @@
       <div class="col-12 col-lg-7" id="game-card">
         <div class="row align-items-center justify-content-center">
           <!-- 1.0 Price tag-->
-          <div class="col-sm-5 col-10 text-center" id="price">
+          <div class="col-12" id="price">
             <!-- 1.1 Price tag display is imported in here from JS file-->
           </div>
           <!-- 2.0 Coin display-->
@@ -185,7 +189,7 @@
               <div class="col-6 text-center" id="moneyPot">
                 <img src="assets/images/money-pot.png" alt="money pot" class="img h-100 w-100" />
               </div>
-              <div class="col-5 text-center" id="sum">
+              <div class="col-6" id="sum">
                 <!-- 3.1 Sum display is imported here from JS file-->
               </div>
             </div>
@@ -194,25 +198,28 @@
       </div>
     </div>
   </section>
+
   <!-- Footer-->
-  <footer class="container" id="footer">
+  <footer class="container">
     <div class="row">
       <ul class="col-sm d-flex justify-content-center" id="social-links">
         <!-- Facebook-->
-        <li class="p-2 "><a target="_blank" href="https://en-gb.facebook.com/" rel="noopener"><i
-              class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
-        </li>
+        <li class="p-2" title="Facebook"><a target="_blank" href="https://en-gb.facebook.com/" rel="noopener"><i
+              class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
+
         <!-- Twitter-->
-        <li class="p-2 "><a target="_blank" href="https://www.twitter.com/" rel="noopener"><i class="fab fa-twitter"
-              aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+        <li class="p-2" title="Twitter"><a target="_blank" href="https://www.twitter.com/" rel="noopener"><i
+              class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+
         <!-- Instagram-->
-        <li class="p-2 "><a target="_blank" href="https://www.instagram.com/" rel="noopener"><i class="fab fa-instagram"
-              aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
-        </li>
+        <li class="p-2" title="Instagram"><a target="_blank" href="https://www.instagram.com/" rel="noopener"><i
+              class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+
         <!-- 1. Contact-->
-        <li class="p-2 " data-toggle="modal" data-target="#contactForm"><a><i class="fas fa-envelope button"
-              aria-hidden="true" title="contact us"></i><span class="sr-only">Envelope</span></a></li>
+        <li class="p-2 " data-toggle="modal" data-target="#contactForm" title="Contact us">
+          <a><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Envelope</span></a></li>
       </ul>
+
       <!-- 1. Contact form: Modal box-->
       <div class="modal fade" tabindex="-1" id="contactForm" role="dialog" aria-labelledby="contactFormHeader"
         aria-hidden="true">
@@ -220,16 +227,15 @@
           <div class="modal-content" id="contact-form-box">
             <!-- 1.1 Contact form: Header-->
             <div class="modal-header">
-              <div class="modal-title col-12 font-weight-normal  text-center" id="contactFormHeader">
-                <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close">
+              <div class="modal-title col-12" id="contactFormHeader">
+                <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close" title="close">
                   <span aria-hidden="true">×</span>
                 </button>
-                <h5 class="pt-4">
-                  Help us improve! </h5>
-                <h6 class="pb-2">We value every customer and your feedback matters to us.</h6>
-                <small class="">We would love to hear from you should you have any suggestions or for general
+                <h4 class="pt-4">
+                  Help us improve! </h4>
+                <p class="pb-2">We value every customer and your feedback matters to us.</p>
+                <small class="">We would love to hear from you should you have any suggestions or general
                   enquiries.</small>
-
               </div>
             </div>
             <!-- 1.2 Contact form: Main body-->
@@ -251,10 +257,9 @@
                   <!-- 1.1.3 question one-->
                   <div class="form-group">
                     <div class="px-0">
-
-                      <label for="formQ1">
-                        <h6>How challenging were the tasks for your
-                          child?</h6>
+                      <label for="formQ1" class="p">
+                        How challenging were the tasks for your
+                        child?
                       </label>
                     </div>
                     <div class="px-0">
@@ -271,9 +276,8 @@
                   <!-- 1.1.4 question two-->
                   <div class="form-group">
                     <div class="px-0">
-
-                      <label for="formQ2">
-                        <h6>Did your child find the game entertaining?</h6>
+                      <label for="formQ2" class="p">
+                        Did your child find the game entertaining?
                       </label>
                     </div>
                     <div class="px-0">
@@ -289,9 +293,8 @@
                   <!-- 1.1.5 question three-->
                   <div class="form-group">
                     <div class="px-0">
-
-                      <label for="interestedInMore">
-                        <h6>Would you like to hear about similar games?</h6>
+                      <label for="interestedInMore" class="p">
+                        Would you like to hear about similar games?
                       </label>
                     </div>
                     <div class="px-0">
@@ -304,8 +307,8 @@
                   </div>
                   <!-- 1.1.6 suggestions-->
                   <div class="form-group">
-                    <label for="otherinfo">
-                      <h6>Your suggestions</h6>
+                    <label for="otherinfo" class="p">
+                      Your suggestions
                     </label>
                     <textarea class="form-control" id="otherinfo" rows="3"></textarea>
                   </div>
@@ -327,25 +330,26 @@
                   </div>
                   <!-- 1.3 Contact form: Send button-->
                   <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn" data-dismiss="#contactForm">
-                      <i class="fas fa-paper-plane" aria-hidden="true" title="send!"></i><span class="sr-only">
+                    <button type="submit" class="btn-round btn-all" data-dismiss="#contactForm" title="Send!">
+                      <i class="fas fa-paper-plane" aria-hidden="true"></i><span class="sr-only">
                         Paper plane </span>
                     </button>
                   </div>
+                </div>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
     <!-- Contact form: End-->
-    </div>
   </footer>
 
   <!-- GAME CARD: POP UP MODAL (inserted with JS)-->
   <div class="modal fade" id="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
     aria-labelledby="modalBody" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content game-card-modal">
+      <div class="modal-content" id="game-card-modal">
         <div class="modal-header justify-content-center" id="modalHeader">
           <!--Modal Header Info comes in from game.js-->
         </div>
@@ -367,10 +371,12 @@
   <audio id="yippeeAudio" src="assets/audio/yippee.ogg"></audio>
   <audio id="nextLevelAudio" src="assets/audio/nextLevel.wav"></audio>
   <audio id="winnerAudio" src="assets/audio/winner.mp3"></audio>
+
   <!-- JS scripts-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
   <!-- My JS path-->
   <script src="assets/js/main.js"></script>
 
