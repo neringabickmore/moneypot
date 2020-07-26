@@ -193,7 +193,7 @@ const openModal = (state) => {
       break;
 
     case "reset":
-      buttonText = "Reset";
+      buttonText = "Try again";
       buttonId = "errorModal";
       iClassFooter = "fas fa-redo";
       iClassBody = "far fa-frown";
