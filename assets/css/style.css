@@ -6,6 +6,9 @@
 */
 
 /*------------- Header-----------------------------*/
+header {
+  height: auto;
+}
 
 #logo h1 {
   color: #d5ae41;
@@ -13,6 +16,7 @@
   letter-spacing: 3px;
   font-size: 2.5rem;
   text-shadow: 1px 0px #382d0d;
+  text-transform: capitalize;
 }
 
 /*------------- Special Styling--------------------*/
@@ -119,6 +123,7 @@ p {
 #contact-form-box {
   color: #f3f6fb;
   background-color: #3f69aa;
+  text-align: center;
 }
 
 #game-rules-main li,
@@ -260,7 +265,7 @@ p {
 
 /*------------- Footer-----------------------------*/
 
-#footer {
+footer {
   background-color: #d5ae41;
   padding: 1rem;
 }
