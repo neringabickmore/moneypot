@@ -59,17 +59,27 @@ h6 {
   margin: 0.25rem;
 }
 
+/*------------- Header-----------------------------*/
+
+#logo h1 {
+  color: #d5ae41;
+  font-family: "Finger Paint", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  text-shadow: 1px 0px #382d0d;
+}
+
 /*---- Font size increases on larger devices-------------*/
 @media(min-width: 768px) {
 
   .yes-star,
   .no-star {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 
   #gameLevel h1,
   #gameTask h1 {
-    font-size: 4rem;
+    font-size: 4rem !important;
   }
 
   #price h1,
@@ -78,18 +88,20 @@ h6 {
   }
 
   #gameNavBtn .btn-round {
-    width: 3.6rem;
-    height: 3.6rem;
-    font-size: 2rem;
-  }
-
-  .coin-button {
-    width: 8rem;
-    height: 8rem;
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    font-size: 2rem !important;
   }
 
   #logo h1 {
-    font-size: 4.5rem;
+    font-size: 4.5rem !important;
+  }
+}
+
+@media(min-width: 1024px) {
+  .coin-button {
+    width: 8rem !important;
+    height: 8rem !important;
   }
 }
 
@@ -153,16 +165,6 @@ h6 {
   box-shadow: 2px -1px 20px 0px #0e2952;
 }
 
-/*------------- Header-----------------------------*/
-
-#logo h1 {
-  color: #d5ae41;
-  font-family: "Finger Paint", sans-serif;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-shadow: 1px 0px #382d0d;
-}
-
 /*------------- Game Dashboard--------------------*/
 
 #game-dashboard {
@@ -187,8 +189,7 @@ h6 {
 #gameLevel,
 #gameTask {
   font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 1.5px;
-  font-size: 1.75rem;
+  letter-spacing: 2px;
 }
 
 /**---- Stars will change colour to yellow when awarded----**/
