@@ -1,4 +1,7 @@
-# Money Pot - Testing details #
+# ![Logo](/wireframes/logo-image.jpg) #
+
+# Money Pot - Testing Details #
+
 
 Main [README.md](README.md) file.
 
@@ -31,21 +34,21 @@ The following validation services and linter were used to check the validity of 
 
 - [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML.
 
-![feedback.html validation](\wireframes\testing\images\feedback-html-validation.jpg) 
+![feedback.html validation](/wireframes/testing/images/feedback-html-validation.jpg) 
   
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
 
-![css validation](\wireframes\testing\images\css-validation.jpg) 
+![css validation](/wireframes/testing/images/css-validation.jpg) 
 
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
 
-![JSHint validation](\wireframes\testing\images\jshint-validation.jpg)
+![JSHint validation](/wireframes/testing/images/jshint-validation.jpg)
 
 - [Autoprefixer CSS online](https://autoprefixer.github.io/) was used to add vendor prefixes.
 
 - [JSONLint](https://jsonlint.com/) was used to validate [game.json](assets\data\game.json) file.
 
-![json validation](/wireframes\testing\images\json-validation.jpg)
+![json validation](/wireframes/testing/images/json-validation.jpg)
 
 ## Client stories testing ##
 
@@ -159,9 +162,9 @@ coinButtonRef.innerHTML +=
 
 **4. Modal display is not clearing initial display before loading the next:**
 
-![modalDisplayError](\wireframes/testing/images/modalDisplayError.jpg)
+![modalDisplayError](/wireframes/testing/images/modalDisplayError.jpg)
 
-![modalDisplayError2](\wireframes\testing\images\modalDisplayError2.jpg)
+![modalDisplayError2](/wireframes/testing/images/modalDisplayError2.jpg)
 
 - Fix: changed below three functions to global and removed it from ```openModal()```:
 
