@@ -11,29 +11,43 @@ body {
   background-color: #f3f6fb;
 }
 
-.btn {
+.btn-all {
   background-color: #bd3d3a;
   color: #f3f6fb;
+  box-shadow: 0 0 3px 0px black;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+}
+
+.btn-all:hover {
+  color: #f3f6fb;
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+
+}
+
+.btn-round {
   margin: 0.5rem;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 0.5;
   padding: 0.5rem;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-size: 1.35rem;
 }
 
-.btn {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  box-shadow: 0 0 3px 0px black;
-}
-
-.btn:hover {
-  color: #f3f6fb;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+.btn-other {
+  border: none;
+  margin: 0.25rem;
 }
 
 /*------------- Modal Styling--------------------*/
@@ -93,22 +107,6 @@ body {
   text-shadow: 3px -1px 8px black;
 }
 
-.modal-btn {
-  background-color: #bd3d3a;
-  color: #f3f6fb;
-  border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  margin: 0.25rem;
-}
-
-.modal-btn:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 /**---- Modal styling: contact form----------**/
 
 .form-legal-info {
@@ -164,19 +162,6 @@ body {
   letter-spacing: 1rem;
   font-size: 1.75rem;
   text-shadow: 0 0 20px black;
-}
-
-#gameNavBtn .btn {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#gameNavBtn .btn:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  color: #f3f6fb;
 }
 
 /*------------- Game Card-------------------------*/
@@ -288,23 +273,4 @@ body {
     sans-serif;
   letter-spacing: 0.05rem;
   font-weight: normal !important;
-}
-
-.playAgain-btn {
-  background-color: #bd3d3a;
-  color: #f3f6fb;
-  border: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  margin: 0.25rem;
-  box-shadow: 0 0 3px 0px black;
-}
-
-.playAgain-btn:hover {
-  text-decoration: none;
-  color: #f3f6fb;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }

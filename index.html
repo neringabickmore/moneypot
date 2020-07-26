@@ -10,7 +10,6 @@
   <meta name="Description" content="Maths game for children age 4-6" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Love+Ya+Like+A+Sister&family=Noto+Sans+JP&family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -80,19 +79,19 @@
             <div class="row">
               <div class="col-sm d-flex justify-content-center" id="gameNavBtn">
                 <!-- Restart the game-->
-                <button type="button" class="btn">
+                <button type="button" class="btn-round btn-all">
                   <i class="fas fa-sync" aria-hidden="true" title="reset the game" id="resetGame"></i><span
                     class="sr-only">restart the game</span>
                 </button>
                 <!-- Reset the sum-->
-                <button type="button" class="btn">
+                <button type="button" class="btn-round btn-all">
                   <i class="fas fa-redo" aria-hidden="true" title="reset the sum" id="resetSum"></i><span
                     class="sr-only">reset the sum</span>
                 </button>
                 <!-- How to play-->
-                <button type="button" class="btn" data-toggle="modal" data-target="#gameRulesModal">
-                  <i class="fas fa-question-circle" aria-hidden="true" title="rules of the game"
-                    id="gameRules"></i><span class="sr-only">rules of the game</span>
+                <button type="button" class="btn-round btn-all" data-toggle="modal" data-target="#gameRulesModal">
+                  <i class="fas fa-question" aria-hidden="true" title="rules of the game" id="gameRules"></i><span
+                    class="sr-only">rules of the game</span>
                 </button>
                 <!-- 1. How to play: Modal box-->
                 <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog" aria-labelledby="gameRulesMain"
@@ -142,7 +141,7 @@
                       </div>
                       <!-- 1.3 How to play: exit button-->
                       <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn" data-dismiss="modal">
+                        <button type="button" class="btn-round btn-all" data-dismiss="modal">
                           <i class="fas fa-times-circle" aria-hidden="true" title="close"></i><span class="sr-only">
                             close </span>
                         </button>
@@ -152,12 +151,12 @@
                 </div>
                 <!-- How to play: End-->
                 <!-- Sound off-->
-                <button type="button" class="btn">
+                <button type="button" class="btn-round btn-all">
                   <i class="fas fa-volume-mute" aria-hidden="true" title="sound off" id="soundOff"></i><span
                     class="sr-only">sound off</span>
                 </button>
                 <!-- Sound on-->
-                <button type="button" class="btn">
+                <button type="button" class="btn-round btn-all">
                   <i class="fas fa-volume-up" aria-hidden="true" title="sound on" id="soundOn"></i><span
                     class="sr-only">sound on</span>
                 </button>
@@ -327,7 +326,7 @@
                   </div>
                   <!-- 1.3 Contact form: Send button-->
                   <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn" data-dismiss="#contactForm">
+                    <button type="submit" class="btn-round btn-all" data-dismiss="#contactForm">
                       <i class="fas fa-paper-plane" aria-hidden="true" title="send!"></i><span class="sr-only">
                         Paper plane </span>
                     </button>
