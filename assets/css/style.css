@@ -99,12 +99,12 @@ button:focus {
 
   #price h1,
   #sum h1 {
-    font-size: 6rem !important;
+    font-size: 5rem !important;
   }
 
   #price {
-    max-width: 65%;
-    max-height: 20%;
+    max-width: 70%;
+    max-height: 50%;
   }
 
   #gameNavBtn .btn-round {
@@ -114,7 +114,7 @@ button:focus {
   }
 
   #logo h1 {
-    font-size: 4.5rem !important;
+    font-size: 3.5rem !important;
   }
 }
 
@@ -230,7 +230,7 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   border: solid 0.25rem #d5ae41;
 }
 
@@ -249,18 +249,19 @@ button:focus {
   text-align: center;
 }
 
-#price {
+#price h1 {
   background-color: #3f69aa;
   border: solid 0.25rem #d5ae41;
   border-radius: 50rem;
-  padding: 2rem;
-  margin: 0.25rem;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
-#sum {
+#sum h1 {
   background-color: #d5ae41;
   border: solid 0.25rem #3f69aa;
   border-radius: 60%;
+  padding: 0.5rem;
 }
 
 .coin-button {
@@ -270,6 +271,13 @@ button:focus {
   margin-bottom: 0.75rem;
   padding: 0.5rem;
   overflow: hidden !important;
+  max-height: 225px;
+  max-width: 225px;
+}
+
+#moneyPot {
+  max-height: 225px;
+  max-width: 225px;
 }
 
 /**------Coin sizes change on different screensize------**/
@@ -301,7 +309,7 @@ button:focus {
 
 footer {
   background-color: #d5ae41;
-  padding: 1rem;
+  height: auto;
 }
 
 #social-links li a i {
