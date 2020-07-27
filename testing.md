@@ -13,7 +13,7 @@ View [website in GitHub](https://neringabickmore.github.io/MoneyPot/) Pages.
 
 - [Automated Testing](#automated-testing)
   - [Validation Services](#validation-services)
-  - [Client stories testing](#client-stories-testing)
+- [Client stories testing](#client-stories-testing)
 - [Manual testing](#manual-testing)
   - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
   - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
