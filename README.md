@@ -1,4 +1,4 @@
-# ![Logo](/wireframes/logo-image.jpg) #
+# ![Game display on different screens](/wireframes/testing/images/game-display-screens.jpg) #
 
 *[Money Pot](https://neringabickmore.github.io/MoneyPot/) is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
 
