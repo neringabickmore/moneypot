@@ -87,7 +87,7 @@ const setGame = (game) => {
 
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
-      `<div class="col-6 p-3"><button class="coin-button btn-all" value="${coin.value}" type="button" aria-hidden="true">
+      `<div class="col-6 p-2 text-center"><button class="coin-button btn-all" value="${coin.value}" type="button" aria-hidden="true">
           <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75 p-1">
         </button></div`;
   });
@@ -131,7 +131,7 @@ const nextLevel = () => {
  */
 const addCoinValue = () => {
   sum += coinValue;
-  displaySumRef.innerHTML = `<h1 class="p-2">${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 
   if (sum === price && task >= 6 && level >= 3) {
     openModal("endOfGame");
@@ -242,13 +242,13 @@ const openModal = (state) => {
 
 // Displays total sum in the div.
 const displaySum = () => {
-  displaySumRef.innerHTML = `<h1 class="p-2">${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
 // Resets the sum to 0.
 const resetSum = () => {
   sum = 0;
-  displaySumRef.innerHTML = `<h1 class="p2">${sum}p</h1>`;
+  displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
 // Resets task of the game to the starting point.
