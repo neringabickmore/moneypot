@@ -121,6 +121,8 @@ I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I
 
 I have also included additional wireframes for the [contact form](/wireframes/wireframe.contact.jpg) page, [information](/wireframes/wireframe.info.jpg), [winner](/wireframes/wireframe.winner.jpg), [error](/wireframes/wireframe.error.jpg) and [congrats](/wireframes/wireframe.congrats.jpg) modal displays. Please note that all of these display layouts will remain the same on all screen sizes.
 
+To make game development easier, I have created [workflow-chart](/wireframes/js-workflow.png).
+
 In the **form page** the **envelope** icon in the footer is replaced with **games console** icon, which on-click brings the user back to the **games page**. On submission of the form, the user is also brought back to the games page.
 
 ---  
