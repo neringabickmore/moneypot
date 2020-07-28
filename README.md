@@ -275,3 +275,13 @@ I have identified the colour palette on [W3](https://www.w3schools.com/)
 ---
 
 ## Acknowledgements ##
+
+I would like to recognise the people who have helped me through this project: 
+
+- My mentor Simen Daehlin for his time, patience and support in helping me to understand Java Script, which I have trully struggled with. 
+
+- Code Institute tutors Tim, Stephen and Samantha who have helped me with technical struggles and made me think outside the box to solve my  Java Script problems.
+
+- My fellow Code Institute slack community, especially Simon Castagna and alumni Bim Williams for listening to my struggles and pushing me forward.
+
+- My son Jacob (5) and his friends Christina (5), Isaac (5), Lennie (6) and Lorrie (5) for testing this game and their invaluable feedback how I can make it a bit more fun. 
