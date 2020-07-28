@@ -91,12 +91,54 @@ The site has vivid colours of blue, yellow and red, large icons as well as audio
 
 ### Testing undertaken on Mobile ##
 
+All steps below were followed repeatidly to test the game on Huawei P20, Samsung A50 and iPhone 8s. 
+
 - Responsive design
+
+  - The users on all above devices could clearly see game dashboard at the top of the screen. I have purposely implemented game display with the scrol option to allow more interation for the user. 
+  - On all devices game console could easily fit without a scroll which was most important to me.
+  - Coin buttons were large enough to be clicked on as well as the sum and price tags are at the right size for the user of the aimed aged. 
+  - Footer remains static at the bottom of the page and gives the finishing touch to the page. 
+  - I have confirmed that the font sizes are responsive on smaller screens.
+
 - User friendly display
+
+  - I have listened to feedback from various users in relation to the friendliness of the dislpay which as all positive.
+  - The buttons were tested and are large enough to be clicked on and icons chosen are self explanatory.
+
 - Interactive games console
+
+  - The user has many buttons to keep them engaged: 
+
+    - Coin buttons are tested and fully functional on all devices.
+    - Modals are fully functioning to notify the user when they did well with the task.
+    - Modals are fully functioning to notify the user when they need to try again.
+    - Modals are fully functioning to notify the user when they did well in completing all the tasks and they are progressing to the next level of the game. 
+    - Modal form are fully functioning to notify the user that they gave completed all of the levels and tasks and that they have won the game. 
+    - Audio if fully functioning (except for iOS) at a click of the button or the appropriate.
+    - The user is rewarded with a star eveyr time they complete the task correctly. At this stage, the white star (empty) turns to yellow. 
+    - The user get all of the stars wiped out when they progress through the levels but are again rewarded with a yellow star upon completion of the task correctly. 
+    - The user is also notified whith the change of the Task number and Level number to help them identify their progress.
+    
+
+  
+
 - Dashboard for easy navigation
+
+  - The user has many buttons to keep them engaged:
+    - Game reset button - fully functional 
+    - Sum reset button - fully functional 
+    - Rules button - fully functional 
+    - Sound on button - fully functional (except for iOS)
+    - Sound off button - - fully functional (except for iOS)
+    
 - Social media links
+
+  - Social media links are fully functional on all 
+
 - Functional contact form
+
+  - The contact form is fully functional on all devices (except for iOS where the form is not responsive). The users are notified when mandatory form fields which are name, email and consent form are not displayed.
 
 ### Testing undertaken on tablet and desktop ###
 
@@ -211,5 +253,9 @@ Function is working appropriately to clear rewarded stars when the user progress
 ![starDisplay](/wireframes/testing/images/starDisplay.jpg)
 
 #### Unsolved bugs ####
+
+1.  Audio does not work on iOS.
+2.  Contact form does not work on iOS.
+3.  The site is not opperational on Internet Explorer. 
 
 ## Further testing ##
