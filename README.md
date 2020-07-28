@@ -185,13 +185,13 @@ On the left side of the screen you can see a dashboard allowing the user to rese
 
 - Rules of the game
 
-![rules](/wireframes/game-rules.JPG)
+![rules](/wireframes/game-rules.jpg)
 
 - Social media links
 
 The site has social media links displayed at the foooter of the page, as well as a button to take them to the contact/feedback form.
 
-![social-media](/wireframes/social-media.JPG)
+![social-media](/wireframes/social-media.jpg)
 
 - Functional contact form
 
