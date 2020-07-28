@@ -4,6 +4,8 @@
 
 ![Game display on different screens](/wireframes/testing/images/game-display-screens.jpg)
 
+Since the Global Covid pandemic has started, my husband and I were one of those parents who had to roll up our sleeves and become stay-at-home teachers for our son Jacob (5). This game was inspired by one of the home schooling tasks with the aim to teach our son the value of the British Currency coins as we played *shopkeepers* selling and buying his toys and groceries, by giving correct change. 
+
 ---
 
 ## Contents ##
