@@ -55,11 +55,35 @@ The following validation services and linter were used to check the validity of 
  The following section goes through each of the user stories from the UX section of [README.md](https://github.com/neringabickmore/MoneyPot/blob/master/README.md)
 
 1. As a  **user**, I want to find the rules how to play the game.
+
+The user can find the rules of the game by clicking on the question mark icon in the game dashboard. When the user hover over the icon it's name is also displayed. 
+
+![game dashboard](/wireframes/game-rules-pointer.png)
+![rules of the game](/wireframes/game-rules.jpg)
+
 2. As a **user**, I want to learn how to add numbers to get the correct sums.
+
+The user has option to select any coin in the game console. If the sum is less than the price tag (at the top of the page), the user is allower to add more coins. When the user selects enough coins and the number in the sum field at the bottom of the console matches the number at the top (price tag), they are notified that they did well. If they choose the sum which is larger than the price tag, they are also notified with the message offering them to try again. Appropriate audio is played to enhance the experience. 
+
+![interactive console](/wireframes/interactive-console.jpg)
+
 3. As a **user**, I want to learn how to recognise British Currency coins.
+
+In the rules of the game, which are aimed at the parent of the child, they are encouraged to show real coins to their child, who are essentially the users. As the game progresses, it becomes apparent that a particular colour and shape of coin is equal to a certain value. By repeatedly playing the game it should become a second nature to the user which coin has what value. 
+
 4. As a **user**, I want to be able to contact the site owner for more information or suggest additional features.
+
+Please note - the form is aimed for the adult user or should be submitted with a responsible adults consent. The site has an option for the user to contact the site owner via a feedback/contact form which is located at the footer of the page.
+
+![feedback-form](/wireframes/contact-form.jpg)
+
 5. As a **user**, I want to give feedback about the game using a questionaire.
+
+The form has three basic questions the user is encouraged to answer. Please refer to the above image for details. 
+
 6. As a **user**, I want to see attractive colours, large icons to play with and have fun!
+
+The site has vivid colours of blue, yellow and red, large icons as well as audio interaction througout the game. 
 
 ---
 
