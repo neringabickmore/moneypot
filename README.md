@@ -156,17 +156,50 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 ### Features Implemented ###
 
 - Responsive design
+
+The game has different layout options, focused on mobile first design in mind as more users are expected to use mobile or tablet devices than desktop.
+
+![site views on different displays](\wireframes\responsive-design.jpg)
+
 - User friendly display
+
+The display has bright colours, large fonts and large buttons as aimed for very young children. The social media icons are a lot smaller at the footer and purposely are not at the focus of the display, aimed at adult interaction instead.
+
 - Interactive games console
+
+When the user interacts with the coin buttons, they get feedback how well they are doing. 
+
+![interactive games console](\wireframes\interactive-console.jpg)
+
 - Dashboard for easy navigation
+
+On the left side of the screen you can see a dashboard allowing the user to reset the game completely, reset the sum, find rules of the game as well as switch the audio on/off.
+
+![dashboad-on-the-left](\wireframes\game-dashboard.jpg)
+
+- Rules of the game
+
+![rules](\wireframes\game-rules.JPG)
+
 - Social media links
+
+The site has social media links displayed at the foooter of the page, as well as a button to take them to the contact/feedback form.
+
+![social-media](\wireframes\social-media.JPG)
+
 - Functional contact form
+
+The form prompts the user if they haven't completed mandatory tasks of the form, such as their name, email address and a cosent confirmation. Upon submission of the form, the user get a notification when their form is sent, which also includes their name. 
+
+![contact-form](\wireframes\contact-form.jpg) 
 
 ### Future Features ###
 
-- Currency switch (i.e. Euro and US Dollar options)
-- Information in a different language (i.e. Lithuanian as I have nieces and nephiew living in Lithuania)
-- Increase levels of difficulty and include higher value currency (Pound coins and notes)
+- Currency switch (i.e. Euro and US Dollar options).
+- Information in a different language (i.e. Lithuanian as I have nieces and nephiew living in Lithuania).
+- Increase levels of difficulty and include higher value currency (Pound coins and notes).
+- Coins switch display places throughout the tasks and levels of the game to make it more challenging.
+- User form submissions are delivered to the site owners inbox with it's contents. 
 
 ---
 
