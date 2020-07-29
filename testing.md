@@ -297,3 +297,7 @@ Function is working appropriately to clear rewarded stars when the user progress
 3.  The site is not opperational on Internet Explorer. 
 
 ## Further testing ##
+
+1. My son Jacob (5) and his friends did further testing. Their feedback as that they are very interested in the game (maybe they were just kind to me) and asked me to build more games for them. 
+
+2. I have also asked my fellow students at the Code Institute to review my site and report any bugs or issues they have discovered. 
