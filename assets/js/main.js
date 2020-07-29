@@ -27,6 +27,7 @@ let level;
 
 $(document).ready(function () {
   fetchData("game.json");
+  $("#gameRulesModal").modal("show");
 });
 
 // Global event listeners
