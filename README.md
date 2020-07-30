@@ -27,6 +27,7 @@ Since the Global Covid pandemic has started, my husband and I were one of those 
 - [Features](#features)
   - [Features Implemented](#features-implemented)
   - [Future Features](#future-features)
+  - [Considered Features](#considered-features)
 - [Testing](#testing)
 - [Deployment](#deployment)
   - [Running Money Pot Locally](#running-money-pot-locally)
@@ -206,6 +207,37 @@ The form prompts the user if they haven't completed mandatory tasks of the form,
 - Increase levels of difficulty and include higher value currency (Pound coins and notes).
 - Coins switch display places throughout the tasks and levels of the game to make it more challenging.
 - User form submissions are delivered to the site owners inbox with its contents. 
+
+### Considered Features ###
+
+I find it's important to explain a few features I have considered and why I have decided against implementing them in this project.
+
+- Background music
+
+This game is educational and the target audience is very young. They are easily distracted and I find that continuous background audio would challenge their ability to focus. 
+
+- Questionnaire in the contact form is not mandatory
+
+  The questionaire part of the contact form is optional for a reason. The form plays a dual role: 
+
+  - To give feedback.
+  - To contact us for any other reasons. 
+
+  Not all of the users would want to provide feedback and yet I still want to hear from them.
+
+- Users do not have an option to choose levels or tasks of the game
+
+  On average, it takes my son between 10 to 15 min to complete the game. It only has 3 levels and 3 tasks on each level. Repetition allows the user to learn quicker. The idea is for the user to repeat the game from start to finish every time as it's quick to complete and they are exposed to different levels of difficulty throughout the game.
+
+  Should the game develop and more levels are added with more complexity I may reconsider this option.
+
+- Coin clicks are unlimited
+
+  In the rules of the game, I encourage parents to be involved with their children while they play the game. One of the recommendations I have is for them to encourage their children to use a variety of coins every time they play. The purpose of the game is not how quickly they can get to the sum, but for them to be able to apply almost real-life scenarios and collect the right amount of change that they have as if they are in a shop trying to buy a toy. In real life scenario, we will not always have 20p, 50p, and 5p to give an exact change of 75p.  By limiting the clicks I would remove that part of learning. 
+
+- No special reward for using as few coin clicks possible to achieve the correct sum
+
+  The purpose of the game is to achieve the correct sum clicking on a variety of the coins every time the user plays the game. Rewarding the user for using as little coin clicks possible removed an important part of learning. 
 
 ---
 
