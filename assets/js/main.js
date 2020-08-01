@@ -5,7 +5,7 @@ const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 
-const backdropLabelContent = document.createElement("h6");
+const backdropLabelContent = document.createElement("div");
 const modalBodyContent = document.createElement("div");
 const modalFooterContent = document.createElement("div");
 
@@ -233,7 +233,7 @@ const openModal = (state) => {
 
   }
 
-  backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}</h6>`;
+  backdropLabelContent.innerHTML = `<h6 class="modal-title">${bodyText}</h6>`;
   modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
     class="sr-only">${srOnly}</span></div>`;
   modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="btn-all btn-other rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;
