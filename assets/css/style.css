@@ -5,6 +5,7 @@ html {
 }
 
 /* Body styling */
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
@@ -13,15 +14,18 @@ body {
   text-align: center;
 }
 
+/*Bug-fix: to prevent style inheritance in the legal
+section of the form, label specificity updated.*/
 h2,
 p,
-label {
+.form-group label {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.5px;
   text-shadow: 0 0 14px #000;
 }
 
 /* Header styling */
+
 header {
   color: #d5ae41;
   font-family: "Finger Paint", sans-serif;
@@ -35,6 +39,7 @@ header h1 {
 }
 
 /* Main section styling */
+
 section {
   background-color: #3f69aa;
   color: #f3f6fb;
@@ -86,7 +91,8 @@ footer {
   background-color: #d5ae41;
 }
 
-footer i {
+/*Bug fix: specifidied li items in the footer to prevent style inheritance on the contact form button icon*/
+footer ul i {
   background-color: #bd3d3a;
   color: #f3f6fb;
   width: 3.2rem;
@@ -103,7 +109,7 @@ footer li {
   list-style-type: none;
 }
 
-footer i:hover {
+footer ul i:hover {
   background-color: #994044;
   color: #f3f6fb;
 }
@@ -118,6 +124,8 @@ footer i:hover {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  font-family: 'Noto', sans-serif;
+  margin: 0.5rem;
 }
 
 .btn-all:hover {
@@ -159,5 +167,50 @@ button:focus {
   max-width: 180px;
   padding: 0.8rem;
   margin: 1rem;
+}
 
+/* Modal styling */
+
+.modal-content {
+  background-color: #f3f6fb;
+}
+
+#gameRulesModal .modal-content,
+#contactForm .modal-content {
+  color: #f3f6fb;
+  background-color: #3f69aa;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal-header h6 {
+  text-shadow: none !important;
+  font-size: 2rem;
+
+}
+
+.modal-body i {
+  color: #d5ae41;
+  font-size: 6rem;
+  line-height: 2rem;
+  text-shadow: 3px -1px 8px #000;
+}
+
+.fa-frown {
+  text-shadow: none !important;
+}
+
+.form-control {
+  font-size: 1.5rem;
+  -webkit-box-shadow: 2px -1px 20px 0px #0e2952;
+  box-shadow: 2px -1px 20px 0px #0e2952;
+}
+
+.form-legal-info {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  text-align: left;
 }
