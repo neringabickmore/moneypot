@@ -56,9 +56,11 @@ $("#soundOn").click(function () {
 });
 
 /**
- * Fetches data to game display.
- * @returns {string} All data in game.json
+ * This function fetches data
+ * from game.json to allow 
+ * game display on index.html.
  */
+
 const fetchData = () => {
   return fetch(`assets/data/game.json`)
     .then((res) => res.json())
@@ -110,14 +112,22 @@ const setGame = (game) => {
   displaySum();
 };
 
-// This function pushes the information for the next task.
+/**
+ * This function pushes 
+ * the information for 
+ * the next task.
+ */
 const nextTask = () => {
   taskNumber++;
   fetchData();
   rewardStars();
 };
 
-// This function pushes the information for the next level.
+/**
+ * This function pushes 
+ * the information for 
+ * the next level.
+ */
 const nextLevel = () => {
   levelNumber++;
   fetchData();
@@ -241,29 +251,48 @@ const openModal = (state) => {
   });
 };
 
-// Displays total sum in the div.
+/**
+ * This function
+ * display total sum
+ * in the div
+ */
 const displaySum = () => {
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
-// Resets the sum to 0.
+/**
+ * This function
+ * resets the sum to 0.
+ */
 const resetSum = () => {
   sum = 0;
   displaySumRef.innerHTML = `<h1>${sum}p</h1>`;
 };
 
-// Resets task of the game to the starting point.
+/**
+ * This function
+ * resets task of the game
+ * to the starting point.
+ */
 const resetTask = () => {
   taskNumber = 0;
   resetStars();
 };
 
-// Resets level of the game to the starting point.
+/**
+ * This function
+ * resets level of the game
+ * to the starting point.
+ */
 const resetLevel = () => {
   levelNumber = 0;
 };
 
-// Resets the game back to the begining.
+/**
+ * This function 
+ * resets the game back
+ * to the begining.
+ */
 const resetGame = () => {
   resetLevel();
   resetSum();
@@ -271,7 +300,11 @@ const resetGame = () => {
   fetchData();
 };
 
-// Rewards a user with the yellow stars.
+/**
+ * This functions 
+ * rewards the user with 
+ * the yellow stars.
+ */
 const rewardStars = () => {
   star++;
   for (let i = 1; i <= star; i++) {
@@ -281,7 +314,11 @@ const rewardStars = () => {
   }
 };
 
-// Resets all stars back to white.
+/**
+ * This function
+ * resets all of the stars
+ * back to white.
+ */
 const resetStars = () => {
   star = 0;
   for (let i = 1; i <= 6; i++) {
@@ -314,7 +351,8 @@ const delayedAudioButton = (audioButtonId) => {
 
 /**
  * Mute/unmute audio.
- * @param {string} soundOff - Targets all audio elements in html.
+ * @param {string} soundOff 
+ * - Targets all audio elements in html.
  */
 const muteAudio = (soundOff) => {
   const allAudio = $("audio");
@@ -329,7 +367,11 @@ const muteAudio = (soundOff) => {
   }
 };
 
-// Allows to show tooltip title
+/**
+ * This functions allows to
+ * show a tooltip when the user
+ * hovers over button elements.
+ */
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
