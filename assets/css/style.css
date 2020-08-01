@@ -288,3 +288,41 @@ section of the form, label specificity updated.*/
 
 
 }
+
+@media(min-width: 992px) {
+
+  section {
+    min-height: 88vh;
+  }
+
+  #gameLevel {
+    padding-top: 8rem;
+  }
+
+  .fa-star {
+    font-size: 4.5rem;
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+
+  #price {
+    padding-top: 2rem;
+  }
+
+  #coin {
+    min-height: 50vh;
+  }
+
+  #game-display-end .col-6 {
+    min-height: 15vh;
+  }
+
+  #moneyPot {
+    padding-top: 5rem;
+  }
+
+  #sum {
+    padding-top: 10rem;
+  }
+
+}
