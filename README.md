@@ -1,10 +1,10 @@
-# Money Pot # 
+# Money Pot #
 
 *[Money Pot](https://neringabickmore.github.io/MoneyPot/) is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
 
 ![Game display on different screens](/wireframes/testing/images/game-display-screens.jpg)
 
-Since the Global Covid pandemic has started, my husband and I were one of those parents who had to roll up our sleeves and become stay-at-home teachers for our son Jacob (5). This game was inspired by one of the homeschooling tasks to teach our son the value of the British Currency coins as we played *shopkeepers* selling and buying his toys and groceries, by giving correct change. 
+Since the Global Covid pandemic has started, my husband and I were one of those parents who had to roll up our sleeves and become stay-at-home teachers for our son Jacob (5). This game was inspired by one of the homeschooling tasks to teach our son the value of the British Currency coins as we played *shopkeepers* selling and buying his toys and groceries, by giving correct change.
 
 ---
 
@@ -39,8 +39,6 @@ Since the Global Covid pandemic has started, my husband and I were one of those 
   - [Code Ideas](#code-ideas)
 - [Acknowledgements](#acknowledgements)
 
-*Table of contents generated with [markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)*
-
 ---
 
 ## UX (User Experience) ##
@@ -56,7 +54,7 @@ The secondary goal of this project is to teach children to identify British Curr
 - **Play** the game.
 - **Learn** to identify British Currency coins.
 - **Learn** simple math sums.
-- **Give feedback** about the game. 
+- **Give feedback** about the game.
 - **Contact** to the site owner.
 
 ### User Stories ###
@@ -95,7 +93,7 @@ The secondary goal of this project is to teach children to identify British Curr
 9. Games console should have six stars displayed, which are highlighted in yellow when the correct sum is achieved. Stars colour should reset back to white at each level.
 10. With each correct sum, a pop up *Congrats* message display appears. The display should have a button to take the user to the next task.
 11. At each incorrect sum, a pop up *Try again* message display appears. The display should have a button to restart the same task and will trigger the sum reset to 0. The user will not lose the stars they have already won.
-12. At each correct completion of the 6 task, *Next level* message display appears. The display should have a button to take the user to the next level task one, trigger the sum reset to 0, all-stars reset to white colour and an additional coin is displayed. 
+12. At each correct completion of the 6 task, *Next level* message display appears. The display should have a button to take the user to the next level task one, trigger the sum reset to 0, all-stars reset to white colour and an additional coin is displayed.
 
 ### Design Choices ###
 
@@ -130,6 +128,8 @@ To make game development easier, I have created [workflow-chart](/wireframes/js-
 
 In the **form page** the **envelope** icon in the footer is replaced with **games console** icon, which on-click brings the user back to the **games page**. On submission of the form, the user is also brought back to the games page.
 
+[Back to content](#contents)
+
 ---  
 
 ## Technologies ##
@@ -156,6 +156,8 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 - [Color editor](https://coolors.co/)
 - [Image editor](https://www.birme.net/)
 
+[Back to content](#contents)
+
 ---
 
 ## Features ##
@@ -174,7 +176,7 @@ The display has bright colours, large fonts, and large buttons as aimed for very
 
 - Interactive games console
 
-When the user interacts with the coin buttons, they get feedback on how well they are doing. 
+When the user interacts with the coin buttons, they get feedback on how well they are doing.
 
 ![interactive games console](/wireframes/interactive-console.jpg)
 
@@ -196,9 +198,9 @@ The site has social media links displayed at the footer of the page, as well as 
 
 - Functional contact form
 
-The form prompts the user if they haven't completed mandatory tasks of the form, such as their name, email address, and a consent confirmation. Upon submission of the form, the user gets a notification when their form is sent, which also includes their name. 
+The form prompts the user if they haven't completed mandatory tasks of the form, such as their name, email address, and a consent confirmation. Upon submission of the form, the user gets a notification when their form is sent, which also includes their name.
 
-![contact-form](/wireframes/contact-form.jpg) 
+![contact-form](/wireframes/contact-form.jpg)
 
 ### Future Features ###
 
@@ -206,7 +208,7 @@ The form prompts the user if they haven't completed mandatory tasks of the form,
 - Information in a different language (i.e. Lithuanian as I have nieces and nephew living in Lithuania).
 - Increase levels of difficulty and include higher value currency (Pound coins and notes).
 - Coins switch display places throughout the tasks and levels of the game to make it more challenging.
-- User form submissions are delivered to the site owners inbox with its contents. 
+- User form submissions are delivered to the site owners inbox with its contents.
 
 ### Considered Features ###
 
@@ -214,14 +216,14 @@ I find it's important to explain a few features I have considered and why I have
 
 - Background music
 
-This game is educational and the target audience is very young. They are easily distracted and I find that continuous background audio would challenge their ability to focus. 
+This game is educational and the target audience is very young. They are easily distracted and I find that continuous background audio would challenge their ability to focus.
 
 - Questionnaire in the contact form is not mandatory
 
-  The questionaire part of the contact form is optional for a reason. The form plays a dual role: 
+  The questionaire part of the contact form is optional for a reason. The form plays a dual role:
 
   - To give feedback.
-  - To contact us for any other reasons. 
+  - To contact us for any other reasons.
 
   Not all of the users would want to provide feedback and yet I still want to hear from them.
 
@@ -233,11 +235,11 @@ This game is educational and the target audience is very young. They are easily 
 
 - Coin clicks are unlimited
 
-  In the rules of the game, I encourage parents to be involved with their children while they play the game. One of the recommendations I have is for them to encourage their children to use a variety of coins every time they play. The purpose of the game is not how quickly they can get to the sum, but for them to be able to apply almost real-life scenarios and collect the right amount of change that they have as if they are in a shop trying to buy a toy. In real life scenario, we will not always have 20p, 50p, and 5p to give an exact change of 75p.  By limiting the clicks I would remove that part of learning. 
+  In the rules of the game, I encourage parents to be involved with their children while they play the game. One of the recommendations I have is for them to encourage their children to use a variety of coins every time they play. The purpose of the game is not how quickly they can get to the sum, but for them to be able to apply almost real-life scenarios and collect the right amount of change that they have as if they are in a shop trying to buy a toy. In real life scenario, we will not always have 20p, 50p, and 5p to give an exact change of 75p.  By limiting the clicks I would remove that part of learning.
 
 - No special reward for using as few coin clicks possible to achieve the correct sum
 
-  The purpose of the game is to achieve the correct sum clicking on a variety of the coins every time the user plays the game. Rewarding the user for using as little coin clicks possible removed an important part of learning. 
+  The purpose of the game is to achieve the correct sum clicking on a variety of the coins every time the user plays the game. Rewarding the user for using as little coin clicks possible removed an important part of learning.
 
 ---
 
@@ -275,6 +277,8 @@ Copy the following code and input it into your terminal to clone Money Pot:
 
 ```git clone https://github.com/neringabickmore.MoneyPot```
 
+[Back to content](#contents)
+
 ---
 
 ## Credits ##
@@ -306,16 +310,21 @@ I have identified the colour palette on [W3](https://www.w3schools.com/)
 
 - I have borrowed audio button ideas from [PicFlip!](https://github.com/AJGreaves/picflip) game.
 
+[Back to content](#contents)
+
 ---
 
 ## Acknowledgements ##
 
-I would like to recognize the people who have helped me through this project: 
+I would like to recognize the people who have helped me through this project:
 
-- My mentor Simen Daehlin for his time, patience, and support in helping me to understand Java Script, which I have truly struggled with but with his help I was able to push through. 
-
+- My mentor Simen Daehlin for his time, patience, and support in helping me to understand Java Script, which I have truly struggled with but with his help I was able to push through.
 - Code Institute tutors Tim, Stephen, and Samantha who have helped me with technical struggles and made me think outside the box to solve my  Java Script problems.
 
 - My fellow Code Institute slack community, especially Simon Castagna and alumni Bim Williams for listening to my struggles and pushing me forward.
 
-- My son Jacob (5) and his friends Christina (5), Isaac (5), Lennie (6), and Lorrie (5) for testing this game and their invaluable feedback on how I can make it a bit more fun. 
+- My son Jacob (5) and his friends Christina (5), Isaac (5), Lennie (6), and Lorrie (5) for testing this game and their invaluable feedback on how I can make it a bit more fun.
+
+[Back to content](#contents)
+
+---
