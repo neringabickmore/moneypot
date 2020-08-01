@@ -185,11 +185,15 @@ button:focus {
 
 /*Bug-fix: to prevent style inheritance in the legal
 section of the form, label specificity updated.*/
-.modal-title,
+.modal-title h2,
 .form-group label {
   font-family: "Noto", sans-serif;
   letter-spacing: 0.5px;
   text-shadow: 0 0 14px #000;
+}
+
+.modal-title h6 {
+  letter-spacing: 0.5px;
 }
 
 .modal-body i {
@@ -244,4 +248,43 @@ section of the form, label specificity updated.*/
 
 #confirmation-page h1 {
   font-weight: bolder;
+}
+
+/* Responsive breakpoints styling */
+
+@media(min-width: 768px) {
+  header h1 {
+    font-size: 7rem;
+  }
+
+  section h1 {
+    font-size: 7rem;
+  }
+
+  #gameTask {
+    padding-left: 3.5rem !important;
+  }
+
+  .fa-star {
+    font-size: 5rem;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  #price {
+    max-width: 70%;
+  }
+
+  #gameNavBtn .btn-round {
+    width: 6rem !important;
+    height: 6rem !important;
+    font-size: 3.5rem !important;
+  }
+
+  .modal-body i {
+    font-size: 8rem;
+    margin: 4rem;
+  }
+
+
 }
