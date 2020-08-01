@@ -4,11 +4,22 @@ html {
   font-size: 62.5%;
 }
 
+/* Body styling */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   background-color: #f3f6fb;
   color: #343a40;
+  text-align: center;
+}
+
+h2,
+h6,
+p,
+label {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 14px #000;
 }
 
 /* Header styling */
