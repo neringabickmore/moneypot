@@ -10,3 +10,16 @@ body {
   background-color: #f3f6fb;
   color: #343a40;
 }
+
+/* Header styling */
+header {
+  color: #d5ae41;
+  font-family: "Finger Paint", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  text-shadow: 1px 0px #382d0d;
+}
+
+header h1 {
+  font-size: 3.5rem;
+}
