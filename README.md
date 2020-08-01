@@ -145,15 +145,16 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 
 - [jQuery](https://jquery.com/)
 - [Popper](https://popper.js.org/)
+- [Popper JS](https://popper.js.org/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+- [Google fonts](https://fonts.google.com/)
   
 ### Tools ###
 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
-- [Google fonts](https://fonts.google.com/)
 - [Color editor](https://coolors.co/)
 - [Image editor](https://www.birme.net/)
 
