@@ -14,7 +14,6 @@ Since the Global Covid pandemic has started, my husband and I were one of those 
   - [Project Goals](#project-goals)
   - [User Goals](#user-goals)
   - [User Stories](#user-stories)
-  - [Site Owner Goals](#site-owner-goals)
   - [User Requirements and Expectations](#user-requirements-and-expectations)
   - [Design Choices](#design-choices)
     - [Fonts](#fonts)
@@ -59,6 +58,8 @@ The secondary goal of this project is to teach children to identify British Curr
 
 ### User Stories ###
 
+#### Site visitor ####
+
 - As a  **user**, I want to find the rules on how to play the game.
 - As a **user**, I want to learn how to add numbers to get the correct sums.
 - As a **user**, I want to learn how to recognise British Currency coins.
@@ -66,10 +67,10 @@ The secondary goal of this project is to teach children to identify British Curr
 - As a **user**, I want to give feedback about the game using a questionnaire.
 - As a **user**, I want to see attractive colours, large icons to play with, and have fun!
 
-### Site Owner Goals ###
+#### Site Owner ####
 
 - As a **site owner**, I want to create an interactive educational maths game for children.
- As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
+- As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
 - As a **site owner**, I also want to teach the children a life skill how to count money, by starting small with pence coins.
 - It is also important to me to receive honest feedback from the parent of the **user** so I can identify how I can improve the game and for recommendations on other educational games their children would benefit from.
 - As a **site owner**, I would also like my audience to connect with me on social media platforms.
@@ -103,7 +104,7 @@ The main aim of the design of the site is to make it appealing to the children. 
 
 For the **logo**, I have chosen [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger). This font seemed to me a close resemblance of a child's writing with a paint brush.
 
-For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Like A Sister](https://fonts.google.com/specimen/Love+Ya+Like+A+Sister?query=love+ya) font. This font seems playful to me. I also liked the fact that there is some transparancy and you can see a bit of the background colour.
+For the **level**, **task**, **price tag** and **sum** I have chosen [Love Ya Like A Sister](https://fonts.google.com/specimen/Love+Ya+Like+A+Sister?query=love+ya) font. This font seems playful to me. I also liked the fact that there is some transparancy and you can see a bit of the background colour. I have also used this font for the modal contents througout the game.
 
 For all **headers** I used [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP?query=noto) font and all **other text** [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto).
 
