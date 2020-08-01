@@ -24,7 +24,7 @@
   <!-- Logo-->
   <header class="container" id="logo">
     <div class="row pt-1">
-      <div class="col-sm text-center text-md-left mx-3">
+      <div class="col-sm text-md-left mx-3">
         <h1>money pot</h1>
       </div>
     </div>
@@ -104,9 +104,9 @@
                       <!-- 1.1 How to play: Header-->
                       <div class="modal-header">
                         <div class="modal-title col-12" id="gameRulesHeader">
-                          <h4 class="text-center">
+                          <h2>
                             How to play Money Pot!
-                          </h4>
+                          </h2>
                         </div>
                       </div>
                       <!-- 1.2 How to play: Main body-->
@@ -187,7 +187,7 @@
           <!-- 3.0 Money pot image and sum display-->
           <div class="col-12">
             <div class="row align-items-center justify-content-center">
-              <div class="col-6 text-center" id="moneyPot">
+              <div class="col-6" id="moneyPot">
                 <img src="assets/images/money-pot.png" alt="money pot" class="img h-100 w-100" />
               </div>
               <div class="col-6" id="sum">
@@ -203,22 +203,32 @@
   <!-- Footer-->
   <footer class="container">
     <div class="row">
-      <ul class="col-sm d-flex justify-content-center mb-1" id="social-links">
+      <ul class="col-sm d-flex justify-content-center mb-1">
         <!-- Facebook-->
-        <li class="p-2" title="Facebook"><a target="_blank" href="https://en-gb.facebook.com/" rel="noopener"><i
-              class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
+        <li class="p-2">
+          <a target="_blank" href="https://en-gb.facebook.com/" rel="noopener" aria-label="Find us on Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
 
         <!-- Twitter-->
-        <li class="p-2" title="Twitter"><a target="_blank" href="https://www.twitter.com/" rel="noopener"><i
-              class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+        <li class="p-2">
+          <a target="_blank" href="https://www.twitter.com/" rel="noopener" aria-label="Find us on Twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
 
         <!-- Instagram-->
-        <li class="p-2" title="Instagram"><a target="_blank" href="https://www.instagram.com/" rel="noopener"><i
-              class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+        <li class="p-2">
+          <a target="_blank" href="https://www.instagram.com/" rel="noopener" aria-label="Find us on Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
 
         <!-- 1. Contact-->
-        <li class="p-2 " data-toggle="modal" data-target="#contactForm" title="Contact us">
-          <a><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Envelope</span></a></li>
+        <li class="p-2 " data-toggle="modal" data-target="#contactForm">
+          <i class="fas fa-envelope" aria-hidden="true" aria-label="Contact us directly"></i>
+        </li>
       </ul>
 
       <!-- 1. Contact form: Modal box-->
@@ -232,8 +242,8 @@
                 <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close" title="close">
                   <span aria-hidden="true">×</span>
                 </button>
-                <h4 class="pt-4">
-                  Help us improve! </h4>
+                <h2 class="pt-4">
+                  Help us improve! </h2>
                 <p class="pb-2">We value every customer and your feedback matters to us.</p>
                 <small class="">We would love to hear from you should you have any suggestions or general
                   enquiries.</small>
@@ -246,19 +256,18 @@
                   <!-- 1.1.1 name input-->
                   <div class="form-group mb-0">
                     <label for="name"></label>
-                    <input name="name" type="text" class="form-control text-center" id="name" placeholder="Your Name"
-                      required />
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required />
                   </div>
                   <!-- 1.1.2 email address input-->
                   <div class="form-group">
                     <label for="email"></label>
-                    <input name="email" type="email" class="form-control text-center" id="email"
-                      placeholder="Your email address" required />
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email address"
+                      required />
                   </div>
                   <!-- 1.1.3 question one-->
                   <div class="form-group">
                     <div class="px-0">
-                      <label for="formQ1" class="p">
+                      <label for="formQ1">
                         How challenging were the tasks for your
                         child?
                       </label>
@@ -277,7 +286,7 @@
                   <!-- 1.1.4 question two-->
                   <div class="form-group">
                     <div class="px-0">
-                      <label for="formQ2" class="p">
+                      <label for="formQ2">
                         Did your child find the game entertaining?
                       </label>
                     </div>
@@ -294,7 +303,7 @@
                   <!-- 1.1.5 question three-->
                   <div class="form-group">
                     <div class="px-0">
-                      <label for="interestedInMore" class="p">
+                      <label for="interestedInMore">
                         Would you like to hear about similar games?
                       </label>
                     </div>
@@ -308,7 +317,7 @@
                   </div>
                   <!-- 1.1.6 suggestions-->
                   <div class="form-group">
-                    <label for="otherinfo" class="p">
+                    <label for="otherinfo">
                       Your suggestions
                     </label>
                     <textarea class="form-control" id="otherinfo" rows="3"></textarea>
@@ -345,7 +354,7 @@
     </div>
     <!-- Contact form: End-->
     <div class="row">
-      <div class="col text-center">
+      <div class="col">
         <small>&copy; 2020 | Neringa Bickmore | All Rights Reserved </small>
       </div>
     </div>
@@ -359,7 +368,7 @@
         <div class="modal-header justify-content-center" id="modalHeader">
           <!--Modal Header Info comes in from game.js-->
         </div>
-        <div id="modalBody" class="modal-body text-center">
+        <div id="modalBody" class="modal-body">
           <!--Modal Body Info comes in from game.js-->
         </div>
         <div class="modal-footer" id="modalFooter">
