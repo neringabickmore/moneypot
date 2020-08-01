@@ -1,1 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Love+Ya+Like+A+Sister&family=Noto+Sans+JP&family=Roboto:wght@300&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background-color: #f3f6fb;
+  color: #343a40;
+}
