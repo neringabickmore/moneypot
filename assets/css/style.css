@@ -213,3 +213,15 @@ section of the form, label specificity updated.*/
   margin-left: 0.5rem;
   text-align: left;
 }
+
+/* Specific feedback.html styling */
+
+#confirmation-page {
+  background-color: #d5ae41;
+  margin: 5rem auto;
+  border-radius: .25rem;
+}
+
+#confirmation-page h1 {
+  font-weight: bolder;
+}
