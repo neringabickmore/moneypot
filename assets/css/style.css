@@ -14,7 +14,6 @@ body {
 }
 
 h2,
-h6,
 p,
 label {
   font-family: "Noto", sans-serif;
@@ -33,4 +32,45 @@ header {
 
 header h1 {
   font-size: 3.5rem;
+}
+
+/* Main section styling */
+section {
+  background-color: #3f69aa;
+  color: #f3f6fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section h1,
+h6 {
+  font-family: "Love Ya Like A Sister", sans-serif;
+  text-shadow: 3px -2px #303031;
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+#game-card {
+  background-color: #bd3d3a;
+  border: solid 0.25rem #d5ae41;
+}
+
+#game-dashboard {
+  border: solid 0.25rem #d5ae41;
+}
+
+#price h1 {
+  background-color: #3f69aa;
+  border: solid 0.25rem #d5ae41;
+  border-radius: 50rem;
+  padding: 0.5rem;
+  margin: 0.75rem;
+}
+
+#sum h1 {
+  background-color: #d5ae41;
+  border: solid 0.25rem #3f69aa;
+  border-radius: 60%;
+  padding: 0.5rem;
 }
