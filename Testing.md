@@ -4,7 +4,7 @@
 
 Main [README.md](README.md) file.
 
-View [website in GitHub](https://neringabickmore.github.io/MoneyPot/) Pages.
+View [website in GitHub](https://neringabickmore.github.io/moneypot/) Pages.
 
 ---
 
@@ -49,7 +49,7 @@ The following validation services and linter were used to check the validity of 
 
 ## Client stories testing ##
 
- The following section goes through each of the user stories from the UX section of [README.md](https://github.com/neringabickmore/MoneyPot/blob/master/README.md)
+ The following section goes through each of the user stories from the UX section of [README.md](https://github.com/neringabickmore/moneypot/blob/master/README.md)
 
 1. As a  **user**, I want to find the rules how to play the game.
 

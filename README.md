@@ -1,6 +1,6 @@
 # Money Pot #
 
-*[Money Pot](https://neringabickmore.github.io/MoneyPot/) is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
+*[Money Pot](https://neringabickmore.github.io/moneypot/) is a maths game designed for children age 4-6. By playing the game, they will learn how to add simple sums and how to recognise pence coins in British Currency.*
 
 ![Game display on different screens](/wireframes/testing/images/game-display-screens.jpg)
 
@@ -257,18 +257,18 @@ The website was developed on *Visual Studio Code* and using *Git* pushed to *Git
 - Opened up **GitHub** in the browser.
 - Signed in with my **username** and **password**.
 - Selected my **repositories**.
-- Navigated to **neringabickmore/MoneyPot**.
+- Navigated to **neringabickmore/moneypot**.
 - In the top navigation clicked **settings**.
 - Scrolled down to the **GitHub Pages** area.
 - Selected **Master Branch** from the **Source** dropdown menu.
 - Clicked to **confirm** my **selection**.
-- [Money Pot](https://neringabickmore.github.io/MoneyPot/) is now **live** on **GitHub Pages**.
+- [Money Pot](https://neringabickmore.github.io/moneypot/) is now **live** on **GitHub Pages**.
 
 ### Running Money Pot Locally ###
 
 Cloning Money Pot from GitHub:
 
-- Navigate to **neringabickmore/MoneyPot**.
+- Navigate to **neringabickmore/moneypot**.
 - Click the green **Clone or Download** button.
 - **Copy** the url in the dropdown box.
 - Using your favourite **IDE** open up your preferred terminal.
@@ -276,7 +276,7 @@ Cloning Money Pot from GitHub:
 
 Copy the following code and input it into your terminal to clone Money Pot:
 
-```git clone https://github.com/neringabickmore.MoneyPot```
+```git clone https://github.com/neringabickmore.moneypot```
 
 [Back to content](#contents)
 
