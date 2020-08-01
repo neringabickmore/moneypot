@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="keywords" content="Money game, coin game, game, reception kids, kids game" />
   <meta name="author" content="Neringa Bickmore" />
   <meta name="Description" content="Maths game for children age 4-6" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -18,11 +20,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
 
   <title>Game: Money Pot</title>
+
 </head>
 
 <body>
+
   <!-- Logo-->
-  <header class="container" id="logo">
+  <header class="container">
     <div class="row pt-1">
       <div class="col-sm text-md-left mx-3">
         <h1>money pot</h1>
@@ -54,22 +58,22 @@
             <div class="row">
               <div class="col-sm d-flex justify-content-center">
                 <div class="no-star" id="star1">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
                 <div class="no-star" id="star2">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
                 <div class="no-star" id="star3">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
                 <div class="no-star" id="star4">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
                 <div class="no-star" id="star5">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
                 <div class="no-star" id="star6">
-                  <i class="fas fa-star" aria-hidden="true" title="no star"></i><span class="sr-only">star</span>
+                  <i class="fas fa-star" aria-hidden="true" title="no star"></i>
                 </div>
               </div>
             </div>
@@ -81,26 +85,23 @@
                 <!-- Restart the game-->
                 <button type="button" class="btn-round btn-all" title="Reset the Game" data-toggle="tooltip"
                   data-placement="top">
-                  <i class="fas fa-sync" aria-hidden="true" id="resetGame"></i><span class="sr-only">restart the
-                    game</span>
+                  <i class="fas fa-sync" aria-hidden="true" id="resetGame"></i>
                 </button>
                 <!-- Reset the sum-->
                 <button type="button" class="btn-round btn-all" title="Reset the Sum" data-toggle="tooltip"
                   data-placement="top">
-                  <i class="fas fa-redo" aria-hidden="true" id="resetSum"></i><span class="sr-only">reset the
-                    sum</span>
+                  <i class="fas fa-redo" aria-hidden="true" id="resetSum"></i>
                 </button>
                 <!-- How to play-->
                 <button type="button" class="btn-round btn-all" data-toggle="modal" data-target="#gameRulesModal">
-                  <i class="fas fa-question" aria-hidden="true" id="gameRules" title="Rules of the Game"
-                    data-toggle="tooltip" data-placement="top"></i><span class="sr-only">rules of the
-                    game</span>
+                  <i class="fas fa-question" aria-hidden="true" title="Rules of the Game" data-toggle="tooltip"
+                    data-placement="top"></i>
                 </button>
                 <!-- 1. How to play: Modal box-->
                 <div class="modal fade" id="gameRulesModal" tabindex="-1" role="dialog"
                   aria-labelledby="game-rules-main" aria-hidden="true">
                   <div class="modal-dialog modal-xl">
-                    <div class="modal-content" id="game-rules-box">
+                    <div class="modal-content">
                       <!-- 1.1 How to play: Header-->
                       <div class="modal-header">
                         <div class="modal-title col-12" id="gameRulesHeader">
@@ -146,8 +147,7 @@
                       <div class="modal-footer justify-content-center">
                         <button type="button" class="btn-round btn-all" data-dismiss="modal" title="Close and Play"
                           data-toggle="tooltip" data-placement="top">
-                          <i class="fas fa-times-circle" aria-hidden="true"></i><span class="sr-only">
-                            close </span>
+                          <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </button>
                       </div>
                     </div>
@@ -157,14 +157,12 @@
                 <!-- Sound off-->
                 <button type="button" class="btn-round btn-all" title="Sound Off" data-toggle="tooltip"
                   data-placement="top">
-                  <i class="fas fa-volume-mute" aria-hidden="true" id="soundOff"></i><span class="sr-only">sound
-                    off</span>
+                  <i class="fas fa-volume-mute" aria-hidden="true" id="soundOff" aria-label="sound off"></i>
                 </button>
                 <!-- Sound on-->
                 <button type="button" class="btn-round btn-all" title="Sound On" data-toggle="tooltip"
                   data-placement="top">
-                  <i class="fas fa-volume-up" aria-hidden="true" id="soundOn"></i><span class="sr-only">sound
-                    on</span>
+                  <i class="fas fa-volume-up" aria-hidden="true" id="soundOn" aria-label="sound on"></i>
                 </button>
               </div>
             </div>
@@ -204,6 +202,7 @@
   <footer class="container">
     <div class="row">
       <ul class="col-sm d-flex justify-content-center mb-1">
+
         <!-- Facebook-->
         <li class="p-2">
           <a target="_blank" href="https://en-gb.facebook.com/" rel="noopener" aria-label="Find us on Facebook">
@@ -236,34 +235,37 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" id="contact-form-box">
+
             <!-- 1.1 Contact form: Header-->
             <div class="modal-header">
               <div class="modal-title col-12" id="contactFormHeader">
-                <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close" title="close">
-                  <span aria-hidden="true">×</span>
-                </button>
-                <h2 class="pt-4">
+                <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close">x</button>
+                <h2 class="pt-4 pb-2">
                   Help us improve! </h2>
                 <p class="pb-2">We value every customer and your feedback matters to us.</p>
-                <small class="">We would love to hear from you should you have any suggestions or general
+                <small>We would love to hear from you <br>if you have any suggestions or general
                   enquiries.</small>
               </div>
             </div>
+
             <!-- 1.2 Contact form: Main body-->
             <form class="container pt-1" action="feedback.html">
               <div class="row justify-content-center">
                 <div class="col-12 col-lg-7">
+
                   <!-- 1.1.1 name input-->
                   <div class="form-group mb-0">
                     <label for="name"></label>
                     <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required />
                   </div>
+
                   <!-- 1.1.2 email address input-->
                   <div class="form-group">
                     <label for="email"></label>
                     <input name="email" type="email" class="form-control" id="email" placeholder="Your email address"
                       required />
                   </div>
+
                   <!-- 1.1.3 question one-->
                   <div class="form-group">
                     <div class="px-0">
@@ -283,6 +285,7 @@
                       </select>
                     </div>
                   </div>
+
                   <!-- 1.1.4 question two-->
                   <div class="form-group">
                     <div class="px-0">
@@ -300,6 +303,7 @@
                       </select>
                     </div>
                   </div>
+
                   <!-- 1.1.5 question three-->
                   <div class="form-group">
                     <div class="px-0">
@@ -315,6 +319,7 @@
                       </select>
                     </div>
                   </div>
+
                   <!-- 1.1.6 suggestions-->
                   <div class="form-group">
                     <label for="otherinfo">
@@ -322,6 +327,7 @@
                     </label>
                     <textarea class="form-control" id="otherinfo" rows="3"></textarea>
                   </div>
+
                   <!-- 1.1.7 legal/consent information-->
                   <div class="from-group">
                     <div class="form-legal-info">
@@ -331,18 +337,18 @@
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck" required />
                         <label class="form-check-label" for="gridCheck">
-                          <small class="form-text">
+                          <small class="form-text pl-2">
                             I consent to Money Pot collecting my details
                             through this form.</small>
                         </label>
                       </div>
                     </div>
                   </div>
+
                   <!-- 1.3 Contact form: Send button-->
                   <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn-round btn-all" data-dismiss="#contactForm" title="Send!">
-                      <i class="fas fa-paper-plane" aria-hidden="true"></i><span class="sr-only">
-                        Paper plane </span>
+                    <button type="submit" class="btn-round btn-all" data-dismiss="#contactForm" aria-label="Send!">
+                      <i class="fas fa-paper-plane" aria-hidden="true"></i>
                     </button>
                   </div>
                 </div>
@@ -364,7 +370,7 @@
   <div class="modal fade" id="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
     aria-labelledby="modalBody" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content" id="game-card-modal">
+      <div class="modal-content">
         <div class="modal-header justify-content-center" id="modalHeader">
           <!--Modal Header Info comes in from game.js-->
         </div>
