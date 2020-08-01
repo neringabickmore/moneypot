@@ -1,6 +1,6 @@
 # Money Pot - Testing Details #
 
-![Logo](/wireframes/logo-image.jpg)
+![Logo](/wireframes/logo.jpg)
 
 Main [README.md](README.md) file.
 
