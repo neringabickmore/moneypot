@@ -27,7 +27,7 @@ let level;
 
 $(document).ready(function () {
   fetchData("game.json");
-  $("#gameRulesModal").modal("show");
+  initModal();
 });
 
 // Global event listeners
@@ -68,6 +68,20 @@ const fetchData = () => {
       setGame(gameData.game);
     })
     .catch((err) => console.log(err));
+};
+
+/**
+ * This function allows 
+ * game rules modal 
+ * to be displayed
+ * on page load.
+ */
+const initModal = () => {
+  let showGameRulesOnLoad = sessionStorage.getItem("modal");
+  if (!showGameRulesOnLoad) {
+    $("#gameRulesModal").modal("show");
+    sessionStorage.setItem("modal");
+  };
 };
 
 /**
