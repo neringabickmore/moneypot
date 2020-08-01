@@ -75,6 +75,11 @@ h6 {
   padding: 0.5rem;
 }
 
+#moneyPot {
+  max-height: 200px;
+  max-width: 200px;
+}
+
 /* Footer styling */
 
 footer {
@@ -101,4 +106,58 @@ footer li {
 footer i:hover {
   background-color: #994044;
   color: #f3f6fb;
+}
+
+/* Styling for buttons */
+
+.btn-all {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  -webkit-box-shadow: 0 0 3px 0px #000;
+  box-shadow: 0 0 3px 0px #000;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-all:hover {
+  color: #f3f6fb;
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.btn-round {
+  margin: 0.8rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  line-height: 0.5;
+  padding: 0.8rem;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-size: 2rem;
+}
+
+.btn-other {
+  border: none;
+  margin: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.coin-button {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  max-height: 180px;
+  max-width: 180px;
+  padding: 0.8rem;
+  margin: 1rem;
+
 }
