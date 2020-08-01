@@ -80,8 +80,9 @@ const initModal = () => {
   let showGameRulesOnLoad = sessionStorage.getItem("modal");
   if (!showGameRulesOnLoad) {
     $("#gameRulesModal").modal("show");
-    sessionStorage.setItem("modal");
-  };
+  } else if (showGameRulesOnLoad) {
+    $("#gameRulesModal").modal("hide");
+  }
 };
 
 /**
