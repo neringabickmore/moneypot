@@ -14,16 +14,6 @@ body {
   text-align: center;
 }
 
-/*Bug-fix: to prevent style inheritance in the legal
-section of the form, label specificity updated.*/
-h2,
-p,
-.form-group label {
-  font-family: "Noto", sans-serif;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 14px #000;
-}
-
 /* Header styling */
 
 header {
@@ -189,7 +179,15 @@ button:focus {
 .modal-header h6 {
   text-shadow: none !important;
   font-size: 2rem;
+}
 
+/*Bug-fix: to prevent style inheritance in the legal
+section of the form, label specificity updated.*/
+.modal-title,
+.form-group label {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 14px #000;
 }
 
 .modal-body i {
@@ -197,6 +195,7 @@ button:focus {
   font-size: 6rem;
   line-height: 2rem;
   text-shadow: 3px -1px 8px #000;
+  margin: 2rem;
 }
 
 .fa-frown {
