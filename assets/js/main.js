@@ -5,7 +5,7 @@ const displaySumRef = document.getElementById("sum");
 const taskRef = document.getElementById("gameTask");
 const levelRef = document.getElementById("gameLevel");
 
-const backdropLabelContent = document.createElement("h6");
+const backdropLabelContent = document.createElement("div");
 const modalBodyContent = document.createElement("div");
 const modalFooterContent = document.createElement("div");
 
@@ -80,8 +80,9 @@ const initModal = () => {
   let showGameRulesOnLoad = sessionStorage.getItem("modal");
   if (!showGameRulesOnLoad) {
     $("#gameRulesModal").modal("show");
-    sessionStorage.setItem("modal");
-  };
+  } else if (showGameRulesOnLoad) {
+    $("#gameRulesModal").modal("hide");
+  }
 };
 
 /**
@@ -104,7 +105,7 @@ const setGame = (game) => {
 
   currentLevel.coins.forEach((coin) => {
     coinButtonRef.innerHTML +=
-      `<div class="col-6 p-2 text-center"><button class="coin-button btn-all" value="${coin.value}" type="button" aria-hidden="true">
+      `<div class="col-6"><button class="coin-button btn-all" value="${coin.value}" type="button" aria-hidden="true">
           <img src="${coin.source}" alt="${coin.name}" class="img h-75 w-75 p-1">
         </button></div`;
   });
@@ -233,7 +234,7 @@ const openModal = (state) => {
 
   }
 
-  backdropLabelContent.innerHTML = `<h6 class="modal-title text-center">${bodyText}</h6>`;
+  backdropLabelContent.innerHTML = `<h6 class="modal-title">${bodyText}</h6>`;
   modalBodyContent.innerHTML = `<div><i class="${iClassBody}" aria-hidden="true"></i><span
     class="sr-only">${srOnly}</span></div>`;
   modalFooterContent.innerHTML = `<div><button id="${buttonId}" type="btn" class="btn-all btn-other rounded pl-3" data-dismiss="modal">${buttonText}<i class="${iClassFooter} p-2" aria-hidden="true"></i></button></div>`;

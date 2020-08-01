@@ -1,55 +1,123 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Love+Ya+Like+A+Sister&family=Noto+Sans+JP&family=Roboto:wght@300&display=swap");
 
-/*------------- Header-----------------------------*/
-header {
-  height: auto;
+html {
+  font-size: 62.5%;
 }
 
-#logo h1 {
-  color: #d5ae41;
-  font-family: "Finger Paint", sans-serif;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-shadow: 1px 0px #382d0d;
-  text-transform: capitalize;
-}
-
-/*------------- Special Styling--------------------*/
+/* Body styling */
 
 body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
   background-color: #f3f6fb;
+  color: #343a40;
+  text-align: center;
 }
 
-h4,
-h5,
-h6,
-p,
-.p {
-  font-family: "Noto", sans-serif !important;
-  letter-spacing: 0.05rem;
-  font-weight: normal;
-  text-shadow: 0 0 14px black;
+/* Header styling */
+
+header {
+  color: #d5ae41;
+  font-family: "Finger Paint", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  text-shadow: 1px 0px #382d0d;
 }
 
-.p,
-p {
-  font-size: 18px !important;
+header h1 {
+  font-size: 3.5rem;
 }
+
+/* Main section styling */
+
+section {
+  background-color: #3f69aa;
+  color: #f3f6fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section h1,
+h6 {
+  font-family: "Love Ya Like A Sister", sans-serif;
+  text-shadow: 3px -2px #303031;
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+/* Footer styling */
+
+footer {
+  background-color: #d5ae41;
+}
+
+/*Bug fix: specifidied li items in the footer to prevent style inheritance on the contact form button icon*/
+footer ul i {
+  background-color: #bd3d3a;
+  color: #f3f6fb;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 1.2rem 0;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1rem !important;
+  -webkit-box-shadow: 0 0 3px 0px #000;
+  box-shadow: 0 0 3px 0px #000;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer ul i:hover {
+  background-color: #994044;
+  color: #f3f6fb;
+}
+
+/* Game display styling*/
+
+#game-card {
+  background-color: #bd3d3a;
+  border: solid 0.25rem #d5ae41;
+}
+
+#game-dashboard {
+  border: solid 0.25rem #d5ae41;
+}
+
+#price h1 {
+  background-color: #3f69aa;
+  border: solid 0.25rem #d5ae41;
+  border-radius: 50rem;
+  padding: 0.5rem;
+  margin: 0.75rem;
+}
+
+#sum h1 {
+  background-color: #d5ae41;
+  border: solid 0.25rem #3f69aa;
+  border-radius: 60%;
+  padding: 0.5rem;
+}
+
+#moneyPot {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+/* Styling for buttons */
 
 .btn-all {
   background-color: #bd3d3a;
   color: #f3f6fb;
-  -webkit-box-shadow: 0 0 3px 0px black;
-  box-shadow: 0 0 3px 0px black;
+  -webkit-box-shadow: 0 0 3px 0px #000;
+  box-shadow: 0 0 3px 0px #000;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-
+  font-family: 'Noto', sans-serif;
+  margin: 0.5rem;
 }
 
 .btn-all:hover {
@@ -61,87 +129,48 @@ p {
 }
 
 .btn-round {
-  margin: 0.5rem;
+  margin: 0.8rem;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   line-height: 0.5;
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: inline-block;
   font-weight: 400;
-  text-align: center;
   vertical-align: middle;
   border: 1px solid transparent;
-  font-size: 1.35rem;
+  font-size: 2rem;
 }
 
 .btn-other {
   border: none;
-  margin: 0.25rem;
+  margin: 0.5rem;
 }
 
 button:focus {
   outline: none;
 }
 
-/*---- Font size increases on larger devices-------------*/
-@media(min-width: 768px) {
-
-  .yes-star,
-  .no-star {
-    font-size: 2.5rem !important;
-  }
-
-  #gameLevel h1,
-  #gameTask h1 {
-    font-size: 4rem !important;
-  }
-
-  #price h1,
-  #sum h1 {
-    font-size: 5rem !important;
-  }
-
-  #price {
-    max-width: 70%;
-    max-height: 50%;
-  }
-
-  #gameNavBtn .btn-round {
-    width: 3.6rem !important;
-    height: 3.6rem !important;
-    font-size: 2rem !important;
-  }
-
-  #logo h1 {
-    font-size: 3.5rem !important;
-  }
+.coin-button {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  max-height: 180px;
+  max-width: 180px;
+  padding: 0.8rem;
+  margin: 1rem;
 }
 
-@media(min-width: 1024px) {
+/* Modal styling */
 
-  #game-dashboard {
-    -webkit-box-align: baseline !important;
-    -ms-flex-align: baseline !important;
-    align-items: baseline !important;
-    padding-top: 8rem;
-  }
+.modal-content {
+  background-color: #f3f6fb;
 }
 
-/*------------- Modal Styling--------------------*/
-
-#game-rules-box,
-#contact-form-box {
+#gameRulesModal .modal-content,
+#contactForm .modal-content {
   color: #f3f6fb;
   background-color: #3f69aa;
-  text-align: center;
-}
-
-#game-rules-main li,
-#contact-form-box p,
-.form-group {
-  font-family: "Roboto", sans-serif;
-  text-shadow: 0 0 4px black;
 }
 
 .modal-header,
@@ -149,209 +178,151 @@ button:focus {
   border: none;
 }
 
-/**---- Modal Styling: Game Console----------**/
-
-#game-card-modal h6 {
-  color: #343a40;
-  font-family: "Love Ya Like A Sister", sans-serif !important;
-  letter-spacing: 0.05rem;
+.modal-header h6 {
+  text-shadow: none !important;
   font-size: 2rem;
-  text-shadow: none;
 }
 
-#game-card-modal {
-  background-color: #f3f6fb;
+/*Bug-fix: to prevent style inheritance in the legal
+section of the form, label specificity updated.*/
+.modal-title h2,
+.form-group label {
+  font-family: "Noto", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 14px #000;
 }
 
-.modal-body .fa-star,
-.modal-body .fa-trophy,
-.modal-body .fa-frown,
-.modal-body .fa-medal {
+.modal-title h6 {
+  letter-spacing: 0.5px;
+}
+
+.modal-body i {
   color: #d5ae41;
   font-size: 6rem;
-  line-height: 20px;
+  line-height: 2rem;
+  text-shadow: 3px -1px 8px #000;
+  margin: 2rem;
 }
 
-.modal-body .fa-star,
-.modal-body .fa-trophy,
-.modal-body .fa-medal {
-  text-shadow: 3px -1px 8px black;
-}
-
-/**---- Modal Styling: Contact Form----------**/
-
-.form-legal-info {
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
+.fa-frown {
+  text-shadow: none !important;
 }
 
 .form-control {
+  font-size: 1.5rem;
   -webkit-box-shadow: 2px -1px 20px 0px #0e2952;
   box-shadow: 2px -1px 20px 0px #0e2952;
 }
 
-/*------------- Game Dashboard--------------------*/
-
-#game-dashboard {
-  background-color: #3f69aa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 35vh;
-  border: solid 0.25rem #d5ae41;
+.form-legal-info {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  text-align: left;
 }
 
-#gameLevel,
-#gameTask,
-.no-star,
-.yes-star {
-  color: #f3f6fb;
-  font-size: 1.75rem;
-  letter-spacing: 1rem;
-  text-shadow: 0 0 20px black;
-}
-
-#gameLevel,
-#gameTask {
-  font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 2px;
-}
-
-/**---- Stars will change colour to yellow when awarded----**/
-
+/* Star styling */
 .yes-star {
   color: #d5ae41;
 }
 
-/*------------- Game Card-------------------------*/
-
-#game-card {
-  background-color: #bd3d3a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 90vh;
-  border: solid 0.25rem #d5ae41;
+.yes-star,
+.no-star {
+  padding: 0.5rem !important;
 }
 
-#price h1,
-#sum h1 {
-  color: #f3f6fb;
-  font-family: "Love Ya Like A Sister", sans-serif;
-  letter-spacing: 3px;
-  font-size: 4rem;
-  margin-bottom: 0;
-  text-shadow: 3px -2px #303031;
+.fa-star {
+  height: 4rem;
+  width: 4rem;
+  font-size: 3.5rem;
+  letter-spacing: 1.5rem;
+  text-shadow: 0 0 20px #000;
 }
 
-#price,
-#sum {
-  text-align: center;
-}
+/* Specific feedback.html styling */
 
-#price h1 {
-  background-color: #3f69aa;
-  border: solid 0.25rem #d5ae41;
-  border-radius: 50rem;
-  padding: 1rem;
-  margin: 0.5rem;
-}
-
-#sum h1 {
+#confirmation-page {
   background-color: #d5ae41;
-  border: solid 0.25rem #3f69aa;
-  border-radius: 60%;
-  padding: 0.5rem;
-}
-
-.coin-button {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none;
-  margin-bottom: 0.75rem;
-  padding: 0.5rem;
-  overflow: hidden !important;
-  max-height: 225px;
-  max-width: 225px;
-}
-
-#moneyPot {
-  max-height: 225px;
-  max-width: 225px;
-}
-
-/**------Coin sizes change on different screensize------**/
-@media(min-width: 1024px) {
-  #coin div {
-    max-width: 80%;
-    max-height: 80%;
-  }
-}
-
-@media(min-width: 576px) {
-
-  #coin div {
-    max-width: 40%;
-    max-height: 40%;
-    overflow-x: hidden;
-  }
-}
-
-@media(min-width: 300px) {
-
-  #coin div {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-/*------------- Footer-----------------------------*/
-
-footer {
-  background-color: #d5ae41;
-  height: auto;
-}
-
-#social-links li a i {
-  background-color: #bd3d3a;
-  color: #f3f6fb;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.75rem 0;
-  border-radius: 50%;
-  font-size: 1rem;
-  line-height: 0.5rem;
-  text-align: center;
-  -webkit-box-shadow: 0 0 3px 0px black;
-  box-shadow: 0 0 3px 0px black;
-}
-
-#social-links li a i:hover {
-  background-color: #994044;
-  color: #f3f6fb;
-}
-
-#social-links li {
-  list-style-type: none;
-}
-
-/*-----------Feedback html styling-------------*/
-
-#feedback-div {
-  background-color: #d5ae41;
-}
-
-.confirmation-page {
-  background-color: #f3f6fb;
-  color: #343a40;
-  margin: 50px auto;
-  font-size: 20px;
-  display: inline-block;
-  line-height: 1.5;
+  margin: 5rem auto;
   border-radius: .25rem;
 }
 
-.confirmation-page h4,
-.confirmation-page h6 {
-  text-shadow: none;
+#confirmation-page h1 {
+  font-weight: bolder;
+}
+
+/* Responsive breakpoints styling */
+
+@media(min-width: 768px) {
+  header h1 {
+    font-size: 7rem;
+  }
+
+  section h1 {
+    font-size: 7rem;
+  }
+
+  #gameTask {
+    padding-left: 3.5rem !important;
+  }
+
+  .fa-star {
+    font-size: 5rem;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  #price {
+    max-width: 70%;
+  }
+
+  #gameNavBtn .btn-round {
+    width: 6rem !important;
+    height: 6rem !important;
+    font-size: 3.5rem !important;
+  }
+
+  .modal-body i {
+    font-size: 8rem;
+    margin: 4rem;
+  }
+
+
+}
+
+@media(min-width: 992px) {
+
+  section {
+    min-height: 88vh;
+  }
+
+  #gameLevel {
+    padding-top: 8rem;
+  }
+
+  .fa-star {
+    font-size: 4.5rem;
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+
+  #price {
+    padding-top: 2rem;
+  }
+
+  #coin {
+    min-height: 50vh;
+  }
+
+  #game-display-end .col-6 {
+    min-height: 15vh;
+  }
+
+  #moneyPot {
+    padding-top: 5rem;
+  }
+
+  #sum {
+    padding-top: 10rem;
+  }
+
 }
