@@ -214,6 +214,24 @@ section of the form, label specificity updated.*/
   text-align: left;
 }
 
+/* Star styling */
+.yes-star {
+  color: #d5ae41;
+}
+
+.yes-star,
+.no-star {
+  padding: 0.5rem !important;
+}
+
+.fa-star {
+  height: 4rem;
+  width: 4rem;
+  font-size: 3.5rem;
+  letter-spacing: 1.5rem;
+  text-shadow: 0 0 20px #000;
+}
+
 /* Specific feedback.html styling */
 
 #confirmation-page {
