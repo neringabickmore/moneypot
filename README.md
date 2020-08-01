@@ -14,6 +14,7 @@ Since the Global Covid pandemic has started, my husband and I were one of those 
   - [Project Goals](#project-goals)
   - [User Goals](#user-goals)
   - [User Stories](#user-stories)
+  - [Site Owner Goals](#site-owner-goals)
   - [User Requirements and Expectations](#user-requirements-and-expectations)
   - [Design Choices](#design-choices)
     - [Fonts](#fonts)
@@ -58,8 +59,6 @@ The secondary goal of this project is to teach children to identify British Curr
 
 ### User Stories ###
 
-#### Site visitor ####
-
 - As a  **user**, I want to find the rules on how to play the game.
 - As a **user**, I want to learn how to add numbers to get the correct sums.
 - As a **user**, I want to learn how to recognise British Currency coins.
@@ -67,7 +66,7 @@ The secondary goal of this project is to teach children to identify British Curr
 - As a **user**, I want to give feedback about the game using a questionnaire.
 - As a **user**, I want to see attractive colours, large icons to play with, and have fun!
 
-#### Site Owner ####
+### Site Owner Goals ###
 
 - As a **site owner**, I want to create an interactive educational maths game for children.
 - As a **site owner**, I want to make sure that children have fun and don't get bored too quickly.
@@ -166,41 +165,41 @@ In the **form page** the **envelope** icon in the footer is replaced with **game
 
 ### Features Implemented ###
 
-- Responsive design
+- **Responsive design**
 
-The game has different layout options, focused on mobile-first design in mind as more users are expected to use mobile or tablet devices than desktop.
+The game has different layout options, focused on *mobile-first* design in mind as more users are expected to use mobile or tablet devices than desktop.
 
 ![site views on different displays](/wireframes/responsive-design.jpg)
 
-- User-friendly display
+- **User-friendly display**
 
-The display has bright colours, large fonts, and large buttons as aimed for very young children. The social media icons are a lot smaller at the footer and purposely are not at the focus of the display, aimed at adult interaction instead.
+The display has *bright colours*, *large fonts*, and *large buttons* as aimed for very young children. The social media icons are a lot smaller at the footer and purposely are not at the focus of the display, aimed at adult interaction instead.
 
-- Interactive games console
+- **Interactive games console**
 
 When the user interacts with the coin buttons, they get feedback on how well they are doing.
 
 ![interactive games console](/wireframes/interactive-console.jpg)
 
-- Dashboard for easy navigation
+- **Dashboard for easy navigation**
 
-On the left side of the screen, you can see a dashboard allowing the user to reset the game completely, reset the sum, find rules of the game as well as switch the audio on/off.
+On the left side of the screen, you can see a *dashboard* allowing the user to *reset the game* completely, *reset the sum*, find *rules of the game* as well as switch the *audio on/off*.
 
 ![dashboad-on-the-left](/wireframes/game-dashboard.jpg)
 
-- Rules of the game
+- **Rules of the game**
 
 ![rules](/wireframes/game-rules.jpg)
 
-- Social media links
+- **Social media links**
 
 The site has social media links displayed at the footer of the page, as well as a button to take them to the contact/feedback form.
 
 ![social-media](/wireframes/social-media.jpg)
 
-- Functional contact form
+- **Functional contact form**
 
-The form prompts the user if they haven't completed mandatory tasks of the form, such as their name, email address, and a consent confirmation. Upon submission of the form, the user gets a notification when their form is sent, which also includes their name.
+The form prompts the user if they haven't completed *mandatory tasks* of the form, such as their name, email address, and a consent confirmation. Upon submission of the form, the user gets a notification when their form is sent, which also includes their name.
 
 ![contact-form](/wireframes/contact-form.jpg)
 
@@ -210,17 +209,17 @@ The form prompts the user if they haven't completed mandatory tasks of the form,
 - Information in a different language (i.e. Lithuanian as I have nieces and nephew living in Lithuania).
 - Increase levels of difficulty and include higher value currency (Pound coins and notes).
 - Coins switch display places throughout the tasks and levels of the game to make it more challenging.
-- User form submissions are delivered to the site owners inbox with its contents.
+- User form submissions are delivered to the site owner's inbox with its contents.
 
 ### Considered Features ###
 
-I find it's important to explain a few features I have considered and why I have decided against implementing them in this project.
+I find it's important to explain a few features I have considered and *why* I have decided *against* implementing them in this project.
 
-- Background music
+- **Background music**
 
 This game is educational and the target audience is very young. They are easily distracted and I find that continuous background audio would challenge their ability to focus.
 
-- Questionnaire in the contact form is not mandatory
+- **Questionnaire in the contact form is not mandatory**
 
   The questionaire part of the contact form is optional for a reason. The form plays a dual role:
 
@@ -229,17 +228,17 @@ This game is educational and the target audience is very young. They are easily 
 
   Not all of the users would want to provide feedback and yet I still want to hear from them.
 
-- Users do not have an option to choose levels or tasks of the game
+- **Users do not have an option to choose levels or tasks of the game**
 
   On average, it takes my son between 10 to 15 min to complete the game. It only has 3 levels and 3 tasks on each level. Repetition allows the user to learn quicker. The idea is for the user to repeat the game from start to finish every time as it's quick to complete and they are exposed to different levels of difficulty throughout the game.
 
   Should the game develop and more levels are added with more complexity I may reconsider this option.
 
-- Coin clicks are unlimited
+- **Coin clicks are unlimited**
 
   In the rules of the game, I encourage parents to be involved with their children while they play the game. One of the recommendations I have is for them to encourage their children to use a variety of coins every time they play. The purpose of the game is not how quickly they can get to the sum, but for them to be able to apply almost real-life scenarios and collect the right amount of change that they have as if they are in a shop trying to buy a toy. In real life scenario, we will not always have 20p, 50p, and 5p to give an exact change of 75p.  By limiting the clicks I would remove that part of learning.
 
-- No special reward for using as few coin clicks possible to achieve the correct sum
+- **No special reward for using as few coin clicks possible to achieve the correct sum**
 
   The purpose of the game is to achieve the correct sum clicking on a variety of the coins every time the user plays the game. Rewarding the user for using as little coin clicks possible removed an important part of learning.
 
